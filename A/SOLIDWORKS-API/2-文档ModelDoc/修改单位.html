@@ -2,13 +2,13 @@
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 <!-- 引入配置文件 -->
     
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 <!-- 字体图片库 -->
     
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
 <!-- 代码高亮库 -->
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body>
@@ -45,7 +45,7 @@
 <h2 id="关键方法"><a href="#关键方法" class="headerlink" title="关键方法"></a>关键方法</h2><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Dim</span> swApp <span class="keyword">As</span> SldWorks.SldWorks</span><br><span class="line"><span class="keyword">Dim</span> swModel <span class="keyword">As</span> SldWorks.ModelDoc2</span><br><span class="line"><span class="keyword">Set</span> swApp = Application.SldWorks</span><br><span class="line"><span class="keyword">Set</span> swModel = swApp.ActiveDoc</span><br><span class="line"></span><br><span class="line"><span class="comment">&#x27;设置单位标准&#x27;设置为MMGS</span></span><br><span class="line">swModel.Extension.SetUserPreferenceInteger(swUserPreferenceIntegerValue_e.swUnitSystem, <span class="number">0</span>, swUnitSystem_e.swUnitSystem_MMGS)</span><br><span class="line"></span><br><span class="line">swModel.Save</span><br><span class="line">swModel.Close</span><br><span class="line"></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><h2 id="20241104"><a href="#20241104" class="headerlink" title="20241104"></a>20241104</h2><p>增减单独修改质量单位的操作，</p>
-<p><img src="/SOLIDWORKS-Solution/%E4%BF%AE%E6%94%B9%E5%8D%95%E4%BD%8D/image-20241104140948961.png" alt="image-20241104140948961"></p>
+<p><img src="/%E4%BF%AE%E6%94%B9%E5%8D%95%E4%BD%8D/image-20241104140948961.png" alt="image-20241104140948961"></p>
 <figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&#x27;设置质量单位</span></span><br><span class="line"><span class="comment">&#x27;Unit = swUnitsMassPropMass_e.swUnitsMassPropMass_Milligrams &#x27;设置mg</span></span><br><span class="line"><span class="comment">&#x27;Unit = swUnitsMassPropMass_e.swUnitsMassPropMass_Grams &#x27;设置g</span></span><br><span class="line">Unit = swUnitsMassPropMass_e.swUnitsMassPropMass_Kilograms <span class="comment">&#x27;设置kg</span></span><br><span class="line"><span class="comment">&#x27;Unit = swUnitsMassPropMass_e.swUnitsMassPropMass_Pounds &#x27;设置磅</span></span><br><span class="line"></span><br><span class="line">swModel.Extension.SetUserPreferenceInteger(swUserPreferenceIntegerValue_e.swUnitsMassPropMass, <span class="number">0</span>, Unit)</span><br></pre></td></tr></table></figure>
 
 
@@ -54,19 +54,19 @@
  			<!-- 引入正文 -->
     </div>	
     
-<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<script src="/lib/highlight/highlight.pack.js"></script>
 <!-- 引入代码高亮的 js -->
     
-<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+<script src="/lib/jquery-3.4.1.min.js"></script>
 	<!-- 引入 jquery -->
     
-<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+<script src="/lib/jquery.pjax.js"></script>
 		<!-- 引入 pjax -->
     
-<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+<script src="/js/main.js"></script>
 					<!-- 引入 js 文件 -->
 	
-<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+<script src="/js/search.js"></script>
 					<!-- 引入 js 文件 -->	
 	<script type="text/javascript">      
      var search_path = "search.xml";
