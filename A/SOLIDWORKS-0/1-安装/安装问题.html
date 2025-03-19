@@ -2,13 +2,13 @@
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
 <!-- 引入配置文件 -->
     
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
 <!-- 字体图片库 -->
     
-<link rel="stylesheet" href="/lib/highlight/styles/atom-one-dark.css">
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
 <!-- 代码高亮库 -->
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body>
@@ -71,11 +71,11 @@
 
 <h2 id="Runtime安装失败"><a href="#Runtime安装失败" class="headerlink" title="Runtime安装失败"></a>Runtime安装失败</h2><img src="安装问题\Runtime安装失败.png">
 
-<h2 id="dll注册失败"><a href="#dll注册失败" class="headerlink" title=".dll注册失败"></a>.dll注册失败</h2><p>sldInnerDispatchProxyu</p>
+<h2 id="dll注册失败"><a href="#dll注册失败" class="headerlink" title=".dll注册失败"></a>.dll注册失败</h2><p>sldInnerDispatchProxyu.dll注册失败，或是ColorBarAX.ocx 失败。已返回 0x5</p>
 <img src="安装问题\sldInnerDispatchProxyu.png">
 
-
-
+<p>此类问题还请检查下是否存在<strong>【加密】</strong>或<strong>【杀毒】</strong>等软件，阻碍了安装组件注册的进行。例如：关闭360安全卫士等，</p>
+<p>有时候退出360还不行的，后台还有一个主动防御的进程。可以把360先卸载，装完SW后再装回去</p>
 <h2 id="缺少运行库组件"><a href="#缺少运行库组件" class="headerlink" title="缺少运行库组件"></a>缺少运行库组件</h2><p>原因：电脑系统环境缺少组件。提示：Register_DocMgrDLL.A48C1CF2_EBF8_48E8_ACAD_68CA04F776A2<br><br>方法：问题参考 S-075133，是电脑缺少组件问题（Microsoft® Visual C++ 2015 Redistributable）。装回组件解决。<br><br>（补充一点：该问题存在 2015 和 2017 组件是不能共存。建议是直接安装 2015-2019 的集合包，<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-CN/cpp/windows/latest-supported-vc-redist?view=msvc-170">#访问下载位置</a>）<br></p>
 <h2 id="Net-框架问题"><a href="#Net-框架问题" class="headerlink" title="Net 框架问题"></a>Net 框架问题</h2><p>原因：net framework 3.5 安装报错（2022 年后需使用.Net framework 框架 4.8）<br><br>方法：<br></p>
 <ol>
@@ -106,22 +106,22 @@
  			<!-- 引入正文 -->
     </div>	
     
-<script src="/lib/highlight/highlight.pack.js"></script>
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
 <!-- 引入代码高亮的 js -->
     
-<script src="/lib/jquery-3.4.1.min.js"></script>
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
 	<!-- 引入 jquery -->
     
-<script src="/lib/jquery.pjax.js"></script>
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
 		<!-- 引入 pjax -->
     
-<script src="/js/main.js"></script>
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
 					<!-- 引入 js 文件 -->
 	
-<script src="/js/search.js"></script>
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
 					<!-- 引入 js 文件 -->	
 	<script type="text/javascript">      
-     var search_path = "search.xml";
+     var search_path = "SOLIDWORKS-Solution/search.xml";
 	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
 	</script>
