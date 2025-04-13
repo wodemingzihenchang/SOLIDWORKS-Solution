@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2023-08-03 23:35:01</span>
+</div>
+
+<div id="article"><h1 id="钣金规格表"><a href="#钣金规格表" class="headerlink" title="钣金规格表"></a>钣金规格表</h1><span id="more"></span>
+
+<h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2><p>规格表是以 Excel 表格的形式设置规格，规格不能同名、厚度不能重复（原则就是规格不能重复）。规格表默认位置：</p>
+<blockquote>
+<p>【C:\Program Files\SolidWorks 2022\SOLIDWORKS\lang\chinese-simplified\Sheet Metal Gauge Tables】</p>
+</blockquote>
+<img src="钣金规格表/image1.png">
+
+<p>规格表内容设置规则是：</p>
+<ol>
+<li>折弯类型：可以选择不同的计算方式</li>
+<li>单位：默认可以设置毫米 mm</li>
+<li>规格内容：在该厚度下，某个半径和角度对于下的规格值</li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>【钣金】钣金零件的首个特征文件夹，里面会放我们钣金参数内容和规格表信息（如下：）。规格表一般是按原有表格格式进行复制添加和修改。</p>
+<p>【钣金】使用&#x2F;编辑特征时，可以选择”规格表”，选择后钣金参数会有所变化。且规格内容来自表格定制的内容</p>
+<img src="钣金规格表/image2.png">
+
+<h1 id="钣金计算方法"><a href="#钣金计算方法" class="headerlink" title="钣金计算方法"></a>钣金计算方法</h1><p>下面使用一折弯边演示此三种钣金展开的计算方法。其展开长度不一是因为折弯位置发生了形变（等我找找材料变形图），那么不同的计算方法就是对该变形位置的实际展开的长度计算。</p>
+<p>讲究的是变形位置存在一段不变的中性层，该层不管是展开还是折弯，它都是一样的。</p>
+<img src="钣金规格表/image3.png">
+
+<h2 id="K-因子："><a href="#K-因子：" class="headerlink" title="K 因子："></a>K 因子：</h2><p>这里就是用 K 因子是描述中性层的位置。K 因子：中性面距内折面&#x2F;厚度，即 t&#x2F;T 随便说明下，中性层是变化的，不同厚度和半径中性层的位置也会变化的。</p>
+<p>模型钣金展开长度：100+100+5.46&#x3D;205.46</p>
+<img src="钣金规格表/K 因子.png">
+
+<h2 id="折弯系数："><a href="#折弯系数：" class="headerlink" title="折弯系数："></a>折弯系数：</h2><p>去除折弯半径的部分，直接使用折弯系数的数值代表该折弯半径的中性层，即固定边+折弯系数即为展开长度。</p>
+<p>模型钣金展开长度：100+100+10&#x3D;210mm</p>
+<img src="钣金规格表/折弯系数.png">
+
+<h2 id="折弯扣除："><a href="#折弯扣除：" class="headerlink" title="折弯扣除："></a>折弯扣除：</h2><p>草图包含折弯半径的部分，直接使用折弯扣除的数值代表该处重复多余的长度。</p>
+<p>模型钣金展开长度：100+100-10&#x3D;190mm</p>
+<img src="钣金规格表/折弯扣除.png">
+
+<h1 id="换算"><a href="#换算" class="headerlink" title="换算"></a>换算</h1><h2 id="K因子换算折弯系数"><a href="#K因子换算折弯系数" class="headerlink" title="K因子换算折弯系数"></a>K因子换算折弯系数</h2><p>折弯系数&#x3D;（r + KT)πA ／180</p>
+<p>K因子&#x3D;(折弯系数*180&#x2F;πA-r)&#x2F;T</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">r————内侧半径</span><br><span class="line">K————K因子</span><br><span class="line">T————材料厚度</span><br><span class="line">A————折弯角度</span><br></pre></td></tr></table></figure>
+
+<p>举例：K因子&#x3D;0.5、折弯内半径r&#x3D;0.2mm、厚度T&#x3D;1mm、带入公式得到折弯系数是：1.1mm</p>
+<p>展开长度：边长+边长-折弯内角*2+折弯系数&#x3D;（50+50-0.2-0.2+1.1）mm &#x3D;100.7mm</p>
+<img src="钣金规格表/K因子换算折弯系数.png">
+
+<p>在SW程序里，可以使用方程式定义，不过需注意的是，钣金在SW的折弯系数只显示第一个特征，所以这里的结果只能作首个特征参数的参考。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;K因子&quot;=(((&quot;折弯系数&quot;*180)/(&quot;首次折弯角度&quot;*3.14))-&quot;折弯半径&quot;)/&quot;折弯厚度&quot;</span><br><span class="line"></span><br><span class="line">- &quot;首次折弯角度&quot;=90</span><br><span class="line">- &quot;折弯系数&quot;、&quot;折弯半径&quot;、&quot;折弯厚度&quot;都从钣金自定义属性获得</span><br></pre></td></tr></table></figure>
+
+<img src="钣金规格表/K因子换算折弯系数2.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

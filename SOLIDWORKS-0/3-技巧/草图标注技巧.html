@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2023-08-13 14:31:30</span>
+</div>
+
+<div id="article"><h1 id="草图标注技巧"><a href="#草图标注技巧" class="headerlink" title="草图标注技巧"></a>草图标注技巧</h1><p>默认情况下，我们在标注草图尺寸时会需要选择【草图-智能尺寸】的方式，再选择草图线段进行尺寸标注。而本文章将介绍一种草图标注的技巧方法及2024草图标注的新功能。提高我们草图标注的效率。</p>
+<h2 id="提示添加尺寸输入"><a href="#提示添加尺寸输入" class="headerlink" title="提示添加尺寸输入"></a>提示添加尺寸输入</h2><p>勾选【系统选项-草图-在生成实体时启用荧屏上数字输入】，那么在绘制草图的同时输入尺寸值，仅在输入值的情况下创建尺寸（该选项会顺便生成尺寸标注）</p>
+<img src="草图标注技巧/提示添加尺寸输入.png">
+
+<p>下面是设置前后，在绘制草图时的编辑页。其中“选项”中就会多一项“添加尺寸”的可选项。</p>
+<img src="草图标注技巧/添加尺寸.png">
+
+<p>在你绘制草图实体的同时，输入尺寸数值。则这个尺寸也会自动添加。</p>
+<img src="草图标注技巧/添加尺寸2.png">
+
+<p>但是，这里也有一个需要说明的。当我们不知该尺寸数值而跳过输入时，草图线段就不会生成尺寸标注，这又回到了最初使用【智能尺寸】命令的标注操作。</p>
+<img src="草图标注技巧/添加尺寸3.png">
+
+
+
+<h2 id="选中时预览草图尺寸"><a href="#选中时预览草图尺寸" class="headerlink" title="选中时预览草图尺寸"></a>选中时预览草图尺寸</h2><p>针对前面的标注情况，在2024新功能中，增加了“选中时预览草图尺寸”功能。在【系统选项-草图-选中时预览草图尺寸】可以将其勾选启用。</p>
+<img src="草图标注技巧/预览草图尺寸.png">
+
+<p>开启该功能后，你可以在选中草图线段时，显示线段的尺寸，并且通过点击尺寸，可以将预览尺寸自动变成具有约束作用的尺寸标注</p>
+<img src="草图标注技巧/预览草图尺寸2.png">
+
+<p>除此之外，预览尺寸还支持你进行多选操作，针对多选的对象关系，软件会智能的判断你想要的尺寸约束显示。例如：两直线形成的夹角关系，圆和直线的距离关系等….</p>
+<img src="草图标注技巧/预览草图尺寸3.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

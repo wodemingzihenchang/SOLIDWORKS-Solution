@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-Flow-HVAC"><a href="#Simulation-Flow-HVAC" class="headerlink" title="Simulation-Flow-HVAC"></a>Simulation-Flow-HVAC</h1><p>SOLIDWORKS Flow Simulation中的 HVAC 模块可让您预测和优化生活环境中的温度控制和气流。</p>
+<p>环境控制的有效性是通过人体舒适度参数来衡量的。这些参数在设计占用空间及其 HVAC 系统时使用，有助于确定环境条件在一般热舒适度或不舒适度以及质量方面是否可接受。</p>
+<span id="more"></span>
+
+<h3 id="PPD"><a href="#PPD" class="headerlink" title="PPD"></a>PPD</h3><p>预测不满意百分比(PPD)–提供热不适或热不满意信息的指数。<br>吃风率——预计会受到吃风困扰的人数百分比。<br>平均辐射温度(MRT)<br>工作温度<br>通风温度——占用区域中任意点与控制条件之间的温度差。</p>
+<img src="Flow-HVAC/image-20250408102602116.png">
+
+<h3 id="PMV"><a href="#PMV" class="headerlink" title="PMV"></a>PMV</h3><p>PMV 的计算考虑了代谢率、服装热阻、外部功、服装表面温度、空气温度和其他一些参数。您可以在“默认参考参数”中设置。</p>
+<img src="Flow-HVAC/image-20250408191736237.png">
+
+<h3 id="ADPI"><a href="#ADPI" class="headerlink" title="ADPI"></a>ADPI</h3><p>空气扩散性能指数（ADPI）</p>
+<p>污染物去除效果（CRE）和当地空气质量指数（LAQI）用于评估通风系统去除污染空气的有效性。为了允许计算舒适度参数，您必须启用计算控制选项中相应的复选框选项，如下图所示。</p>
+<p>预测不满意百分比(PPD) 和预测平均投票 (PMV) 是两个主要的舒适度参数，可确定问题区域在占用空间中的位置，使您可以在构建冷却系统之前解决这些问题。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/8658817862">【图片】SOLIDWORKS Flow Simulation 中的舒适参数是什么【卓盛信息solidworks吧】_百度贴吧</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

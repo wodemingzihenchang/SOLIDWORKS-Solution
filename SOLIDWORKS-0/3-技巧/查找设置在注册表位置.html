@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2024-04-19 16:21:27</span>
+</div>
+
+<div id="article"><h1 id="查找设置在注册表位置"><a href="#查找设置在注册表位置" class="headerlink" title="查找设置在注册表位置"></a>查找设置在注册表位置</h1><h2 id="导出设置"><a href="#导出设置" class="headerlink" title="导出设置"></a>导出设置</h2><img src="查找设置在注册表位置/image-20240423175000857.png">
+
+<p>在菜单栏，【工具-保存&#x2F;恢复设置】保存是否勾选的设置文件2份（swSetting.sldreg）</p>
+<ul>
+<li>勾   选——保存设置文件1份</li>
+<li>未勾选——保存设置文件1份</li>
+</ul>
+<img src="查找设置在注册表位置/1.png">
+
+<h2 id="数据对比"><a href="#数据对比" class="headerlink" title="数据对比"></a>数据对比</h2><p>使用文本编辑器，打开保存设置的数据，新建Excel用来对比数据设置差异。</p>
+<img src="查找设置在注册表位置/image-20240423171231777.png">
+
+<p>将数据复制到Excel A列里面，</p>
+<img src="查找设置在注册表位置/image-20240423173430162.png">
+
+<p>设置同值判断函数：“&#x3D;IF(A1&#x3D;B1,1,0)”</p>
+<img src="查找设置在注册表位置/image-20240423173505069.png">
+
+<p>应用填充函数</p>
+<img src="查找设置在注册表位置/image-20240423173611105.png">
+
+<h2 id="查找结果"><a href="#查找结果" class="headerlink" title="查找结果"></a>查找结果</h2><p>设置筛选</p>
+<img src="查找设置在注册表位置/image-20240423173806693.png">
+
+<p>按结果差异值进行筛选，结果为0的行，就是设置差异的选项了</p>
+<img src="查找设置在注册表位置/image-20240423173832408.png">
+
+<img src="查找设置在注册表位置/image-20240423173902472.png">
+
+<h2 id="查找注册表"><a href="#查找注册表" class="headerlink" title="查找注册表"></a>查找注册表</h2><p>在注册表里，定位到当前SW版本。Ctrl+F进行“项名称”查找。</p>
+<img src="查找设置在注册表位置/image-20240423174329222.png">
+
+<p>这里就是SW设置在注册表体现的内容了，通过修改此处也能影响SW的选项设置</p>
+<p>（注意：注册表的设置，需要SW程序在完全退出的状态下修改，不然会和现有的程序设置进行冲突导致注册表设置失败）</p>
+<img src="查找设置在注册表位置/image-20240423174352828.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

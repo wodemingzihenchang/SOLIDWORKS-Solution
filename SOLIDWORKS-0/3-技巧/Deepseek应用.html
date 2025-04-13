@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2025-02-09 18:59:59</span>
+</div>
+
+<div id="article"><h1 id="Deepseek应用"><a href="#Deepseek应用" class="headerlink" title="Deepseek应用"></a>Deepseek应用</h1><span id="more"></span>
+
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>AI知识库的实现主要依赖2种技术：<strong>语言大模型</strong>+<strong>知识向量化</strong></p>
+<p>简单概述，利用已有的文档、内部知识生成向量知识库，在提问的时候结合库的内容一起给大模型，让其做回答。</p>
+<img src="Deepseek本地部署知识库/image-20250306203842084.png">
+
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><h2 id="宏程序"><a href="#宏程序" class="headerlink" title="宏程序"></a>宏程序</h2><h2 id="1-自然语言驱动建模（核心应用）"><a href="#1-自然语言驱动建模（核心应用）" class="headerlink" title="1. 自然语言驱动建模（核心应用）"></a><strong>1. 自然语言驱动建模（核心应用）</strong></h2><p><strong>应用场景</strong>：用户通过自然语言描述（如“创建直径50mm、高100mm的圆柱体，顶部倒角5mm”）直接生成3D模型。<br><strong>实现方法</strong>：</p>
+<ul>
+<li><strong>语义解析</strong>：利用Deepseek解析用户指令，提取关键参数（尺寸、几何关系、特征顺序）。</li>
+<li><strong>API映射</strong>：将解析结果映射为SOLIDWORKS API命令（如<code>Part.CreateCylinder()</code>）。</li>
+<li><strong>自动生成代码</strong>：通过Deepseek生成可执行的VBA&#x2F;C#宏代码，调用SOLIDWORKS COM接口执行建模。</li>
+<li><strong>即时预览</strong>：在插件内集成模型预览功能，支持用户实时调整指令。</li>
+</ul>
+<hr>
+<h2 id="2-智能设计优化（AI增强设计）"><a href="#2-智能设计优化（AI增强设计）" class="headerlink" title="2. 智能设计优化（AI增强设计）"></a><strong>2. 智能设计优化（AI增强设计）</strong></h2><p><strong>应用场景</strong>：基于性能目标（如轻量化、强度）自动优化零件结构。<br><strong>实现方法</strong>：</p>
+<ul>
+<li><strong>多目标优化</strong>：Deepseek分析仿真数据（静力学、热力学），生成参数调整建议（如壁厚、加强筋布局）。</li>
+<li><strong>拓扑优化引导</strong>：将AI建议转换为<code>SolidWorks Simulation</code>的拓扑约束条件。</li>
+<li><strong>迭代学习</strong>：记录用户最终选择的设计方案，优化后续推荐策略。</li>
+</ul>
+<hr>
+<h2 id="3-设计规范自动化校验"><a href="#3-设计规范自动化校验" class="headerlink" title="3. 设计规范自动化校验"></a><strong>3. 设计规范自动化校验</strong></h2><p><strong>应用场景</strong>：自动检查模型是否符合企业&#x2F;行业标准（如ISO 2768公差）。<br><strong>实现方法</strong>：</p>
+<ul>
+<li><strong>规则库构建</strong>：训练Deepseek理解GB、ASME等标准文档，提取校验规则。</li>
+<li><strong>模型特征扫描</strong>：通过API遍历模型特征，将参数输入Deepseek进行合规性判断。</li>
+<li><strong>自动修正建议</strong>：对不符合项生成修正方案（如调整孔间距、添加圆角）。</li>
+</ul>
+<hr>
+<h2 id="4-智能装配助手"><a href="#4-智能装配助手" class="headerlink" title="4. 智能装配助手"></a><strong>4. 智能装配助手</strong></h2><p><strong>应用场景</strong>：语音&#x2F;文本指导复杂装配体操作（“将齿轮轴与箱体孔对齐”）。<br><strong>实现方法</strong>：</p>
+<ul>
+<li><strong>装配意图识别</strong>：Deepseek解析用户指令，确定需配合的特征（轴-孔、平面贴合）。</li>
+<li><strong>约束自动生成</strong>：调用<code>Assembly.AddMate()</code>方法创建配合关系。</li>
+<li><strong>冲突检测</strong>：结合<code>Interference Detection</code> API，提示潜在干涉问题。</li>
+</ul>
+<hr>
+<h2 id="5-工程图智能标注"><a href="#5-工程图智能标注" class="headerlink" title="5. 工程图智能标注"></a><strong>5. 工程图智能标注</strong></h2><p><strong>应用场景</strong>：自动生成符合工艺需求的工程图标注。<br><strong>实现方法</strong>：</p>
+<ul>
+<li><strong>特征优先级分析</strong>：Deepseek识别关键加工特征（配合面、基准面）。</li>
+<li><strong>标注策略生成</strong>：根据特征类型选择标注方式（尺寸链 vs 坐标标注）。</li>
+<li><strong>自动注释</strong>：调用<code>DrawingDoc.CreateDimension()</code>生成标注，通过<code>FeatureManager</code>调整布局。</li>
+</ul>
+<hr>
+<h2 id="6-跨格式设计知识检索"><a href="#6-跨格式设计知识检索" class="headerlink" title="6. 跨格式设计知识检索"></a><strong>6. 跨格式设计知识检索</strong></h2><p><strong>应用场景</strong>：通过自然语言查询企业知识库（如“查找铝合金压铸件的拔模角设计规范”）。<br><strong>实现方法</strong>：</p>
+<ul>
+<li><strong>知识图谱构建</strong>：用Deepseek索引STEP、PDF手册、PLM系统数据。</li>
+<li><strong>语义搜索</strong>：将用户查询转换为SQL&#x2F;NoSQL查询语句，检索模型库、文档。</li>
+<li><strong>结果可视化</strong>：在SOLIDWORKS界面直接高亮显示模型相关特征。</li>
+</ul>
+<hr>
+<h2 id="7-智能BOM生成与供应链对接"><a href="#7-智能BOM生成与供应链对接" class="headerlink" title="7. 智能BOM生成与供应链对接"></a><strong>7. 智能BOM生成与供应链对接</strong></h2><p><strong>应用场景</strong>：自动生成带采购信息的物料清单。<br><strong>实现方法</strong>：</p>
+<ul>
+<li><strong>零件智能分类</strong>：Deepseek分析模型特征，识别标准件&#x2F;定制件。</li>
+<li><strong>供应商匹配</strong>：连接ERP数据库，为外购件推荐供应商&#x2F;价格。</li>
+<li><strong>BOM导出优化</strong>：自动生成符合ERP格式（如XML&#x2F;Excel）的BOM表。</li>
+</ul>
+<hr>
+<h1 id="技术实现路径"><a href="#技术实现路径" class="headerlink" title="技术实现路径"></a><strong>技术实现路径</strong></h1><ol>
+<li><strong>接口层</strong>：使用SOLIDWORKS API（C#&#x2F;VB.NET）开发插件，通过COM接口控制建模流程。</li>
+<li><strong>AI集成</strong>：部署Deepseek模型至本地服务器或使用API，通过gRPC&#x2F;REST通信。</li>
+<li><strong>数据处理</strong>：<ul>
+<li>结构化数据：参数表、特征树 → 直接输入模型</li>
+<li>非结构化数据：工程图、文档 → 先经OCR&#x2F;NLP处理</li>
+</ul>
+</li>
+<li><strong>反馈机制</strong>：记录用户修正操作，持续优化AI输出准确性。</li>
+</ol>
+<hr>
+<h1 id="关键技术挑战"><a href="#关键技术挑战" class="headerlink" title="关键技术挑战"></a><strong>关键技术挑战</strong></h1><ul>
+<li><strong>几何语义理解</strong>：需构建SOLIDWORKS专用术语库提升指令解析准确率</li>
+<li><strong>特征依赖关系</strong>：建模顺序影响需通过图神经网络处理</li>
+<li><strong>实时性要求</strong>：复杂模型API调用需优化响应时间（建议采用异步执行）</li>
+</ul>
+<p>通过深度集成Deepseek的NLP和数据分析能力，可显著降低SOLIDWORKS使用门槛，将传统CAD软件升级为智能设计协同平台。建议从自然语言建模和设计校验等高频场景切入，逐步扩展至全流程AI辅助设计。</p>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2025-03-04 16:19:10</span>
+</div>
+
+<div id="article"><h1 id="PDM连接失败处理方法"><a href="#PDM连接失败处理方法" class="headerlink" title="PDM连接失败处理方法"></a>PDM连接失败处理方法</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>局域网</p>
+<h2 id="连接ping"><a href="#连接ping" class="headerlink" title="连接ping"></a>连接ping</h2><p>如果网络中存在访问服务器的连接问题，你可以尝试下面方法检查原因：</p>
+<h2 id="防火墙Telnet"><a href="#防火墙Telnet" class="headerlink" title="防火墙Telnet"></a>防火墙Telnet</h2><p>方法：</p>
+<p>关闭服务器防火墙后，查看客户端是否可正常连接，若不可以应检查网络是否通，若可以则为防火墙设置问题。</p>
+<p> 方法2: 防火墙高级面板方式<br>1.进入控制面板-&gt;管理工具-&gt;找到“高级安全Windows防火墙<br>2点击入站规则<br>3.找到 回显请求-ICMPv4-In (Echo Request -ICMPv4-In)4.右键点击规则点击启用规则(Enable)</p>
+<p>检查网络是否通：服务器与客户端在同一局域网中，ping IP，必须通，但服务需开启；</p>
+<p>防火墙设置： </p>
+<p>防火墙-入站规则与出站规则分别添加端口TCP与UDP，特定端口3030,1403,1433,1434</p>
+<p> 方法2: 防火墙高级面板方式<br>1.进入控制面板-&gt;管理工具-&gt;找到“高级安全 Windows防火墙<br>2点击入站规则<br>3.找到回显请求-ICMPv4-In (Echo Request -ICMPv4-In)<br>4.右键点击规则点击”启用规则(Enabie)</p>
+<h1 id="无法在网络上找到主机"><a href="#无法在网络上找到主机" class="headerlink" title="无法在网络上找到主机"></a>无法在网络上找到主机</h1><p>客户端提示无法在网络上找到主机</p>
+<img src="PDM连接失败处理方法/无法在网络上找到主机.png">
+
+<p>解决方法：客户端IP设为固定IP</p>
+<h1 id="找不到服务器"><a href="#找不到服务器" class="headerlink" title="找不到服务器"></a>找不到服务器</h1><img src="PDM连接失败处理方法/找不到服务器.png">
+
+<p>客户端无法搜索到服务器。如果网络中存在访问服务器的连接问题，你可以尝试下面方法检查原因：</p>
+<h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>关闭服务器防火墙后，查看客户端是否可正常连接，若不可以应检查网络是否通，若可以则为防火墙设置问题。检查网络是否通：</p>
+<p>防火墙设置： 防火墙-入站规则与出站规则分别添加端口TCP与UDP，特定端口3030,1403,1433,1434</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

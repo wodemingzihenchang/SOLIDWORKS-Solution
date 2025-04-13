@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2024-04-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h1><h2 id="打开插件"><a href="#打开插件" class="headerlink" title="打开插件"></a>打开插件</h2><img src="Simulation-静态分析/image-20240425173736873.png">
+
+<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>在运行第一个初始静态模拟之后，您可以启动趋势跟踪器，并将初始分析作为基线设计，以比较后续的设计更改。</p>
+<img src="Simulation-静态分析/image-20240424171345104.png">
+
+<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><p>【材料】材料:合金钢</p>
+<img src="Simulation-静态分析/指定材料.png">
+
+
+
+<h2 id="连结"><a href="#连结" class="headerlink" title="连结"></a>连结</h2><p>单零件的话是没有连结的，这一点可以忽略</p>
+<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><p>因为曲柄固定环处会产生旋转运动，所以在此圆柱面上作“固定铰链”约束。</p>
+<img src="Simulation-静态分析/image-20240424173250522.png">
+
+<p>在螺丝固定位置，我们选择“固定几何体”</p>
+<img src="Simulation-静态分析/image-20240424173358244.png">
+
+
+
+<h2 id="外部载荷"><a href="#外部载荷" class="headerlink" title="外部载荷"></a>外部载荷</h2><p>在有限元分析中，要确保静态分析，除了载荷静态之外，有一个非常重要的因素:整个结构所有的部件都必须保证静态，不能存在可能发生的运动趋势。</p>
+<img src="Simulation-静态分析/image-20240424173737984.png">
+
+
+
+<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>默认网格</p>
+<img src="Simulation-静态分析/image-20240603112043503.png">
+
+<p>应用网格控制</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><img src="Simulation-静态分析/image-20240424173814227.png">
+
+<p>应力</p>
+<img src="Simulation-静态分析/image-20240603112117776.png">
+
+<p>位移</p>
+<img src="Simulation-静态分析/image-20240603112121577.png">
+
+<p>应变</p>
+<img src="Simulation-静态分析/image-20240603112126051.png">
+
+<p>安全系数</p>
+<img src="Simulation-静态分析/image-20240424173954278.png">
+
+
+
+<p>检查最危险（最小）位置</p>
+<img src="Simulation-静态分析/image-20240424174109425.png">
+
+<h1 id="趋势跟踪器"><a href="#趋势跟踪器" class="headerlink" title="趋势跟踪器"></a>趋势跟踪器</h1><p>在SolidWorks Simulation Standard中，有一个名为趋势跟踪器的直观工具可用于评估连续设计更改对产品性能的影响。帮助产品工程师从静态研究的不同迭代中检测结果的趋势，从而在设计过程的早期指导设计决策。</p>
+<img src="Simulation-静态分析/image-20240425162432311.png">
+
+<p>设置基准线</p>
+<p>在运行第一个初始静态模拟之后，您可以启动趋势跟踪器，并将初始分析作为基线设计，以比较后续的设计更改。</p>
+<img src="Simulation-静态分析/image-20240425162830006.png">
+
+
+
+<img src="Simulation-静态分析/image-20240425162851416.png">
+
+<h2 id="添加趋势传感器"><a href="#添加趋势传感器" class="headerlink" title="添加趋势传感器"></a>添加趋势传感器</h2><img src="Simulation-静态分析/image-20240425163038728.png">
+
+
+
+<p>添加趋势跟踪数据图表</p>
+<p>当用户执行自由形式的设计更改时，趋势跟踪器自动执行所有记录，以保存结果，如重量，压力，位移或用户想要跟踪的任何其他参数。</p>
+<img src="Simulation-静态分析/image-20240425163337310.png">
+
+<p>在这个连杆示例中，我们的第一个初始静态模拟显示最小安全系数为9。模型修改不同形状和尺寸下的变化趋势：</p>
+<h2 id="迭代1修改厚度"><a href="#迭代1修改厚度" class="headerlink" title="迭代1修改厚度"></a>迭代1修改厚度</h2><p>我们想减少杆本身的厚度16至14，使其更轻，然后重新运行静态模拟。厚度减小后的结果。我们的最小FOS仍然很大。厚度的减少使总重量减少了约15%。</p>
+<img src="Simulation-静态分析/迭代1.png">
+
+<h2 id="迭代2切除中间"><a href="#迭代2切除中间" class="headerlink" title="迭代2切除中间"></a>迭代2切除中间</h2><p>让我们继续设计。我们想了解通过所有连杆切断的影响。通过这种设计更改，FOS下降到4.4。与此同时，趋势跟踪器显示，与基线1相比，压力水平有所增加，而体重减轻了40%。</p>
+<img src="Simulation-静态分析/迭代2.png">
+
+<h2 id="迭代3中间加强筋"><a href="#迭代3中间加强筋" class="headerlink" title="迭代3中间加强筋"></a>迭代3中间加强筋</h2><p>让我们将一些材料添加回连杆并重新运行模拟。现在让我们看看我们的趋势追踪结果。我们可以看到，即使连杆的重量增加了一点点，与此同时，我们能够将应力水平降低35%。</p>
+<img src="Simulation-静态分析/迭代3.png">
+
+<p>同样，用户可以继续执行所有设计更改，趋势跟踪器保留所有值以进行比较研究。</p>
+<h2 id="查看趋势"><a href="#查看趋势" class="headerlink" title="查看趋势"></a>查看趋势</h2><p>趋势跟踪器的一个很好的功能叫做查看图库。查看图库是SolidWorks Simulation保存每次迭代的应力和位移等结果的地方，因此用户可以同时查看所有这些结果以进行比较研究。</p>
+<img src="Simulation-静态分析/image-20240425170457900.png">
+
+<p>趋势跟踪器还可以保存每次设计迭代的记录。因此任何时候，用户都可以回到特定的迭代中查看更多细节，并保留最佳设计理念。</p>
+<img src="Simulation-静态分析/image-20240425170820409.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2023-11-08 18:34:25</span>
+</div>
+
+<div id="article"><h1 id="Visualize导入失败"><a href="#Visualize导入失败" class="headerlink" title="Visualize导入失败"></a>Visualize导入失败</h1><p>在 SOLIDWORKS Visualize 应用程序中打开 SOLIDWORKS® 装配体文档时，为什么显示错误“导入失败。详情请参阅日志文件。”？</p>
+<img src="0-Visualize问题\导入失败.png">
+
+<span id="more"></span>
+
+<p>这种情况的可能原因包括：</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>A.装配体的特定零部件导致问题。要确定哪个零部件有问题，请执行以下步骤：</p>
+<p>1.在 SOLIDWORKS® 软件中打开 CAD 模型。</p>
+<p>2.压缩装配体中的一半零部件，然后使用 SOLIDWORKS Visualize 插件中的选项将模型导出到 SOLIDWORKS Visualize。重复此步骤，直至导出正常工作。</p>
+<p>3.识别导致问题的零部件。</p>
+<p>4.修复或压缩该零部件中有问题的特征。</p>
+<p>5.将装配体从 SOLIDWORKS 导出到 SOLIDWORKS Visualize。</p>
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>B.CAD 文件损坏。要在 SOLIDWORKS Visualize 应用程序中正确打开 CAD 文件，该文件必须在 SOLIDWORKS 中正确打开。例如：</p>
+<p>1.下载随附的 ZIP 文件并提取装配体。</p>
+<p>2.在 SOLIDWORKS Visualize 应用程序中打开示例装配体。将出现错误。</p>
+<p>3.在 SOLIDWORKS 中打开同一装配体。将出现警告文件损坏的消息。这表示问题不是出在SOLIDWORKS Visualize，很可能是来自装配体的 SOLIDWORKS 侧。</p>
+<h2 id="方法3"><a href="#方法3" class="headerlink" title="方法3"></a>方法3</h2><p>2、特定电脑问题</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

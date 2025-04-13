@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="PDM材料明细表"><a href="#PDM材料明细表" class="headerlink" title="PDM材料明细表"></a>PDM材料明细表</h1><span id="more"></span>
+
+<p>使用材料明细表对话框来创建材料明细表 (BOM) 模板，以显示零部件信息；模板可以多个；</p>
+<h2 id="新建BOM表"><a href="#新建BOM表" class="headerlink" title="新建BOM表"></a>新建BOM表</h2><img src="材料明细表/新建.png">
+
+<p>选择类型。在所选列里，进行【新列&#x2F;删除列】操作。编辑所选列的变量进行属性的读取</p>
+<img src="材料明细表/材料明细表.png">
+
+<p>在PDM文件夹底下预览处使用BOM表，可以看到【材料明细表】内容里的列信息就是我们步骤2编辑的。（注意这里需要我们在数据卡里的属性才能被读取到）</p>
+<img src="材料明细表/使用.png">
+
+
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><h2 id="清单类型"><a href="#清单类型" class="headerlink" title="清单类型"></a>清单类型</h2><img src="材料明细表/清单类型.png">
+
+<h2 id="层级选择"><a href="#层级选择" class="headerlink" title="层级选择"></a>层级选择</h2><p>缩进</p>
+<p>仅顶层</p>
+<p>仅零件</p>
+<h2 id="显示树"><a href="#显示树" class="headerlink" title="显示树"></a>显示树</h2><p>显示&#x2F;隐藏树结构</p>
+<h2 id="激活显示状态"><a href="#激活显示状态" class="headerlink" title="激活显示状态"></a>激活显示状态</h2><p>显示所选项</p>
+<h2 id="“最新项”和“如原样”"><a href="#“最新项”和“如原样”" class="headerlink" title="“最新项”和“如原样”"></a>“最新项”和“如原样”</h2><p>您可在用于不同版本的装配体零部件的计算材料明细表视图间切换。此功能在创建装配体后修改装配体零部件的情况下很有用。</p>
+<p>您可计算所选版本的装配体材料明细表：</p>
+<p>“如原样”：•使用创建版本时所选版本的装配体最初参考的零部件版本</p>
+<p>“最新项”：•使用所选版本的装配体参考的最新零部件版本</p>
+<h1 id="内容输出"><a href="#内容输出" class="headerlink" title="内容输出"></a>内容输出</h1><h2 id="另存-BOM文件"><a href="#另存-BOM文件" class="headerlink" title="另存.BOM文件"></a>另存.BOM文件</h2><img src="材料明细表/另存.BOM文件.png">
+
+<h2 id="打开csv表格"><a href="#打开csv表格" class="headerlink" title="打开csv表格"></a>打开csv表格</h2><h2 id="搜索内容"><a href="#搜索内容" class="headerlink" title="搜索内容"></a>搜索内容</h2><img src="材料明细表/搜索内容.png">
+
+<h2 id="比较清单内容"><a href="#比较清单内容" class="headerlink" title="比较清单内容"></a>比较清单内容</h2><p>当您比较两个材料明细表时，两个材料明细表中的所有条目的集合出现在材料明细表比较中。 彩色表示材料明细表之间的差异。</p>
+<table>
+<thead>
+<tr>
+<th><img src="https://help.solidworks.com/2021/chinese-simplified/EnterprisePDM/FileExplorer/isv1466167983055.image" alt="img"></th>
+<th>每个单元格左侧的绿色栏表示添加的行。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://help.solidworks.com/2021/chinese-simplified/EnterprisePDM/FileExplorer/xge1466168048569.image" alt="img"></td>
+<td>单元格左侧的橙色栏表示编辑的单元格。 方括号显示材料明细表中您选取用来进行比较的值。</td>
+</tr>
+<tr>
+<td><img src="https://help.solidworks.com/2021/chinese-simplified/EnterprisePDM/FileExplorer/reg1466168108373.image" alt="img"></td>
+<td>每个单元格左侧的红色栏表示删除的行。 方括号表示材料明细表中您选取用来进行比较的数据。</td>
+</tr>
+</tbody></table>
+<img src="材料明细表/比较清单内容.png">
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><h2 id="查找变量"><a href="#查找变量" class="headerlink" title="查找变量"></a>查找变量</h2><p>1</p>
+<p>2在所选配置列表查找变量</p>
+<img src="材料明细表/查找变量2.png">
+
+<p>3</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2023/chinese-simplified/EnterprisePDM/admin/IDD_EDIT_COLUMN.htm">材料明细表对话框 - 2023 - SOLIDWORKS PDM 帮助</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

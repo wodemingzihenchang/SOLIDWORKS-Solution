@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2024-04-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-自适应网格"><a href="#Simulation-自适应网格" class="headerlink" title="Simulation-自适应网格"></a>Simulation-自适应网格</h1><p>自适应网格用于适应计算结果，并自动调整网格的方式，以达到精确化结果的目的。当然，这个在之前的课程中，我们是通过【局部网格控制】来手动实现网格细化精确结果。</p>
+<p>本章我们将利用【自适应网格】方法来自动自动细化网格（h自适应）或自动增加网格阶数（p自适应），以达到更加精确的结果。</p>
+<span id="more"></span>
+
+<h1 id="标准分析"><a href="#标准分析" class="headerlink" title="标准分析"></a>标准分析</h1><h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>新建静应力分析算例，根据前面所学知识，设置如下分析条件。</p>
+<img src="教程13-自适应网格/image-20240520163041119.png">
+
+<h2 id="标准网格"><a href="#标准网格" class="headerlink" title="标准网格"></a>标准网格</h2><p>利用默认网格计算结果</p>
+<img src="教程13-自适应网格/image-20240520163211897.png">
+
+<h1 id="h-自适应"><a href="#h-自适应" class="headerlink" title="h-自适应"></a>h-自适应</h1><h2 id="新建算例-1"><a href="#新建算例-1" class="headerlink" title="新建算例"></a>新建算例</h2><p>在仿真设计树的算例【右键-属性-自适应】自适应方法选择“h-自适应”。</p>
+<img src="教程13-自适应网格/image-20240520163849861.png">
+
+<p>h自适应方法里，可以设置“目标精度”即，最后两次结果比大于98%，则完成h自适应的最终结果。</p>
+<p>或者是按照“最大循环次数”进行每次的循环（当5次循环结束后，可能还可以继续【运行】再一个5次循环，直到98%的目标精度才停止）。</p>
+<img src="教程13-自适应网格/image-20240520163918241.png">
+
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p>运行，循环计算结果</p>
+<p>![h自适应](教程13-自适应网格&#x2F;h自适应.gif”&gt;</p>
+<img src="教程13-自适应网格/image-20240520163252683.png">
+
+<p>查看h-自适应收敛的过程表格</p>
+<img src="教程13-自适应网格/image-20240710173101704.png">
+
+<img src="教程13-自适应网格/image-20240710173124134.png">
+
+<img src="教程13-自适应网格/image-20240710173207121.png">
+
+
+
+<h1 id="p-自适应"><a href="#p-自适应" class="headerlink" title="p-自适应"></a>p-自适应</h1><h2 id="新建算例-2"><a href="#新建算例-2" class="headerlink" title="新建算例"></a>新建算例</h2><p>在仿真设计树的算例【右键-属性-自适应】自适应方法选择“p-自适应”。</p>
+<img src="教程13-自适应网格/image-20240520163849861.png">
+
+<p>p自适应方法不同于h自适应（细化网格的方式求解），p自适应是通过增加单元格的阶数进行求解。而对照h自适应方法，这里的结束条件也是按结果比，和手动设置的阶数数量。</p>
+<img src="教程13-自适应网格/image-20240520164948554.png">
+
+<p>修改网格设置</p>
+<img src="教程13-自适应网格/image-20240520165051047.png">
+
+<h2 id="运行结果-1"><a href="#运行结果-1" class="headerlink" title="运行结果"></a>运行结果</h2><img src="教程13-自适应网格/image-20240520164008996.png">
+
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

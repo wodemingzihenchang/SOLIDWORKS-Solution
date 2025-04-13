@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-概述"><a href="#Simulation-概述" class="headerlink" title="Simulation-概述"></a>Simulation-概述</h1><span id="more"></span>
+
+<h2 id="功能矩阵"><a href="#功能矩阵" class="headerlink" title="功能矩阵"></a>功能矩阵</h2><img src="教程00-概述/仿真产品矩阵图.png">
+
+<h2 id="有限元分析概述"><a href="#有限元分析概述" class="headerlink" title="有限元分析概述"></a>有限元分析概述</h2><p>在数学术语中，FEA （Finite Element Analysis）也称之为有限单元法，有限元法的基本概念将复杂的问题分解成很多简单的、便于求解的小问题，再将这些小问题所求得的解进行综合，得到一个整体的、接近于原始问题的解。</p>
+<h3 id="分析三阶段"><a href="#分析三阶段" class="headerlink" title="分析三阶段"></a>分析三阶段</h3><ul>
+<li>前处理：前处理是建立有限元模型，完成单元网格划分；</li>
+<li>求解：</li>
+<li>后处理：采集处理分析结果，使用户能简便提取信息，了解计算结果</li>
+</ul>
+<img src="教程00-概述\FEA分析的基本步骤.png">
+
+<p>建立有限元模型–&gt;求解有限元模型–&gt;结果分析</p>
+<img src="教程00-概述\建立数学模型.png">
+
+<h3 id="分析的误差"><a href="#分析的误差" class="headerlink" title="分析的误差"></a>分析的误差</h3><img src="教程00-概述\FEA中的误差.png">
+
+<h2 id="有限单元"><a href="#有限单元" class="headerlink" title="有限单元"></a>有限单元</h2><p>离散化过程（也叫网格划分）是将连续的模型剖分成有限单元。Solidworks Simulation 用实体四面体单元划分实体几何体，而用三角形壳单元划分几何面。</p>
+<p>单元类型：在【生成网格】时，有选项是选择“草稿品质”或“高品质”的选项</p>
+<ul>
+<li>一阶实体四面体单元</li>
+<li>二阶实体四面体单元</li>
+<li>一阶三角形壳单元</li>
+<li>二阶三角形壳单元</li>
+</ul>
+<img src="教程00-概述\网格单元.png">
+
+
+
+<h2 id="自由度"><a href="#自由度" class="headerlink" title="自由度"></a>自由度</h2><p>决定一个物体的位置所需独立坐标的数目，叫做这个物体的自由度 。有限单元网格中的自由度定义了节点平移或转动的能力。节点拥有的自由度数取决于节点所属的单元类型。</p>
+<p>实体单元节点：3个平移自由度<br>壳单元节点：6个自由度<br>梁单元节点：6个自由度</p>
+<h2 id="FEA计算"><a href="#FEA计算" class="headerlink" title="FEA计算"></a>FEA计算</h2><h2 id="FEA结果解释"><a href="#FEA结果解释" class="headerlink" title="FEA结果解释"></a>FEA结果解释</h2><p>默认分析的结果图解。FEA在结构分析中提供了应力、应变和位移的解，在热分析中提供温度、温度梯度和热流的解。</p>
+<ul>
+<li>位 移：物体变形后的形状</li>
+<li>应 力：物体受力状况</li>
+<li>应 变：物体变形程度</li>
+</ul>
+<p>第一强度理论（最大法向应力理论）<br> P1：第一主应力<br>o 主应力：切应力为零的平面上的正应力。<br> 一般适用于脆性材料，如铸铁、陶瓷、工具钢等<br> 第二强度理论（最大伸长线应变理论）<br> P1-u(P2+P3)<br> 合金铸铁、低温回火的高强度钢和石料等<br> 第三强度理论（最大切应力理论）<br> 最大抗剪应力Τ max&#x3D;(P1-P3)&#x2F;2<br>第四强度理论——形状改变比能理论<br> Von Mises应力</p>
+<h2 id="使用限制"><a href="#使用限制" class="headerlink" title="使用限制"></a>使用限制</h2><ul>
+<li><p>线性材料</p>
+<p>在所有SW材质中，应力和应变是成线性比例关系。大多数结构的盈利值低于屈服应力，而安全系数通常与屈服应力有关。</p>
+</li>
+<li><p>小变形</p>
+<p>小变形发现是假设在变形过程中结构的刚度仍保持不变。大变形的刚度有变化导致影响结果。</p>
+</li>
+<li><p>静态载荷</p>
+</li>
+</ul>
+<hr>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

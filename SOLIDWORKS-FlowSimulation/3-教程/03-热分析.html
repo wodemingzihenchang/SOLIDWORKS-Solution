@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2024-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="热分析"><a href="#热分析" class="headerlink" title="热分析"></a>热分析</h1><h2 id="前处理"><a href="#前处理" class="headerlink" title="前处理"></a>前处理</h2><p>简化模型：简化不影响分析的部分，学习针对复杂几何体的良好建模方法</p>
+<img src="03-热分析/image-20241017140511450.png">
+
+<img src="03-热分析/image-20250313101118398.png">
+
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><img src="03-热分析/image-20241017140649751.png">
+
+
+
+<img src="03-热分析/image-20241017140724544.png">
+
+
+
+<img src="03-热分析/image-20241017140804445.png">
+
+
+
+<img src="03-热分析/image-20241017140830481.png">
+
+
+
+<img src="03-热分析/image-20241017140918147.png">
+
+
+
+<img src="03-热分析/image-20241017140933754.png">
+
+
+
+<img src="03-热分析/image-20241017140950816.png">
+
+
+
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><img src="03-热分析/image-20241017141252320.png">
+
+
+
+<h2 id="风扇"><a href="#风扇" class="headerlink" title="风扇"></a>风扇</h2><p>在模型中创建风扇</p>
+<img src="03-热分析/image-20241017141639154.png">
+
+<p>在【风扇-创建&#x2F;编辑】中，可以打开风扇的工程数据库，里面将是软件预定义供应商的风扇参数，和其风扇曲线</p>
+<img src="03-热分析/image-20241017141808267.png">
+
+
+
+<h2 id="固体材料"><a href="#固体材料" class="headerlink" title="固体材料"></a>固体材料</h2><p>添加定义用户自己的材料数据，材料将决定在流体介质交互过程的温度变化。</p>
+<img src="03-热分析/image-20241017142034149.png">
+
+
+
+<img src="03-热分析/image-20241017142130028.png">
+
+
+
+<img src="03-热分析/image-20241017142219447.png">
+
+
+
+<img src="03-热分析/image-20241017142344821.png">
+
+
+
+<img src="03-热分析/image-20241017142443704.png">
+
+
+
+<img src="03-热分析/image-20241017142721623.png">
+
+<p>自定义线圈材料</p>
+<img src="03-热分析/image-20241017144727928.png">
+
+
+
+<img src="03-热分析/image-20241017144917349.png">
+
+<h2 id="多孔板"><a href="#多孔板" class="headerlink" title="多孔板"></a>多孔板</h2><p>使用穿孔板</p>
+<p>有一些是密集的多孔板模型，我们如果是一个个孔点的话，会需要花费大量时间，而SW Flow将其作为一种【多孔板】条件处理。</p>
+<img src="03-热分析/image-20241017151029579.png">
+
+<img src="03-热分析/image-20241017151143341-17291491038851.png">
+
+<h2 id="热源"><a href="#热源" class="headerlink" title="热源"></a>热源</h2><p>添加热载荷</p>
+<img src="03-热分析/image-20241017151321473.png">
+
+<img src="03-热分析/image-20241017151404417.png">
+
+
+
+<img src="03-热分析/image-20241017151434558.png">
+
+
+
+<img src="03-热分析/image-20241017151458476.png">
+
+
+
+<img src="03-热分析/image-20241017151520936.png">
+
+
+
+<img src="03-热分析/image-20241017151605241.png">
+
+
+
+<img src="03-热分析/image-20241017151637824.png">
+
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><img src="03-热分析/image-20241017151919690.png">
+
+
+
+<img src="03-热分析/image-20241017152026541.png">
+
+
+
+<h2 id="划分网格"><a href="#划分网格" class="headerlink" title="划分网格"></a>划分网格</h2><img src="03-热分析/image-20241017152059510.png">
+
+
+
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p>切面图：可发现单风扇在左侧的降温作用明显，右侧的散热器发热温度高</p>
+<img src="03-热分析/image-20241017152841366.png">
+
+<p>流动轨迹</p>
+<img src="03-热分析/image-20241017153310178.png">
+
+
+
+
+
+
+
+
+
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

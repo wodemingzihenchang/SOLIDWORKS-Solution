@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2022-09-15 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="PDM卸载向导"><a href="#PDM卸载向导" class="headerlink" title="PDM卸载向导"></a>PDM卸载向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类以及 PDM 的安装向导</p>
+<span id="more"></span>
+
+<h1 id="卸载客户端"><a href="#卸载客户端" class="headerlink" title="卸载客户端"></a>卸载客户端</h1><p>以下步骤允许您“干净地”重新安装Enterprise PDM 客户端，同时移除通常在您卸载 Enterprise PDM 之后残留的注册表项和文件。</p>
+<p>!!!警告!!! 仅在未安装服务器组件的客户端电脑上使用这些步骤。如果在已安装存档服务器或数据库服务器的系统上按照这些说明操作，现有文件库可能会停止运行。</p>
+<p>1.在客户端上的本地库视图中检入任何已检出的文件</p>
+<p>2.移除所有本地库视图（在资源管理器中右键单击每个视图，然后选择“删除文件库视图”）</p>
+<p>3.通过控制面板卸载 SOLIDWORKS Enterprise PDM</p>
+<p>4.重新启动电脑以释放任何已加载的程序文件或插件 DLL</p>
+<p>5.删除 Enterprise PDM 特定注册表项：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorksEnterprise</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorksEnterprise</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorksEnterprise</span><br></pre></td></tr></table></figure>
+
+<p>6.选择“开始”菜单。键入 %localappdata%。按 Enter 键。进入 SOLIDWORKS 文件夹。删除“SOLIDWORKS Enterprise PDM”或”SOLIDWORKS PDM“子文件夹</p>
+<p>7.删除安装程序所在文件夹（如果有残留）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c:\Program Files\SolidWorksEnterprise PDM\（根据自己电脑实际安装位置）</span><br><span class="line">c:\Program Files(x86)\SolidWorks Enterprise PDM\（同上）</span><br></pre></td></tr></table></figure>
+
+<h1 id="卸载服务器"><a href="#卸载服务器" class="headerlink" title="卸载服务器"></a>卸载服务器</h1><p>一般不动服务器，谢谢</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2023-09-30 23:29:40</span>
+</div>
+
+<div id="article"><h1 id="内存不足问题"><a href="#内存不足问题" class="headerlink" title="内存不足问题"></a>内存不足问题</h1><p>-A</p>
+<p>-B：增加 Speedpak 对内存影响的说明</p>
+<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>“SOLIDWORKS 资源监控器”检测 “内存使用”限制超过 78% 时，将显示一系列警告。</p>
+<img src="提示内存不足问题/image1.png">
+
+<p>SOLIDWORKS 资源监控器：用于监视您的 SOLIDWORKS软件或您的系统所使用的资源。当您运行的资源不足时，（大概是占用超 70%就开始提示）SOLIDWORKS资源监控器在 Windows任务栏的通知区域中提供信息，帮助您采取适当行动以避免系统故障或丢失数据。</p>
+<p>你可能需要了解的内存小知识：<strong>即：计算机内存使用&#x3D;物理内存+虚拟内存</strong></p>
+<p>“内存使用”：是系统提供或预留给 SOLIDWORKS以及任何其他运行在计算机上的进程的内存量。操作系统会建立”内存使用”的限制，即物理随机存储器(RAM) 的内存加上您的虚拟内存（分页内存）大小。（例如：计算机有 32 GB 的RAM，虚拟内存（分页内存）大小是 8 GB，那么”内存使用”限制为 40 GB）</p>
+<p>Windows资源包括：</p>
+<p>▪ 物理内存——系统中RAM的数量。<br>▪ 虚拟内存——Windows 为作为内存使用的一部分硬盘空间。<br>▪ 桌面堆——为用户对象(如窗口、菜单、游标、图标和菜单键盘快捷方式)保留的操作系统内存<br>▪ GDI对象——支持字体、位图、笔刷、钢笔和绘图表面等图形的资源</p>
+<h2 id="方法1虚拟内存"><a href="#方法1虚拟内存" class="headerlink" title="方法1虚拟内存"></a>方法1虚拟内存</h2><p>验证分页文件大小配置。建议使用”系统自动分配大小”。要验证您的分页文件大小，请执行以下步骤：</p>
+<p>1.转至”控制面板”&gt;“系统”。单击”高级系统设置”。</p>
+<img src="提示内存不足问题/image2.png">
+
+<p>2.在”性能”组中，单击”设置”。</p>
+<img src="提示内存不足问题/image3.png">
+
+<p>3.单击”高级”选项卡。在”虚拟内存”组中，单击”更改”。</p>
+<img src="提示内存不足问题/image4.png">
+
+<p>4.确保”系统自动分配大小”选项至少在一个驱动器上处于激活状态。</p>
+<img src="提示内存不足问题/image5.png">
+
+<p>通过分页文件确保操作系统和其他进程有更多的可用内存。例如，如果您没有分页文件，那么操作系统就不得不将物理内存提供给运行的进程。在您的计算机上可能有一个需要<br>2 GB 内存的进程，但仅使用了 500 MB。这意味着操作系统要强制预留 2 GB<br>的物理内存，不得由其他进程使用，而其中有 1.5 GB 物理内存未被激活使用。</p>
+<h2 id="方法2排除消耗内存最多进程"><a href="#方法2排除消耗内存最多进程" class="headerlink" title="方法2排除消耗内存最多进程"></a>方法2排除消耗内存最多进程</h2><p>1.按下 Ctrl + Alt + Delete 并启动 Windows®”任务管理器”。</p>
+<p>2.单击”性能”选项卡，然后单击”打开资源监视器”。</p>
+<img src="提示内存不足问题/image6.png">
+
+<p>3.单击”内存”选项卡。</p>
+<p>4.单击”提交<br>(KB)”列标题按降序排列。消耗提交内存最多的进程会显示在最顶部。</p>
+<p>（如果有其他占用异常大的进程，则可用考虑临时退出，为 SW 设计让出资源）</p>
+<img src="提示内存不足问题/image7.png">
+
+<p>利用该信息了解和调查管理消耗最多提交内存的进程的必要步骤。您可以尝试结束那些不需要的进程。</p>
+<p>如果进程是基本进程，则调查其占用太多提交内存的原因。</p>
+<p>如果进程不是 SOLIDWORKS进程，且您需要进一步协助，请咨询开发此进程的公司的支持团队。</p>
+<p>如果您需要计算机上运行的所有进程，并且确定所有进程均按预期运行，那么您可能需要为您的计算机安装更多的物理内存。</p>
+<h2 id="方法3使用Speedpak"><a href="#方法3使用Speedpak" class="headerlink" title="方法3使用Speedpak"></a>方法3使用Speedpak</h2><p>本次测试数据：6000+零部件（独立零件 1500 个），总装文件大小：95.4MB。全部文件大小：1.07GB。单纯还原打开需要7.8GB，全部部件Speedpak，如图的内存占用从 9GB 减少至 2GB，大大减少内存的占用。</p>
+<p>关于 Speedpak 的使用方法，可以往期文章或视频。</p>
+<img src="提示内存不足问题/image10.png">
+
+<h2 id="方法4关闭提示"><a href="#方法4关闭提示" class="headerlink" title="方法4关闭提示"></a>方法4关闭提示</h2><p>如果一切都正常，那可以关闭 SOLIDWORKS Resource Monitor 的所有通知</p>
+<img src="提示内存不足问题/image-20240513115730933-17155726512911.png">
+
+<h2 id="方法5GDI设置"><a href="#方法5GDI设置" class="headerlink" title="方法5GDI设置"></a>方法5GDI设置</h2><p>通常情况下，用户看到该错误时，并不是RAM不足的原因（特别是有用户已经将内存加到了16GB或者32GB），而是GDI对象或用户对象达到了极限。我们可以通过修改注册表来解决这个问题。</p>
+<p>浏览到如下位置，</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows</span><br></pre></td></tr></table></figure>
+
+<p>设置以下的值：</p>
+<p>a) GDIProcessHandleQuota ：256 ~ 65536，默认值为10000（十进制）可适当增加数值；</p>
+<p>b) USERProcessHandleQuota ：200 ~ 18000，默认值为10000（十进制）可适当增加数值。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>这个错误信息不一定真的是客户的实际物理内存完全不够了，出现内存耗尽的可能原因常见的有：</p>
+<h2 id="内存耗尽"><a href="#内存耗尽" class="headerlink" title="内存耗尽"></a>内存耗尽</h2><p>内存耗尽</p>
+<img src="提示内存不足问题/image-20240812120902006.png">
+
+
+
+<h3 id="情况1：系统"><a href="#情况1：系统" class="headerlink" title="情况1：系统"></a>情况1：系统</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">错误模块名称: windows.storage.dll，版本: 10.0.19041.4412，时间戳: 0x7a515b73</span><br><span class="line">错误应用程序路径: D:\PROGRA~1\SOLIDW~1\SOLIDW~1\SLDWORKS.exe</span><br><span class="line">错误模块路径: C:\Windows\SYSTEM32\windows.storage.dll</span><br><span class="line"></span><br><span class="line">这里的windows.storage.dll看似是跟系统特别是存储相关的，您可以首先尝试一下重命名SolidWorks注册表：(HKEY_CURRENT_USER\Software\Solidworks)</span><br><span class="line"></span><br><span class="line">如果这个方法不起作用的话，再尝试按以下微软官方推荐方法修复Windows系统：</span><br><span class="line">在管理员命令提示符下键入以下命令：sfc /SCANNOW及</span><br><span class="line">Dism /Online /Cleanup-Image /ScanHealth</span><br><span class="line">这条命令将扫描全部系统文件并和官方系统文件对比，扫描计算机中的不一致情况。</span><br><span class="line">Dism /Online /Cleanup-Image /CheckHealth</span><br><span class="line">这条命令必须在前一条命令执行完以后，发现系统文件有损坏时使用。</span><br><span class="line">DISM /Online /Cleanup-image /RestoreHealth</span><br><span class="line">这条命令是把那些不同的系统文件还原成官方系统源文件。</span><br><span class="line">完成后重启，再键入以下命令：sfc /SCANNOW，</span><br><span class="line">检查系统文件是否被修复。</span><br><span class="line">以上命令可以直接复制到命令提示符中运行。</span><br></pre></td></tr></table></figure>
+
+<h3 id="情况2：插件"><a href="#情况2：插件" class="headerlink" title="情况2：插件"></a>情况2：插件</h3><p>使用PLM相关插件，启用时，会在小零件情况下也发生“内存耗尽，程序正在终止”的提示。</p>
+<h3 id="情况3：服务"><a href="#情况3：服务" class="headerlink" title="情况3：服务"></a>情况3：服务</h3><p>开始&gt; 运行 &gt; 输入 ‘msconfig’ ，回车 </p>
+<p>到服务标签页，勾选‘隐藏所有 Microsoft 服务’ </p>
+<p>去除勾选所有服务(包含所有杀毒软件的服务，这些保留’SolidWorks Licensing Service’&#x2F;SolidWorks Electrical Collaborative Server&#x2F; Dassault services&#x2F;NVIDIA and office)</p>
+<p>到开机启动标签页</p>
+<p>去除Microsoft 、NVIDIA、office之外的所有服务器 </p>
+<p>测试是否有相同问题，如果没有，将其他服务器一个一个的勾选回来，重复操作设置 &gt;&gt;确认时哪个第三方服务有影响。</p>
+<h3 id="情况4：内存检查"><a href="#情况4：内存检查" class="headerlink" title="情况4：内存检查"></a>情况4：内存检查</h3><p>使用VMMａｐ工具检查SOLIDWORKS实际使用虚拟内存情况，这个是Windows的官方工具，下载路径： <a target="_blank" rel="noopener" href="http://technet.microsoft.com/en-us/sysinternals/dd535533.aspx">http://technet.microsoft.com/en-us/sysinternals/dd535533.aspx</a> 	</p>
+<p>• 先开启SOLIDWORKS，然后运行这个工具，在列表里面选择sldworks.exe进程，在出现内存耗尽信息的时候，可以F5刷新： </p>
+<img src="提示内存不足问题/image-20241209200851570.png">
+
+<p>• 看Largest 列，对应Free, 是否有足够的内存 </p>
+<p>• 看Heap行，也就是堆栈层，Commited列，是否占用很大内存。如果是，那么可能是存在堆栈数据内存溢出的情况。同样原理，也可以通过Commited列，看是否有其他类型内存溢出。 </p>
+<img src="提示内存不足问题/image-20241209203206191.png">
+
+<p>• 可能刚开始的时候SOLIDWORKS刚运行不会有内存耗尽的情况，但是可以着重观察，SOLIDWORKS运行一段时间后，或者打开某个大型装配体，图纸又关闭后，重新打开或者编辑某个简单零件的时候，看内存使用和释放情况。 </p>
+<h2 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h2><p>客户硬件确实有问题。例如出现了内存泄漏。</p>
+<h2 id="内存占用"><a href="#内存占用" class="headerlink" title="内存占用"></a>内存占用</h2><p>客户设备上可用内存空间有限，在开启一些大型装配体或者文件，或者使用相对需要占用较多内存的命令，例如进行仿真分析等，出现内存耗尽，请和客户确认，是否他们仅在开启文件的时候出现内存耗尽的错误。</p>
+<h2 id="特定文件"><a href="#特定文件" class="headerlink" title="特定文件"></a>特定文件</h2><p>客户的部分文件有问题，打开文件，显示内存耗尽，这个也同样要客户确认，内存耗尽，是否就是打开一些特定文件，或者包含有一些文件的装配体，就会出现。</p>
+<p><strong>新建文件检查：</strong>硬件和文件都没有问题，随机打开一个新建文件，部分电脑打开图纸，就会显示内存耗尽，这是之前的已知问题，和客户登录账号有特定字符或者空格有关，<!-- 详细可以参考QA00000264216解决方案也有，是因为windows的临时文件夹有空格或者没有短名称 --></p>
+<h2 id="Toolbox"><a href="#Toolbox" class="headerlink" title="Toolbox"></a>Toolbox</h2><p>有一部分客户端上toolbox有问题，开启的SOLIDWORKS Toolbox Utilities情况下，会有内存耗尽的错误，请帮客户确认，是否客户是在有开启toolbox的情况下，出现的内存耗尽错误。</p>
+<h2 id="PDM"><a href="#PDM" class="headerlink" title="PDM"></a>PDM</h2><p>还有部分客户端是由于文件在PDM中存储，开启PDM add-in的时候，打开部分特定文件会出现内存耗尽或者系统可用资源低的错误。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

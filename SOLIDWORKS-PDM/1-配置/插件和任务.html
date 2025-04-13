@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="PDM插件和任务"><a href="#PDM插件和任务" class="headerlink" title="PDM插件和任务"></a>PDM插件和任务</h1><span id="more"></span>
+
+<p>通过管理工具中的任务特征，可配置、运行和监控常用的Enterpise PDM 文件操作任务。这些任务由通过 Enterprise PDM API创建的插件定义</p>
+<img src="插件和任务/任务.png">
+
+<h2 id="1添加插件-任务"><a href="#1添加插件-任务" class="headerlink" title="1添加插件&amp;任务"></a>1添加插件&amp;任务</h2><p>1、通过使用插件，您可以更好地配置 PDM</p>
+<p>2、新插件：加载.dll 文件</p>
+<p>3、调试插件：您无需将插件添加到库也可调试该插件。调试时，插件将从编译程序将之注册的地方加载。其他用户不会受到插件的影响。</p>
+<img src="插件和任务/输入任务.png">
+
+<h2 id="2配置任务主机"><a href="#2配置任务主机" class="headerlink" title="2配置任务主机"></a>2配置任务主机</h2><p>通常，整个操作都需要标准权限或仅需要管理员登录名。并且需要有电脑设置成【任务主机配置】这样，该电脑就能进行插件任务的运行。在“ 插件”上设置一个选中标记（这需要提升的权限或管理员权限）</p>
+<img src="插件和任务/任务主机配置.png">
+
+<p>接下来打开管理员面板，右键单击该任务，然后按“打开”。转到“执行方法”，然后在您的计算机名称上打勾。完成</p>
+<img src="插件和任务/执行方法.png">
+
+<p>在客户端里的命令设置可以从【任务-菜单命令】里设置。命令按钮会在客户端的菜单里显示。</p>
+<img src="插件和任务/任务菜单.png">
+
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p>您可以使用任务列表对话框查看任务状态、手动启动任务、查看已完成任务的详细信息，以及设置时间间隔以刷新未决任务列表。 也可以暂停和恢复任务。</p>
+<img src="插件和任务/任务列表.png">
+
+<h1 id="dispatch"><a href="#dispatch" class="headerlink" title="dispatch"></a>dispatch</h1><p><a target="_blank" rel="noopener" href="https://littleboy97.gitee.io/_A/SOLIDWORKS-PDM/3-%E6%8A%80%E5%B7%A7/PDM%E6%8F%92%E4%BB%B6dispatch.html">PDM插件dispatch</a></p>
+<h1 id="SWTaskAdd"><a href="#SWTaskAdd" class="headerlink" title="SWTaskAdd"></a>SWTaskAdd</h1><p>为确保插件（如 SOLIDWORKS Task 插件）的最新版本正在运行，您必须手动升级插件。</p>
+<p>将文件保管库升级到新的 Service Pack 或版本时，现有的 加载项不会自动更新。这是为了防止 覆盖自定义项的加载项。</p>
+<p>例如，您可能已自定义由 SOLIDWORKS 任务插件。您可以继续使用自定义任务，而不升级。 但是，您将无法使用新的任务功能，并且可能会遇到问题 启动任务并处理升级的 SOLIDWORKS 文件。</p>
+<p>自 升级 这 任务 手动地 复制 .cex 文件 那 包含 SWTaskAdd-in、 转换 设计检查器和打印 任务。 这 位置 之 .cex 文件取决于 安装 之 客户端。如果安装客户端 通过 在 InstallShield 向导中，将 .cex 文件复制到 C：\Program Files\SOLIDWORKS PDM\Default Data\ 文件夹。 如果安装 客户 通过 SOLIDWORKS 安装管理程序，将 .cex 文件复制到 C：\Program Files\SOLIDWORKS Corp\Default Data\ 文件夹。您导入 这些文件中的一个或多个，用于更新 SWTaskAdd-in 及其任务 支持。</p>
+<p>内容</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_determining_current_versions_EPDM_SWTaskAddin.htm">确定 SOLIDWORKS PDM 和 SOLIDWORKS Task 插件的当前版本</a></p>
+<p>为确保您拥有 SOLIDWORKS Task 插件的最新更新，SOLIDWORKS PDM Professional 版本和 SWTaskAddin 版本应相同。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_performing_SWTaskAddin_upgrade.htm">执行 SWTaskAddin 升级（仅限 SOLIDWORKS PDM Professional）</a></p>
+<p>如果 SWTaskAddin 的版本低于 SOLIDWORKS PDM Professional 的版本，您可以通过导入 .cex 文件来升级 SWTaskAddin。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_upgrading_tasks.htm">升级任务</a></p>
+<p>升级 SWTaskAddin 后，可以导入最新版本的“转换”、“打印”和“设计检查器”任务。</p>
+</li>
+</ul>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

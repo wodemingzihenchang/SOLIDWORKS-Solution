@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2024-05-19 16:21:27</span>
+</div>
+
+<div id="article"><h1 id="大型装配体处理"><a href="#大型装配体处理" class="headerlink" title="大型装配体处理"></a>大型装配体处理</h1><p>个装配体的复杂程度超出了你的电脑系统资源极限，影响了正常的工作效率</p>
+<p>“大”装配体会引起下列功能变慢：<br>▪ 打开和保存<br>▪ 重建模型<br>▪ 创建工程图<br>▪ 旋转和查看<br>▪ 插入零部件<br>▪ 切换窗口<br>▪ 配合过程</p>
+<p>有太多细节或太多特征的部件<br>▪ “细节层次”高设置的零件<br>▪ 有重建错误的部分<br>▪ 零部件来自一个访问速度慢的目录-网络位置<br>▪ 零部件以SolidWorks的旧版本格式打开</p>
+<h1 id="▪-硬件条件"><a href="#▪-硬件条件" class="headerlink" title="▪ 硬件条件"></a>▪ 硬件条件</h1><p>▪ 软件环境设置<br>▪ 装配技术</p>
+<h2 id="电脑环境"><a href="#电脑环境" class="headerlink" title="电脑环境"></a>电脑环境</h2><p>建议关闭不必要的应用程序</p>
+<p>▪ 虽然 SolidWorks对大多数杀毒软件（如NoD32、Kaspersky、Symantec等）系统保护工具显示出了良好的兼容性，但是在安装有这些系统工具的个别机器上运行 SolidWorks会出现一些莫名其妙的错误报告或提示。</p>
+<p>所以，在发现SolidWorks软件运行不畅的时候，可以关闭这些系统工具然后再次尝试运行，很多在外企工作的用户在设计过程中经常会启动“金山词霸”去浏览网页或公司内部管理加密等系统软件，特别是翻译软件的实时取词，很容易造成 SOLIDWORKS的意外跳出。</p>
+<p>▪ 以下防病毒 (AV) 应用程序已经过 SOLIDWORKS 的测试：</p>
+<p><a target="_blank" rel="noopener" href="https://www.solidworks.com.cn/sw/support/AntiVirus_SW.html">https://www.solidworks.com.cn/sw/support/AntiVirus_SW.html</a></p>
+<h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><p>首先您需要注意，当运行 SOLIDWORKS而系统的物理内存不足时， SOLIDWORKS将访问虚拟内存，这将影<br>响软件的运行效果。</p>
+<p>▪ 设置方式：</p>
+<p>右键桌面上的“此电脑”，选择“属性”，再选择左侧栏里的“高级系统设置”。然后点击“高级”选项卡，在性能一栏点“设置”，再选择“高级”选项卡，我们可以看到有一个“虚拟内存”的功能栏，点“更改”。▪ 一般设置为物理内存的1.5-2倍。</p>
+<p>更多内存操作看这里<a href="https://wodemingzihenchang.github.io/A/SOLIDWORKS/SOLIDWORKS-0/3-%E6%8A%80%E5%B7%A7/%E6%8F%90%E7%A4%BA%E5%86%85%E5%AD%98%E4%B8%8D%E8%B6%B3%E9%97%AE%E9%A2%98.html">内存不足问题</a></p>
+<h2 id="GDI设置"><a href="#GDI设置" class="headerlink" title="GDI设置"></a>GDI设置</h2><p>通常情况下，用户看到该错误时，并不是RAM不足的原因（特别是有用户已经将内存加到了16GB或者32GB），而是GDI对象或用户对象达到了极限。幸运的是，我们可以通过修改注册表来解决这个问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows</span><br></pre></td></tr></table></figure>
+
+<p>设置以下的值：将数值调大<br>GDIProcessHandleQuota ：256 ~ 65536，▪ 默认值为10000（十进制）；<br>USERProcessHandleQuota ：200 ~ 18000，▪ 默认值为10000（十进制）；</p>
+<img src="大型装配体处理/image-20240825114634282.png">
+
+<h1 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h1><h2 id="关闭插件"><a href="#关闭插件" class="headerlink" title="关闭插件"></a>关闭插件</h2><p>▪ 关闭不必要的插件</p>
+<img src="大型装配体处理/image-20241204172915156.png">
+
+<p>▪ 关闭RealView图形</p>
+<img src="大型装配体处理/image-20241204172816022.png">
+
+<h2 id="背景显示"><a href="#背景显示" class="headerlink" title="背景显示"></a>背景显示</h2><p>▪ 建议选择“素色”背景而不是“渐变”，这会对提升s显示性能有所帮助</p>
+<img src="大型装配体处理/image-20240610151353710.png">
+
+<h2 id="显示选项"><a href="#显示选项" class="headerlink" title="显示选项"></a>显示选项</h2><p>▪ 清除模型边线选项中的“图形动态高亮显示”“反走样边线&#x2F;草图”</p>
+<p>▪ 该选项可以使模型的边线显示的更清晰，消除模型“锯齿”现象，但会大大增加图形显示卡的负担，特别是大型装配会严重影响机器性能</p>
+<img src="大型装配体处理/image-20240610151446050.png">
+
+<h2 id="性能选项"><a href="#性能选项" class="headerlink" title="性能选项"></a>性能选项</h2><p>▪ 在系统选项中的性能里，将&lt;细节层次&gt;调至较少以减少细节显示， 从而提高 显示速度。调整图示的&lt;配合动画速度&gt;至关闭</p>
+<img src="大型装配体处理/image-20240610151330364.png">
+
+
+
+<h2 id="装配体选项"><a href="#装配体选项" class="headerlink" title="装配体选项"></a>装配体选项</h2><p>▪ 处理大型装配体时，打开&lt;大型装配体模式&gt;</p>
+<p>▪ 隐藏不必要的相关基准面面、基准轴、临时轴、辅助曲线等。</p>
+<img src="大型装配体处理/image-20240610151553189.png">
+
+<h2 id="外部参考"><a href="#外部参考" class="headerlink" title="外部参考"></a>外部参考</h2><p>▪ 保存所有时不提示只读文件的保存；</p>
+<p>▪ 保存所有时，不强制全部文档保存到当前最新版本（当然这部分能保存最新也是好的，相当于痛苦一次）</p>
+<img src="大型装配体处理/image-20241204170244621.png">
+
+<h2 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h2><p>尽量不设置过多位置的【参考的文件】，特别是网盘的路径，这将有可能造成打开速度卡慢情况</p>
+<img src="大型装配体处理/image-20241225112008336.png">
+
+<img src="大型装配体处理/image-20241225112038300.png">
+
+<h2 id="备份-恢复"><a href="#备份-恢复" class="headerlink" title="备份&#x2F;恢复"></a>备份&#x2F;恢复</h2><p>为了好的性能可以考虑关闭此功能</p>
+<p>如果备份，确保恢复文件夹位置是位于本机，且备份次数是适当的</p>
+<img src="大型装配体处理/image-20241204165528460.png">
+
+<h2 id="工程图选项"><a href="#工程图选项" class="headerlink" title="工程图选项"></a>工程图选项</h2><p>拖动工程视图时显示内容，清除之后，拖动时将仅显示视图边界。</p>
+<p>打开工程图时允许自动更新。清除此选项以更快地打开工程图</p>
+<img src="大型装配体处理/image-20240610151934981.png">
+
+<h2 id="文档属性"><a href="#文档属性" class="headerlink" title="文档属性"></a>文档属性</h2><p>将图示的&lt;上色和草稿品质HLR&#x2F;HLV分辨率&gt;向左调节，以提高显示效率</p>
+<p>此选项在图形边线的分辨率较低时显示很粗糙，如圆形显示为多边形，但这样会减轻机器的运行负担，提升速度</p>
+<img src="大型装配体处理/image-20240610151821687.png">
+
+<h1 id="打开文档问题"><a href="#打开文档问题" class="headerlink" title="打开文档问题"></a>打开文档问题</h1><p>装配体文件打开顺序：</p>
+<img src="大型装配体处理/装配体文件打开顺序.png">
+
+<img src="大型装配体处理/image-20241204164548503.png">
+
+<p>选中装配体文件，打开，检查装配体层次，从上往下打开特征树中的文件</p>
+<h2 id="打开零部件"><a href="#打开零部件" class="headerlink" title="打开零部件"></a>打开零部件</h2><p>检查的方法可以使用SW菜单栏【文件-打开】，在打开对话框内，点“参考”按钮</p>
+<img src="大型装配体处理/查看参考.png">
+
+<p>这里需着重关注下，特别是你设置了【系统选项-参考的文件】你需留意是否该路径文件访问是否正常特别是网盘路径的访问。</p>
+<img src="大型装配体处理/参考文件.png">
+
+<h2 id="更新装配体"><a href="#更新装配体" class="headerlink" title="更新装配体"></a>更新装配体</h2><p>这一步会：</p>
+<p>1、解算和更新配合关系，我们尽量避免一些【高级配合】和【机械配合】；</p>
+<p>2、解算装配体中零件阵列、镜像等、解算装配体特征</p>
+<p>3、重建文件几何体和位置</p>
+<p>4、生成特征树</p>
+<h2 id="更新图形"><a href="#更新图形" class="headerlink" title="更新图形"></a>更新图形</h2><p>所有文件打开后，渲染绘图区，完全显示</p>
+<h2 id="提示报错信息"><a href="#提示报错信息" class="headerlink" title="提示报错信息"></a>提示报错信息</h2><p>如果您的装配体存在重建过程是错误提示，软件还会弹窗提示你存在的问题</p>
+<img src="大型装配体处理/image-20241204182523588.png">
+
+<p>当然，你也可以在【系统选项-装配体】中，禁用重建检查的提醒或者不显示错误，来绕过这部分。</p>
+<h1 id="设计规范"><a href="#设计规范" class="headerlink" title="设计规范"></a>设计规范</h1><h2 id="轻化零部件"><a href="#轻化零部件" class="headerlink" title="轻化零部件"></a>轻化零部件</h2><p>在SOLIDWORKS装配体中，零部件有多种状态，分别是：还原、轻化、压缩、隐藏。不同状态的零部件占用不同的系统资源。零部件的各种状态定义如</p>
+<p><strong>还原状态：</strong>零部件的模型信息完全装入内存</p>
+<p><strong>轻化状态：</strong>零部件的模型信息部分装入内存，只在需要时才装入内存并参与运算</p>
+<p><strong>压缩状态：</strong>零部件的模型信息暂时从内存中清除，零件功能不再可用也不参与运算</p>
+<p><strong>隐藏状态：</strong>零部件的模型信息完全装入内存，但是零部件不可见</p>
+<h2 id="Speedpak"><a href="#Speedpak" class="headerlink" title="Speedpak"></a>Speedpak</h2><p>在不丢失参考的情况下生成装配体的简化配置。 操作大型的复杂装配体时，使用 SpeedPak 配置可以显著提高处理装配体及其工程图时的操作性能。</p>
+<p><a href="https://wodemingzihenchang.github.io/A/SOLIDWORKS/SOLIDWORKS-0/SW-%E8%A3%85%E9%85%8D%E4%BD%93/Speedpak.html">Speedpak使用说明</a></p>
+<h2 id="大型设计审阅模式"><a href="#大型设计审阅模式" class="headerlink" title="大型设计审阅模式"></a>大型设计审阅模式</h2><p>使用大型设计审阅是对数量级超一定量时可以考虑使用（例如我5000块的中等台式电脑，基本上在5000以上装配体会开始卡慢），可以通过该模式快速打开，并进行有限功能的编辑：</p>
+<p><strong>插入零部件</strong></p>
+<p><strong>编辑零部件：</strong>需要单独打开零部件编辑</p>
+<p><strong>配合</strong></p>
+<p><strong>测量</strong></p>
+<p><strong>可以查看文件路径</strong></p>
+<p><strong>预览最后一次保存的状态</strong>：对于单独修改了零部件，总装没保存进行更新的。我们只能看到修改前零件的样子，此处需要在大型设计审阅模式下，右键修改零件进行【更新零部件图像】。</p>
+<img src="大型装配体处理/大型设计审阅模式-更新零部件图像.png">
+
+<h2 id="配合"><a href="#配合" class="headerlink" title="配合"></a>配合</h2><p>下列配合关系的计算速度 (从快到慢):</p>
+<p>• 关系配合Relation Mates (重合.平行等)</p>
+<p>• 逻辑配合Logical Mates (宽度，齿轮，凸轮)</p>
+<p>• 距离配合Distance Mates</p>
+<p>• 限制配合Limit Mates</p>
+<h2 id="外部参考-1"><a href="#外部参考-1" class="headerlink" title="外部参考"></a>外部参考</h2><p>避免不必要的外部参考，可对其进行如下操作：</p>
+<p>▪ 关联设计用在合适的地方，可以断开，锁定</p>
+<p>▪ 阻止外部参考生成</p>
+<img src="大型装配体处理/image-20241205163343431.png">
+
+<h1 id="标准件优化"><a href="#标准件优化" class="headerlink" title="标准件优化"></a>标准件优化</h1><h2 id="报错修复"><a href="#报错修复" class="headerlink" title="报错修复"></a>报错修复</h2><h2 id="简化模型"><a href="#简化模型" class="headerlink" title="简化模型"></a>简化模型</h2><p>对于外购装配件只保留需要安装配合的零件，可将不重要装配体简化，按另存为“外部面”的零件处理。减少导入过程的格式识别和装配体数量</p>
+<img src="大型装配体处理/简化模型-保存外部面.png">
+
+<img src="大型装配体处理/简化模型-保存外部面2.png">
+
+<h2 id="Defeature"><a href="#Defeature" class="headerlink" title="Defeature"></a>Defeature</h2><p>简化装配体零部件</p>
+<img src="大型装配体处理/Defeature.png">
+
+<h2 id="特征冻结"><a href="#特征冻结" class="headerlink" title="特征冻结"></a>特征冻结</h2><p>对于部分标准件，可能存在特征修改并在装配体保存时，会进行【重建】操作。因此进行不必要的计算。</p>
+<img src="大型装配体处理/特征冻结.png">
+
+<h2 id="合并多实体"><a href="#合并多实体" class="headerlink" title="合并多实体"></a>合并多实体</h2><p>对于部分标准件，可能存在多实体的问题，可以尝试将多实体合并成单实体</p>
+<img src="大型装配体处理/合并多实体.png">
+
+<h1 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h1><p>影响因素多来自于特征数量（空间复杂度）和解算时长（时间复杂度）。</p>
+<p>对于稳定量产的零件及标准件，可以设置【冻结栏】的方式冻结特征。冻结后的特征将不参与【保存&#x2F;重建】等过程的计算，提供操作过程的运算速度</p>
+<h2 id="性能评估"><a href="#性能评估" class="headerlink" title="性能评估"></a>性能评估</h2><p>▪ 统计特征重建需要的时间。</p>
+<img src="大型装配体处理/性能评估.png">
+
+<p>▪ 避免模型细节特征可以压缩文件大小，提高速度</p>
+<p>▪ 使用贴图替代实体拉伸切除或包覆</p>
+<p>▪ 复杂模型应用冻结栏</p>
+<p>▪ 圆角倒角细节特征最后生成</p>
+<h2 id="草图"><a href="#草图" class="headerlink" title="草图"></a>草图</h2><p>草图举例设置简单求解，阵列等复制类特征，由【阵列】特征生成。</p>
+<img src="大型装配体处理/草图-阵列.png">
+
+<h2 id="阵列"><a href="#阵列" class="headerlink" title="阵列"></a>阵列</h2><p>复杂或数量多的阵列，尽量使用几何体阵列方式制作</p>
+<img src="大型装配体处理/勾选几何体阵列.png">
+
+<h2 id="钣金和焊件"><a href="#钣金和焊件" class="headerlink" title="钣金和焊件"></a>钣金和焊件</h2><p>合理利用钣金焊件等特定类型，与只用实体多特征的对比</p>
+<p>门板 的实体和钣金建模的性能对比</p>
+<p>机架 的实体和焊件建模的性能对比</p>
+<h2 id="复杂零件"><a href="#复杂零件" class="headerlink" title="复杂零件"></a>复杂零件</h2><p>装配体-性能评估找到的，影响恶劣的“复杂零件”。特征性能评估即优化性能</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

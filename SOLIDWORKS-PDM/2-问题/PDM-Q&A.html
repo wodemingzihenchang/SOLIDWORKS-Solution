@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2024-10-18 14:58:26</span>
+</div>
+
+<div id="article"><h1 id="PDM-Q-A"><a href="#PDM-Q-A" class="headerlink" title="PDM-Q&amp;A"></a>PDM-Q&amp;A</h1><span id="more"></span>
+
+<h2 id="默认材料明细表"><a href="#默认材料明细表" class="headerlink" title="默认材料明细表"></a>默认材料明细表</h2><p>是否能设置默认使用某个明细表（而不是第一个）</p>
+<p><img src="/SOLIDWORKS-Solution/PDM-Q&A/image-20250205144808837.png" alt="image-20250205144808837"></p>
+<h2 id="如何查看工作流程？"><a href="#如何查看工作流程？" class="headerlink" title="如何查看工作流程？"></a>如何查看工作流程？</h2><p>A可以在文件【属性】内可以看到。</p>
+<p><img src="/SOLIDWORKS-Solution/PDM-Q&A/image-20240617174737734.png" alt="image-20240617174737734"></p>
+<h2 id="什么是？"><a href="#什么是？" class="headerlink" title="什么是&lt;本地文件&gt;？"></a>什么是&lt;本地文件&gt;？</h2><p>A文件夹或文件以灰色显示表示其为&lt;本地文件&gt;，是不存在数据库的文件。</p>
+<p>有几个原因可能会导致您看到这些本地文件或文件夹。它们的出现通常是正常的：<br> 您登录到拥有更多访问权限的其他用户以前缓存文件的库视图，但当前用户对文件夹或文件没有读取权限。以前缓存的对象仍将在视图中。<br> 文件夹或文件已被删除、重命名或移动，而以前缓存的副本保留。<br> 文件由应用程序添加到本地视图，但未添加到库本身。因此，它们仅在本地存在。（请注意，有些文件应在本地保留，如由应用程序创建的临时文件）。</p>
+<p>清除：</p>
+<p>使用“清除本地缓存”命令或移除对话框中的本地副本（请注意，这只会处理库的部分文件，不会移除本地文件夹）。</p>
+<p><img src="/SOLIDWORKS-Solution/PDM-Q&A/image-20240703101912915.png" alt="image-20240703101912915"></p>
+<p>隐藏：</p>
+<p>右键单击管理工具中的“用户”，选择“设置”&gt;“资源管理器”选项卡，然后启用“只显示属于文件库一部分的文件”。</p>
+<p><img src="/SOLIDWORKS-Solution/PDM-Q&A/image-20240703101811326.png" alt="image-20240703101811326"></p>
+<h1 id="PDM常见问题方法"><a href="#PDM常见问题方法" class="headerlink" title="PDM常见问题方法"></a>PDM常见问题方法</h1><!-- more -->
+
+<h1 id="数据库连接问题"><a href="#数据库连接问题" class="headerlink" title="数据库连接问题"></a>数据库连接问题</h1><p>服务器数据库连接问题</p>
+<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h2 id="没能删除工作流程"><a href="#没能删除工作流程" class="headerlink" title="没能删除工作流程"></a>没能删除工作流程</h2><p>工作流程包含文件，所以不能删除</p>
+<img src="0-PDM问题方法/没能删除工作流程.png">
+
+
+
+
+
+<h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><h2 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h2><p>组属性 - 警告选项卡</p>
+<p>受影响的操作： 更改状态</p>
+<p>受影响的操作： 检入</p>
+<p>受影响的操作： 检出</p>
+<p>受影响的操作： 设置修订版</p>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2020/chinese-simplified/EnterprisePDM/Admin/IDD_GROUP_WARNING.htm">组属性 - 警告选项卡 - 2020 - SOLIDWORKS PDM 帮助</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>Windows 11 在2023年9月WIN更新 KB5030509后出现。</p>
+<p>2024 SP1已修复</p>
+<p>2024 SP0&#x2F;2023 SP5&#x2F;2022SP5 的补丁参考 QA00000308431</p>
+<img src="PDM-Q&A/Win11 PDM路径失效问题.png">
+
+
+
+<h1 id="日志错误"><a href="#日志错误" class="headerlink" title="日志错误"></a>日志错误</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>Msg&#x3D;[Microsoft][ODBC SQL Server Driver][SQL Server] DELETE语句与REFERENCE约束”FK_GroupProjectNotification_Notifications”冲突。冲突发生在数据库“vaultdb”，表“dbo”。“GroupProjectNotification”，列“NotificationID”。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="CRP文件丢失怎么办"><a href="#CRP文件丢失怎么办" class="headerlink" title="CRP文件丢失怎么办?"></a>CRP文件丢失怎么办?</h2><p>PDM报告原CRP文件丢失怎么办?</p>
+<p><img src="/SOLIDWORKS-Solution/PDM-Q&A/image-20240921130313996.png" alt="image-20240921130313996"></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.renrendoc.com/paper/159682726.html">pdm常见问题及解决办法 (renrendoc.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/157477312">这是解决SOLIDWORKS PDM问题的8个最佳步骤 - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cadsharp.com/blog/4-pdm-vault-addin-errors/#:~:text=The%20archive%20server%20could%20not%20open%20the%20Windows,dll%2C%20make%20sure%20it%E2%80%99s%20not%20blocked%20by%20windows">https://www.cadsharp.com/blog/4-pdm-vault-addin-errors/#:~:text=The%20archive%20server%20could%20not%20open%20the%20Windows,dll%2C%20make%20sure%20it%E2%80%99s%20not%20blocked%20by%20windows</a></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

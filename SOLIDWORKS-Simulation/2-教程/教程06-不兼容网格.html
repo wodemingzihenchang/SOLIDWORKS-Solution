@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2024-04-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-不兼容网格"><a href="#Simulation-不兼容网格" class="headerlink" title="Simulation-不兼容网格"></a>Simulation-不兼容网格</h1><p>本章讨论了兼容和不兼容网格划分方法在实体单元网格中的区别。兼容网格相邻零件或实体的网格波节是合并在一起的，以保证接合。如果不满足这个条件则会得到不兼容网格。</p>
+<img src="教程06-不兼容网格/6378321649016785196358108.png">
+
+<h2 id="兼容对比说明"><a href="#兼容对比说明" class="headerlink" title="兼容对比说明"></a>兼容对比说明</h2><p><strong>兼容网格</strong></p>
+<p>在兼容网格中，接触实体被网格化，以便在每个实体的网格之间存在节点到节点的对应。</p>
+<p>对应的节点可以合并(对于接合相触面)或叠加。对于无穿透接触面，会在源面和目标面上的重合节点之间创建节点到节点接触单元。基于兼容网格的结果比基于不兼容网格的结果更加准确。但是这样额外地添加约束使得网格划分器在执行网格划分时占用更多的时间。</p>
+<p><strong>非兼容网格</strong></p>
+<p>而在非兼容网格中，在每个接触实体的网格之间不存在节点到节点的对应，每个实体单独进行网格化。因此减少了完成网格划分需要的时间。</p>
+<p>在【算例属性-选项-不兼容接合选项】的约束方程式(接合的接触)来确保接触面网格的接合。</p>
+<h1 id="兼容网格"><a href="#兼容网格" class="headerlink" title="兼容网格"></a>兼容网格</h1><h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><img src="教程06-不兼容网格/image-20240430092538064.png">
+
+<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><img src="教程06-不兼容网格/image-20240430094517194.png">
+
+<h2 id="连结"><a href="#连结" class="headerlink" title="连结"></a>连结</h2><p>右键【连结-全局接触】编辑定义。</p>
+<img src="教程06-不兼容网格/image-20240430092824430.png">
+
+<img src="教程06-不兼容网格/image-20240430092852745.png">
+
+
+
+<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><img src="教程06-不兼容网格/image-20240430094634702.png">
+
+
+
+<h2 id="载荷"><a href="#载荷" class="headerlink" title="载荷"></a>载荷</h2><img src="教程06-不兼容网格/image-20240430094837819.png">
+
+
+
+<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>使用默认设置生成网格</p>
+<img src="教程06-不兼容网格/网格1.png">
+
+
+
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>可以观察到零件的变形是对称分布的，最大位移量为0.08mm</p>
+<img src="教程06-不兼容网格/兼容网格结果.png">
+
+<h1 id="不兼容网格"><a href="#不兼容网格" class="headerlink" title="不兼容网格"></a>不兼容网格</h1><h2 id="复制算例"><a href="#复制算例" class="headerlink" title="复制算例"></a>复制算例</h2><img src="教程06-不兼容网格/image-20240430095706991.png">
+
+<h2 id="连结-1"><a href="#连结-1" class="headerlink" title="连结"></a>连结</h2><p>右键【连结-全局接触】编辑定义。</p>
+<img src="教程06-不兼容网格/image-20240430092824430.png">
+
+<img src="教程06-不兼容网格/image-20240430100157087.png">
+
+<p>修改兼容网格后，原本已有的网格划分会失效，软件会提示你“重新划分网格”。</p>
+<img src="教程06-不兼容网格/image-20240430100204769.png">
+
+<h2 id="网格-1"><a href="#网格-1" class="headerlink" title="网格"></a>网格</h2><p>那默认设置生成网格即可，生成的网格在实体间的接触面上就不兼容（网格不相接）</p>
+<img src="教程06-不兼容网格/image-20240430100639395.png">
+
+<h2 id="不兼容接合选项"><a href="#不兼容接合选项" class="headerlink" title="不兼容接合选项"></a>不兼容接合选项</h2><p>在【算例属性-选项-不兼容接合选项】，可以选择不兼容网格的接合计算方式，该方式是对此类不兼容（不相接）网格的处理方法。</p>
+<ul>
+<li>自动：(默认)根据模型及求解时长自动选择接合类型。</li>
+<li>简化：采用传统接合算法</li>
+<li>更精准：</li>
+</ul>
+<img src="教程06-不兼容网格/image-20240430101158086.png">
+
+<h2 id="运行-1"><a href="#运行-1" class="headerlink" title="运行"></a>运行</h2><p>不兼容结果</p>
+<img src="教程06-不兼容网格/不兼容网格结果.png">
+
+<p>兼容结果</p>
+<img src="教程06-不兼容网格/兼容网格结果.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

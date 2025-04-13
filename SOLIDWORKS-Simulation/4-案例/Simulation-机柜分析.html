@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2024-03-19 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-机柜分析"><a href="#Simulation-机柜分析" class="headerlink" title="Simulation-机柜分析"></a>Simulation-机柜分析</h1><p>分析实例:机柜<br>问题描述:在柜体顶部指定横梁部位分别施加垂直向下的4450N载荷，并在指定焊接点位置施加垂直向下的4450N载荷，考察结构的应力及变形情况。材料:AISI304</p>
+<p>柜子模型如图10-50所示。其材料为【铝合金】&#x2F;【5052H32】，承载着4450N(1000Ib)的力，并在两个转角处的两个横梁上作用着两个4450N(1000Ib)的载荷，如图10-51所示。为了简化模型，分析中没有计入其他载荷和质量(例如搁板载荷等)。柜子底部沿着基座通过螺栓固定到地面。</p>
+<p><img src="/SOLIDWORKS-Solution/Simulation-%E6%9C%BA%E6%9F%9C%E5%88%86%E6%9E%90/image-20240319163637325.png" alt="image-20240319163637325"></p>
+<span id="more"></span>
+
+<p>混合单元的仿真</p>
+<p>【新建算例】</p>
+<p>实体</p>
+<p>钣金件</p>
+<p>焊件</p>
+<p><img src="/SOLIDWORKS-Solution/Simulation-%E6%9C%BA%E6%9F%9C%E5%88%86%E6%9E%90/image-20240319165606429.png" alt="image-20240319165606429"></p>
+<p>【连结】零部件接触删除</p>
+<p>【夹具】</p>
+<p><img src="/SOLIDWORKS-Solution/Simulation-%E6%9C%BA%E6%9F%9C%E5%88%86%E6%9E%90/image-20240319165640830.png" alt="image-20240319165640830"></p>
+<p>【外部载荷】</p>
+<p><img src="/SOLIDWORKS-Solution/Simulation-%E6%9C%BA%E6%9F%9C%E5%88%86%E6%9E%90/image-20240319165715031.png" alt="image-20240319165715031"></p>
+<p>【网格】</p>
+<p>默认网格</p>
+<p>【运行】</p>
+<p>混合单元时，默认求解器可能不支持，可以换成如图求解器。</p>
+<p><img src="/SOLIDWORKS-Solution/Simulation-%E6%9C%BA%E6%9F%9C%E5%88%86%E6%9E%90/image-20240319170036927.png" alt="image-20240319170036927"></p>
+<p>混合单元的【连结】问题，可能会出现“壳单元”和“梁单元”间的焊接不足问题。</p>
+<p>排查方法：将“壳单元”部分排查在分析之外，排除法检查。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: ICT</span>
+    <span id="post-date">2023-11-02 10:13:01</span>
+</div>
+
+<div id="article"><h1 id="技巧-干涉检查"><a href="#技巧-干涉检查" class="headerlink" title="技巧-干涉检查"></a>技巧-干涉检查</h1><p>SOLIDWORKS软件针对干涉检查提供了全方位的功能，无论是在装配体还是零部件在静态、动态的环境下都可以快速的进行干涉检查且立即以警示窗口提示将面临的干涉部位，进而快速修正或排除此干涉现象。</p>
+<h2 id="静态干涉检查"><a href="#静态干涉检查" class="headerlink" title="静态干涉检查"></a>静态干涉检查</h2><p>SOLIDWORKS的【干涉检查】，可检查设计是否存在干涉，并做出修正，减少干涉问题带来的浪费。也可针对大型组合件、多本体零件以及指定零组件来进行检查。利用SOLIDWORKS干涉检查可得知产生干涉的零组件、每个干涉部位的体积，并以高亮颜色显示。<br>在装配体环境下，点击【评估】-【干涉检查】-【计算】</p>
+<img src="干涉检查\干涉检查.png">
+
+<p>你还可以在”选项”和”显示”里，操作计算的零件及进行干涉位置的显示。</p>
+<img src="干涉检查/干涉检查选项.png">
+
+<h2 id="碰撞干涉检查"><a href="#碰撞干涉检查" class="headerlink" title="碰撞干涉检查"></a>碰撞干涉检查</h2><p>大型组合件中可常见许多的运动机构设计，较复杂的运动机构设计是很难于判别出干涉的。以往是将零组件装配作动后，才会得知是否产生干涉的现象。SOLIDWORKS移动零部件可用有效检查运动状态下的零部件干涉情况。</p>
+<ol>
+<li>在装配体环境下，点击【装配体】-【移动零部件】</li>
+<li>在选项中点击【碰撞检查】,启用’碰撞时停止’、’高亮显示面’、’声音’</li>
+<li>拖动运动的机构检查过程中的碰撞情况。</li>
+<li>（可选）检查范围可选择【所有零部件之间】或【这些零部件之间】</li>
+</ol>
+<img src="干涉检查\碰撞干涉检查.png">
+
+<h2 id="运动干涉检查"><a href="#运动干涉检查" class="headerlink" title="运动干涉检查"></a>运动干涉检查</h2><p>除了手动操作机构运动外，SW还提供的动画干涉检查的功能，通过设置实际工况下的运动步骤，有程序自身去检查该过程中会存在的干涉情况（并列出干涉对象和位置）。</p>
+<p>在装配体环境下，点击【动画】并设置好机构动画。在【动画】设计树中，右键总装配体选择“检查干涉”</p>
+<img src="干涉检查\进入动画.png">
+
+<p>选择要检测的零部件，点击立即查找。检查结果会列出在对话框的下边，并提示找到几个干涉（以及每个捕捉帧的干涉情况）</p>
+<img src="干涉检查\运动干涉检查.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>
