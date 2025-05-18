@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2024-04-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-3点弯曲测试"><a href="#Simulation-3点弯曲测试" class="headerlink" title="Simulation-3点弯曲测试"></a>Simulation-3点弯曲测试</h1><p>在此设置中，创建两个矩形体作为支撑，夹具应用于其底面，并在杆顶部的中心施加单个点载荷，如图</p>
+<p><img src="/SOLIDWORKS-Solution/3%E7%82%B9%E5%BC%AF%E6%9B%B2%E6%B5%8B%E8%AF%95/image-20250418114510406.png" alt="image-20250418114510406"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>使用对称模型&#x2F;夹具或稳定顶点夹具稳定模型的影响可以使 SOLIDWORKS Simulation 获得更可靠的结果。</p>
+<h2 id="打开插件"><a href="#打开插件" class="headerlink" title="打开插件"></a>打开插件</h2><img src="Simulation-静态分析/image-20240425173736873.png">
+
+<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>在运行第一个初始静态模拟之后，您可以启动趋势跟踪器，并将初始分析作为基线设计，以比较后续的设计更改。</p>
+<img src="Simulation-静态分析/image-20240424171345104.png">
+
+<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><p>【材料】材料:合金钢</p>
+<img src="Simulation-静态分析/指定材料.png">
+
+
+
+<h2 id="连结"><a href="#连结" class="headerlink" title="连结"></a>连结</h2><p>在杆和两个支撑之间施加“无穿透”接触，使得力将杆推入支撑并弯曲。已知结果是对称的，但此初始设置的结果表明，杆件会奇怪地偏转，就好像除了弯曲之外还在旋转。</p>
+<h2 id="夹具"><a href="#夹具" class="headerlink" title="夹具"></a>夹具</h2><p>因为曲柄固定环处会产生旋转运动，所以在此圆柱面上作“固定铰链”约束。</p>
+<img src="Simulation-静态分析/image-20240424173250522.png">
+
+<p>在螺丝固定位置，我们选择“固定几何体”</p>
+<img src="Simulation-静态分析/image-20240424173358244.png">
+
+
+
+<h2 id="外部载荷"><a href="#外部载荷" class="headerlink" title="外部载荷"></a>外部载荷</h2><p>在有限元分析中，要确保静态分析，除了载荷静态之外，有一个非常重要的因素:整个结构所有的部件都必须保证静态，不能存在可能发生的运动趋势。</p>
+<img src="Simulation-静态分析/image-20240424173737984.png">
+
+
+
+<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>默认网格</p>
+<img src="Simulation-静态分析/image-20240603112043503.png">
+
+<p>应用网格控制</p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><img src="Simulation-静态分析/image-20240424173814227.png">
+
+<p>应力</p>
+<img src="Simulation-静态分析/image-20240603112117776.png">
+
+<p>位移</p>
+<img src="Simulation-静态分析/image-20240603112121577.png">
+
+<p>应变</p>
+<img src="Simulation-静态分析/image-20240603112126051.png">
+
+<p>安全系数</p>
+<img src="Simulation-静态分析/image-20240424173954278.png">
+
+
+
+<p>检查最危险（最小）位置</p>
+<img src="Simulation-静态分析/image-20240424174109425.png">
+
+<h1 id="选项-1：利用对称来稳定模型"><a href="#选项-1：利用对称来稳定模型" class="headerlink" title="选项 1：利用对称来稳定模型"></a>选项 1：利用对称来稳定模型</h1><p>正是出于这个原因，应该强制稳定这个模型以产生对称的结果。在此过程中，必须考虑确保对模型的调整不会导致程序给出无效结果。</p>
+<p>在模型本身和载荷对称的情况下，应在仿真中使用对称性。SOLIDWORKS Simulation 中的对称夹具是相对不可回避的约束，可防止应力奇异性的生成，同时还可以稳定模型中的 1 个平移自由度和 2 个旋转自由度。</p>
+<p>图 3 显示了沿长对称平面一分为二的模型。将模型切成两半产生的平面会应用一个 “对称” 类型的夹具（位于 “高级夹具 ”下）。</p>
+<p><img src="/SOLIDWORKS-Solution/3%E7%82%B9%E5%BC%AF%E6%9B%B2%E6%B5%8B%E8%AF%95/image-20250418114741234.png" alt="image-20250418114741234"></p>
+<p>鉴于这是一个半模型，因此需要将施加到模型的力设置为其值的一半，以便与完整模型类似。不过，对于压力负载，这不需要考虑。通过使用四分之一对称模型，可以更进一步地实现这种对称设置，如图 5 所示。</p>
+<p><img src="/SOLIDWORKS-Solution/3%E7%82%B9%E5%BC%AF%E6%9B%B2%E6%B5%8B%E8%AF%95/image-20250418114902533.png" alt="image-20250418114902533"></p>
+<p>四分之一模型产生的结果与半模型相同，优点是使用更少的网格单元和更快的求解时间，或者具有更密集的网格通常可以产生更好的结果。</p>
+<h1 id="选项-2：稳定整个模型"><a href="#选项-2：稳定整个模型" class="headerlink" title="选项 2：稳定整个模型"></a>选项 2：稳定整个模型</h1><p>在许多情况下，由于模型不对称，因此无法使用对称性。因此，需要利用其他夹具技术来稳定整个模型并产生有效的结果。在下一个示例中，被弯曲的物体不是均匀的棒材，而是在一侧放置不对称灯泡的棒材，如图 7 所示。</p>
+<p><img src="/SOLIDWORKS-Solution/3%E7%82%B9%E5%BC%AF%E6%9B%B2%E6%B5%8B%E8%AF%95/image-20250418115057758.png" alt="image-20250418115057758"></p>
+<p>同样，这个完整的模型在不稳定时也会受到旋转的影响，如图 8 所示。</p>
+<p>补救措施是在模型上对结果影响最小的位置创建夹具。这导致夹具被放置在伪对称的可能位置（理论上应该在模型上的给定方向上位移最小的位置）。</p>
+<p>对于此模型，在模型上放置了一条分割线曲线，以在这些位置生成顶点，以便与自定义的“使用参考几何”夹具一起使用。这些夹具的定义是为了防止伪对称顶点上的移动，以防止模型在支撑块上滑动&#x2F;滚动，如图 9 所示。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

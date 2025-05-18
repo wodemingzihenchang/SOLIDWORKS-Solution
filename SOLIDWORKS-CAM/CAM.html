@@ -28,11 +28,13 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
     <!-- 外部链接打开新的窗口跳转 -->
     </ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
-    <span id="post-author">作者: ICT</span>
+    <span id="post-author">作者: </span>
     <span id="post-date">2024-03-10 00:21:22</span>
 </div>
 
@@ -73,7 +75,7 @@
 <p>毛坯类型<br>包络块、<br>预定义的包络块、或者，您可以选择使用预定义的边框，选择一个草图并挤压它，<br>拉伸草图、<br>圆柱、<br>STL文件、<br>零件文件</p>
 <p>坐标系</p>
 <p>边界框偏移</p>
-<p>毛坯尺寸&amp;数量<br>然后显示库存的总大小下面的“库存大小”区域，并将更新</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>毛坯尺寸&amp;数量<br>然后显示库存的总大小下面的“库存大小”区域，并将更新</p>
 <p>对于进给量和速度，以确保刀具在铣削过程中不会断裂</p>
 <p>设置-铣削设置<br>生成2.5轴的铣削方向及看粗下来的加工特征</p>
 <p>提取加工特征<br>SOLIDWORKS CAM使用基于特征的加工方法，因此在创建刀具路径之前要确定需要加工的特征。</p>
@@ -156,6 +158,12 @@
 <p>排序<br>排序操作”对话框中的“排序”选项卡提供了基于操作类型和工具进行排序的选项。</p>
 <p>组合操作<br>在这节课中，我将向您展示如何组合和链接操作，以帮助简化和优化您的工具路径。</p>
 <p>连接操作<br>操作可以在以下情况下进行链接（关键在特征要相同）:<br>1、在装配模式下，在不同的零件上以不同的方向加工相同的特征时，可以将这些特征的操作联系起来，以便在所有零件上加工相同的特征。<br>2、当在单个零件上加工相似特征时，可以将操作链接起来，以便加工相同的特征。</p>
+<h1 id="3轴铣削操作"><a href="#3轴铣削操作" class="headerlink" title="3轴铣削操作"></a>3轴铣削操作</h1><p>对于铣削复杂的多表面特征，SOLIDWORKS CAM配备了三个刀具路径，可以快速轻松地对大多数挑战进行编程。在这些情况下，机器时间可能会有所不同：</p>
+<p>区域间隙：区域间隙是3 轴粗加工操作。此循环通过在毛坯上进行一系列平行切割，或通过向毛坯挖空，以逐渐减小的 Z 深度水平去除毛坯或包含区域与选定特征之间的材料。切削深度可以是恒定的或可变的。</p>
+<p>Z 级：Z 级循环是一种精加工轮廓循环，通过进行一系列水平、平面切割来去除材料。根据指定的表面光洁度，切割沿着 Z 轴递减的特征轮廓进行。切割从模型的最高位置开始并向下进行。</p>
+<p>平坦区域：平坦区域循环使用型腔出样模式从平坦且平行于XY 加工平面的特征面上去除材料。刀具路径仅在完全平坦的区域上生成。如果面&#x2F;曲面具有很小的梯度，则不会生成刀具路径。该循环可用于已清除多余材料的精加工，并支持单个或多个切削深度。</p>
+<p> <strong>多表面特征示例</strong></p>
+<p>我们将加工下面零件的顶部。我们将使用毛坯零件的轮廓草图，因为它是作为毛坯提供的。库存的顶部中心将是我们的工作偏移。</p>
 <h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p>铣削装配体教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\ mill_assemblies_tutorial.pdf<br>铣削教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\mill_tutorial.pdf<br>设置表教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\setup_sheets_tutorial.pdf<br>基于公差的价格TBM：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\tbm_user_guide.pdf<br>TechDB 设置指南：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\techdb_settings_guide.pdf<br>工艺数据库 (TechDB) 教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\technology_database_tutorial.pdf<br>车削教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\turn_tutorial.pdf</p>
 </div>
  			<!-- 引入正文 -->

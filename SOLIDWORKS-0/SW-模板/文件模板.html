@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2024-06-04 11:04:46</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS文件模板"><a href="#SOLIDWORKS文件模板" class="headerlink" title="SOLIDWORKS文件模板"></a>SOLIDWORKS文件模板</h1><p>使用模板能节省创建新文档的时间，避免因手动预设录入产生的错误，如：设置文档属性，填写标题栏信息，处理BOM表格等等。</p>
+<p>SOLIDWORKS文件模板包括有：如下3类</p>
+<ul>
+<li>零件.prtdot</li>
+<li>装配体.asmdot</li>
+<li>工程图模板.drwdot</li>
+</ul>
+<h1 id="制作零件模板"><a href="#制作零件模板" class="headerlink" title="制作零件模板"></a>制作零件模板</h1><h2 id="文档属性"><a href="#文档属性" class="headerlink" title="文档属性"></a>文档属性</h2><p>这部分可以参考：<a href="%5BSOLIDWORKS-Solution%5D(https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/SOLIDWORKS-0/SW-%E6%A8%A1%E6%9D%BF/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7.html)">SOLIDWORKS属性</a></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>表达式</th>
+<th>评估的值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>所在文件夹</td>
+<td>文字</td>
+<td>$PRP:”SW-Folder Name”</td>
+<td>E:\零件-自定义属性\</td>
+</tr>
+<tr>
+<td>文件名</td>
+<td>文字</td>
+<td>$PRP:”SW-文件名称”</td>
+<td>零件-自定义属性</td>
+</tr>
+<tr>
+<td>…</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h2><img src="文件模板/image-20240614100214897.png">
+
+<h1 id="制作钣金模板"><a href="#制作钣金模板" class="headerlink" title="制作钣金模板"></a>制作钣金模板</h1><h2 id="钣金参数"><a href="#钣金参数" class="headerlink" title="钣金参数"></a>钣金参数</h2><p>钣金模板相比零件模板会多出钣金特有的属性，例如：”展开长宽”、“板厚”、“折弯因子”等等。</p>
+<img src="文件模板/image-20250502120718498.png">
+
+<p>规格表</p>
+<h2 id="文档属性-1"><a href="#文档属性-1" class="headerlink" title="文档属性"></a>文档属性</h2><h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><h1 id="制作钣金模板-1"><a href="#制作钣金模板-1" class="headerlink" title="制作钣金模板"></a>制作钣金模板</h1><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>焊件切割清单自动生成长、宽、厚规格</p>
+<h1 id="制作装配体模板"><a href="#制作装配体模板" class="headerlink" title="制作装配体模板"></a>制作装配体模板</h1><h2 id="文档属性-2"><a href="#文档属性-2" class="headerlink" title="文档属性"></a>文档属性</h2><p>装配体一般需要定制的内容不多</p>
+<h1 id="制作工程图模板"><a href="#制作工程图模板" class="headerlink" title="制作工程图模板"></a>制作工程图模板</h1><p>图库</p>
+<h2 id="工程图标题栏"><a href="#工程图标题栏" class="headerlink" title="工程图标题栏"></a>工程图标题栏</h2><p><strong>属性映射</strong></p>
+<p>名称一致就可以建立链接，其中材料，重量、图纸比例的值不用输入，solidworks已经计算了，直接就<br>可以引用。其他需要手工输入的，将它放于零件属性（建议放于零件）。 </p>
+<h2 id="表格位置"><a href="#表格位置" class="headerlink" title="表格位置"></a>表格位置</h2><p>材料明细表定位点位置</p>
+<h2 id="文档属性-3"><a href="#文档属性-3" class="headerlink" title="文档属性"></a>文档属性</h2><p>尺寸</p>
+<p>字体</p>
+<h3 id="文档属性-4"><a href="#文档属性-4" class="headerlink" title="文档属性"></a>文档属性</h3><p>单位</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%96%87%E4%BB%B6%E6%A8%A1%E6%9D%BF/image-20250501165259861.png" alt="image-20250501165259861"></p>
+<p>出详图</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%96%87%E4%BB%B6%E6%A8%A1%E6%9D%BF/image-20250501165357045.png" alt="image-20250501165357045"></p>
+<p>尺寸</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%96%87%E4%BB%B6%E6%A8%A1%E6%9D%BF/image-20250501165439364.png" alt="image-20250501165439364"></p>
+<p>注解</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%96%87%E4%BB%B6%E6%A8%A1%E6%9D%BF/image-20250501165811351.png" alt="image-20250501165811351"></p>
+<p>保存标准</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%96%87%E4%BB%B6%E6%A8%A1%E6%9D%BF/image-20250501165846115.png" alt="image-20250501165846115"></p>
+<h2 id="设置文件位置"><a href="#设置文件位置" class="headerlink" title="设置文件位置"></a>设置文件位置</h2><img src="文件模板/image-20240614095347532.png">
+
+<h1 id="设置默认模板"><a href="#设置默认模板" class="headerlink" title="设置默认模板"></a>设置默认模板</h1><p>如何在后续新建或导入stp模型时，使用自定义的模板文件。就需要在【系统选项-默认模板】里设置模板文件路径。</p>
+<p>1、找到【工具-选项】系统选项，默认模板。</p>
+<p>2、设置零件、装配体、工程图的默认模板，这里我所选模板是“gb_part”，实际情况按自定义模板的名称来选。</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%96%87%E4%BB%B6%E6%A8%A1%E6%9D%BF/image-20250503143620004.png" alt="image-20250503143620004"></p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>
