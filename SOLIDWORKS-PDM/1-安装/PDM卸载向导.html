@@ -41,7 +41,7 @@
 <div id="article"><h1 id="PDM卸载向导"><a href="#PDM卸载向导" class="headerlink" title="PDM卸载向导"></a>PDM卸载向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类以及 PDM 的安装向导</p>
 <span id="more"></span>
 
-<h1 id="卸载客户端"><a href="#卸载客户端" class="headerlink" title="卸载客户端"></a>卸载客户端</h1><p>以下步骤允许您“干净地”重新安装Enterprise PDM 客户端，同时移除通常在您卸载 Enterprise PDM 之后残留的注册表项和文件。</p>
+<h2 id="卸载客户端"><a href="#卸载客户端" class="headerlink" title="卸载客户端"></a>卸载客户端</h2><p>以下步骤允许您“干净地”重新安装Enterprise PDM 客户端，同时移除通常在您卸载 Enterprise PDM 之后残留的注册表项和文件。</p>
 <p>!!!警告!!! 仅在未安装服务器组件的客户端电脑上使用这些步骤。如果在已安装存档服务器或数据库服务器的系统上按照这些说明操作，现有文件库可能会停止运行。</p>
 <p>1.在客户端上的本地库视图中检入任何已检出的文件</p>
 <p>2.移除所有本地库视图（在资源管理器中右键单击每个视图，然后选择“删除文件库视图”）</p>
@@ -50,11 +50,11 @@
 <p>5.删除 Enterprise PDM 特定注册表项：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorksEnterprise</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorksEnterprise</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorksEnterprise</span><br></pre></td></tr></table></figure>
 
-<p>6.选择“开始”菜单。键入 %localappdata%。按 Enter 键。进入 SOLIDWORKS 文件夹。删除“SOLIDWORKS Enterprise PDM”或”SOLIDWORKS PDM“子文件夹</p>
+<p>6.选择“开始”菜单。键入：%localappdata%。按 Enter 键。进入 SOLIDWORKS 文件夹。删除“SOLIDWORKS Enterprise PDM”或”SOLIDWORKS PDM“子文件夹</p>
 <p>7.删除安装程序所在文件夹（如果有残留）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c:\Program Files\SolidWorksEnterprise PDM\（根据自己电脑实际安装位置）</span><br><span class="line">c:\Program Files(x86)\SolidWorks Enterprise PDM\（同上）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c:\Program Files\SolidWorksEnterprise PDM\（根据自己电脑实际安装位置）</span><br><span class="line">c:\Program Files(x86)\SolidWorks Enterprise PDM\（根据自己电脑实际安装位置）</span><br></pre></td></tr></table></figure>
 
-<h1 id="卸载服务器"><a href="#卸载服务器" class="headerlink" title="卸载服务器"></a>卸载服务器</h1><p>一般不动服务器，谢谢</p>
+<h2 id="卸载服务器"><a href="#卸载服务器" class="headerlink" title="卸载服务器"></a>卸载服务器</h2><p>一般不动服务器，谢谢</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

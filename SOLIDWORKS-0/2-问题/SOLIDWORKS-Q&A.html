@@ -38,22 +38,39 @@
     <span id="post-date">2023-11-20 23:23:31</span>
 </div>
 
-<div id="article"><h1 id="SOLIDWORKS-Q-A"><a href="#SOLIDWORKS-Q-A" class="headerlink" title="SOLIDWORKS-Q&amp;A"></a>SOLIDWORKS-Q&amp;A</h1><p>Q2025新功能“使用书签保存检查文件 ”，如果没有3DE账号或角色。是否有效？</p>
+<div id="article"><h1 id="SOLIDWORKS-Q-A"><a href="#SOLIDWORKS-Q-A" class="headerlink" title="SOLIDWORKS-Q&amp;A"></a>SOLIDWORKS-Q&amp;A</h1><h2 id="类Range的Activate方法无效"><a href="#类Range的Activate方法无效" class="headerlink" title="类Range的Activate方法无效"></a>类Range的Activate方法无效</h2><p>类Range的Activate方法无效，其实出现此问题的原因为Excel的加载项和SOLIDWORKS冲突。</p>
+<img src="SOLIDWORKS-Q&A/image-20241121094836635.png">
+
+<p><strong>解决方法为：</strong>打开Excel，选择选项，在加载项中，选择COM加载项，转到。取消勾选Officeplus加载项,点击确定。</p>
+<h2 id="sldedb初始化错误"><a href="#sldedb初始化错误" class="headerlink" title="sldedb初始化错误"></a>sldedb初始化错误</h2><p>内存不足或尝试从标准文件”C:\…\HoleWizardFavorites.sldedb”初始化数据来源时发生其它错误</p>
+<img src="SOLIDWORKS-Q&A/image-20240711095013883.png">
+
+
+
+<p>方法1：重置sldedb文件</p>
+<p>找到提示路径（C:\…\HoleWizardFavorites.sldedb）下的HoleWizardFavorites.mdb文件，把其删除，该功能正常使用</p>
+<p>方法2：确定版本</p>
+<p>使用后正常电脑的HoleWizardFavorites.mdb或.sldedb</p>
+<h1 id="3DE"><a href="#3DE" class="headerlink" title="3DE"></a>3DE</h1><h2 id="书签保存"><a href="#书签保存" class="headerlink" title="书签保存"></a>书签保存</h2><p>Q2025新功能“使用书签保存检查文件 ”，如果没有3DE账号或角色。是否有效？</p>
 <p>A</p>
 <p>CAD出现的依据是什么？</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="装配体类"><a href="#装配体类" class="headerlink" title="装配体类"></a>装配体类</h1><h2 id="替换零部件"><a href="#替换零部件" class="headerlink" title="替换零部件"></a>替换零部件</h2><p>替换零部件是替换一个还是全部</p>
+<p>和替换零部件应用所有实例有关</p>
+<img src="SOLIDWORKS-Q&A/image-20250617164704139png">
+
+
+
+<h2 id="去掉后缀"><a href="#去掉后缀" class="headerlink" title="去掉后缀"></a>去掉后缀</h2><p>Q：能把虚拟零部件的^后缀去掉嘛？</p>
+<p>A：分2部分说明：1、设计树名称可以在零部件右键【属性-零部件名称】修改，2、这种修改只会在设计树生效，在打开的零件界面或BOM表明细里，还是带^符号的。</p>
+<h2 id="CAD系列"><a href="#CAD系列" class="headerlink" title="CAD系列"></a>CAD系列</h2><p>Q：两个子装配体，就会发生一个子装配体就会有问题，内部零部件偏位，形状变化</p>
+<p>A：同名零件，他会用已打开的零件，如果那个零件坐标位置不一样，后打开的装配体就会跑偏。这个CAD系列是在2025后出现，其出现的依据是什么？</p>
 <img src="SOLIDWORKS-Q&A/CAD系列出现的依据测试１.png">
 
-
-
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="Q核心数问题"><a href="#Q核心数问题" class="headerlink" title="Q核心数问题"></a>Q核心数问题</h2><p>看使用“设计类”还是“仿真类”产品</p>
-<p>关于SW设计类的CPU核心使用问题：SW程序多线程在执行时，是由系统在多核心上分配，同时在单核运行。也就是我们无需太在意核心数，还是已主频为主（当然多核心也有利于系统分配其他程序，也有一点点效果）</p>
-<p>关于SW仿真类的CPU核心使用问题：仿真计算类的是可以多核运算。</p>
-<h1 id="装配体类"><a href="#装配体类" class="headerlink" title="装配体类"></a>装配体类</h1><p>Q：能把虚拟零部件的^后缀去掉嘛？</p>
-<p>A：分2部分说明：1、设计树名称可以在零部件右键【属性-零部件名称】修改，2、这种修改只会在设计树生效，在打开的零件界面或BOM表明细里，还是带^符号的。</p>
-<h2 id="CAD系列"><a href="#CAD系列" class="headerlink" title="CAD系列"></a>CAD系列</h2><p>这个CAD系列是在2025后出现，其出现的依据是什么？</p>
 <p>图１：是否和上传到3DE云后，下载就会按CAD系列配置来；</p>
 <p>图２：是新建的文件，就和旧版本的配置一样</p>
 <img src="SOLIDWORKS-Q&A/配置CAD系列/CAD系列.png">
+
+
 
 <p>Q：实体不相互完全剪裁</p>
 <p>A：把允许延伸勾掉就好了</p>

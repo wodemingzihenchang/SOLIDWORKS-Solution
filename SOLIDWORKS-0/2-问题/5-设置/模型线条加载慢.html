@@ -45,8 +45,18 @@
 
 <h2 id="方法-1：关闭OpenGL"><a href="#方法-1：关闭OpenGL" class="headerlink" title="方法 1：关闭OpenGL"></a>方法 1：关闭OpenGL</h2><img src="模型线条加载慢/关闭OpenGL.png">
 
-<h2 id="方法-2：检查显卡启动"><a href="#方法-2：检查显卡启动" class="headerlink" title="方法 2：检查显卡启动"></a>方法 2：检查显卡启动</h2><p>如果不能关闭关闭OpenGL。英伟达的显卡在打开软件时可以选择是：集显打开（错误），还是独显打开（正确），可右键软件程序检查。</p>
-<h2 id="方法-3：检查显卡驱动"><a href="#方法-3：检查显卡驱动" class="headerlink" title="方法 3：检查显卡驱动"></a>方法 3：检查显卡驱动</h2><p>如果不能关闭关闭OpenGL。请检查您电脑的显卡情况是否使用正常。特别是重装系统的电脑因缺少显卡驱动导致“只能打开OpenGL显示模式”。</p>
+<h2 id="方法-2：检查显卡启动"><a href="#方法-2：检查显卡启动" class="headerlink" title="方法 2：检查显卡启动"></a>方法 2：检查显卡启动</h2><p>如果不能关闭关闭OpenGL。请检查【开始&#x2F;菜单-SOLIDWORKS 工具-SOLIDWORKS RX】诊断当前SW是否使用（或能识别独立显卡）。</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%A8%A1%E5%9E%8B%E7%BA%BF%E6%9D%A1%E5%8A%A0%E8%BD%BD%E6%85%A2/image-20250617121514180.png" alt="image-20250617121514180"></p>
+<p>以英伟达显卡为例：在右键软件时，可以选择是：集显打开（错误），还是独显打开（正确）。并且在英伟达显卡控制面板程序里也可以设置显示的设置。</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%A8%A1%E5%9E%8B%E7%BA%BF%E6%9D%A1%E5%8A%A0%E8%BD%BD%E6%85%A2/image-20250617121342050.png" alt="image-20250617121342050"></p>
+<h2 id="方法-3：检查显卡驱动"><a href="#方法-3：检查显卡驱动" class="headerlink" title="方法 3：检查显卡驱动"></a>方法 3：检查显卡驱动</h2><p>如果不能关闭关闭OpenGL。请检查【开始&#x2F;菜单-SOLIDWORKS 工具-SOLIDWORKS RX】诊断您电脑的显卡情况是否使用正常。特别是重装系统的电脑因缺少显卡驱动导致“只能打开OpenGL显示模式”。</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%A8%A1%E5%9E%8B%E7%BA%BF%E6%9D%A1%E5%8A%A0%E8%BD%BD%E6%85%A2/image-20250617121515746.png" alt="image-20250617121515746"></p>
+<p>显卡是否支持，可参考：<a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification">SOLIDWORKS官网硬件认证</a></p>
+<h2 id="方法-4：强制关闭OpenGl"><a href="#方法-4：强制关闭OpenGl" class="headerlink" title="方法 4：强制关闭OpenGl"></a>方法 4：强制关闭OpenGl</h2><p>打开注册表后，依次找到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CURRENT_USER\SOFTWARE\SolidWorks\SOLIDWORKS 2018\Performance\Graphics\Hardware\Intel</span><br></pre></td></tr></table></figure>
+
+<p>点击“Intel”，设置“Workarounds”值为4000000。</p>
+<p><img src="/SOLIDWORKS-Solution/%E6%A8%A1%E5%9E%8B%E7%BA%BF%E6%9D%A1%E5%8A%A0%E8%BD%BD%E6%85%A2/image-20250617115814294.png" alt="image-20250617115814294"></p>
 </div>
  			<!-- 引入正文 -->
     </div>	

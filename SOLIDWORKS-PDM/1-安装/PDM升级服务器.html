@@ -43,13 +43,13 @@
 <p>摘要：本文详细介绍了SOLIDWORKS PDM &amp; Manage服务端的两种升级方式，以及客户端的升级和插件的更新。</p>
 <span id="more"></span>
 
-<h2 id="1-1升级许可服务器"><a href="#1-1升级许可服务器" class="headerlink" title="1.1升级许可服务器"></a>1.1升级许可服务器</h2><p>1、在安装包中找到“swlicmgr”文件夹，并双击打开。升级许可服务器License Manager Server</p>
+<h2 id="1升级许可服务器"><a href="#1升级许可服务器" class="headerlink" title="1升级许可服务器"></a>1升级许可服务器</h2><p>1、在安装包中找到“swlicmgr”文件夹，并双击打开。升级许可服务器License Manager Server</p>
 <p>2、右键“setup.exe”，选择以管理员身份运行。</p>
 <p>3、点击下一步。</p>
 <p>4、继续点击下一步。</p>
 <p>5、点击安装并等待。</p>
 <p>6、等待安装完成，点击完成，以退出安装程序。<!--卸载旧PDM--></p>
-<h2 id="1-2升级PDM服务器"><a href="#1-2升级PDM服务器" class="headerlink" title="1.2升级PDM服务器"></a>1.2升级PDM服务器</h2><p>在SWPDMServer安装包中找到“setup.exe”，右键选择以管理员身份运行。 </p>
+<h2 id="1升级PDM服务器"><a href="#1升级PDM服务器" class="headerlink" title="1升级PDM服务器"></a>1升级PDM服务器</h2><p>在SWPDMServer安装包中找到“setup.exe”，右键选择以管理员身份运行。 </p>
 <img src="PDM升级服务器/image-20231207102351034.png">
 
 <p> 点击下一步继续。</p>
@@ -88,13 +88,7 @@
 <p>等待安装完成，点击完成，以退出安装程序。</p>
 <img src="PDM升级服务器/image-20231207102504792.png">
 
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="1-3升级Manage-Server"><a href="#1-3升级Manage-Server" class="headerlink" title="1.3升级Manage Server"></a>1.3升级Manage Server</h2><p>\1.   在安装包中找到“SWManageServer”文件夹，并双击打开。 </p>
-<p>\1.   右键“setup.exe”，选择以管理员身份运行。 </p>
-<p>\1.   点击下一步，以继续安装。 </p>
-<p>\1.   点击下一步，以继续安装。 </p>
-<p>\1.   点击安装并等待。 </p>
-<p>\1.   等待安装完成，点击完成，以退出安装程序。</p>
-<h2 id="通过向导安装"><a href="#通过向导安装" class="headerlink" title="通过向导安装"></a>通过向导安装</h2><p>在安装包中找到“setup.exe”安装程序，并右键以管理员身份运行。点击确定以继续安装。勾选上以下三个服务器组件，并点击下一步。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="通过向导安装"><a href="#通过向导安装" class="headerlink" title="通过向导安装"></a>通过向导安装</h2><p>在安装包中找到“setup.exe”安装程序，并右键以管理员身份运行。点击确定以继续安装。勾选上以下三个服务器组件，并点击下一步。</p>
 <img src="PDM升级服务器/image-20231207102512301.png">
 
 <p>勾选上“不，我想继续安装SOLIDWORKS”，并点击下一步。</p>
@@ -102,10 +96,11 @@
 <p>\1.   在ManageServer的更改中填写好相关信息，并点击返回到摘要。</p>
 <p>\1.   在PDM服务器的更改中，勾选上需安装的组件（此处如不勾选PDM客户端，后续须在SWPDMServer中修改安装以添加），以及数据库名称，并点击返回到摘要。</p>
 <p>\1.   勾选上“我接受SOLIDWORKS条款”，并单击安装。</p>
-<p>参考：</p>
+<p> 参考：</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/551716084">SOLIDWORKS PDM&amp;Manage升级SOP——服务器篇 - 知乎 (zhihu.com)</a></p>
 <h2 id="降级服务器"><a href="#降级服务器" class="headerlink" title="降级服务器"></a>降级服务器</h2><p>需要备份SQL（PDM数据库.bak文件），然后做还原操作</p>
 <p><img src="/SOLIDWORKS-Solution/PDM%E5%8D%87%E7%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8/image-20241010142345054.png" alt="image-20241010142345054"></p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="数据库升级失败"><a href="#数据库升级失败" class="headerlink" title="数据库升级失败"></a>数据库升级失败</h2><p>什么原因导致 SOLIDWORKS® PDM 数据库升级 (upgrade.exe) 失败，并出现客户端日志错误“[SQL Server] The transaction log for database ‘db_name’ is full（[SQL Server] 数据库“db_name”的事务日志已满）”？</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

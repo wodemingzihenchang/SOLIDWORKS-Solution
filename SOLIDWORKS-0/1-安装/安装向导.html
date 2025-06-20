@@ -41,7 +41,11 @@
 <div id="article"><h1 id="SOLIDWORKS安装向导"><a href="#SOLIDWORKS安装向导" class="headerlink" title="SOLIDWORKS安装向导"></a>SOLIDWORKS安装向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类的安装向导</p>
 <span id="more"></span>
 
-<h1 id="配置要求："><a href="#配置要求：" class="headerlink" title="配置要求："></a>配置要求：</h1><p>注意：安装前，需检查当前电脑配置是否支持SW的安装环境（详细见下方配置要求参考）。<br><br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">SOLIDWORKS官网系统要求</a><br><br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification">SOLIDWORKS官网硬件认证</a><br><br><a target="_blank" rel="noopener" href="https://www.pugetsystems.com/recommended/">普吉网站的选配参考</a><br></p>
+<h1 id="配置要求："><a href="#配置要求：" class="headerlink" title="配置要求："></a>配置要求：</h1><p>注意：安装前，需检查当前电脑配置是否支持SW的安装环境（详细见下方配置要求参考）。<br><br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">SOLIDWORKS官网系统要求</a><br></p>
+<p><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification">SOLIDWORKS官网硬件认证</a><br></p>
+<img src="安装向导/image-20250522175616150.png">
+
+<p><a target="_blank" rel="noopener" href="https://www.pugetsystems.com/recommended/">普吉网站的选配参考</a><br></p>
 <h2 id="硬件组成："><a href="#硬件组成：" class="headerlink" title="硬件组成："></a>硬件组成：</h2><p><strong>处理器 CPU：</strong><br>负责处理 SOLIDWORKS 程序操作过程的计算。对于零部件设计模块，其所占用的是 CPU 的单核心的计算能力，单核主频越高越好。对于模拟和渲染计算，更多核心的 cpu 有利于提高计算速度。</p>
 <p><strong>内存 RAM：</strong><br>当一个文档在 SOLIDWORKS 中打开时，它将会被加载到 RAM 内存上。因此，您需要足够的内存来运存 SOLIDWORKS 文件，我们发现在普遍在 16GB 是可以满足正常设计需求。当你需要处理大型装配体时，建议按需升级内存配置（见下表）</p>
 <p><strong>显卡 GPU:</strong><br>显卡对你的工作效率至关重要。它帮助处理器加速操作，如缩放和旋转。英特尔 HD 显卡，以及 GeForce 和 Radeon(非 Pro)等卡是不支持的消费级卡。通常性能和稳定性都很差。<br>NVIDIA 也是 SOLIDWORKS 可视化渲染中唯一支持 NVIDIA iRay 的显卡。图形和那些拥有 4GB 或更多内存的支持新的 AI 去噪(推荐 6GB+)意味着你可以更快地返回结果。最新的 Quadro RTX 显卡甚至有专门的光线追踪核心来进一步加速渲染</p>
@@ -87,6 +91,10 @@
 <p><strong>问：我需要 Xeon CPU 吗？</strong><br>答：一些英特尔至强处理器提供的核心数量比主流酷睿型号高得多，内存容量也更高，有时还支持额外的指令集。这些功能一起可以提高渲染和某些类型模拟的性能。但是，至强 CPU 的时钟频率几乎总是低于酷睿 i7 和 i9 CPU - 这意味着您将放弃少量性能来执行一般建模任务。我们提供基于这两个平台的系统，具体取决于 SOLIDWORKS 的哪些方面对您最重要 - 哪些方面更符合您的预算。</p>
 <p><strong>问：我应该买一个超频的系统吗？</strong><br>答：一般来说，我们不建议对任何专业工作站进行超频。通常，适度的性能提升不值得与超频相关的缺点，包括不稳定、更短的硬件寿命和潜在的数据不准确。</p>
 <p><strong>问：这些系统是否适用于 CATIA 或其他 CAD 软件？</strong><br>答：是的！SOLIDWORKS 和 CATIA 具有非常相似的系统要求，因此这些工作站也应该非常适合几乎任何 CAD&#x2F;CAM&#x2F;CAE 软件，包括 CATIA、Solid Edge、Creo 等。</p>
+<p><strong>问：核心数问题</strong></p>
+<p>看使用“设计类”还是“仿真类”产品</p>
+<p>关于SW设计类的CPU核心使用问题：SW程序多线程在执行时，是由系统在多核心上分配，同时在单核运行。也就是我们无需太在意核心数，还是已主频为主（当然多核心也有利于系统分配其他程序，也有一点点效果）</p>
+<p>关于SW仿真类的CPU核心使用问题：仿真计算类的是可以多核运算。</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

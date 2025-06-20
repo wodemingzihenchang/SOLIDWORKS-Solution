@@ -38,29 +38,71 @@
     <span id="post-date">2022-08-09 16:21:27</span>
 </div>
 
-<div id="article"><p>记录有关SOLIDWORKS设置的注册表内容。</p>
+<div id="article"><h1 id="SOLIDWORKS-注册表"><a href="#SOLIDWORKS-注册表" class="headerlink" title="SOLIDWORKS 注册表"></a>SOLIDWORKS 注册表</h1><p>记录有关SOLIDWORKS设置的注册表内容。</p>
 <span id="more"></span>
 
-<h2 id="注册表简介"><a href="#注册表简介" class="headerlink" title="注册表简介"></a>注册表简介</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager：网络版借用信息</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\Solidworks：设置信息</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\Solidworks BackOffice：批量处理任务工具</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\srac：Simulation 信息</span><br></pre></td></tr></table></figure>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager：网络版借用信息</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\Solidworks：设置信息</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\Solidworks BackOffice：批量处理任务工具</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\srac：Simulation 信息</span><br></pre></td></tr></table></figure>
 
-<h2 id="SolidWorks"><a href="#SolidWorks" class="headerlink" title="SolidWorks"></a>SolidWorks</h2><p>下面即是 SW 在电脑上的注册表信息。有时我们需要重置注册表时，可将注册表改名备份，再启动 SOLIDWORKS 即可。</p>
-<blockquote>
-<p>[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks]<br> [HKEY_CURRENT_USER\SOFTWARE\Solidworks]<br></p>
-</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks</span><br><span class="line">	Addin：插件信息</span><br><span class="line">    AddInsStartup：设道启动的新件</span><br><span class="line">    Applications     </span><br><span class="line">    IM 安装信息</span><br><span class="line">    Licenses 所有产品学列号情息</span><br><span class="line">    Security</span><br><span class="line">    SOLIDWORKS 20XX 对应版本的牛用户设定信息</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="SolidWorks"><a href="#SolidWorks" class="headerlink" title="SolidWorks"></a>SolidWorks</h1><p>下面即是 SW 在电脑上的注册表信息。有时我们需要重置注册表时，可将注册表改名备份，再启动 SOLIDWORKS 即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Solidworks]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks]</span><br></pre></td></tr></table></figure>
+
+
+
 <p>再下面我们来看看注册表里有哪些内容吧：</p>
 <p>· AddIns： 插件信息<br><br>· AddInsStartup：插件自启动<br><br>· Application： 工具插件<br><br>· IM： 安装管理器设定信息<br><br>· Licenses： 所有产品序列号<br><br>· Security： CAD 序列号信息<br><br>· SOLIDWORKS 20XX 对应版本的设定信息<br></p>
-<h3 id="许可"><a href="#许可" class="headerlink" title="许可"></a>许可</h3><p>强制归还许可，删除 BORROW 信息，并重启网络版服务，可强制归还许可</p>
+<h2 id="许可"><a href="#许可" class="headerlink" title="许可"></a>许可</h2><p>强制归还许可，删除 BORROW 信息，并重启网络版服务，可强制归还许可</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager]</span><br></pre></td></tr></table></figure>
 
-<h3 id="图标恢复"><a href="#图标恢复" class="headerlink" title="图标恢复"></a>图标恢复</h3><p>命令管理器无图标恢复，使用正确的注册表覆写</p>
+<h2 id="图标恢复"><a href="#图标恢复" class="headerlink" title="图标恢复"></a>图标恢复</h2><p>命令管理器无图标恢复，使用正确的注册表覆写</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SolidWorks 201X\User Interface\CommandManager]</span><br><span class="line">	-\AssyContext 装配体工具栏</span><br><span class="line">	-\Caption 菜单栏</span><br><span class="line">	-\DrwContext 工程图工具栏</span><br><span class="line">	-\EditPartContext 装配体编辑零件工具栏</span><br><span class="line">	-\PartContext 零件工具栏</span><br></pre></td></tr></table></figure>
 
-
-
-<h3 id="快速更换序列号"><a href="#快速更换序列号" class="headerlink" title="快速更换序列号"></a>快速更换序列号</h3><p>修改以下几个位置的注册表中的值即可</p>
+<h2 id="快速更换序列号"><a href="#快速更换序列号" class="headerlink" title="快速更换序列号"></a>快速更换序列号</h2><p>修改以下几个位置的注册表中的值即可</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Licenses\Serial Numbers]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Security]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Licenses\Serial Numbers]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Security]</span><br></pre></td></tr></table></figure>
 
-<h3 id="EPDM"><a href="#EPDM" class="headerlink" title="EPDM"></a>EPDM</h3><p>EPDM 的库在 SQL 中被删除，但存档库还存在。存档库服务器所在电脑中的找到下列注册项,删除其中与库同名的项</p>
+<h2 id="重置注册表"><a href="#重置注册表" class="headerlink" title="重置注册表"></a>重置注册表</h2><img src="SOLIDWORKS注册表/image-20250614105445469.png">
+
+
+
+<h2 id="查找设置在注册表位置"><a href="#查找设置在注册表位置" class="headerlink" title="查找设置在注册表位置"></a>查找设置在注册表位置</h2><img src="SOLIDWORKS注册表/image-20240423175000857.png">
+
+<p>导出设置：在菜单栏【工具-保存&#x2F;恢复设置】保存设置文件</p>
+<img src="SOLIDWORKS注册表/1.png">
+
+<p>数据对比：使用文本编辑器，打开保存设置的数据，新建Excel用来对比数据设置差异。</p>
+<img src="SOLIDWORKS注册表/image-20240423171231777.png">
+
+<p>将数据复制到Excel A列里面，</p>
+<img src="SOLIDWORKS注册表/image-20240423173430162.png">
+
+<p>设置同值判断函数：“&#x3D;IF(A1&#x3D;B1,1,0)”</p>
+<img src="SOLIDWORKS注册表/image-20240423173505069.png">
+
+<p>应用填充函数</p>
+<img src="SOLIDWORKS注册表/image-20240423173611105.png">
+
+<p>查找结果：设置筛选</p>
+<img src="SOLIDWORKS注册表/image-20240423173806693.png">
+
+<p>按结果差异值进行筛选，结果为0的行，就是设置差异的选项了</p>
+<img src="SOLIDWORKS注册表/image-20240423173832408.png">
+
+<img src="SOLIDWORKS注册表/image-20240423173902472.png">
+
+<p>查找注册表：在注册表里，定位到当前SW版本。Ctrl+F进行“项名称”查找。</p>
+<img src="SOLIDWORKS注册表/image-20240423174329222.png">
+
+<p>这里就是SW设置在注册表体现的内容了，通过修改此处也能影响SW的选项设置</p>
+<p>（注意：注册表的设置，需要SW程序在完全退出的状态下修改，不然会和现有的程序设置进行冲突导致注册表设置失败）</p>
+<img src="SOLIDWORKS注册表/image-20240423174352828.png">
+
+<h2 id="强制归还许可"><a href="#强制归还许可" class="headerlink" title="强制归还许可"></a>强制归还许可</h2><p>HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager</p>
+<p>删除BORROW信息，并重启网络版服务，可强制归还许可</p>
+<p><img src="/SOLIDWORKS-Solution/SOLIDWORKS%E6%B3%A8%E5%86%8C%E8%A1%A8/image-20250619214726778.png" alt="image-20250619214726778"></p>
+<h1 id="EPDM"><a href="#EPDM" class="headerlink" title="EPDM"></a>EPDM</h1><p>EPDM 的库在 SQL 中被删除，但存档库还存在。存档库服务器所在电脑中的找到下列注册项,删除其中与库同名的项</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults]</span><br></pre></td></tr></table></figure>
 
 <p>EPDM 中如何清理新建用户名中的历史记录？删除注册表中的不需要的用户名即可</p>
