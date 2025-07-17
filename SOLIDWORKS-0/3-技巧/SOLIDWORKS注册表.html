@@ -99,9 +99,14 @@
 <p>（注意：注册表的设置，需要SW程序在完全退出的状态下修改，不然会和现有的程序设置进行冲突导致注册表设置失败）</p>
 <img src="SOLIDWORKS注册表/image-20240423174352828.png">
 
-<h2 id="强制归还许可"><a href="#强制归还许可" class="headerlink" title="强制归还许可"></a>强制归还许可</h2><p>HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager</p>
-<p>删除BORROW信息，并重启网络版服务，可强制归还许可</p>
-<p><img src="/SOLIDWORKS-Solution/SOLIDWORKS%E6%B3%A8%E5%86%8C%E8%A1%A8/image-20250619214726778.png" alt="image-20250619214726778"></p>
+<h2 id="强制归还许可"><a href="#强制归还许可" class="headerlink" title="强制归还许可"></a>强制归还许可</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager</span><br></pre></td></tr></table></figure>
+
+<p>重命名（或删除）BORROW信息</p>
+<p>然后在c盘，删除客户端的“C:\ProgramData\FLEXnet”这个文件夹。</p>
+<p>在重新打开许可程序，看看能否重新借用</p>
+<img src="SOLIDWORKS注册表/强制归还许可.png">
+
+<p>不过这个方法似乎不是百分之百成功。如果不行，可能需要重激活许可服务器。并重启网络版服务，可强制归还许可</p>
 <h1 id="EPDM"><a href="#EPDM" class="headerlink" title="EPDM"></a>EPDM</h1><p>EPDM 的库在 SQL 中被删除，但存档库还存在。存档库服务器所在电脑中的找到下列注册项,删除其中与库同名的项</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults]</span><br></pre></td></tr></table></figure>
 
