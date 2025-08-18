@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="流体力学知识"><a href="#流体力学知识" class="headerlink" title="流体力学知识"></a>流体力学知识</h1><p>SOLIDWORKS Flow Simulation 是一个计算流体力学 (CFD) 软件，可用来分析各种液流问题。 它计算的数量是由液流引起的压力分布和温度概貌。 以下显示的球阀装配体内液流动的求解过程。 </p>
+<span id="more"></span>
+
+<p>1</p>
+<img src="流体力学知识/clip_image036.png">
+
+<h2 id="层流-湍流"><a href="#层流-湍流" class="headerlink" title="层流&amp;湍流"></a>层流&amp;湍流</h2><p>•层流-在流动中流体是平滑的、稳定的低速的流体流动-可以是稳态也可以是瞬态</p>
+<p>•湍流-由雷诺数决定𝑅𝑒&#x3D;𝜌𝑉𝐿 𝜇 ，其中ρ、μ为流体密度和动力粘度，v、 L为流场的特征速度和特征长度</p>
+<img src="流体力学知识/image-20250721121757483.png">
+
+<p>层流现象视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1k5411f7yp">https://www.bilibili.com/video/BV1k5411f7yp</a></p>
+<h2 id="牛顿-非牛顿流体"><a href="#牛顿-非牛顿流体" class="headerlink" title="牛顿&amp;非牛顿流体"></a>牛顿&amp;非牛顿流体</h2><p>牛顿流体：-任一点上的剪应力都同剪切变形速率呈线性函数关系</p>
+<p>非牛顿流体：-剪应力和剪切变形速率之间不满足线性关系的流体。如塑胶, 血液, 橡胶, 牙膏等。</p>
+<p><strong>不可压缩</strong></p>
+<p>压力的改变不影响密度, 大多数液体和低流速气体 (Mach&lt;0.3),均可视为不可压缩流体。</p>
+<p><strong>可压缩</strong></p>
+<p>压力与密度是相互影响的, 通常是高流速的气体(少部分 高速液体)。- 气体可用马赫数来表征，𝑀𝑎&#x3D; 为气体音速。</p>
+<p><strong>马赫数与可压不可压的关系</strong></p>
+<p><strong>Ma &lt; 0.2</strong> </p>
+<p><strong>Ma &gt; 0.2</strong></p>
+<p><strong>Ma &gt; 1.0</strong> </p>
+<p><strong>Ma &gt; 5.0</strong> <strong>不可压缩 可压缩 超音速</strong></p>
+<p>• 𝐶 : ,其中v为气体速度，C （亚音速） 超出Flow Simulation的限制</p>
+<h2 id="压力"><a href="#压力" class="headerlink" title="压力"></a>压力</h2><p>绝对压力 Flow Simulation 输入压力值均为绝对压力。- 相对于压强为零的压强值。 </p>
+<p>• 相对压力- 相对于标准大气压的数据。 • 动压-1 2 P （可压缩气体中静压和总压 的关系） 1 P total &#x3D; ∙ 𝜌 ∙ 𝑣2；𝜌为流体密度，v为流体速度。- 不考虑重力影响，动压可以用静压和总压表示：P总压&#x3D;P静压+P 动压 </p>
+<p>• 环境压力 2022&#x2F;7&#x2F;12  ( 1 + − 1  M 2 2  ) − 1- Flow simulation用来定义可能存在流体流出和流入的边界压力。- 如果在计算中出现回旋，环境压力表示入口处的总压，出口处的静 压。</p>
+<h2 id="热交换模型"><a href="#热交换模型" class="headerlink" title="热交换模型"></a>热交换模型</h2><p>热传导- 通过实体或流体的分子运动传递 热量，𝑄&#x3D;𝑘 𝛻𝑇 𝐿 ，k为传导系数 • 热对流- 由于流体宏观运动而引起的热量传递，𝑄&#x3D;ℎ𝐴(𝑇wall−𝑇)，h为对 流换热系数 • 辐射- 通过电磁波所传递的热量，，σ为波尔兹曼常数- 黑体，用来表示对任何波长的外来辐射完全吸收而无任何反射的物 体- 白体，用来表示完全反射任何波长的外来辐射 • 共轭导热- 包括对流与传导类型</p>
+<p>热分析 ◼ 计算温度分布 ◼ 了解热量传递路径 ◼ 评估散热系数热性能</p>
+<p>现象 • 重力（浮力）效应 • 气体相对湿度 • 蒸汽流中的凝结 • 液体流动中的空化汽蚀 • 流体中的示踪物、液态或固态粒子 • 流体内部、流体与固体之间的热传递 • 固体之间的辐射热传递 • 固体的电气焦耳热</p>
+<p>特定边界条件和热源 • 旋转流动和风扇 • 多孔板 • 导热管 • 散热器 • 热电冷却器 • 双热阻组件 • 接触热阻 • 接触电阻</p>
+<p>SolidWorks Flow simulation分析功能 流动分析 热分析 噪音预测 电子冷却分析 暖通通风系统分析 示踪物研究与粒子轨迹分析</p>
+<h2 id="内部与外部流动"><a href="#内部与外部流动" class="headerlink" title="内部与外部流动"></a>内部与外部流动</h2><p>支持内部与外部流动分析支持多种流体运算</p>
+<img src="流体力学知识/image-20250721123158951.png">
+
+<p><strong>内部:</strong><br>流体在外围固体壁面内部的流动<br>流体通过入口流入模型，并从出口流出模型<br>需要封盖<br>例如: 管道, 阀门, 引擎，暖通系统……</p>
+<p><strong>外部:</strong><br>完全覆盖固体模型表面的流动<br>计算域必须比实际的几何模型大得多<br>不需要封盖<br>例如: 汽车，导弹,，潜水艇，建筑物 ……</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

@@ -64,6 +64,11 @@
 <p>1、可以在【控制面板\系统和安全\Windows Defender 防火墙\自定义设置】尝试关闭防火墙，</p>
 <p>2、在服务器上的防火墙设置中，新建出站和入站规则，确保开通25734和25735两个端口。确保telnet &lt;IP&gt; 25734接通。</p>
 <h2 id="许可文件限制"><a href="#许可文件限制" class="headerlink" title="许可文件限制"></a>许可文件限制</h2><p>检查是否已正确读入许可文件。</p>
+<h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><p>在关闭防火墙后，客户端连接正常</p>
+<p>1、检查防火墙进出站</p>
+<p>2、设置允许程序</p>
+<img src="许可问题/防火墙设置允许程序.png">
+
 <h1 id="无法获得许可"><a href="#无法获得许可" class="headerlink" title="无法获得许可"></a>无法获得许可</h1><h2 id="用户信息"><a href="#用户信息" class="headerlink" title="用户信息"></a>用户信息</h2><p>有些时候打开许可程序发现是有许可的，但是启动软件就提示：无法获得许可。</p>
 <p>你需要检查下当前用户注册表内是否有许可服务器信息的登记：注册表位置如下：如果是空白，则根据您的服务器地址完善信息，如下图</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager</span><br></pre></td></tr></table></figure>
@@ -114,6 +119,9 @@
 <p>处理方法：</p>
 <p>是将现有的全部序列号进行【选择所有】激活</p>
 <h1 id="重激活"><a href="#重激活" class="headerlink" title="重激活"></a>重激活</h1><h2 id="重读失败"><a href="#重读失败" class="headerlink" title="重读失败"></a>重读失败</h2><img src="许可问题/Q&A/重读失败.png">
+
+<h1 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h1><h2 id="许可分版本吗"><a href="#许可分版本吗" class="headerlink" title="许可分版本吗"></a>许可分版本吗</h2><p>许可程序区分年份版本</p>
+<p>许可程序不分SP版本</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

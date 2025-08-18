@@ -38,7 +38,22 @@
     <span id="post-date">2023-10-19 10:42:25</span>
 </div>
 
-<div id="article"><h1 id="使用cvs创建本地视图"><a href="#使用cvs创建本地视图" class="headerlink" title="使用cvs创建本地视图"></a>使用cvs创建本地视图</h1><span id="more"></span>
+<div id="article"><h1 id="使用cvs创建本地视图"><a href="#使用cvs创建本地视图" class="headerlink" title="使用cvs创建本地视图"></a>使用cvs创建本地视图</h1><p>If you are unable to attach to the archive server through the administration tool or the view setup wizard, you can use the following method to script a view setup file. You can also use a CVS file when distributing vault views from a script. For more information, see the installation guide.<br>如果无法通过管理工具或视图设置向导连接到归档服务器，则可以使用以下方法编写视图设置文件脚本。从脚本分发 Vault 视图时，也可以使用 CVS 文件。有关更多信息，请参阅安装指南。</p>
+<p>You can create your own CVS file by running the viewsetup.exe &#x2F;a command from the SOLIDWORKS PDM installation folder on a client computer that does not yet have a local vault view. Alternatively, you can modify the CVS file in the attachments according to your requirements.<br>您可以通过在尚未具有本地 Vault 视图的客户端计算机上运行 SOLIDWORKS PDM 安装文件夹中的 viewsetup.exe &#x2F;a 命令来创建自己的 CVS 文件。或者，您可以根据需要修改附件中的 CVS 文件。</p>
+<p>Prepare the CVS file</p>
+<h2 id="准备-CVS-文件"><a href="#准备-CVS-文件" class="headerlink" title="准备 CVS 文件"></a>准备 CVS 文件</h2><p>Copy the attached CVS file to the archive server.<br>将附加的 CVS 文件复制到归档服务器。<br>Open the file in a text editor, such as Notepad. Do not associate the CVS extension file with the text editor because it must remain associated with the viewsetup.exe file. If you use the Open with function, select Notepad and deactivate the Always use this app to open .cvs files option.<br>在文本编辑器（如记事本）中打开文件。不要将 CVS 扩展文件与文本编辑器相关联，因为它必须与 viewsetup.exe 文件保持相关联。如果您使用“ 打开方式” 功能，请选择“记事本”并停用“ 始终使用此应用程序打开 .cvs 文件” 选项。</p>
+<p>Modify and update the following highlighted sections in the CVS file:<br>修改和更新 CVS 文件中以下突出显示的部分：</p>
+<p>Location – The folder in which you want to create the physical view folder. Typically C:.<br>位置 – 要在其中创建物理视图文件夹的文件夹。通常为 C：\。<br>ViewType – SharedView is the recommendation for a shared view that is accessible to all profiles on the system. Use PrivateView for a view that is only accessible to the active profile.<br>ViewType – SharedView 是系统上所有配置文件都可以访问的共享视图的建议。将 PrivateView 用于仅供活动配置文件访问的视图。<br>[FileVault] - Update with the file vault name. The name is case-sensitive. Keep the square brackets.<br>[FileVault] - 使用文件保管库名称进行更新。该名称区分大小写。保留方括号。<br>VaultID - Update with the file vault ID. You can find the ID in the vault properties within the administration tool, or in the archive server registry. Exclude the { and } brackets.<br>VaultID - 使用文件保管库 ID 进行更新。您可以在管理工具中的保险库属性或归档服务器注册表中找到该标识。排除 { 和 } 括号。<br>DbName - The vault database name. The name is case-sensitive.<br>DbName - 保管库数据库名称。该名称区分大小写。<br>DbServer - The SQL server hostname, or the instance name SERVER\INSTANCE.<br>DbServer - SQL Server 主机名或实例名称 SERVER\INSTANCE。<br>ServerLoc - The archive server hostname.<br>ServerLoc - 存档服务器主机名。<br>4. Save your changes to the CVS file.<br>4. 保存对 CVS 文件的更改。</p>
+<p>You can find the required vault details to use when you update the CVS file in the following registry location on the archive server:<br>您可以在归档服务器上的以下注册表位置找到更新 CVS 文件时要使用的所需保险库详细信息：</p>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\VAULTNAME</p>
+<p>Example:  例：</p>
+<p>Alternatively, you can find the details in the vault properties within the administration tool on a system that is already attached to the vault.<br>或者，您可以在已连接到 Vault 的系统上的管理工具中的 Vault 属性中找到详细信息。</p>
+<p>Create the local view</p>
+<h2 id="使用-CVS-文件"><a href="#使用-CVS-文件" class="headerlink" title="使用 CVS 文件"></a>使用 CVS 文件</h2><p>要在客户端工作站上创建本地 Vault 视图，请复制更新的 CVS 文件并双击该文件以完成视图设置。如果文件提示输入应用程序，请选择以 SOLIDWORKS PDM 安装文件夹中的 ViewSetup.exe 打开。</p>
+<p>您还可以使用以下命令编写视图安装文件脚本以静默运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">viewsetup.exe viewsetupfile.cvs /q</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <p><a target="_blank" rel="noopener" href="https://www.mlc-cad.com/solidworks-help-center/create-local-pdm-vault-view-using-cvs-file/">使用 .cvs 文件创建本地 PDM 库视图 (mlc-cad.com)</a></p>
 </div>

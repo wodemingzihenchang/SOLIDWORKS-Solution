@@ -38,12 +38,51 @@
     <span id="post-date">2024-10-27 17:18:29</span>
 </div>
 
-<div id="article"><h1 id="流体分析-热传递"><a href="#流体分析-热传递" class="headerlink" title="流体分析-热传递"></a>流体分析-热传递</h1><span id="more"></span>
+<div id="article"><h1 id="流体分析-热传递"><a href="#流体分析-热传递" class="headerlink" title="流体分析-热传递"></a>流体分析-热传递</h1><p>铜热交换器用于在空气和水系统之间传递热量。 获得两种介质的温度分布。</p>
+<span id="more"></span>
 
-<p>1</p>
-<img src="芯片散热问题/image-20241217140010062.png">
+<h2 id="向导设置"><a href="#向导设置" class="headerlink" title="向导设置"></a>向导设置</h2><p>设置流体仿真的一些条件，其中包括：“项目名称”、“单位”、“分析类型”、“流体介质”、“壁面条件”、“初始条件”等。</p>
+<p>项目名称：</p>
+<img src="../Flow-入门/clip_image009.jpg">
 
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1></div>
+<p>单位系统：</p>
+<img src="../Flow-入门/clip_image011.jpg">
+
+<p>分析类型：</p>
+<p>内部，勾选(排除不具备流动条件的腔)勾选(固体内热传导)</p>
+<img src="热传递/image-20250727133114003.png">
+
+<p>默认流体：水，空气；默认固体：铜</p>
+<img src="热传递/image-20250727133240492.png">
+
+<img src="热传递/image-20250727133323630.png">
+
+<p>壁面条件</p>
+<img src="../Flow-入门/clip_image017.jpg">
+
+<p>初始条件</p>
+<img src="../Flow-入门/clip_image019.jpg">
+
+<h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><p>450K热空气以0.15kg &#x2F; s的速率进入热交换器（在图中所示的入口处）。</p>
+<img src="热传递/image-20250727135128234.png">
+
+<img src="热传递/image-20250727135857648.png">
+
+<p>水以0.001kg &#x2F; s的速率通过热交换器。</p>
+<img src="热传递/image-20250727162749494.png">
+
+<img src="热传递/image-20250727162948893.png">
+
+<h2 id="流体子域"><a href="#流体子域" class="headerlink" title="流体子域"></a>流体子域</h2><p>因为我们是有两个不同的流体，我们需进行两个流体域的控制</p>
+<img src="热传递/image-20250727144559234.png">
+
+
+
+<img src="热传递/image-20250727144740644.png">
+
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><img src="热传递/image-20250727162633637.png">
+
+</div>
  			<!-- 引入正文 -->
     </div>	
     

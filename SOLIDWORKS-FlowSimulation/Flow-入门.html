@@ -61,7 +61,11 @@
 
 <h3 id="单位系统"><a href="#单位系统" class="headerlink" title="单位系统"></a>单位系统</h3><img src="Flow-入门/clip_image011.jpg">
 
-<h3 id="分析类型"><a href="#分析类型" class="headerlink" title="分析类型"></a>分析类型</h3><img src="Flow-入门/clip_image013.jpg">
+<h3 id="分析类型"><a href="#分析类型" class="headerlink" title="分析类型"></a>分析类型</h3><p><strong>内部:</strong><br>流体在外围固体壁面内部的流动<br>流体通过入口流入模型，并从出口流出模型<br>需要封盖<br>例如: 管道, 阀门, 引擎，暖通系统……</p>
+<p><strong>外部:</strong><br>完全覆盖固体模型表面的流动<br>计算域必须比实际的几何模型大得多<br>不需要封盖<br>例如: 汽车，导弹,，潜水艇，建筑物 ……</p>
+<p>排除内部空间：用于在外部流动分析中忽略封闭的内部空间</p>
+<p>排除不具备流动条件的腔：在内部和外部流动分析中，如果要排除其表面未指定边界条件或风扇的封闭内部空间，则可选择此选项。</p>
+<img src="Flow-入门/clip_image013.jpg">
 
 <h3 id="流体介质"><a href="#流体介质" class="headerlink" title="流体介质"></a>流体介质</h3><img src="Flow-入门/clip_image015.jpg">
 
@@ -71,7 +75,11 @@
 
 <h2 id="输入数据"><a href="#输入数据" class="headerlink" title="输入数据"></a>输入数据</h2><img src="Flow-入门/clip_image020.png">
 
-<h3 id="计算域："><a href="#计算域：" class="headerlink" title="计算域："></a>计算域：</h3><img src="Flow-入门/clip_image022.jpg">
+<h3 id="计算域："><a href="#计算域：" class="headerlink" title="计算域："></a>计算域：</h3><p>流动和热传递的计算是在计算域内进行的。</p>
+<p>计算域边界平行于全局坐标系平面。</p>
+<p>对于外部流动，计算域的边界平面将自动远离模型。</p>
+<p>对于内部流动，如果考虑固体内热传导，计算域的边界平面将自动包围整个模型；如果不考虑固体内热传导，则计算域的边界平面仅包围模型的流体通道。</p>
+<img src="Flow-入门/clip_image022.jpg">
 
 <h3 id="流体子域"><a href="#流体子域" class="headerlink" title="流体子域"></a>流体子域</h3><p>多流体情况或是由部分区域是其他流体介质时使用，本次项目无效设置。</p>
 <h3 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h3><img src="Flow-入门/clip_image023.png">
@@ -100,9 +108,6 @@
 
 <h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>设置好“输入数据”后，启用Flow工具栏【运行】命令</p>
 <img src="Flow-入门/clip_image035.png">
-
-<p>运行时你可能会遇到的报警：</p>
-<img src="Flow-入门/clip_image036.png">
 
 <h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><img src="Flow-入门/clip_image037.png">
 

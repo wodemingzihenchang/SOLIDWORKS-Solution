@@ -54,9 +54,25 @@
 <h1 id="3DE"><a href="#3DE" class="headerlink" title="3DE"></a>3DE</h1><h2 id="书签保存"><a href="#书签保存" class="headerlink" title="书签保存"></a>书签保存</h2><p>Q2025新功能“使用书签保存检查文件 ”，如果没有3DE账号或角色。是否有效？</p>
 <p>A</p>
 <p>CAD出现的依据是什么？</p>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="装配体类"><a href="#装配体类" class="headerlink" title="装配体类"></a>装配体类</h1><h2 id="替换零部件"><a href="#替换零部件" class="headerlink" title="替换零部件"></a>替换零部件</h2><p>替换零部件是替换一个还是全部</p>
+<h1 id="显示与隐藏"><a href="#显示与隐藏" class="headerlink" title="显示与隐藏"></a>显示与隐藏</h1><img src="SOLIDWORKS-Q&A/image-20250813134408288.png">
+
+
+
+
+
+<h1 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h1><h2 id="剖面"><a href="#剖面" class="headerlink" title="剖面"></a>剖面</h2><p>如何选中剖面</p>
+<img src="SOLIDWORKS-Q&A/image-20250805184633730.png">
+
+<h1 id="装配体"><a href="#装配体" class="headerlink" title="装配体"></a>装配体</h1><p>设计树界面+右键界面</p>
+<img src="SOLIDWORKS-Q&A/设计树界面+右键界面.png">
+
+
+
+
+
+<h2 id="替换零部件"><a href="#替换零部件" class="headerlink" title="替换零部件"></a>替换零部件</h2><p>替换零部件是替换一个还是全部</p>
 <p>和替换零部件应用所有实例有关</p>
-<img src="SOLIDWORKS-Q&A/image-20250617164704139png">
+<img src="SOLIDWORKS-Q&A/image-20250617164704139.png">
 
 
 
@@ -68,7 +84,7 @@
 
 <p>图１：是否和上传到3DE云后，下载就会按CAD系列配置来；</p>
 <p>图２：是新建的文件，就和旧版本的配置一样</p>
-<img src="SOLIDWORKS-Q&A/配置CAD系列/CAD系列.png">
+<img src="SOLIDWORKS-Q&A/CAD系列.png">
 
 
 
@@ -82,6 +98,29 @@
 
 <p>Q：剖面视图，分区灰色-需要图形显卡才支持</p>
 <img src="SOLIDWORKS-Q&A/剖面视图，分区灰色-需要图形显卡才支持.png">
+
+<h1 id="工程图"><a href="#工程图" class="headerlink" title="工程图"></a>工程图</h1><p>工程图图片logo不显示。但是在其他电脑是显示正常的</p>
+<p>方法：</p>
+<p>右键程序，属性，在兼容性设置里，勾选了这个以管理员身份运行此程序，然后不显示了，我刚才试了下去掉这个就可以了</p>
+<img src="SOLIDWORKS-Q&A/image-20250728112748346.png">
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="不能拖动打开"><a href="#不能拖动打开" class="headerlink" title="不能拖动打开"></a>不能拖动打开</h2><p>方法：</p>
+<p>查看桌面sw快捷方式的属性，兼容性里面的“以管理员身份运行此程序”不要勾选，确定之后就可以拖动文件进去sw了。</p>
+<img src="SOLIDWORKS-Q&A/image-20250728112748346.png">
+
+<p>方法：（未验证）</p>
+<p>把桌面的快捷方式删除，到安装目录下面重新发送一个桌面快捷方式就全都搞定了。</p>
+<p>方法：（未验证）<br>按Windows键+R，打开“运行”对话框:输入regedit，回车或确定。依次找到以下键值:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</span><br></pre></td></tr></table></figure>
+
+<p>右键“EnableLUA 选“修改”。把值改成0，确定。然后重启电脑。</p>
+<h2 id="无法中断当前操作"><a href="#无法中断当前操作" class="headerlink" title="无法中断当前操作"></a>无法中断当前操作</h2><p>无法中断当前操作，或此时文件不可访问。</p>
+<img src="SOLIDWORKS-Q&A/image-20241006130349260.png">
+
+<p>方法：检查在软件其他窗口是否有在进行中的命令。</p>
+<h2 id="共享违例"><a href="#共享违例" class="headerlink" title="共享违例"></a>共享违例</h2><p>在打开文件时，什么原因导致错误消息“A sharing violation occurred while accessing [Network File Path\Name]（访问 [网络文件路径\名称] 时出现共享违规）”？</p>
+<p>方法：</p>
+<p>访问网络上的文件时，可能会出现此错误。 请尝试重新启动网络服务器。如果问题仍然存在，请诊断网络。</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

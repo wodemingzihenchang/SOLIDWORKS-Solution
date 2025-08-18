@@ -38,7 +38,7 @@
     <span id="post-date">2022-09-15 19:12:18</span>
 </div>
 
-<div id="article"><h1 id="SOLIDWORKS安装向导"><a href="#SOLIDWORKS安装向导" class="headerlink" title="SOLIDWORKS安装向导"></a>SOLIDWORKS安装向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类以及 PDM 的安装向导</p>
+<div id="article"><h1 id="PDM安装向导"><a href="#PDM安装向导" class="headerlink" title="PDM安装向导"></a>PDM安装向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类以及 PDM 的安装向导</p>
 <span id="more"></span>
 
 <h2 id="配置要求："><a href="#配置要求：" class="headerlink" title="配置要求："></a>配置要求：</h2><p>注意：安装前，需检查当前电脑配置是否支持SW的安装环境（详细见下方配置要求参考）。</p>
@@ -75,14 +75,11 @@
 </blockquote>
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="Webview2"><a href="#Webview2" class="headerlink" title="Webview2"></a>Webview2</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\SOLIDWORKS安装包\sldim\MicrosoftEdgeWebView2RuntimeInstallerX64.exe</span><br></pre></td></tr></table></figure>
 
-<h2 id="ODBC-Driver17"><a href="#ODBC-Driver17" class="headerlink" title="ODBC Driver17"></a>ODBC Driver17</h2><p>可在如下文件夹内找到安装程序，安装后再运行PDM安装程序</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\SOLIDWORKS安装包\PreReqs\ODBCSQLDriver17</span><br></pre></td></tr></table></figure>
-
-
-
 <h2 id="不兼容的版本"><a href="#不兼容的版本" class="headerlink" title="不兼容的版本"></a>不兼容的版本</h2><img src="PDM安装向导/不兼容的版本.png">
 
 <p>需检出当前客户端和服务器的版本，并尝试修改客户端的版本。这里涉及客户端PDM的卸载和安装操作（详见#安装说明）</p>
+<p>方法：</p>
+<p>这里是因为只升级了PDM程序，原本的PDM库还是之前的版本。注意：程序和数据库是两个东西。可以<a href="PDM%E5%8D%87%E7%BA%A7%E5%90%91%E5%AF%BC.html">参考：PDM升级向导，PDM库升级</a></p>
 <h2 id="需要SQL更高版本"><a href="#需要SQL更高版本" class="headerlink" title="需要SQL更高版本"></a>需要SQL更高版本</h2><img src="PDM安装向导/PDM需要SQL2019版本.png">
 
 <p>要在 Microsoft® SQL Server 2019 或 Microsoft® SQL Server Express 2019 上创建或升级文件库数据库，SOLIDWORKS® PDM 软件需要“SQL Server 2019 Cumulative Update 4”或更高版本。更新 SQL Server 安装，请执行以下步骤：</p>
@@ -107,13 +104,20 @@
 <h2 id="Error1722"><a href="#Error1722" class="headerlink" title="Error1722"></a>Error1722</h2><p>Register_DocMgr.DLL</p>
 <img src="PDM安装向导/image-20241106103934467.png">
 
-<p>在继续之前，请阅读 软件要求 部分。必须安装 MSXML 和 Visual C++ Redistributable for Visual Studio 2015 才能成功注册 SOLIDWORKS Document Manager DLL。</p>
+<p>在继续之前，请阅读 软件要求 部分。必须安装 MSXML 和 Visual C++ Redistributable for Visual Studio 2015 才能成功注册 Register_DocMgrDLL（SOLIDWORKS Document Manager DLL）。</p>
 <p>SOLIDWORKS Document Manager API 是 SwDocumentMgr.dll 中包含的 COM 对象。SOLIDWORKS Document Manager DimXpert API 包含在 dimxpert.dll 中。如果您安装了 SOLIDWORKS 软件，则 zlib.dll DLL 会自动安装在以下文件夹中：</p>
 <p>参考：<a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/English/api/swdocmgrapi/GettingStarted-swdocmgrapi.html">Getting Started - 2021 - SOLIDWORKS API Help</a></p>
 <p>在某些情况下，要解决此安装错误，您必须安装更新的 C++ 软件包：</p>
 <p><a target="_blank" rel="noopener" href="https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads">https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads</a></p>
 <p>通常，您必须下载和安装 x86 和 x64 组件。 Visual C++ 2017 运行时组件更新 Visual C++ 2015 ，而 Visual C++ 2019 运行时组件更新 Visual C++ 2017 。 此安装是传统的，而 Visual C++ 运行时组件的早期版本是并排配置，允许每个组件的多个版本同时安装。</p>
 <p>首先从上述链接安装这些软件包 2015-2017-2019 ，然后重试安装。</p>
+<h2 id="ODBC问题"><a href="#ODBC问题" class="headerlink" title="ODBC问题"></a>ODBC问题</h2><p>如果您安装或升级到 SOLIDWORKS® PDM 客户端版本 2020 或更高版本并且您的系统没有安装“Microsoft ODBC Driver 17 for SQL Server”，则您将无法访问文件库。您可能会遇到以下一个或多个问题：</p>
+<p>• 无法访问数据库中的项目<br>• 登录提示无法显示，而是出现一个空的本地文件夹。<br>• 启动管理工具失败，并显示“由于未找到 msodbcsql17.dll，代码无法继续执行。重新安装程序可能会修复此问题”<br>• 创建新库失败并出现错误。<br>• 客户端日志可能会显示“未找到数据源名称，且未指定默认驱动程序”。<br>• 客户端日志可能会显示“[ODBC Driver Manager] Driver’s SQLAllocHandle on SQL_HANDLE_ENV failed”</p>
+<p>方法：</p>
+<p>要解决此安装问题，或修复“Microsoft ODBC Driver 17 for SQL Server”先决条件。您可以从安装文件夹安装该驱动程序：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SOLIDWORKS安装包\PreReqs\ODBCSQLDriver17\</span><br></pre></td></tr></table></figure>
+
+<p>或从 Microsoft <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17">下载 ODBC Driver for SQL Server - ODBC Driver for SQL Server | Microsoft Learn</a></p>
 </div>
  			<!-- 引入正文 -->
     </div>	
