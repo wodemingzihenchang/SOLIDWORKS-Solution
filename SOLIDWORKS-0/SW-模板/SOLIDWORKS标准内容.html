@@ -77,29 +77,113 @@
 <h2 id="设计方法"><a href="#设计方法" class="headerlink" title="设计方法"></a>设计方法</h2><h3 id="设计协同"><a href="#设计协同" class="headerlink" title="设计协同"></a>设计协同</h3><p>搭建良好的共享环境：</p>
 <p>（低要求）-共享数据库需要一个局域网</p>
 <p>（高要求）-如果有大量的数据频繁的存放、修改与管理，需要用专业的数据管理系统及其配套的网络和硬件要求</p>
-<p><img src="/SOLIDWORKS-Solution/SOLIDWORKS%E6%A0%87%E5%87%86%E5%86%85%E5%AE%B9/image-20250503221849823.png" alt="image-20250503221849823"></p>
+<p><img src="/SOLIDWORKS-Solution/SOLIDWORKS%E6%A0%87%E5%87%86%E5%86%85%E5%AE%B9/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95.png" alt="image-20250503221849823"></p>
 <h3 id="设计重用"><a href="#设计重用" class="headerlink" title="设计重用"></a>设计重用</h3><p>pick and go(打包)，对零部件做参考关联的复制。</p>
 <h2 id="设计规范"><a href="#设计规范" class="headerlink" title="设计规范"></a>设计规范</h2><p><strong>设计规范</strong></p>
 <pre class="mermaid"> graph LR
 设置-->零件-->装配-->工程图-->出BOM表
 装配-->干涉检查-->仿真分析-->工程图</pre>
 
-<p><img src="/SOLIDWORKS-Solution/SOLIDWORKS%E6%A0%87%E5%87%86%E5%86%85%E5%AE%B9/%E5%9B%BE%E7%89%874.png" alt="图片4"></p>
-<p><strong>设置规范</strong></p>
-<p><strong>零件规范</strong></p>
+
+
+<h3 id="产品设计规范"><a href="#产品设计规范" class="headerlink" title="产品设计规范"></a>产品设计规范</h3><p>第一章、产品设计规范基础</p>
+<p>1.1设计软件统一</p>
+<p>1.2软件版本统一</p>
+<p>1.3软件安装选项设置统一</p>
+<p>第二章、采购件与标准件使用定义</p>
+<p>2.1采购件</p>
+<p>2.2标准件定义与命名规范</p>
+<p>第三章、设计文件命名规范</p>
+<p>3.1项目命名规范</p>
+<p>3.2设计模型与图纸命名规范</p>
+<p>第四章、原材料命名规范</p>
+<p>4.1板材类命名规范</p>
+<p>4.2棒料类命名规范</p>
+<p>4.3型材类命名规范</p>
+<h3 id="零件建模规范"><a href="#零件建模规范" class="headerlink" title="零件建模规范"></a>零件建模规范</h3><p>第一章、选择规定的设计模板</p>
+<p>1.1选择公司规定的零件模板进行设计</p>
+<p>1.2明确初期设计意图</p>
+<p>第二章、草图绘制规范</p>
+<p>2.1原点基准选择规范</p>
+<p>2.2完全定义草图(草图的三种状态)</p>
+<p>2.3草图尺寸标注意图与尺寸标注规范(重点)</p>
+<p>2.4 一个草图不要有多个草图特征</p>
+<p>2.5草图中添加圆角和草图阵列的选用</p>
+<p>第三章、零件建模规范</p>
+<p>3.1实体建模特征类型</p>
+<p>3.2 实体建模特征方式</p>
+<p>3.3实体雯件建模规范</p>
+<p>3.4焊件型材零件建模规范</p>
+<p>第四章、添加零件属性</p>
+<p>4.1 添加”名称”自定义属性值</p>
+<p>4.2 定义”类型”自定义属性</p>
+<p>4.3”数量”与”阶段标记”自定义属性值填写说明</p>
+<p>4.4”备注”自定义属性值填写说明</p>
+<p>4.5”表面处理”自定义属性值填写说明</p>
+<p>4.6”材质”自定义属性值填写说明</p>
+<p>4.7”热处理”自定义属性值填写说明</p>
+<p>4.8自定义属性应用</p>
 <p>零部件分类规则</p>
 <p>零件特征命名规则</p>
 <p>产品图号编码规则</p>
+<h3 id="装配建模规范"><a href="#装配建模规范" class="headerlink" title="装配建模规范"></a>装配建模规范</h3><p>第一章、选择规定的模板与装配体结构规范</p>
+<p>1.1选择公司规定的装配体模板进行设计</p>
+<p>1.2装配体结构</p>
+<p>1.3产品模块化拆分思路</p>
+<p>1.4装配结构树规范第二章、中间格式与其他CAD数据导入处理规范</p>
+<p>2.1 3D Interconnect介绍</p>
+<p>2.2启用3D Interconnect中间格式导入</p>
+<p>2.3不启用3D Interconnect中间格式导入</p>
+<p>第三章、装配体建模规范</p>
+<p>3.1装配体第一零部件插入</p>
+<p>3.2装配体配合推荐</p>
+<p>3.3装配体零部件之间的配合推荐方案</p>
+<p>3.4装配体验证</p>
+<p>3.5装配体保存规范第四章、大型装配体建模规范</p>
+<p>4.1大型装配体显示与设置应用4.2大型装配体建模规范</p>
 <p><strong>装配体规范</strong></p>
 <p>外部参考</p>
 <p>自顶向下设计</p>
 <p>大型装配设计规范</p>
-<p><strong>出图规范</strong></p>
-<h1 id="快–"><a href="#快–" class="headerlink" title="快–&gt;"></a>快–&gt;</h1><h2 id="模板化"><a href="#模板化" class="headerlink" title="模板化"></a>模板化</h2><h3 id="预设属性"><a href="#预设属性" class="headerlink" title="预设属性"></a>预设属性</h3><p>文件<a href="自定义属性.html" target="_blank">自定义属性</a>预设</p>
-<h3 id="属性卡"><a href="#属性卡" class="headerlink" title="属性卡"></a>属性卡</h3><p><a href="属性卡.html" target="_blank">SOLIDWORKS属性卡</a></p>
-<h3 id="标题栏"><a href="#标题栏" class="headerlink" title="标题栏"></a>标题栏</h3><p>设置标题栏的变量属性</p>
+<h3 id="图纸建模规范"><a href="#图纸建模规范" class="headerlink" title="图纸建模规范"></a>图纸建模规范</h3><p>第一章、选择规定的工程图模板</p>
+<p>1.1选择公司规定的装配体模板进行设计</p>
+<p>1.2确保”工程图文件名称”与”模型文件”名称一致</p>
+<p>第二章、工程图格式与标准说明</p>
+<p>2.1 图框说明</p>
+<p>2.2 绘图标准与图层定义第三章、出图规范</p>
+<p>3.1 视图可见边线类型</p>
+<p>3.2 视图放置</p>
+<p>3.3 尺寸标注</p>
+<p>第四章、工程图表格与序号创建</p>
+<p>4.1 材料明细表创建</p>
+<p>4.2 焊接切割清单</p>
+<p>4.3创建零件序号</p>
+<h1 id="快–"><a href="#快–" class="headerlink" title="快–&gt;"></a>快–&gt;</h1><h2 id="模板化"><a href="#模板化" class="headerlink" title="模板化"></a>模板化</h2><p>第一章、SOLIDWORKS版本统一与计算机设置<br>1.1软件安装版本统一</p>
+<p>1.2 计算机设置–加快软件反应速度</p>
+<p>1.3防止意外丢失数据，做好系统自动保存。</p>
+<p>第二章、SOLIDWORKS软件设计资源环境设置</p>
+<p>2.1系统选项一文件模板</p>
+<h3 id="文件模板"><a href="#文件模板" class="headerlink" title="文件模板"></a>文件模板</h3><p>设置标题栏的变量属性</p>
 <p><img src="/SOLIDWORKS-Solution/SOLIDWORKS%E6%A0%87%E5%87%86%E5%86%85%E5%AE%B9/image-20250503140309661.png" alt="image-20250503140309661"></p>
+<p>2.2系统选项一默认模板</p>
+<h3 id="预设属性"><a href="#预设属性" class="headerlink" title="预设属性"></a>预设属性</h3><p>文件<a href="自定义属性.html" target="_blank">自定义属性</a>预设</p>
+<p>2.3系统选项一材料明细表模板</p>
+<p>2.4系统选项一自定义属性文件</p>
+<h3 id="属性卡"><a href="#属性卡" class="headerlink" title="属性卡"></a>属性卡</h3><p><a href="属性卡.html" target="_blank">SOLIDWORKS属性卡</a></p>
+<p>2.5系统选项一设计库</p>
+<p>2.6系统选项一材质数据库</p>
+<p>2.7系统选项一图纸格式</p>
+<p>2.8系统选项一焊件轮廓</p>
+<p>2.9系统选项一焊件切割清单模板设置</p>
 <h3 id="表格模板"><a href="#表格模板" class="headerlink" title="表格模板"></a>表格模板</h3><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><a href="快捷键.html" target="_blank">SOLIDWORKS快捷键</a></p>
+<p>第三章、SOLIDWORKS操作环境设置<br>3.1自定义一鼠标笔试</p>
+<p>3.2自定义一快捷方式栏</p>
+<p>第四章、SOLIDWORKS软件设置保存与导入</p>
+<p>4.1保存软件设置</p>
+<p>4.2导入软件设置</p>
+<p>第五章、SOLIDWORKS toolbox设置</p>
+<p>5.1 SOLIDWORKS toolbox文件位置设定</p>
+<p>5.2 SOLIDWORKS Toolbox自定义设置</p>
 <h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p><a href="设计库.html" target="_blank">SOLIDWORKS设计库</a></p>
 <h2 id="参数化"><a href="#参数化" class="headerlink" title="参数化"></a>参数化</h2><p><a href="参数化.html" target="_blank">SOLIDWORKS参数化</a></p>
 <h1 id="调研"><a href="#调研" class="headerlink" title="调研"></a>调研</h1><p>产品解析：（例如：可用思维导图对产品设计组成）</p>
