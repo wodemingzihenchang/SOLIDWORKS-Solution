@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2024-09-12 10:13:01</span>
+</div>
+
+<div id="article"><h1 id="工程图-尺寸"><a href="#工程图-尺寸" class="headerlink" title="工程图-尺寸"></a>工程图-尺寸</h1><h1 id="直径尺寸"><a href="#直径尺寸" class="headerlink" title="直径尺寸"></a>直径尺寸</h1><img src="尺寸/直径尺寸.jpg">
+
+<h1 id="公差"><a href="#公差" class="headerlink" title="公差"></a>公差</h1><h2 id="标准样式"><a href="#标准样式" class="headerlink" title="标准样式"></a>标准样式</h2><p>孔标注怎么改成国标上下式</p>
+<img src="尺寸/公差怎么改成0.00 模式.png">
+
+<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>默认公差字体可能会是1，会过标注线，如图中间尺寸</p>
+<img src="尺寸/字体大小.png">
+
+<p>可以如图设置修改下公差字体大小 </p>
+<img src="尺寸/公差字体大小.png">
+
+
+
+<h1 id="尺寸取整"><a href="#尺寸取整" class="headerlink" title="尺寸取整"></a>尺寸取整</h1><p>这是一个孔标注，出现有数字小数点没有去零的情况。</p>
+<img src="尺寸/image-20241108120728568.png">
+
+<h2 id="单位-舍零取整"><a href="#单位-舍零取整" class="headerlink" title="单位-舍零取整"></a>单位-舍零取整</h2><p>方法1：在菜单栏【工具-选项-文档属性-单位-舍零取整】</p>
+<img src="尺寸/image-20241108120934665.png">
+
+<h2 id="尾随零值消除"><a href="#尾随零值消除" class="headerlink" title="尾随零值消除"></a>尾随零值消除</h2><p>方法2：在【文档属性-尺寸-零】设置尾随零值为“消除”</p>
+<img src="尺寸/image-20241108121044435.png">
+
+<h1 id="显示更改的尺寸"><a href="#显示更改的尺寸" class="headerlink" title="显示更改的尺寸"></a>显示更改的尺寸</h1><h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>在【系统选项-颜色-工程图更改的尺寸】这里会设置颜色，并且勾选“在打开时为更改过的工程图尺寸使用指定颜色”</p>
+<img src="尺寸/显示更改的尺寸设置.png">
+
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>当工程图没打开时候，修改零部件尺寸。</p>
+<p>此时再打开其工程图，会发现更改的尺寸会在图纸上显示颜色。不过这颜色是临时性的，在保存工程图后，下次打开就恢复正常颜色</p>
+<img src="尺寸/image-20250320101943549.png">
+
+<h1 id="自动尺寸"><a href="#自动尺寸" class="headerlink" title="自动尺寸"></a>自动尺寸</h1><h2 id="出详图"><a href="#出详图" class="headerlink" title="出详图"></a>出详图</h2><p>设置【文档属性，出详图，为工程图标注的尺寸】时，在插入视图后，会自动为模型进行尺寸标注（标注内容是来自于3D建模的尺寸标注）</p>
+<img src="尺寸/自动尺寸.png">
+
+<h2 id="插入注解"><a href="#插入注解" class="headerlink" title="插入注解"></a>插入注解</h2><img src="尺寸/自动尺寸2.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

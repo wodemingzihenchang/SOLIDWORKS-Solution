@@ -101,6 +101,29 @@
 
 <h1 id="其他情况"><a href="#其他情况" class="headerlink" title="其他情况"></a>其他情况</h1><p>打开文件时出错。这可能是由于网络问题。请稍后重试</p>
 <img src="打开文件遇到错误/image-20241010141807292.png">
+
+
+
+<h1 id="Failed-to-load-shellfilelauncherresu"><a href="#Failed-to-load-shellfilelauncherresu" class="headerlink" title="Failed to load shellfilelauncherresu"></a>Failed to load shellfilelauncherresu</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>SOLIDWORKS双击打不开,提示Failed to load shellfilelauncherresu</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>参考QA00000216330</p>
+<p>“Swshellfilelauncherresu.dll”文件是与 SOLIDWORKS® File Launcher（“swShellFileLauncher.exe”）相关的程序文件。有关更多详细信息，请参阅知识库解决方案 S-062537。</p>
+<p>如果操作系统语言指定了受支持的 SOLIDWORKS 语言，但计算机上未安装 SOLIDWORKS 语言包，则会出现此错误。</p>
+<p>修改 SOLIDWORKS 安装并添加缺失的语言包。或者，您可以强制 SOLIDWORKS 使用英语，如下所示：</p>
+<p>1.启动 SOLIDWORKS。<br>2.转到“工具”&gt;“选项”&gt;“常规”。<br>3.激活以下选项：<br>• “使用英文菜单”<br>• “使用英文特征和文件名称”</p>
+<img src="打开文件遇到错误/image-20251014115403776.png">
+
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>如果“swshellfilelauncherresu.dll”错误仍然存在，则您可以修复安装，或者尝试手动重新注册 DLL。此文件存在于以下位置：</p>
+<p>“C:\Program Files[SOLIDWORKS 安装文件夹]\SOLIDWORKS\lang[语言]”</p>
+<p>有关如何手动注册 DLL 的信息，请参阅知识库解决方案 S-04425。</p>
+<h1 id="打开会一直弹窗"><a href="#打开会一直弹窗" class="headerlink" title="打开会一直弹窗"></a>打开会一直弹窗</h1><p>我们在打开SW文件（特别是装配体及其工程图）时，会出现一直弹打开文件的窗口。</p>
+<!-- more -->
+
+<h2 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h2><p>看情况像是问题文件内参考的文件丢失导致，这会使得软件在打开问题文件时，需要你手动查找到丢失的参考文件。</p>
+<h2 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h2><p>在【系统选项-信息】找到“无法找到文件，你是否要自己查找它”并勾选使其恢复弹窗提示</p>
+<img src="打开文件遇到错误/image-20240826111025974.png">
+
+<p>再次打开问题装配体或工程图，选择【压缩所有缺失的零部件】，这样原本出现弹窗的文件将以“压缩状态”处理，而不是出现打开窗口。</p>
+<img src="打开文件遇到错误/image-20240826111105072.png">
 </div>
  			<!-- 引入正文 -->
     </div>	

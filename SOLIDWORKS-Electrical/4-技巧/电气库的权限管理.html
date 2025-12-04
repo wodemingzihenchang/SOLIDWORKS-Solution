@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2024-05-09 12:19:51</span>
+</div>
+
+<div id="article"><h1 id="Electrical电气库的权限管理"><a href="#Electrical电气库的权限管理" class="headerlink" title="Electrical电气库的权限管理"></a>Electrical电气库的权限管理</h1><p>Electrical电气库一般需要专人维护，普通工程师是没有权限修改的。因此在SolidWorks Electrical软件下就可以根据这种情况进行权限设置。具体操作如下：</p>
+<h2 id="管理员设置"><a href="#管理员设置" class="headerlink" title="管理员设置"></a>管理员设置</h2><p>在电气服务器中打开软件，在工具-界面配置-权限管理中，打开用户权限设置，如图</p>
+<img src="电气库的权限管理/image-20251115134316956.png">
+
+<p>在首次设置时，系统会要求创建第一个管理员用户，在此我们设置第一个管理员账户</p>
+<img src="电气库的权限管理/image-20251115134335814.png">
+
+<p>进行管理用户权限设置，如图</p>
+<img src="电气库的权限管理/image-20251115134345808.png">
+
+<p>在此界面中，我们可以看到系统已经针对不同使用权限预设了不同的配置文件，例如管理员是拥有最高权限，要查看所有预设的配置文件的权限设置，可以单击功能表格进行，如图</p>
+<img src="电气库的权限管理/image-20251115134355712.png">
+
+<p>在此表格中我们看到了不同配置文件下的对软件使用功能的权限配置</p>
+<img src="电气库的权限管理/image-20251115134401723.png">
+
+<p>当然我们也可以按照企业的要求进行自定义的权限文件配置，只需单击新配置文件即可进行自定义编辑。</p>
+<img src="电气库的权限管理/image-20251115134407982.png">
+
+<h2 id="用户设置"><a href="#用户设置" class="headerlink" title="用户设置"></a>用户设置</h2><p>设置好权限的配置文件后，我们就可以对每个配置文件下添加组和用户，如图</p>
+<img src="电气库的权限管理/image-20251115134413241.png">
+
+<p>所有配置文件和用户设置完成后，当用户打开软件后，就可以使用对应的账户登录了</p>
+<img src="电气库的权限管理/image-20251115134418401.png">
+
+<p>例如我们使用用户user01的账户登录，他只能对工程项目进行编辑，没有权限对电气库文件进行编辑，当他电气库时，会提示没有权限，通过此方法可以对企业的数据进行规范有效的管理。</p>
+<img src="电气库的权限管理/image-20251115134423412.png"></div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

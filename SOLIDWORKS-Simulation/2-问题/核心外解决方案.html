@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2024-03-11 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-核心外解决方案"><a href="#Simulation-核心外解决方案" class="headerlink" title="Simulation-核心外解决方案"></a>Simulation-核心外解决方案</h1><span id="more"></span>.
+
+<p>当你运行分析时，会出现以下消息之一：</p>
+<p>核心外解决方案，预计会有延迟！或添加[XXX]超内存以在核心中运行</p>
+<p>核心外解决方案，使用虚拟内存。</p>
+<p>核心外解决方案，预计会有延迟！</p>
+<p>接触条件下的内存不足。核心外解决方案。请做好延迟的准备！</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>核心外解消息表示内存（RAM）不足以同时存储求解方程组所需的所有数据。结果是求解器执行交换。也就是说，它在分析过程中使用硬盘上的虚拟内存（分页文件）来存储信息。这需要大量写入和读取硬盘驱动器，导致分析变慢。核外仿真的持续时间通常是同一仿真在有足够内存时的十倍以上。</p>
+<p>这些信息通常出现在使用英特尔直接稀疏求解器时，因为该求解器比FFEPlus求解器需要更多内存。FFEPlus求解器所需的内存大约少10倍。</p>
+<p>运行研究所需的内存量取决于网格中的自由度数和求解器选择。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>要解决这个问题，可以实现以下组合：</p>
+<p>使用各种技术来减少模型中的自由度数。例如：</p>
+<ul>
+<li>优化网格以减少自由度。</li>
+<li>简化几何结构。</li>
+<li>用连接器替换车身。</li>
+<li>更改求解器选择</li>
+<li>关于求解器选择</li>
+</ul>
+<p>如果FFEPlus求解器兼容你的分析类型和选项，可以考虑用它代替Intel Direct Sparse求解器。</p>
+<p>如果FFEPlus求解器与你的分析类型和选项不兼容，可以考虑使用大型问题直接稀疏求解器。该求解器具有特殊特性，即使在处理通常会出核的巨大问题时，也能保持其效率。</p>
+<img src="核心外解决方案/image-20251202152530754.png">
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

@@ -83,10 +83,15 @@
 <p>升级 SWTaskAddin 后，可以导入最新版本的“转换”、“打印”和“设计检查器”任务。</p>
 </li>
 </ul>
-<h1 id="Dispatch"><a href="#Dispatch" class="headerlink" title="Dispatch"></a>Dispatch</h1><p><a target="_blank" rel="noopener" href="https://littleboy97.gitee.io/_A/SOLIDWORKS-PDM/3-%E6%8A%80%E5%B7%A7/PDM%E6%8F%92%E4%BB%B6dispatch.html">PDM插件dispatch</a></p>
+<h1 id="Dispatch"><a href="#Dispatch" class="headerlink" title="Dispatch"></a>Dispatch</h1><p>企业版本PDM Dispatch是集成在PDM库内并且可以触发多种事件的插件工具，例如在文档达到某种工作流程状态时即触发该操作。</p>
 <!-- more -->
 
-<h2 id="加载插件"><a href="#加载插件" class="headerlink" title="加载插件"></a>加载插件</h2><img src="插件和任务/image-20240427110410451.png">
+<h2 id="加载插件"><a href="#加载插件" class="headerlink" title="加载插件"></a>加载插件</h2><p>方法1</p>
+<p>C:\Program Files\SOLIDWORKS PDM\Default Data</p>
+<img src="插件和任务/image-20251106162133796.png">
+
+<p>方法2</p>
+<img src="插件和任务/image-20240427110410451.png">
 
 
 
@@ -137,20 +142,64 @@
 </tr>
 </tbody></table>
 <h2 id="程序例子："><a href="#程序例子：" class="headerlink" title="程序例子："></a>程序例子：</h2><p>dispatch程序一般以“程序.acn”的形式。</p>
-<h3 id="读写注册表"><a href="#读写注册表" class="headerlink" title="读写注册表"></a>读写注册表</h3><p>Example of writing and reading registry values.acn</p>
+<h3 id="检入检出"><a href="#检入检出" class="headerlink" title="检入检出"></a>检入检出</h3><p>将文件检入或检出PDM库</p>
+<p>更改文件变量必须做什么？检出文件</p>
+<p>更改变量值（非自由版本变量）</p>
+<p>必须精确写入实际名称和路径进行操作</p>
+<h3 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h3><p>复制PDM库内外的文件</p>
+<p>复制只抓取缓存版本，而不是最新版本</p>
+<p>没有移动文件!</p>
+<p>复制本地缓存版本，不是最新的</p>
+<h3 id="生成文件夹"><a href="#生成文件夹" class="headerlink" title="生成文件夹"></a>生成文件夹</h3><p>在PDM内部或外部创建文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">生成文件夹</span><br><span class="line">%RootFolderPath%\01_物料库\物料标准库\%一级分类%</span><br><span class="line">%RootFolderPath%\01_物料库\物料标准库\%一级分类%\%二级分类%</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<p>1、需要逐级创建</p>
+<p>2、如果文件夹存在则会跳过</p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>只删除文件的缓存版本</p>
+<p>可勾选“同时将文件从库中移除”删除(权限?)</p>
+<h3 id="获取文件"><a href="#获取文件" class="headerlink" title="获取文件"></a>获取文件</h3><p>如果文件不存在，则创建文件的本地缓存副本</p>
+<p>也可以在系统中获得最新版本的文件缓存</p>
+<h3 id="标号-转移"><a href="#标号-转移" class="headerlink" title="标号&#x2F;转移"></a>标号&#x2F;转移</h3><p>基于If语句创建跳转</p>
+<p>非常有用</p>
+<h3 id="移动文件夹"><a href="#移动文件夹" class="headerlink" title="移动文件夹"></a>移动文件夹</h3><p>将本地文件夹从一个位置移动到另一个位置（非PDM库内文件路径）</p>
+<p>不能移动PDM库内文件夹!</p>
+<h3 id="生成参数文件"><a href="#生成参数文件" class="headerlink" title="生成参数文件"></a>生成参数文件</h3><p>生成包含所选文件信息的文本文件</p>
+<p>需要一个模板，例如txt</p>
+<h3 id="发送信息"><a href="#发送信息" class="headerlink" title="发送信息"></a>发送信息</h3><p>向选定的用户或组发送邮件消息</p>
+<p>使用建立的任何邮件系统发送</p>
+<p>将邮件消息发送到选定的用户或组，使用已建立的邮件系统发送</p>
+<h3 id="设定变量"><a href="#设定变量" class="headerlink" title="设定变量"></a>设定变量</h3><p>设置文件或文件夹数据卡的变量</p>
+<p>可以配置特定的SW配置页签文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="外壳执行"><a href="#外壳执行" class="headerlink" title="外壳执行"></a>外壳执行</h3><p>启动命令行，exe程序执行获取参数值的好方法</p>
+<h3 id="等候"><a href="#等候" class="headerlink" title="等候"></a>等候</h3><p>根据所选动作暂停脚本执行</p>
+<p>文件删除</p>
+<p>文件生成</p>
+<p>注册表值已设定</p>
+<h3 id="读写注册表"><a href="#读写注册表" class="headerlink" title="读写注册表"></a>读写注册表</h3><p>小心使用!! 防止写错位置</p>
+<p>写入运行脚本的机器的本地注册表</p>
+<p>不限制写入哪些注册表值</p>
 <img src="插件和任务/读写注册表.png">
 
 <p>使用：</p>
 <img src="插件和任务/读写注册表2.png">
 
-<p>​     </p>
-<h3 id="提示文件名"><a href="#提示文件名" class="headerlink" title="提示文件名"></a>提示文件名</h3><p>File Name String Examples.acn</p>
-<img src="插件和任务/提示文件名.png">
 
-<p>使用：</p>
-<p>【右键文件-show me file info】会弹确认信息框，内容如下：</p>
-<img src="插件和任务/提示文件名2.png">
 
+<h3 id="编辑框-组合框"><a href="#编辑框-组合框" class="headerlink" title="编辑框&#x2F;组合框"></a>编辑框&#x2F;组合框</h3><p>非常实用的输入变量值更新缺失的信息和初始化</p>
+<img src="插件和任务/编辑框组合框.png">
+
+<h3 id="是否信息框"><a href="#是否信息框" class="headerlink" title="是否信息框"></a>是否信息框</h3><p>根据所选值决定执行跳转路径</p>
+<h3 id="函数使用介绍"><a href="#函数使用介绍" class="headerlink" title="函数使用介绍"></a>函数使用介绍</h3><p>针对静态字符串自动抓取关键字字符</p>
+<h2 id="帮助文档"><a href="#帮助文档" class="headerlink" title="帮助文档"></a>帮助文档</h2><p>详细可查看PDM帮助，提供详细的命令说明</p>
+<h2 id="样例讲解"><a href="#样例讲解" class="headerlink" title="样例讲解"></a>样例讲解</h2><p>样例1：获取文件名后缀与不带后缀文件名</p>
+<p>样例2：同步零件属性到工程图</p>
+<p>样例3：使用零件信息重命名工程图</p>
+<p>样例4：通过注册表批量提示所有报错文件信息</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2024-03-11 17:18:29</span>
+</div>
+
+<div id="article"><h1 id="Simulation-迭代求解器停止"><a href="#Simulation-迭代求解器停止" class="headerlink" title="Simulation-迭代求解器停止"></a>Simulation-迭代求解器停止</h1><span id="more"></span>.
+
+<p>当你用FFEPlus求解器运行静态研究时，会出现以下提示：</p>
+<p><em>迭代求解器停止了。<br>求解器存在数值难题。<br>模型可能没有足够的夹具。<br>结果没有保存。</em></p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>如果未激活大位移选项，英特尔直接稀疏求解器会显示“本模型计算过多位移”。如果该选项激活，消息为：<br>“本研究的变形太大，不符合现实<br>。你想停止程序，用<br>更小的载荷或更刚的模型重新运行吗？”</p>
+<p>此错误信息的前文是“状态代码：9 MATRIX_SINGULAR_OR_INDEFINITE”。</p>
+<h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><p>如果求解器计算极大的位移，就会出现错误信息。如果模型没有完全约束，就会发生这种情况。当你的模型没有足够的边界条件时，就是这种情况。这种情况可能发生在：</p>
+<p>在单个体的研究中，六个刚体运动中的一个或多个未被适当约束阻止，或研究属性未启用“软弹簧以稳定模型”选项。<br>在多物体的研究中，当全局交互设为自由时，允许所有接触部件自由运动<br>在包含多个物体的研究中，一个或多个部件不相互接触，因此不受约束，或者定义的相互作用允许一个或多个物体至少向一个方向自由运动。<br>在一项涉及多体体的研究中，约束或远程位移不足以阻止所有刚体运动。<br>你激活“使用平面内效应”选项，在施加的载荷下，会预测屈曲。平面内效应大幅降低了刚度，使得刚度矩阵变成奇异矩阵。<br>请参见附件中的示例模型。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>审查你的模型。注意是否有约束力不足的实体。通过定义相互作用以及应用夹具、连接器和远程位移，可以约束物体。</p>
+<p>检查已套用的约束装置和远程摆动。</p>
+<p>在2014版及以后版本中，回顾全局接触定义及所有定义的接触集。使用<strong>交互查看器</strong>。</p>
+<p>2016年及以后版本中，寻找无约束的身体。使用“欠约束体”工具。在2023版的SOLIDWORKS Simulation Professional和SOLIDWORKS Simulation Premium中，仅针对静态研究，Underconstrained Bodies算法在可用性方面有显著提升。</p>
+<p>如果你激活了“<strong>使用平面内效应</strong>”选项，运行屈曲分析以确定是否预测屈曲。如果是这样，使用“使用平面内效应”选项会导致静态分析失败。这是正常的。在这种情况下，尝试使用非线性分析，可能使用<strong>弧长</strong>控制法。</p>
+<p>另一种排查这类问题的方法是，在静态分析属性中激活“<strong>使用软弹簧稳定模型</strong>”选项，这种问题已被交互查看器和欠约束物体工具取代。</p>
+<p>然后，运行分析并查看位移图，发现有些物体或壳体并未随其余结构移动。通常，这些物体或壳体突出模型，若直接施加载荷，则相较模型其他部分承受较大位移，若未直接施加载荷，则位移为零位移。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>

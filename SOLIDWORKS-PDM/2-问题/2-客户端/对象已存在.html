@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2025-11-24 14:41:34</span>
+</div>
+
+<div id="article"><h1 id="PDM-对象已存在"><a href="#PDM-对象已存在" class="headerlink" title="PDM-对象已存在"></a>PDM-对象已存在</h1><p>登录时提示对象已存在解决方法</p>
+<p>用户电脑网络密钥过多或者重复，导致登录PDM时无法获取正确的密钥进行登录。删除用户电脑的网络密钥，连接PDM时会自动产生新的密钥，即可正常登录。 </p>
+<p><strong>方法</strong></p>
+<p>在电脑运行处输入“regedit”，打开注册表。找到以下路径： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList </span><br></pre></td></tr></table></figure>
+
+<p>在ProfileList 文件夹下方会有很多不同的用户产生的密钥信息。</p>
+<p>由于不同的用户分别存储各自的密钥信息，如果该用户无法登录，与其他用户没有关系。<br>这也就解释了为什么新建的用户可以登录而某些旧的用户无法登录。因为新建的用户密钥是正常<br>的，不会影响PDM的登录。 </p>
+<p>找到对应用户名的密钥存放的位置，进入</p>
+<img src="对象已存在/image-20251108205627770.png">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\AppData\Roaming\Microsoft\Crypto\RSA</span><br></pre></td></tr></table></figure>
+
+<p>其中 Administrator 为登录的用户名称。在该文件夹中可以看到以S开头的文件夹，必须确认该文件夹名称与注册表中看到的一致。</p>
+<img src="对象已存在/image-20251108210022413.png">
+
+<p>接下来进入该文件夹，可以看到很多不同的网络密钥。删除后PDM就可以正常登录了。删除前如果担心出问题还可以先把文件备份一下。 </p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>
