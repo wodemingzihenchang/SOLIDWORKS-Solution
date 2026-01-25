@@ -44,6 +44,15 @@
 <p><img src="/SOLIDWORKS-Solution/PDM%E6%B3%A8%E5%86%8C%E8%A1%A8/image-20241021194643005.png" alt="image-20241021194643005"></p>
 <span id="more"></span>
 
+<h2 id="重置注册表"><a href="#重置注册表" class="headerlink" title="重置注册表"></a>重置注册表</h2><p>1、PDM管理工具&gt;用户&gt;右键&gt;设置&gt;目标菜单&gt;选择每个下拉框菜单&gt;点击重置</p>
+<p>2、关闭SW和PDM，退出右下角的PDM蓝莓图示，打开注册表。导出保存做个备份，然后把PDMWorks Enterprise删除掉，重启计算机后测试是否能正常了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT _USER\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise</span><br></pre></td></tr></table></figure>
+
+<p>3、如果还有问题先把本地视图移除掉，然后进入注册表：把这三个注册表键值删除掉后再创建新的本地视图，然后测试是否正常</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise</span><br></pre></td></tr></table></figure>
+
+
+
 <h1 id="存档服务器"><a href="#存档服务器" class="headerlink" title="存档服务器"></a>存档服务器</h1><h2 id="Computer"><a href="#Computer" class="headerlink" title="Computer"></a>Computer</h2><p>ArchiveServer存档文件夹：确保默认值指向正确的根文件夹，文件库存档存储在该文件夹中。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\Applications\PDMWorks Enterprise\ArchiveServer\Computers\local\Archives</span><br></pre></td></tr></table></figure>
 

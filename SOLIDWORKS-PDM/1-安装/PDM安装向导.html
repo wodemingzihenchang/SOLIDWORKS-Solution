@@ -39,16 +39,16 @@
 </div>
 
 <div id="article"><h1 id="PDM安装向导"><a href="#PDM安装向导" class="headerlink" title="PDM安装向导"></a>PDM安装向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类以及 PDM 的安装向导</p>
+<img src="PDM安装向导/PDM标准版和专业版的差别.png">
+
 <span id="more"></span>
 
-<h2 id="配置要求："><a href="#配置要求：" class="headerlink" title="配置要求："></a>配置要求：</h2><p>注意：安装前，需检查当前电脑配置是否支持SW的安装环境（详细见下方配置要求参考）。</p>
-<p>PDM服务器规格：</p>
-<p><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">SOLIDWORKS官网系统要求</a><br></p>
-<p>PDM客户端规格：</p>
-<p><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification">SOLIDWORKS官网硬件认证</a><br><a href="../SOLIDWORKS问题/【0安装】-SOLIDWORKS硬件配置.html">SOLIDWORKS硬件配置参考</a><br><a target="_blank" rel="noopener" href="https://www.pugetsystems.com/recommended/">普吉网站的选配参考</a><br></p>
-<p>网络规格：</p>
-<h2 id="PDM-安装"><a href="#PDM-安装" class="headerlink" title="PDM 安装"></a>PDM 安装</h2><p>注意：安装前，需检查当前服务器配置是否支持PDM的安装环境（详细见<a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">#配置要求</a>）。</p>
-<p>1、安装SQL服务器</p>
+<h2 id="配置要求："><a href="#配置要求：" class="headerlink" title="配置要求："></a>配置要求：</h2><p>注意：安装前，需检查当前服务器配置是否支持PDM的安装环境（详细见<a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">#配置要求</a>）。</p>
+<p><strong>PDM服务器规格：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">SOLIDWORKS官网系统要求</a></p>
+<p><strong>PDM客户端规格：</strong></p>
+<p><strong>网络规格：</strong></p>
+<h2 id="PDM-安装"><a href="#PDM-安装" class="headerlink" title="PDM 安装"></a>PDM 安装</h2><p>1、安装SQL服务器</p>
 <blockquote>
 <p>..\SQLsetup.exe<br></p>
 </blockquote>
@@ -60,8 +60,7 @@
 <blockquote>
 <p>..\SOLIDWORKS 20xx SP05 安装包\SWPDMClient\setup.exe<br></p>
 </blockquote>
-<h2 id="PDM-升级"><a href="#PDM-升级" class="headerlink" title="PDM 升级"></a>PDM 升级</h2><p>注意：升级前，建议检入所有文件；备份数据库和 PDM 数据库，升级后功能使用测试。本章默认只考虑在原 PDM 服务器下升级，如需进行 PDM 迁移阅读下文“SOLIDWORKS PDM 迁移”。</p>
-<p>1、升级PDM服务器</p>
+<h2 id="PDM-升级"><a href="#PDM-升级" class="headerlink" title="PDM 升级"></a>PDM 升级</h2><p>1、升级PDM服务器</p>
 <blockquote>
 <p>..\SOLIDWORKS 20xx SP05 安装包\SWPDMServer\setup.exe<br></p>
 </blockquote>
@@ -75,11 +74,6 @@
 </blockquote>
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="Webview2"><a href="#Webview2" class="headerlink" title="Webview2"></a>Webview2</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\SOLIDWORKS安装包\sldim\MicrosoftEdgeWebView2RuntimeInstallerX64.exe</span><br></pre></td></tr></table></figure>
 
-<h2 id="不兼容的版本"><a href="#不兼容的版本" class="headerlink" title="不兼容的版本"></a>不兼容的版本</h2><img src="PDM安装向导/不兼容的版本.png">
-
-<p>需检出当前客户端和服务器的版本，并尝试修改客户端的版本。这里涉及客户端PDM的卸载和安装操作（详见#安装说明）</p>
-<p>方法：</p>
-<p>这里是因为只升级了PDM程序，原本的PDM库还是之前的版本。注意：程序和数据库是两个东西。可以<a href="PDM%E5%8D%87%E7%BA%A7%E5%90%91%E5%AF%BC.html">参考：PDM升级向导，PDM库升级</a></p>
 <h2 id="需要SQL更高版本"><a href="#需要SQL更高版本" class="headerlink" title="需要SQL更高版本"></a>需要SQL更高版本</h2><img src="PDM安装向导/PDM需要SQL2019版本.png">
 
 <p>要在 Microsoft® SQL Server 2019 或 Microsoft® SQL Server Express 2019 上创建或升级文件库数据库，SOLIDWORKS® PDM 软件需要“SQL Server 2019 Cumulative Update 4”或更高版本。更新 SQL Server 安装，请执行以下步骤：</p>
@@ -88,19 +82,6 @@
 <p>3.在包含 SQL 2019 安装的同一计算机上运行更新程序文件。</p>
 <p>4.继续创建 PDM 库的流程。</p>
 <p>（要运行较旧的 SQL Cumulative Update（至少为“CU4”），您可以从 Microsoft 更新目录 (<a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202019">https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202019</a>) 中选择其他内容）</p>
-<h2 id="密码不正确"><a href="#密码不正确" class="headerlink" title="密码不正确"></a>密码不正确</h2><p>首次安装 SOLIDWORKS PDM 客户端后，必须在 <a target="_blank" rel="noopener" href="https://www.javelin-tech.com/blog/tag/solidworks-pdm-client/">PDM</a> 管理中识别存档服务器。</p>
-<img src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/06/13-06-2022-03-04-57.png">
-
-<p>加载项服务器到客户端计算机。将客户端计算机连接到存档服务器时，将登录的用户配置文件与用户配置文件的“附加访问权限”和“管理访问权限”进行比较。如果用户配置文件凭据不匹配，系统将提示用户登录 PDM 存档服务器。</p>
-<p>客户端添加服务器连接失败，输入的用户名或密码不正确</p>
-<img src="PDM安装向导/输入账号密码不正确.png">
-
-<p>需确保在网络访问到服务器的电脑用户存在，并由密码设置（空密码好像是不行的）</p>
-<img src="PDM安装向导/从网络访问此电脑.png">
-
-<p>解决方法:本地安全策略&gt;本地策略&gt;安全选项&gt;网络访问:本地账户的共享和安全模型&gt;把该项改为经典模</p>
-<img src="PDM安装向导/从网络访问此电脑2.png">
-
 <h2 id="Error1722"><a href="#Error1722" class="headerlink" title="Error1722"></a>Error1722</h2><p>Register_DocMgr.DLL</p>
 <img src="PDM安装向导/image-20241106103934467.png">
 

@@ -44,18 +44,14 @@
 <p>在电脑运行处输入“regedit”，打开注册表。找到以下路径： </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList </span><br></pre></td></tr></table></figure>
 
-<p>在ProfileList 文件夹下方会有很多不同的用户产生的密钥信息。</p>
-<p>由于不同的用户分别存储各自的密钥信息，如果该用户无法登录，与其他用户没有关系。<br>这也就解释了为什么新建的用户可以登录而某些旧的用户无法登录。因为新建的用户密钥是正常<br>的，不会影响PDM的登录。 </p>
+<p>在ProfileList会有很多不同的用户分别产生的密钥信息。 这也就解释了为什么新建的用户可以登录而某些旧的用户无法登录。因为新建的用户密钥是正常的，不会影响PDM的登录。 </p>
 <p>找到对应用户名的密钥存放的位置，进入</p>
-<img src="对象已存在/image-20251108205627770.png">
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator\AppData\Roaming\Microsoft\Crypto\RSA</span><br></pre></td></tr></table></figure>
 
-<p>其中 Administrator 为登录的用户名称。在该文件夹中可以看到以S开头的文件夹，必须确认该文件夹名称与注册表中看到的一致。</p>
-<img src="对象已存在/image-20251108210022413.png">
+<img src="对象已存在/image-20251108205627770.png">
 
-<p>接下来进入该文件夹，可以看到很多不同的网络密钥。删除后PDM就可以正常登录了。删除前如果担心出问题还可以先把文件备份一下。 </p>
-</div>
+<p>其中 Administrator 为登录的用户名称。在该文件夹中可以看到以S开头的文件夹，必须确认该文件夹名称与注册表中看到的一致。不一致的删除后PDM就可以正常登录了。删除前如果担心出问题还可以先把文件备份一下。 </p>
+<img src="对象已存在/image-20251108210022413.png"></div>
  			<!-- 引入正文 -->
     </div>	
     

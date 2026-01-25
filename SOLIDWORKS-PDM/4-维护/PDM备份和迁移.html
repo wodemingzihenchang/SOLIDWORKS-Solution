@@ -96,6 +96,15 @@
 <h2 id="拷贝存档文件夹"><a href="#拷贝存档文件夹" class="headerlink" title="拷贝存档文件夹"></a>拷贝存档文件夹</h2><p>把原文件库数据拷贝覆盖到新服务器上的文件库中，一般文件库的位置在PDM服务端安装目录下“SOLIDWORKS PDM\Data”文件夹中。</p>
 <p>※ 需要记住该文件的路径，以备还原的时候将备份的文件复制到原来相同Data位置，要确保路径一致。</p>
 <img src="PDM备份和迁移/image-20251105165415296.png">
+
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="修改注册表"><a href="#修改注册表" class="headerlink" title="修改注册表"></a>修改注册表</h2><p>在开始菜单运行中输入 regedit，打开注册表，找到如下路径；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Computers\&lt;local&gt;\档案</span><br></pre></td></tr></table></figure>
+
+<p>把Vaults里添加：还原的库名称</p>
+<img src="PDM备份和迁移/image-20260120225551005.png">
+
+<h2 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h2><p>表:dbo.ArchiveServers编辑值 ArchiveServerName&#x3D;当前机器名<br>表:dbo.SystemInfo 编辑值 ArchiveServerName&#x3D; 当前机器名</p>
+<p>第一步备份SolidWorks PDM文件库对应的数据库。然后在新的服务器数据库上进行相应的还原数据库操作。<br>第二步在还原后的文件数据库中，查找相应的表“SystemInfo”，在数据库管理工具中通过语句“select<em>from [dbo].[SystemInfo]”来查看文件数据库的版本。<br>第三步判断现在新服务器上的PDM版本与迁移过来的版本是否一致，如果迁移过来的版本比较低，那么需要进行相应的库版本升级操作。具体相应的操作，需要在安装包中使用自带的工具“Upgrade.exe”程序来进行相应的自动升级操作。<br>第四步清除复制信息，在还原后的文件数据库中，查找相应的表“ArchiveServers”，在数据库管理工具中通过语句“select</em>from [dbo].[ArchiveServers]”来查看相应的记录信息，删除“ArchiveServerID”不等于1的所有记录；然后查看表“ArchiveServerStored”中是否有相应的记录，如果存在，则删除所有的记录，通过相应的语句“deletefrom [dbo].[ArchiveServerStored]”。<br>第五步为内容搜索重新创建链接服务器，在数据库管理工具中执行相应的语句“Exec Sys_IndexServerLink 1”来自动创建链接服务器。<br>第六步更新SolidWorksPDM主数据库“ConisioMasterDb”中的表“FileVaults”中的记录，把相应的迁移过来的文件库记录增加到该表中。<br>第七步创建缺少的存档服务器注册表项和文件归档文件夹。使用PDM提供的工具“ArcServCreator32.exe”，在新服务器相应的注册表和文件库中新建相应的库数据记录以及相应的文件库文件夹。<br>第八步把原文件库数据拷贝覆盖到新服务器上的文件库中，一般文件库的位置在PDM服务端安装目录下“SOLIDWORKS PDM\Data”文件夹中。<br>第九步在SolidWorksPDM管理工具结构树上进行相应的“刷新”操作，把新迁移的文件库记录添加到管理工具结构树中。同时登陆到管理工具中把相应的插件移除，进行重新的加载。<br>通过上面的步骤介绍，基本就能实现库系统的迁移操作。</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

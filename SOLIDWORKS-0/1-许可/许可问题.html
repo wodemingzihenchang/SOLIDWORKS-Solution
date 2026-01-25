@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    </ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2022-06-18 22:12:59</span>
+</div>
+
+<div id="article"><h1 id="网络版许可问题"><a href="#网络版许可问题" class="headerlink" title="网络版许可问题"></a>网络版许可问题</h1><p>无论是服务器还是客户端，你都需要学会打开这个SOLIDWORKS服务器程序（或客户端程序）进行问题排查。</p>
+<p>客户端：SolidNetWork License Manager Client 20xx</p>
+<p>服务端：SolidNetWork License Manager Server 20xx</p>
+<img src="许可问题/打开程序.png">
+
+<h1 id="无法获得许可"><a href="#无法获得许可" class="headerlink" title="无法获得许可"></a>无法获得许可</h1><h2 id="用户信息"><a href="#用户信息" class="headerlink" title="用户信息"></a>用户信息</h2><p>有些时候打开许可程序发现是有许可的，但是启动软件就提示：无法获得许可。</p>
+<p>你需要检查下当前用户注册表内是否有许可服务器信息的登记：注册表位置如下：如果是空白，则根据您的服务器地址完善信息，如下图</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager</span><br></pre></td></tr></table></figure>
+
+<img src="许可问题/image-20250626161006518.png">
+
+<h2 id="内部的-FLEXlm-错误"><a href="#内部的-FLEXlm-错误" class="headerlink" title="内部的 FLEXlm 错误"></a>内部的 FLEXlm 错误</h2><p>内部的 FLEXim 错误:请向 Globetrotter 软件公司报告,(-76.61026 0)</p>
+<p>方法：重启电脑后恢复正常。</p>
+<h1 id="未被授权"><a href="#未被授权" class="headerlink" title="未被授权"></a>未被授权</h1><p>正版与盗版混用,一般会提示“此SOLIDWORKS版本尚未被适当当地授权，请联系您的供应商”。可检查当前序列号的情况。</p>
+<p>方法1：</p>
+<p>1、一般会是安装盗版插件时注册表序列号被更改导致（已发现GearTax插件会出现此问题）。</p>
+<p>2、进入注册表路径位置“计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Licenses\Serial Numbers” </p>
+<p>3、将SolidWorks序列号改回正版序列号，并打开SW软件激活即可。</p>
+<p>方法2：</p>
+<p>若添加序列号后打开程序依旧出现弹窗，可在激活程序swactwiz.exe手动打开激活，在尝试启动SOLIDWORKS程序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">swactwiz.exe程序位置在：</span><br><span class="line">&lt;程序位置&gt;\SOLIDWORKS Corp\SOLIDWORKS\setup\i386</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="lic许可错误"><a href="#lic许可错误" class="headerlink" title=".lic许可错误"></a>.lic许可错误</h1><p>如果在同时用作 SolidNetWork 许可证 (SNL) 服务器和客户端的计算机上打开 SOLIDWORKS 时收到许可错误消息，您的计算机可能具有无效或已过期的临时 .lic 文件。</p>
+<p>方法</p>
+<p>1.在 Windows文件资源管理器中，浏览到 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramData\SolidWorks\SolidWorksStandaloneLic.lic</span><br></pre></td></tr></table></figure>
+
+<p>(若无该文件夹，则需在文件资源管理器【查看-选项中】设置显示隐藏的文件和文件夹）</p>
+<p>2.如果您看到任何具有“.lic”文件扩展名的文件，请将其重命名。</p>
+<p>3.重新启动 SOLIDWORKS</p>
+<p>此问题的其他症状包括：</p>
+<ul>
+<li>• 您收到“独立许可证故障”或“无法获得许可证”错误。</li>
+<li>• 使用 SOLIDWORKS 序列号的独立激活时，不提示激活许可证。</li>
+<li>• 在您转至“帮助”&gt;“激活许可证”时没有任何反应</li>
+</ul>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="套接字因故障关闭"><a href="#套接字因故障关闭" class="headerlink" title="套接字因故障关闭"></a>套接字因故障关闭</h2><p>套接字因故障已在另一端关闭</p>
+<p>情况1：修改注册表内容导致</p>
+<img src="许可问题/Q&A/修改注册表内容导致.png">
+
+
+
+<h2 id="管理员禁用"><a href="#管理员禁用" class="headerlink" title="管理员禁用"></a>管理员禁用</h2><p>已在此页面上禁用功能，因为安需要管理员权院才能正常运行，</p>
+<p>方法：需管理员身份运行</p>
+<img src="许可问题/Q&A/需要管理员权限.png">
+
+
+
+
+
+<h2 id="多个计算机ID"><a href="#多个计算机ID" class="headerlink" title="多个计算机ID"></a>多个计算机ID</h2><p>安装过旧版本许可程序记录，在安装2024许可程序之后会出现的问题。</p>
+<p>因此，你需要留意升级许可程序前，停用许可。</p>
+<img src="许可问题/Q&A/多计算机ID问题.png">
+
+<h2 id="空计算机ID"><a href="#空计算机ID" class="headerlink" title="空计算机ID"></a>空计算机ID</h2><p>是客户电脑禁止了FlexNet服务导致的，将服务启动，问题解决了</p>
+<h2 id="许可数量缺少"><a href="#许可数量缺少" class="headerlink" title="许可数量缺少"></a>许可数量缺少</h2><p>该情况可能发生在：有多条序列号的产品数量，当只激活1条的时候。此时当前激活的许可数量会覆盖原有数量，导致数量缺少。</p>
+<p>处理方法：</p>
+<p>是将现有的全部序列号进行【选择所有】激活</p>
+<h1 id="重激活"><a href="#重激活" class="headerlink" title="重激活"></a>重激活</h1><h2 id="重读失败"><a href="#重读失败" class="headerlink" title="重读失败"></a>重读失败</h2><img src="许可问题/Q&A/重读失败.png">
+
+<h1 id="其他-1"><a href="#其他-1" class="headerlink" title="其他"></a>其他</h1><h2 id="许可分版本吗"><a href="#许可分版本吗" class="headerlink" title="许可分版本吗"></a>许可分版本吗</h2><p>许可程序区分年份版本</p>
+<p>许可程序不分SP版本</p>
+<h1 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h1><p>Could not obtain license for SOLIDWORKS®.Licensed number of users reached (-4,132,0)”</p>
+<p>Question	<br>为什么即使 SolidNetWork License Manager 显示有可用的免费许可，仍显示以下错误消息？我收到错误信息，“Could not obtain license for SOLIDWORKS®.Licensed number of users reached (-4,132,0)”。<br>Answer	<br>检查确认是否 SolidNetWork License (SNL) Manager 在运行时使用了某个 SOLIDWORKS® 选项文件，该文件本应用于为已在组中设置的用户保留 SOLIDWORKS 许可。如果用户尚未整合到 (SNL) 选项文件中包括的用户组内，则为用户生成此错误信息。要修复此错误，请关闭 SNL 管理器，编辑 SNL 选项文件，然后重新启动 SNL 管理器。</p>
+<p>Question	</p>
+<p>“UNSUPPORTED: “swepdm_cadeditor” (PORT_AT_HOST_PLUS) admin@LP5-TIV-DSA (No such feature exists.(-5,346))”</p>
+<p>Answer	</p>
+<p>然后，服务器尝试使用软件包名称“swepdm_cadeditorandweb”。如果许可可用，日志将显示成功的许可检出条目：<br>“(SW_D) OUT: “swepdm_cadeditorandweb” admin@LP5-TIV-DSA”</p>
+<p>Question	<br>是否可以将 SolidNetwork 许可证（“SNL”）或功能保留用于特定的 PC（工作站）、主机、用户或用户组？<br>Answer	<br>是，可以使用“选项”文件将特定的功能保留用于特定的 PC。<br>\ Docs\flexuser 中的 FlexLM 帮助的 chap5.htm 已对此进行了介绍</p>
+<p>例如，要将一个 SolidWorks 许可证保留用于名为 host_name 的 PC</p>
+<p>1.首先创建一个名为 sw_d.opt 的文件。<br>2.在此文件中添加一行：<br>RESERVE 1 solidworks HOST host_name（其中的主机名称就是 PC 在网络上的名称。）<br>3.将 sw_d.opt 文件放入与 sw_d.lic 文件相同的文件夹中：..\ \licenses<br>4.打开 SolidNetwork 许可管理器，并通过“管理”选项卡来停止服务。当 SolidNetwork 许可管理器重新启动时，将会读取选项文件。</p>
+<p>随后，日志文件应该会报告 sw_d.opt 文件已被读取，并且会报告任何受到影响的功能。</p>
+<p>例如</p>
+<p>10:30:05 (SW_D) Using options file: “C:\Program Files\2006 SNL Manager\licenses\sw_d.opt”<br>10:30:06 (SW_D) Server started on server1 for: solidworks<br>10:30:06 (SW_D) RESERVING 1 solidworks&#x2F;0022 84BE 2640 DE4C license for HOST host_name</p>
+<p>使用“选项”文件可以完成许多任务，其中之一就是排除用户&#x2F;主机的功能访问权限。</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</body></html>
