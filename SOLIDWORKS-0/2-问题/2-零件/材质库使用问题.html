@@ -74,7 +74,8 @@
 <img src="材质库使用问题/image2.jpeg" >
 
 <h1 id="无效字符"><a href="#无效字符" class="headerlink" title="无效字符"></a>无效字符</h1><p>0xc00ce508:文本内容中发现无效字符</p>
-<p>![image-20240731173203779](材质库使用问题&#x2F;image-20240731173203779.png”&gt;</p>
+<img src="材质库使用问题/image-20240731173203779.png">
+
 <p>sldmat材质库文件是以xml文件格式进行存储，因此错误的xml格式，会影响文件的准确性。</p>
 <h1 id="不允许使用文本"><a href="#不允许使用文本" class="headerlink" title="不允许使用文本"></a>不允许使用文本</h1><p>0xc00ce018:根据 DTD&#x2F;架构，元索”<a target="_blank" rel="noopener" href="http://www,solidworks.comsldmaterialsjmaterials'的上下文中不允许使用文本,要求/">http://www,solidworks.comsldmaterialsjmaterials&#39;的上下文中不允许使用文本，要求</a>: curves。</p>
 <img src="材质库使用问题/image-20250324153446714.png">
@@ -94,6 +95,19 @@
 <p>A3：取消excel加载项</p>
 <img src="材质库使用问题/image-20250602233335742.png">
 
+<h1 id="无编辑材料"><a href="#无编辑材料" class="headerlink" title="无编辑材料"></a>无编辑材料</h1><p>如果 SolidWorks 用户发现他们的 SolidWorks 部分缺少编辑材料选项，那是一个常见的已知错误。</p>
+<img src="材质库使用问题/image-20260209170145127.png">
+
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>用户可以通过以下步骤重置 SolidWorks Windows 注册表来解决此问题：</p>
+<p>关闭所有 SOLIDWORKS 实例</p>
+<p>启动 Windows 注册表编辑器。（进入开始菜单，输入：regedit）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\SolidWorks</span><br></pre></td></tr></table></figure>
+
+<p>展开 SolidWorks 文件夹。这个文件夹包含多个文件夹，分别控制你机器上 SOLIDWORKS 的不同方面。这里为机器上安装的每个不同版本的 SOLIDWORKS 列出了独立文件夹。在下面的图片中，你可能会看到我有多个版本（2016、2018 和 2022）。</p>
+<img src="材质库使用问题/image-20260209172558248.png">
+
+<p>建议在未确认登记册不会损坏系统之前，不要对登记册进行永久性更改。因此，此时你可以右键点击代表你想重置的 SOLIDWORKS 版本的文件夹，然后选择重命名该文件夹。</p>
+<p>重启 SolidWorks，检查那些问题。</p>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>Q：SOLIDWORKS 材料老是丢失，有什么办法不丢失</p>
 <p>A：</p>
 </div>

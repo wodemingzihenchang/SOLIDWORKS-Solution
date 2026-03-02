@@ -46,7 +46,7 @@
 <p>在许可借用里选择借用时长，选择借用的产品即可（参考红字操作）。归还的话参考蓝字操作</p>
 <img src="02-许可借出和归还/借用&归还许可.png">
 
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="无法借用"><a href="#无法借用" class="headerlink" title="无法借用"></a>无法借用</h2><p>借用许可证时发生错误“无法借用许可证。 没有可供借用的许可证 (-67, 147, 0)”? 在以下情况下会发生此错误：</p>
+<h1 id="许可借出问题"><a href="#许可借出问题" class="headerlink" title="许可借出问题"></a>许可借出问题</h1><h2 id="无法借用"><a href="#无法借用" class="headerlink" title="无法借用"></a>无法借用</h2><p>借用许可证时发生错误“无法借用许可证。 没有可供借用的许可证 (-67, 147, 0)”? 在以下情况下会发生此错误：</p>
 <p>1、无空闲许可：检查客户端许可程序，检查“许可的使用”是否正常有空闲许可证。如果许可证总数为0，则需检查“服务器”的连接问题。</p>
 <img src="02-许可借出和归还/许可的使用.png">
 
@@ -55,7 +55,14 @@
 <p>方法：关闭SOLIDWORKS 程序（或对应产品的程序），保证当前是没有检出的许可借用状态，再去借出许可。</p>
 <img src="02-许可借出和归还/借出许可失败.png">
 
-<h1 id="许可归还"><a href="#许可归还" class="headerlink" title="许可归还"></a>许可归还</h1><h2 id="无法归还"><a href="#无法归还" class="headerlink" title="无法归还"></a>无法归还</h2><p>在客户端机器上，将“借用”文件夹添加到注册表中，</p>
+<h2 id="没有借用信息"><a href="#没有借用信息" class="headerlink" title="没有借用信息"></a>没有借用信息</h2><p>如果客户端计算机借用 SOLIDWORKS产品，但许可并未出现在 SolidNetWork License (SNL) Manager 的“借用的产品许可”列表中，该怎么办？</p>
+<p><strong>方法：</strong></p>
+<p>您可以通过在 Windows 注册表中重命名“FLEXlm License Manager”文件夹来解决此问题。请执行下列步骤：</p>
+<p>1.关闭 SolidNetWork License (SNL) Manager。<br>2.打开 Windows 注册表编辑器。<br>3.浏览至以下注册表位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\FLEXlm License Manager\Borrow</span><br></pre></td></tr></table></figure>
+
+<p>4.确认有一个注册表项显示借用的产品。<br>5.将“FLEXlm License Manager”注册表文件夹重命名为类似“FLEXlm License Manager_old”的文件夹。<br>6.打开 SNL Manager。确认没有任何更改，然后关闭 SNL Manager。<br>7.返回到注册表编辑器，并将注册表文件夹名称恢复为“FLEXlm License Manager”。<br>8.打开 SNL Manager &gt; 单击“许可借用”选项卡。借用的产品现在显示在“借用的产品许可”区域中。</p>
+<h1 id="许可归还问题"><a href="#许可归还问题" class="headerlink" title="许可归还问题"></a>许可归还问题</h1><h2 id="无法归还"><a href="#无法归还" class="headerlink" title="无法归还"></a>无法归还</h2><p>在客户端机器上，将“借用”文件夹添加到注册表中，</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER/Software/Flexlm License Manager/</span><br></pre></td></tr></table></figure>
 
 <p>用户不能删除或编辑此文件夹。如果发生这种情况，他们将无法将许可证“返回”给服务器，必须等待借用期到期才能再次使用许可证。</p>
@@ -77,14 +84,7 @@
 <img src="02-许可借出和归还/归还许可.png">
 
 <p>注：后几者可在许可管理器-许可证的使用中查看。（若其它电脑远程， 显示那项有所不同， 不是被查询的客户端机器名）</p>
-<h2 id="强制归还3"><a href="#强制归还3" class="headerlink" title="强制归还3"></a>强制归还3</h2><h2 id="没有借用信息"><a href="#没有借用信息" class="headerlink" title="没有借用信息"></a>没有借用信息</h2><p>如果客户端计算机借用 SOLIDWORKS产品，但许可并未出现在 SolidNetWork License (SNL) Manager 的“借用的产品许可”列表中，该怎么办？</p>
-<p><strong>方法：</strong></p>
-<p>您可以通过在 Windows 注册表中重命名“FLEXlm License Manager”文件夹来解决此问题。请执行下列步骤：</p>
-<p>1.关闭 SolidNetWork License (SNL) Manager。<br>2.打开 Windows 注册表编辑器。<br>3.浏览至以下注册表位置：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\FLEXlm License Manager\Borrow</span><br></pre></td></tr></table></figure>
-
-<p>4.确认有一个注册表项显示借用的产品。<br>5.将“FLEXlm License Manager”注册表文件夹重命名为类似“FLEXlm License Manager_old”的文件夹。<br>6.打开 SNL Manager。确认没有任何更改，然后关闭 SNL Manager。<br>7.返回到注册表编辑器，并将注册表文件夹名称恢复为“FLEXlm License Manager”。<br>8.打开 SNL Manager &gt; 单击“许可借用”选项卡。借用的产品现在显示在“借用的产品许可”区域中。</p>
-</div>
+<h2 id="强制归还3"><a href="#强制归还3" class="headerlink" title="强制归还3"></a>强制归还3</h2></div>
  			<!-- 引入正文 -->
     </div>	
     

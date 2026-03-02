@@ -40,6 +40,7 @@
 
 <div id="article"><h1 id="1Routing管道教程"><a href="#1Routing管道教程" class="headerlink" title="1Routing管道教程"></a>1Routing管道教程</h1><p>Routing 应用程序是 SOLIDWORKS Premium 软件的一个插件。 您可以使用 Routing  生成特殊类型的子装配体，以在零部件之间创建管道、管筒、电力电缆或管线的路径。</p>
 <p>前期知识点：3D 草图、装配体（从上至下的设计和配合）、设计库、配置（设计表）</p>
+<h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228223415864.png" alt="image-20260228223415864"></p>
 <h2 id="线路部件组成："><a href="#线路部件组成：" class="headerlink" title="线路部件组成："></a>线路部件组成：</h2><ul>
 <li><p><strong>零部件</strong>：即配件和接头，包括法兰、T 形接头、电气接头和线夹。大多数配件和接头必须有至少一个连接点 (CPoint)，指明步路段的起始位置或终止位置。</p>
 </li>
@@ -81,10 +82,78 @@
 <p>2、没有在编辑布线时，接头会自动生成步路；在编辑布线时，接头可以添加到步路中（）</p>
 <p>3、有布线情况下。布线会在放置点进行分割；并可以进行方向Tab（或shift+箭头键旋转）</p>
 <h1 id="10管筒线路"><a href="#10管筒线路" class="headerlink" title="10管筒线路"></a>10管筒线路</h1><p>管筒线路概述  管通和管筒零部件  使用柔性管筒自动步路  使用正交管筒自动步路  折弯和样条曲线错误  创建管筒工程图  </p>
-<p>10【管道线路】硬管的设计<br>    1、添加接头-》接头属性-》添加其他接头-》自动布线<br>    2、规划路径添加中间夹，管路过长添加吊架零件<br>    3、（自动步路-》沿几何体生成等距的步路）</p>
+<h2 id="添加接头"><a href="#添加接头" class="headerlink" title="添加接头"></a>添加接头</h2><p>添加一对法兰接头，形成管筒线路</p>
+<p>​	1、添加接头-》</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228224307953.png" alt="image-20260228224307953"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228224347403.png" alt="image-20260228224347403"></p>
+<p>接头属性-》</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228224658772.png" alt="image-20260228224658772"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228224444249.png" alt="image-20260228224444249"></p>
+<p>添加其他接头-》</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228224829925.png" alt="image-20260228224829925"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228224347403.png" alt="image-20260228224347403"></p>
+<p>自动布线</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/%E8%87%AA%E5%8A%A8%E6%AD%A5%E8%B7%AF.png" alt="image-20260228225000098"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228225149408.png" alt="image-20260228225149408"></p>
+<p>​	2、规划路径添加中间夹，管路过长添加吊架零件<br>​	3、（自动步路-》沿几何体生成等距的步路)</p>
+<h2 id="线路属性模板"><a href="#线路属性模板" class="headerlink" title="线路属性模板"></a>线路属性模板</h2><p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228230459383.png" alt="image-20260228230459383"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228231042456.png" alt="image-20260228231042456"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228231255682-17722915759192.png" alt="image-20260228231255682"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228231343502.png" alt="image-20260228231343502"></p>
+<p>自动步路：</p>
+<p>因为连接点在坐标系方向上，正交自动步路效果不好。我们使用草图绘制进行自动步路</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228231747934.png" alt="image-20260228231747934"></p>
+<h2 id="使用管夹"><a href="#使用管夹" class="headerlink" title="使用管夹"></a>使用管夹</h2><p>法兰1</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228232206279.png" alt="image-20260228232206279"></p>
+<p>使用SCH40线路模板</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228231255682-17722915759192.png" alt="image-20260228231255682"></p>
+<p>法兰2</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228232310826.png" alt="image-20260228232310826"></p>
+<p>插入管夹</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228232814828.png" alt="image-20260228232814828"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/%E8%87%AA%E5%8A%A8%E6%AD%A5%E8%B7%AF.png" alt="image-20260228225000098"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228233219201.png" alt="image-20260228233219201"></p>
+<p>处理非模板的弯管零件</p>
+<p>此处我们使用方法3：生成成型的折弯</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228233531129.png" alt="image-20260228233531129"></p>
+<p>小技巧</p>
+<p>孤立的方法</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228234114155.png" alt="image-20260228234114155"></p>
+<p>吊环零件</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228234635076.png" alt="image-20260228234635076"></p>
+<h2 id="1自动步路方式"><a href="#1自动步路方式" class="headerlink" title="1自动步路方式"></a>1自动步路方式</h2><p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228235015285.png" alt="image-20260228235015285"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/%E8%87%AA%E5%8A%A8%E6%AD%A5%E8%B7%AF.png" alt="image-20260228225000098"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228235749447.png" alt="image-20260228235749447"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260228235902400.png" alt="image-20260228235902400"></p>
 <h1 id="11管筒步路零部件"><a href="#11管筒步路零部件" class="headerlink" title="11管筒步路零部件"></a>11管筒步路零部件</h1><p>步路库零件  创建步路库零件  管筒零部件  复制步路零部件  零部件类型  配件零部件  Routing 功能点</p>
-<p>11【管道配件】可放置在布线任一点或指定点。<br>    1、添加三通管，tab键改方向<br>    2、添加阀门，shift+方向键改方向（默认15度增量，在选项-步路可设置）<br>    3、使用覆盖层，用于包住管道保护保温等作用。</p>
-<h1 id="12-管筒线路"><a href="#12-管筒线路" class="headerlink" title="12 管筒线路"></a>12 管筒线路</h1><p>12【管筒线路】tubing，可以是硬管也可以是软管，气管的步路<br>    1、【自动步路】<br>    2、右键步路零件-》输出管道&#x2F;管筒数据-》输出按钮-》保存或预览<br>    3、【封套】用封套做一个用于零件运动、操作空间的几何体积来检测干涉，<br>    4、右键-》线路端属性，单独修改单段的线路属性</p>
+<h2 id="三通管"><a href="#三通管" class="headerlink" title="三通管"></a>三通管</h2><p>11【管道配件】可放置在布线任一点或指定点。</p>
+<p>​	1、添加三通管，tab键改方向</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301000241475.png" alt="image-20260301000241475"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301000606206.png" alt="image-20260301000606206"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/%E8%87%AA%E5%8A%A8%E6%AD%A5%E8%B7%AF.png" alt="image-20260228225000098"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301000809137.png" alt="image-20260301000809137"></p>
+<p>小技巧：</p>
+<p>替换特定弯头，可以通过另存弯头零件，并替换实现</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301001021629.png" alt="image-20260301001021629"></p>
+<h2 id="阀门"><a href="#阀门" class="headerlink" title="阀门"></a>阀门</h2><p>​	2、添加阀门，shift+方向键改方向（默认15度增量，在选项-步路可设置）</p>
+<p>管路一般是一段直线（没有断点），如果我们需要在管路中间添加阀门配件。则需要使用【管路设计，分割线路】在中间生成断点。</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301001215468.png" alt="image-20260301001215468"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301001500756.png" alt="image-20260301001500756"></p>
+<h2 id="覆盖层"><a href="#覆盖层" class="headerlink" title="覆盖层"></a>覆盖层</h2><p>​	3、使用覆盖层，用于包住管道保护保温等作用。</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301001834933.png" alt="image-20260301001834933"></p>
+<h1 id="12-管筒线路"><a href="#12-管筒线路" class="headerlink" title="12 管筒线路"></a>12 管筒线路</h1><h2 id="软管tube"><a href="#软管tube" class="headerlink" title="软管tube"></a>软管tube</h2><p>12【管筒线路】tubing，可以是硬管也可以是软管，气管的步路</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301002847555.png" alt="image-20260301002847555"></p>
+<p>使用软管模板</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301002859948.png" alt="image-20260301002859948"></p>
+<p>​	1、【自动步路】</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/%E8%87%AA%E5%8A%A8%E6%AD%A5%E8%B7%AF.png" alt="image-20260228225000098"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301003013918.png" alt="image-20260301003013918"></p>
+<h2 id="输出管道-管筒数据"><a href="#输出管道-管筒数据" class="headerlink" title="输出管道&#x2F;管筒数据"></a>输出管道&#x2F;管筒数据</h2><p>​	2、右键步路零件-》输出管道&#x2F;管筒数据-》输出按钮-》保存或预览</p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301003236507.png" alt="image-20260301003236507"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301003458124.png" alt="image-20260301003458124"></p>
+<p><img src="/SOLIDWORKS-Solution/Routing%E7%AE%A1%E9%81%93%E6%95%99%E7%A8%8B/image-20260301003529736.png" alt="image-20260301003529736"></p>
+<h2 id="封套"><a href="#封套" class="headerlink" title="封套"></a>封套</h2><p>​	3、【封套】用封套做一个用于零件运动、操作空间的几何体积来检测干涉，</p>
+<h2 id="编辑线路"><a href="#编辑线路" class="headerlink" title="编辑线路"></a>编辑线路</h2><p>​	4、右键-》线路端属性，单独修改单段的线路属性</p>
 <h1 id="13更改管道和管筒"><a href="#13更改管道和管筒" class="headerlink" title="13更改管道和管筒"></a>13更改管道和管筒</h1><ul>
 <li><p>P28第13章 更改管道和管筒（2）</p>
 </li>
@@ -123,7 +192,7 @@
 <h1 id="17管道垫木"><a href="#17管道垫木" class="headerlink" title="17管道垫木"></a>17管道垫木</h1><ul>
 <li>P36第17章 管道垫木（2）</li>
 </ul>
-<h1 id="18SOLIDWORKS内容"><a href="#18SOLIDWORKS内容" class="headerlink" title="18SOLIDWORKS内容"></a>18SOLIDWORKS内容</h1><p>  云端内容，可网络</p>
+<h1 id="18SOLIDWORKS内容"><a href="#18SOLIDWORKS内容" class="headerlink" title="18SOLIDWORKS内容"></a>18SOLIDWORKS内容</h1><p>  云端内容，需网络</p>
 <p><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/media/solidworks-2023-routing">SOLIDWORKS 2023 - Routing | 新功能</a></p>
 </div>
  			<!-- 引入正文 -->

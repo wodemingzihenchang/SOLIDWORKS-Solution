@@ -62,6 +62,25 @@
 
 <p>已经安装完成后需要更换许可类型：PDM 管理【工具&gt;帮助&gt;关于SOLIDWORKS PDM管理&gt;客户端类型】下拉框选择。重启电脑，重启后才会生效为新的许可类型</p>
 <p>读不到【更新】</p>
+<h2 id="BR10000410974检入失败"><a href="#BR10000410974检入失败" class="headerlink" title="BR10000410974检入失败"></a>BR10000410974检入失败</h2><p>Check in of large drawing with many references can cause “an unspecified error occurred” with log showing a query resource error from SPU_UnlockFilesInBatch <em>2025 regression</em></p>
+<p>Seen with SOLIDWORKS PDM 2025 SP4 and SP4, Windows 2022, SQL 2022 CU7</p>
+<p>多选文件检入时，因查询错误而失败。客户端日志显示有三个错误依次出现：</p>
+<p>--</p>
+<p>Description: Exec SPU_UnlockFilesInBatch<br>Module: Explorer.EXE<br>Function: SpUnlock::mhUnlockBatch<br>Error code: E_UNEXPECTED<br>Error code general description: An unspecified error occurred.</p>
+<p>--</p>
+<p>Description: Caught error 1<br>Module: Explorer.EXE<br>Function: SpUnlock::mhUnlock<br>Error code: E_EDM_DATABASE_ACCESS<br>Error code general description: Could not access the item in the database.</p>
+<p>--</p>
+<p>Description:<br>Error running query in SpDbOdbc<br>State&#x3D;37000<br>Msg&#x3D;[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The query processor ran out of internal resources and could not produce a query plan. This is a rare event and only expected for extremely complex queries or queries that reference a very large number of tables or partitions. Please simplify the query. If you believe you have received this message in error, contact Customer Support Services for more information.</p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; LAST COMMAND &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>…</p>
+<p>Begin Transaction<br>Exec SPU_UnlockFilesInBatch 1</p>
+<p>Module: Explorer.EXE<br>Function: hGetErrCode<br>Error code: E_EDM_DATABASE_ACCESS<br>Error code general description: Could not access the item in the database.</p>
+<p>-————–</p>
+<p>Workaround:<br>The following registry key avoids the check in error.</p>
+<p>在检入失败的客户端：</p>
+<p>关闭SOLIDWORKS，从通知托盘图标退出SOLIDWORKS PDM。添加注册表值：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\FileFmtMgr</span><br></pre></td></tr></table></figure>
+
+<p>密钥：ParallelCheckInUpload<br>类型：DWORD<br>值：0</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://www.renrendoc.com/paper/159682726.html">pdm常见问题及解决办法 (renrendoc.com)</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/157477312">这是解决SOLIDWORKS PDM问题的8个最佳步骤 - 知乎 (zhihu.com)</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cadsharp.com/blog/4-pdm-vault-addin-errors/#:~:text=The%20archive%20server%20could%20not%20open%20the%20Windows,dll%2C%20make%20sure%20it%E2%80%99s%20not%20blocked%20by%20windows">https://www.cadsharp.com/blog/4-pdm-vault-addin-errors/#:~:text=The%20archive%20server%20could%20not%20open%20the%20Windows,dll%2C%20make%20sure%20it%E2%80%99s%20not%20blocked%20by%20windows</a></p>

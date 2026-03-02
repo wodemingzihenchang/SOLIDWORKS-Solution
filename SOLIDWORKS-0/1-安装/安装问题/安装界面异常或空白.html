@@ -43,16 +43,20 @@
 
 <img src="安装界面异常或空白/安装界面异常或空白.png">
 
-<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>在【X:\SOLIDWORKS 2024 SP01\sldimllanglenglish\html】设置下这三个html的权限是完全控制状态。</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SOLIDWORKS安装包\sldim\lang\english\HTML</span><br></pre></td></tr></table></figure>
+
+<p>设置下这三个html文件属性是“解除锁定”</p>
 <img src="安装界面异常或空白/安装界面异常或空白方法1.png">
 
+<p>且权限是完全控制状态。</p>
 <img src="安装界面异常或空白/安装界面异常或空白方法.png">
 
-<h1 id="界面大小显示异常"><a href="#界面大小显示异常" class="headerlink" title="界面大小显示异常"></a>界面大小显示异常</h1><p>界面大小显示异常，选择不到安装设置</p>
-<h2 id="方法1-1"><a href="#方法1-1" class="headerlink" title="方法1"></a>方法1</h2><p>找到SW单独安装包程序，进行setup.exe安装</p>
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>找到SW单独安装包程序，进行setup.exe安装</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..:\SOLIDWORKS安装包\swwi\data</span><br></pre></td></tr></table></figure>
 
-<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><img src="安装界面异常或空白/安装界面显示问题.png">
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>如果无法实现，或者是其他安装文件导致问题，可以使用 Microsoft® Streams 工具删除阻挡属性。</p>
+<p>Download the tool from <a target="_blank" rel="noopener" href="http://technet.microsoft.com/en-us/sysinternals/bb897440.aspx">http://technet.microsoft.com/en-us/sysinternals/bb897440.aspx</a><br>从 <a target="_blank" rel="noopener" href="http://technet.microsoft.com/en-us/sysinternals/bb897440.aspx">http://technet.microsoft.com/en-us/sysinternals/bb897440.aspx</a> 下载该工具<br>Open a Windows® command prompt as administrator (Run as administrator).<br>以管理员身份打开 Windows®命令提示符（ 以管理员身份运行 ）。<br>Change the directory to the download location of the Streams.exe program file.<br>把目录改成 Streams.exe 程序文件的下载位置。<br>Run the following command:<br>执行以下命令：<br>streams -s -d[IM_uncompressed_files_folder] </p>
+<p>You can eliminate the -s parameter if you know the problematic file.<br>如果你知道有问题的文件，可以去掉 -s 参数。</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

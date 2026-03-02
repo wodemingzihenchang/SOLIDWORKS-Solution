@@ -43,42 +43,16 @@
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>SOLIDWORKS PDM是一种产品数据管理（PDM）系统的软件解决方案。它帮助企业更有效地管理和共享产品数据，通过自动化的流程更好地协同产品开发与销售环节，使产品具有更好的质量、更低的价格和更短的开发周期。</p>
 <p>应用对象为：工程师，设计师，制造商，供应商，销售人员，市场人员以及工程制造等相关人员。</p>
 <p>管理数据包括：三维模型，工程图纸，项目计划，产品规格，数控加工程序，分析结果，邮件，BOM等其他类型文件。</p>
-<p>学习流程：</p>
-<p>1、学会登录&#x2F;注销</p>
-<p>2、熟悉检入检出操作</p>
-<p>3、熟悉流程变更</p>
-<p>4、了解获取文件版本</p>
-<p>5、了解预览窗口</p>
-<p>6、了解搜索功能</p>
-<p>7、熟悉SW插件端操作</p>
-<h2 id="登录和注销"><a href="#登录和注销" class="headerlink" title="登录和注销"></a>登录和注销</h2><p>登录方式 ：</p>
-<p>1、双击本地视图图标；</p>
-<p>2、右键PDM本地视图选择登陆；（通常我们在取消登录后双击无效时可以用此方法）</p>
+<h2 id="登录和注销"><a href="#登录和注销" class="headerlink" title="登录和注销"></a>登录和注销</h2><p>登录方式1：双击本地视图图标；</p>
+<p>登录方式2：右键PDM本地视图选择登陆；（通常我们在取消登录后双击无效时可以用此方法）</p>
 <img src="PDM客户端-教程\登录方式.png">
 
-<p>注销方式：</p>
-<p>1、在资源管理器找到注销图标</p>
-<p>2、在Windows任务栏中找到PDM图标，右键选择“注销”</p>
+<p>注销方式1：在资源管理器找到注销图标</p>
+<p>注销方式2：在Windows任务栏中找到PDM图标，右键选择“注销”</p>
 <img src="PDM客户端-教程\注销方式.png">
 
 
 
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
-<li>1、项目文件夹</li>
-</ul>
-<p>利用PDM模板设置，创建项目以及文件，组织产品，项目文件</p>
-<ul>
-<li>2、检入检出</li>
-</ul>
-<p>文件库安全与检索，文件版本与修订管理</p>
-<ul>
-<li>3、权限</li>
-</ul>
-<p>更改权限控制与数据共享</p>
-<ul>
-<li>4、清单</li>
-</ul>
-<p>搜索与报表</p>
 <ul>
 <li>5、文件参考</li>
 </ul>
@@ -89,11 +63,12 @@
 <p>PDM工作流程用于呈现文件在预定流程中的位置。用户无需指定文件的流程，只要按照规定的归类存放用户的文档，文件即自动落入设定好的流程中。</p>
 <h1 id="客户端工具栏"><a href="#客户端工具栏" class="headerlink" title="客户端工具栏"></a>客户端工具栏</h1><h2 id="客户端界面"><a href="#客户端界面" class="headerlink" title="客户端界面"></a>客户端界面</h2><img src="PDM客户端-教程/客户端/客户端界面.png">
 
-<h2 id="客户端菜单栏"><a href="#客户端菜单栏" class="headerlink" title="客户端菜单栏"></a>客户端菜单栏</h2><img src="PDM客户端-教程/客户端/菜单栏.png">
+<p>客户端菜单栏</p>
+<img src="PDM客户端-教程/客户端/菜单栏.png">
 
 
 
-<h2 id="添加到库"><a href="#添加到库" class="headerlink" title="添加到库"></a>添加到库</h2><p>将文件添加到EPDM库中，按照预定的文件夹结构在相对应的项目文件夹内添加文件即可，有如下2方法：</p>
+<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="添加到库"><a href="#添加到库" class="headerlink" title="添加到库"></a>添加到库</h2><p>将文件添加到EPDM库中，按照预定的文件夹结构在相对应的项目文件夹内添加文件即可，有如下2方法：</p>
 <p>方法1：将计算机本地的文件零件图纸存放到对应类型的文件夹内；</p>
 <img src="PDM客户端-教程/客户端/添加到库.jpg">
 
@@ -101,12 +76,9 @@
 <img src="PDM客户端-教程/另存到库.jpg">
 
 <p>PDM里的文件在检出检入时，会有不同的状态：对于现在刚刚复制到库中的文件，一般会是&lt;私有状态&gt;</p>
-<p>私有状态：</p>
-<p>私有状态文件是其他用户添加到库中的文件，但还未检入。</p>
-<p>检入状态：</p>
-<p>此文件当前没有被编辑，有权限的用户可以将其检出编辑，打开该状态的文件为“只读”打开。</p>
-<p>检出状态：</p>
-<p>当文件被其他用户检出编辑时，其他用户无法同时检出编辑，只能查看复制，但是不能修改保存。</p>
+<p>私有状态：私有状态文件是其他用户添加到库中的文件，但还未检入。</p>
+<p>检入状态：此文件当前没有被编辑，有权限的用户可以将其检出编辑，打开该状态的文件为“只读”打开。</p>
+<p>检出状态：当文件被其他用户检出编辑时，其他用户无法同时检出编辑，只能查看复制，但是不能修改保存。</p>
 <h2 id="操作-检入"><a href="#操作-检入" class="headerlink" title="操作-检入"></a>操作-检入</h2><p>对于&lt;私有状态&gt;文件，其他电脑是看不到的，你需要进行【操作-检入】，将私有文件，上传到PDM数据库中，此时文件才算正式入库。</p>
 <img src="PDM客户端-教程/检入文件.jpg">
 
@@ -119,27 +91,27 @@
 <p>要实现这个效果，你需要在PDM管理程序里设置，右键您的用户或组【设置-参考对话框】在 检出和版本访问控制下，取消“始终使用文件的最新版本”。 </p>
 <img src="PDM客户端-教程\版本.png">
 
-<ul>
-<li><h3 id="条目"><a href="#条目" class="headerlink" title="条目"></a>条目</h3></li>
-</ul>
-<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><ul>
-<li>设置参考引用</li>
-</ul>
+<p>条目</p>
+<h1 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h1><h2 id="参考引用"><a href="#参考引用" class="headerlink" title="参考引用"></a>参考引用</h2><p>粘贴为参考引用</p>
 <pre class="mermaid">graph LR
 子文件复制-->检出父文件-->粘贴为参考引用-->检入父文件</pre>
 <img src="PDM客户端-教程\设置参考引用.png">
 
-<ul>
-<li>解除参考引用</li>
-</ul>
+<p>解除参考引用</p>
 <pre class="mermaid">graph LR
 检出父文件-->编辑参考-->取消勾选参考-->检入父零件</pre>
 <img src="PDM客户端-教程\解除参考引用.png">
 
-<h2 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h2><p>【历史记载】</p>
-<img src="PDM客户端-教程\工具栏\历史记载.png">
+<h2 id="设定修订版"><a href="#设定修订版" class="headerlink" title="设定修订版"></a>设定修订版</h2><h2 id="更改状态"><a href="#更改状态" class="headerlink" title="更改状态"></a>更改状态</h2><h2 id="更改类别"><a href="#更改类别" class="headerlink" title="更改类别"></a>更改类别</h2><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h2 id="标号"><a href="#标号" class="headerlink" title="标号"></a>标号</h2><h1 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h1><h2 id="历史记载"><a href="#历史记载" class="headerlink" title="历史记载"></a>历史记载</h2><img src="PDM客户端-教程\工具栏\历史记载.png">
 
-<p>【属性】-可以在文件属性内可以看到工作流程。</p>
+
+
+<h2 id="数据卡配置显示"><a href="#数据卡配置显示" class="headerlink" title="数据卡配置显示"></a>数据卡配置显示</h2><p>建议仅显示@配置，也就是自定义属性的数据卡</p>
+<img src="PDM客户端-教程/image-20260211213945321.png">
+
+<img src="PDM客户端-教程/image-20260211214146826.png">
+
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>【属性】-可以在文件属性内可以看到工作流程。</p>
 <img src="PDM客户端-教程/image-20240617174737734.png">
 
 <p>【属性】-已删除项（回收站）</p>
@@ -148,7 +120,7 @@
 
 
 
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>【分支&amp;合并】</p>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>【分支&amp;合并】</p>
 <p>【复制树】</p>
 <p>具备权限的用户可以对带参考引用的文件进行【复制树&#x2F;移动树】。类似于SOLIDWORKS的打包。</p>
 <img src="PDM客户端-教程\工具栏\复制树.png">
@@ -170,13 +142,8 @@
 <p>当用户需要知道文档变化状态的时候自动通知自己，可以使用设置通知的功能。</p>
 <img src="PDM客户端-教程\工具栏\通知.png">
 
-
-
-
-
-
-
-<h2 id="自定义工具栏"><a href="#自定义工具栏" class="headerlink" title="自定义工具栏"></a>自定义工具栏</h2><h1 id="文件列表"><a href="#文件列表" class="headerlink" title="文件列表"></a>文件列表</h1><h2 id="属性列表"><a href="#属性列表" class="headerlink" title="属性列表"></a>属性列表</h2><img src="PDM客户端-教程/属性列表.png">
+<h1 id="文件列表"><a href="#文件列表" class="headerlink" title="文件列表"></a>文件列表</h1><h2 id="属性列表"><a href="#属性列表" class="headerlink" title="属性列表"></a>属性列表</h2><p>1</p>
+<img src="PDM客户端-教程/属性列表.png">
 
 
 
@@ -198,21 +165,24 @@
 <p>项目图标</p>
 <img src="PDM客户端-教程\文件夹图标\项目图标.png">
 
-
-
-
-
-
-
 <h1 id="预览窗口"><a href="#预览窗口" class="headerlink" title="预览窗口"></a>预览窗口</h1><h2 id="预览标签"><a href="#预览标签" class="headerlink" title="预览标签"></a>预览标签</h2><img src="PDM客户端-教程\预览标签显示.png">
 
 <h2 id="数据卡"><a href="#数据卡" class="headerlink" title="数据卡"></a>数据卡</h2><p>在选择文件后，【预览窗口-数据卡】会显示该文件的属性，方便查看和修改(修改需要检出文件后才行)</p>
 <img src="PDM客户端-教程/数据卡.png">
 
+<h2 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h2><img src="PDM客户端-教程/image-20260211214520563.png">
 
+<h2 id="材料明细表"><a href="#材料明细表" class="headerlink" title="材料明细表"></a>材料明细表</h2><img src="PDM客户端-教程/image-20260211214554080.png">
 
-<h2 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h2><h2 id="材料明细表"><a href="#材料明细表" class="headerlink" title="材料明细表"></a>材料明细表</h2><h2 id="包含"><a href="#包含" class="headerlink" title="包含"></a>包含</h2><p>文件参考：（SW装配体和零部件的参考默认是生效的，对于其他的文件我们需要手动进行【修改-复制链接-粘贴为参考引用】）</p>
-<h2 id="使用处"><a href="#使用处" class="headerlink" title="使用处"></a>使用处</h2><h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><h2 id="文件名搜索"><a href="#文件名搜索" class="headerlink" title="文件名搜索"></a>文件名搜索</h2><p>嵌入式的搜索<br>搜索工具<br>模糊搜索</p>
+<h2 id="包含"><a href="#包含" class="headerlink" title="包含"></a>包含</h2><p>文件参考：（SW装配体和零部件的参考默认是生效的，对于其他的文件我们需要手动进行【修改-复制链接-粘贴为参考引用】）</p>
+<img src="PDM客户端-教程/image-20260211214607567.png">
+
+<h2 id="使用处"><a href="#使用处" class="headerlink" title="使用处"></a>使用处</h2><img src="PDM客户端-教程/image-20260211214658201.png">
+
+<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><p>Workflow</p>
+<img src="PDM客户端-教程/image-20260211214726548.png">
+
+<h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><h2 id="文件名搜索"><a href="#文件名搜索" class="headerlink" title="文件名搜索"></a>文件名搜索</h2><p>嵌入式的搜索<br>搜索工具<br>模糊搜索</p>
 <h2 id="属性搜索"><a href="#属性搜索" class="headerlink" title="属性搜索"></a>属性搜索</h2><p>多条件搜索</p>
 <p>结果输出<br>收藏搜索</p>
 <p>参考：[SOLIDWORKS PDM快速搜索工具 - 知乎 (zhihu.com)](<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/512512933#:~:text=%E8%A6%81%E8%AE%BF%E9%97%AE%E2%80%9C%E5%BF%AB%E9%80%9F%E6%90%9C%E7%B4%A2%E5%8F%98%E9%87%8F%E5%88%97%E8%A1%A8%E2%80%9D%EF%BC%8C%E8%AF%B7%E6%89%93%E5%BC%80">https://zhuanlan.zhihu.com/p/512512933#:~:text=要访问“快速搜索变量列表”，请打开</a> PDM 管理工具，然后展开“列表”，右键单击“快速搜索变量列表”并选择“新建列表” 在新列表中，您可以将其自定义为最多,5 个您想要的附加变量，在我的示例中，我使用这 5 个附加变量并将它们分配给我在PDM库中可用的用户。)</p>
