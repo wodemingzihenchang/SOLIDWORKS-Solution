@@ -30,6 +30,8 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
     
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    
     <!-- 外部链接打开新的窗口跳转 -->
     </ul>
 </div></nav>	<!-- 引入导航 -->
@@ -70,19 +72,21 @@
 
 <img src="文件夹预览图不显示/image-20240920135923470.png" >
 
-
-
-
-
 <p>这个默认启动也可以在【window设置-默认应用-按文件类型指导默认应用】里设置，这点可以参考：</p>
 <ol>
 <li>在”<strong>开始”<strong>菜单上，选择”设置</strong>&gt;</strong> <strong>应用&gt;</strong> **默认应用”**。</li>
-<li>选择你想要设置的默认程序，然后选择该应用。 你还可以在 Microsoft Store 中获取新的应用。 必须先安装应用，然后才可以将其设置为默认应用。 <img src="https://support.content.office.net/zh-cn/media/5a39720d-1114-4c9f-9d53-e5b8553d847d.jpg" alt="替换文本"></li>
+<li>选择你想要设置的默认程序，然后选择该应用。 你还可以在 Microsoft Store 中获取新的应用。 必须先安装应用，然后才可以将其设置为默认应用。</li>
 <li>你可能希望你的.pdf、电子邮件或音乐使用 Microsoft 提供的应用自动打开。 按文件类型选择默认应用。 向下滚动并选择 **”按文件类型选择默认应用”**。</li>
 </ol>
-<h2 id="方法4：手动注册-dll"><a href="#方法4：手动注册-dll" class="headerlink" title="方法4：手动注册 dll"></a>方法4：手动注册 dll</h2><p>（不大建议的方法：是手动把预览图的动态链接库进行注册使用，遇到高低版本时也是没用的）</p>
+<h2 id="方法4：恢复文件关联"><a href="#方法4：恢复文件关联" class="headerlink" title="方法4：恢复文件关联"></a>方法4：恢复文件关联</h2><p>高版本的SOLIDWORKS软件可能优化了swshellLauncher.exe这个程序，你可能会找不到他。</p>
+<p>那你可以用管理员启动程序，在设置【系统选项，普通，恢复文件关联】点击下，恢复程序及其SOLIDWORKS格式文件的关联。</p>
+<img src="文件夹预览图不显示/恢复文件关联.png" >
+
+
+
+<h2 id="方法5：手动注册-dll"><a href="#方法5：手动注册-dll" class="headerlink" title="方法5：手动注册 dll"></a>方法5：手动注册 dll</h2><p>（不大建议的方法：是手动把预览图的动态链接库进行注册使用，遇到高低版本时也是没用的）</p>
 <p>手动注册 dll 文件。在安装目录中找到 sldwinshellextu.dll 和 sldthumbnailprovider.dll。通常文件的路径如下：X 代表安装盘：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X:\ProgramFiles\CommonFiles\SolidWorks Shared\sldwinshellextu.dll</span><br><span class="line">X:\Program Files\SolidWorks Corp\SolidWorks\sldthumbnailprovider.dll</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X:\Program Files\Common Files\SolidWorks Shared\sldwinshellextu.dll</span><br><span class="line">X:\Program Files\SolidWorks Corp\SolidWorks\sldthumbnailprovider.dll</span><br></pre></td></tr></table></figure>
 
 <p>然后拷贝到 c:\windows\system32 文件夹中。</p>
 <p>在 windows 的搜索工具里输入 CMD，输入或复制如下命令，按回车，等待注册结束后即可。</p>

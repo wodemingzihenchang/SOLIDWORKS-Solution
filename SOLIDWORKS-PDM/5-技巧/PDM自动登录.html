@@ -30,6 +30,8 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
     
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    
     <!-- 外部链接打开新的窗口跳转 -->
     </ul>
 </div></nav>	<!-- 引入导航 -->
@@ -53,6 +55,10 @@
 <p>在Archive Server配置工具中，转到“工具”&gt;“默认设置”。选择登录界面选项卡，在默认登录类型下选择Windows登录，然后选中“自动登录”。点击确定，所有设置为服务器默认值的客户端将使用其Windows登录设置自动登录。</p>
 <img src="PDM自动登录/存档服务器登录.png">
 
+<h1 id="不要自动登录"><a href="#不要自动登录" class="headerlink" title="不要自动登录"></a>不要自动登录</h1><p>该功能只有在 SOLIDWORKS PDM 2023 SP4或更新版本中提供。打开注册表编辑器。浏览到：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[vaultname]</span><br></pre></td></tr></table></figure>
+
+<p>创建名为 DisableAutoLoginPrompt 的新 DWORD （32 位） 值将值设置为1（1 &#x3D; 禁止自动登录，0 &#x3D; 关闭）</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/r_settings_auto_login.htm">https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/r_settings_auto_login.htm</a></p>
 </div>
  			<!-- 引入正文 -->

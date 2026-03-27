@@ -30,6 +30,8 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
     
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    
     <!-- 外部链接打开新的窗口跳转 -->
     </ul>
 </div></nav>	<!-- 引入导航 -->
@@ -51,16 +53,6 @@
 <p>注销方式2：在Windows任务栏中找到PDM图标，右键选择“注销”</p>
 <img src="PDM客户端-教程\注销方式.png">
 
-
-
-<ul>
-<li>5、文件参考</li>
-</ul>
-<p>跟踪文件参考引用，方便查看设计关系。</p>
-<ul>
-<li>6、自动审批跟踪</li>
-</ul>
-<p>PDM工作流程用于呈现文件在预定流程中的位置。用户无需指定文件的流程，只要按照规定的归类存放用户的文档，文件即自动落入设定好的流程中。</p>
 <h1 id="客户端工具栏"><a href="#客户端工具栏" class="headerlink" title="客户端工具栏"></a>客户端工具栏</h1><h2 id="客户端界面"><a href="#客户端界面" class="headerlink" title="客户端界面"></a>客户端界面</h2><img src="PDM客户端-教程/客户端/客户端界面.png">
 
 <p>客户端菜单栏</p>
@@ -76,9 +68,9 @@
 <img src="PDM客户端-教程/另存到库.jpg">
 
 <p>PDM里的文件在检出检入时，会有不同的状态：对于现在刚刚复制到库中的文件，一般会是&lt;私有状态&gt;</p>
-<p>私有状态：私有状态文件是其他用户添加到库中的文件，但还未检入。</p>
-<p>检入状态：此文件当前没有被编辑，有权限的用户可以将其检出编辑，打开该状态的文件为“只读”打开。</p>
-<p>检出状态：当文件被其他用户检出编辑时，其他用户无法同时检出编辑，只能查看复制，但是不能修改保存。</p>
+<p><strong>私有状态：</strong>私有状态文件是其他用户添加到库中的文件，但还未检入。</p>
+<p><strong>检入状态：</strong>此文件当前没有被编辑，有权限的用户可以将其检出编辑，打开该状态的文件为“只读”打开。</p>
+<p><strong>检出状态：</strong>当文件被其他用户检出编辑时，其他用户无法同时检出编辑，只能查看复制，但是不能修改保存。</p>
 <h2 id="操作-检入"><a href="#操作-检入" class="headerlink" title="操作-检入"></a>操作-检入</h2><p>对于&lt;私有状态&gt;文件，其他电脑是看不到的，你需要进行【操作-检入】，将私有文件，上传到PDM数据库中，此时文件才算正式入库。</p>
 <img src="PDM客户端-教程/检入文件.jpg">
 
@@ -91,8 +83,7 @@
 <p>要实现这个效果，你需要在PDM管理程序里设置，右键您的用户或组【设置-参考对话框】在 检出和版本访问控制下，取消“始终使用文件的最新版本”。 </p>
 <img src="PDM客户端-教程\版本.png">
 
-<p>条目</p>
-<h1 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h1><h2 id="参考引用"><a href="#参考引用" class="headerlink" title="参考引用"></a>参考引用</h2><p>粘贴为参考引用</p>
+<h2 id="条目"><a href="#条目" class="headerlink" title="条目"></a>条目</h2><h1 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h1><h2 id="参考引用"><a href="#参考引用" class="headerlink" title="参考引用"></a>参考引用</h2><p>粘贴为参考引用</p>
 <pre class="mermaid">graph LR
 子文件复制-->检出父文件-->粘贴为参考引用-->检入父文件</pre>
 <img src="PDM客户端-教程\设置参考引用.png">
@@ -102,9 +93,9 @@
 检出父文件-->编辑参考-->取消勾选参考-->检入父零件</pre>
 <img src="PDM客户端-教程\解除参考引用.png">
 
-<h2 id="设定修订版"><a href="#设定修订版" class="headerlink" title="设定修订版"></a>设定修订版</h2><h2 id="更改状态"><a href="#更改状态" class="headerlink" title="更改状态"></a>更改状态</h2><h2 id="更改类别"><a href="#更改类别" class="headerlink" title="更改类别"></a>更改类别</h2><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h2 id="标号"><a href="#标号" class="headerlink" title="标号"></a>标号</h2><h1 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h1><h2 id="历史记载"><a href="#历史记载" class="headerlink" title="历史记载"></a>历史记载</h2><img src="PDM客户端-教程\工具栏\历史记载.png">
+<h2 id="设定修订版"><a href="#设定修订版" class="headerlink" title="设定修订版"></a>设定修订版</h2><h2 id="更改状态"><a href="#更改状态" class="headerlink" title="更改状态"></a>更改状态</h2><img src="PDM客户端-教程/image-20260303175003577.png">
 
-
+<h2 id="更改类别"><a href="#更改类别" class="headerlink" title="更改类别"></a>更改类别</h2><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h2 id="标号"><a href="#标号" class="headerlink" title="标号"></a>标号</h2><h1 id="显示"><a href="#显示" class="headerlink" title="显示"></a>显示</h1><h2 id="历史记载"><a href="#历史记载" class="headerlink" title="历史记载"></a>历史记载</h2><img src="PDM客户端-教程\工具栏\历史记载.png">
 
 <h2 id="数据卡配置显示"><a href="#数据卡配置显示" class="headerlink" title="数据卡配置显示"></a>数据卡配置显示</h2><p>建议仅显示@配置，也就是自定义属性的数据卡</p>
 <img src="PDM客户端-教程/image-20260211213945321.png">
@@ -120,25 +111,19 @@
 
 
 
-<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p>【分支&amp;合并】</p>
-<p>【复制树】</p>
-<p>具备权限的用户可以对带参考引用的文件进行【复制树&#x2F;移动树】。类似于SOLIDWORKS的打包。</p>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><h2 id="分支-合并"><a href="#分支-合并" class="headerlink" title="分支&amp;合并"></a>分支&amp;合并</h2><h2 id="复制树"><a href="#复制树" class="headerlink" title="复制树"></a>复制树</h2><p>具备权限的用户可以对带参考引用的文件进行【复制树&#x2F;移动树】。类似于SOLIDWORKS的打包。</p>
 <img src="PDM客户端-教程\工具栏\复制树.png">
 
-<p>【移动树】</p>
-<img src="PDM客户端-教程\工具栏\移动树.png">
+<h2 id="移动树"><a href="#移动树" class="headerlink" title="移动树"></a>移动树</h2><img src="PDM客户端-教程\工具栏\移动树.png">
 
 <!-- 如果直接使用Ctrl+X剪切文件，再其他文件夹位置Ctrl+V复制文件，这操作对于装配体的零部件来说，会影响装配体零部件的参考位置（会造成丢失的情况）。因此利用【移动树】工具可以确保文件关联的情况下，去移动我们的数据文件。-->
 
 
 
-<p>【更新参考引用】</p>
-<p>【脱机工作】</p>
-<p>图片是点了“脱机工作”后的界面。文件夹图标显示蓝色，并且PDM联机工具会受限（例如：检入检出等操作将不可用），</p>
+<h2 id="更新参考引用"><a href="#更新参考引用" class="headerlink" title="更新参考引用"></a>更新参考引用</h2><h2 id="脱机工作"><a href="#脱机工作" class="headerlink" title="脱机工作"></a>脱机工作</h2><p>图片是点了“脱机工作”后的界面。文件夹图标显示蓝色，并且PDM联机工具会受限（例如：检入检出等操作将不可用），</p>
 <img src="PDM客户端-教程\文件夹图标\文件夹图标-脱机.png">
 
-<p>【通知】</p>
-<p>默认是PDM的信息通知</p>
+<h2 id="通知"><a href="#通知" class="headerlink" title="通知"></a>通知</h2><p>默认是PDM的信息通知</p>
 <p>当用户需要知道文档变化状态的时候自动通知自己，可以使用设置通知的功能。</p>
 <img src="PDM客户端-教程\工具栏\通知.png">
 

@@ -30,6 +30,8 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
     
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    
     <!-- 外部链接打开新的窗口跳转 -->
     </ul>
 </div></nav>	<!-- 引入导航 -->
@@ -41,8 +43,6 @@
 <div id="article"><h1 id="PDM备份"><a href="#PDM备份" class="headerlink" title="PDM备份"></a>PDM备份</h1><p>更换服务器后，我们需要对SolidWorks PDM库服务器进行相应的系统迁移操作。</p>
 <p>（流程图）</p>
 <span id="more"></span> 
-
-
 
 <h2 id="迁移内容"><a href="#迁移内容" class="headerlink" title="迁移内容"></a>迁移内容</h2><p>PDM 迁移会分2种情况：迁移到【全新服务器】或迁移到【已有PDM的服务器】。需迁移内容包括：</p>
 <table style="width: 100%; border-collapse: collapse; margin-bottom: 4px; margin-top: 4px; ">
@@ -82,10 +82,13 @@
 
 <img src="PDM备份和迁移/image-20251105163551198.png">
 
-
-
 <p>更新SolidWorksPDM主数据库“ConisioMasterDb”中的表“FileVaults”中的记录，把相应的迁移过来的文件库记录增加到该表中。</p>
 <img src="PDM备份和迁移\主数据库更新.png">
+
+<p>为内容搜索重新创建链接服务器，在数据库管理工具中执行相应的语句。来自动创建链接服务器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Exec Sys_IndexServerLink 1</span><br></pre></td></tr></table></figure>
+
+
 
 <h2 id="存档服务器还原"><a href="#存档服务器还原" class="headerlink" title="存档服务器还原"></a>存档服务器还原</h2><p>存档服务器还原时，操作路径跟备份相同</p>
 <p>打开存档服务器，点击“工具”—“备份设置”，点击“装载备份”按钮之后出现如下对话框</p>
@@ -103,8 +106,30 @@
 <p>把Vaults里添加：还原的库名称</p>
 <img src="PDM备份和迁移/image-20260120225551005.png">
 
-<h2 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h2><p>表:dbo.ArchiveServers编辑值 ArchiveServerName&#x3D;当前机器名<br>表:dbo.SystemInfo 编辑值 ArchiveServerName&#x3D; 当前机器名</p>
-<p>第一步备份SolidWorks PDM文件库对应的数据库。然后在新的服务器数据库上进行相应的还原数据库操作。<br>第二步在还原后的文件数据库中，查找相应的表“SystemInfo”，在数据库管理工具中通过语句“select<em>from [dbo].[SystemInfo]”来查看文件数据库的版本。<br>第三步判断现在新服务器上的PDM版本与迁移过来的版本是否一致，如果迁移过来的版本比较低，那么需要进行相应的库版本升级操作。具体相应的操作，需要在安装包中使用自带的工具“Upgrade.exe”程序来进行相应的自动升级操作。<br>第四步清除复制信息，在还原后的文件数据库中，查找相应的表“ArchiveServers”，在数据库管理工具中通过语句“select</em>from [dbo].[ArchiveServers]”来查看相应的记录信息，删除“ArchiveServerID”不等于1的所有记录；然后查看表“ArchiveServerStored”中是否有相应的记录，如果存在，则删除所有的记录，通过相应的语句“deletefrom [dbo].[ArchiveServerStored]”。<br>第五步为内容搜索重新创建链接服务器，在数据库管理工具中执行相应的语句“Exec Sys_IndexServerLink 1”来自动创建链接服务器。<br>第六步更新SolidWorksPDM主数据库“ConisioMasterDb”中的表“FileVaults”中的记录，把相应的迁移过来的文件库记录增加到该表中。<br>第七步创建缺少的存档服务器注册表项和文件归档文件夹。使用PDM提供的工具“ArcServCreator32.exe”，在新服务器相应的注册表和文件库中新建相应的库数据记录以及相应的文件库文件夹。<br>第八步把原文件库数据拷贝覆盖到新服务器上的文件库中，一般文件库的位置在PDM服务端安装目录下“SOLIDWORKS PDM\Data”文件夹中。<br>第九步在SolidWorksPDM管理工具结构树上进行相应的“刷新”操作，把新迁移的文件库记录添加到管理工具结构树中。同时登陆到管理工具中把相应的插件移除，进行重新的加载。<br>通过上面的步骤介绍，基本就能实现库系统的迁移操作。</p>
+<h2 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h2><p>表:dbo.ArchiveServers编辑值 ArchiveServerName&#x3D;当前机器名</p>
+<p>表:dbo.SystemInfo 编辑值 ArchiveServerName&#x3D; 当前机器名</p>
+<p>第一步备份SolidWorks PDM文件库对应的数据库。然后在新的服务器数据库上进行相应的还原数据库操作。</p>
+<p>第二步在还原后的文件数据库中，查找相应的表“SystemInfo”，在数据库管理工具中通过语句来查看文件数据库的版本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select*from [dbo].[SystemInfo]</span><br></pre></td></tr></table></figure>
+
+
+<p>第三步判断现在新服务器上的PDM版本与迁移过来的版本是否一致，如果迁移过来的版本比较低，那么需要进行相应的库版本升级操作。具体相应的操作，需要在安装包中使用自带的工具“Upgrade.exe”程序来进行相应的自动升级操作。</p>
+<p>第四步清除复制信息，在还原后的文件数据库中，查找相应的表“ArchiveServers”，在数据库管理工具中通过语句，来查看相应的记录信息，删除“ArchiveServerID”不等于1的所有记录；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select*from [dbo].[ArchiveServers]</span><br></pre></td></tr></table></figure>
+
+<p>然后查看表“ArchiveServerStored”中是否有相应的记录，如果存在，则删除所有的记录，通过相应的语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deletefrom [dbo].[ArchiveServerStored]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>第五步为内容搜索重新创建链接服务器，在数据库管理工具中执行相应的语句。来自动创建链接服务器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Exec Sys_IndexServerLink 1</span><br></pre></td></tr></table></figure>
+
+<p>第六步更新SolidWorksPDM主数据库“ConisioMasterDb”中的表“FileVaults”中的记录，把相应的迁移过来的文件库记录增加到该表中。</p>
+<p>第七步创建缺少的存档服务器注册表项和文件归档文件夹。使用PDM提供的工具“ArcServCreator32.exe”，在新服务器相应的注册表和文件库中新建相应的库数据记录以及相应的文件库文件夹。</p>
+<p>第八步把原文件库数据拷贝覆盖到新服务器上的文件库中，一般文件库的位置在PDM服务端安装目录下“SOLIDWORKS PDM\Data”文件夹中。</p>
+<p>第九步在SolidWorksPDM管理工具结构树上进行相应的“刷新”操作，把新迁移的文件库记录添加到管理工具结构树中。同时登陆到管理工具中把相应的插件移除，进行重新的加载。</p>
+<p>完成</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

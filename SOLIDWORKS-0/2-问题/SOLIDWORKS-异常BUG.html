@@ -30,6 +30,8 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
     
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    
     <!-- 外部链接打开新的窗口跳转 -->
     </ul>
 </div></nav>	<!-- 引入导航 -->
@@ -38,24 +40,39 @@
     <span id="post-date">2023-11-20 23:23:31</span>
 </div>
 
-<div id="article"><h1 id="模型异常"><a href="#模型异常" class="headerlink" title="模型异常"></a>模型异常</h1><h2 id="配合异常崩溃"><a href="#配合异常崩溃" class="headerlink" title="配合异常崩溃"></a>配合异常崩溃</h2><p>配合异常马上崩溃-swsettings 20251113 1029012124</p>
+<div id="article"><h1 id="启动问题"><a href="#启动问题" class="headerlink" title="启动问题"></a>启动问题</h1><h2 id="热修复后崩溃"><a href="#热修复后崩溃" class="headerlink" title="热修复后崩溃"></a>热修复后崩溃</h2><p><a target="_blank" rel="noopener" href="https://r1132100503382-eu1-3dswym.3dexperience.3ds.com/community/swym:prd:R1132100503382:community:kKnaKWHGTPC4ut-q1X_9uA?content=swym:prd:R1132100503382:qnaquestion:Bk1gBbIvT-6PR7EUTvJDMQ">Solidworks在热修复后崩溃，可能是GPU故障？</a></p>
+<p>我遇到了启动后崩溃的情况。使用多年后，现在看来显卡可能是问题所在。</p>
+<p>电脑装的是游戏显卡（AMD Radeon RX 6800S），可能不再支持了。我尝试过各种方法，从更新驱动、关闭混合模式、将Windows显卡优先设置到AMD Radeon RX 6800S、重置Solidworks注册表、关闭所有用户设置以及在OpenGL中打开软件，还是会崩溃。</p>
+<p><strong>方法：</strong></p>
+<p>我通过将以下DLL：SWK3DCompassAddin.dll重命名为SWK3DCompassAddin.dll.bak  解决了这个问题</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C：\Program Files\Dassault Systemes\SOLIDWORKS 3DEXPERIENCE R2026x\win_b64\code\bin\SWXDesktopAddins</span><br></pre></td></tr></table></figure>
+
+<h1 id="模型异常"><a href="#模型异常" class="headerlink" title="模型异常"></a>模型异常</h1><h2 id="模型抖动"><a href="#模型抖动" class="headerlink" title="模型抖动"></a>模型抖动</h2><p>装配体旋转的时候，会抖动。怎么解决</p>
+<p><strong>方法：</strong></p>
+<p>按空格，选一个标准视图把模型摆正，然后ctrl+q重建模型，然后保存，在试试</p>
+<h2 id="不支持的文件扩展名"><a href="#不支持的文件扩展名" class="headerlink" title="不支持的文件扩展名"></a>不支持的文件扩展名</h2><img src="SOLIDWORKS-异常BUG/不支持的文件扩展名.png">
+
+<h2 id="配合异常崩溃"><a href="#配合异常崩溃" class="headerlink" title="配合异常崩溃"></a>配合异常崩溃</h2><p>配合异常马上崩溃-swsettings 20251113 1029012124</p>
 <h2 id="尺寸显示异常"><a href="#尺寸显示异常" class="headerlink" title="尺寸显示异常"></a>尺寸显示异常</h2><p>20251126-科瑞-尺寸显示科学计数法swSettings20251126（未能复现）</p>
 <h2 id="折弯线可以设置图层吗"><a href="#折弯线可以设置图层吗" class="headerlink" title="折弯线可以设置图层吗"></a>折弯线可以设置图层吗</h2><p>不能，这是已知的功能缺陷，已经有用户希望可以做到为图纸中的折弯线使用图层进行控制；ESPR # 596294 Would like to be able to change the line font for brake lines on drawings Ability to set custom line font&#x2F;Layer?Color to the Bend lines in Drawing &amp; Part.<br>E：Enhancement( 增强)<br>SPR：Software Performance Report( 软件性能报告) </p>
 <h2 id="剖视图上的尺寸，不能拖放"><a href="#剖视图上的尺寸，不能拖放" class="headerlink" title="剖视图上的尺寸，不能拖放"></a>剖视图上的尺寸，不能拖放</h2><p>剖视图上的尺寸，不能拖放到从该剖视图创建的局部视图上，情况是这样的吗？</p>
-<p><img src="/SOLIDWORKS-Solution/SOLIDWORKS-%E5%BC%82%E5%B8%B8BUG/image-20251226172358137.png" alt="image-20251226172358137"></p>
-<p>这是已知的软件 BUG，已经由：SPR # 280137 :Cannot Ctrl + Drag or Shift + Drag dimensions from parent view to section view or any view derived from section view 上报至研发部门，目前还未在已发行的版本中修正。</p>
+<img src="SOLIDWORKS-异常BUG/image-20251226172358137.png">
+
+<p><strong>已知SPR280137</strong></p>
+<p>Cannot Ctrl + Drag or Shift + Drag dimensions from parent view to section view or any view derived from section view 上报至研发部门，目前还未在已发行的版本中修正。</p>
 <h2 id="尺寸显示科学计数法"><a href="#尺寸显示科学计数法" class="headerlink" title="尺寸显示科学计数法"></a>尺寸显示科学计数法</h2><p>重置当前用户solidworks注册表后恢复正常</p>
 <h2 id="装配体另存"><a href="#装配体另存" class="headerlink" title="装配体另存"></a>装配体另存</h2><p>体solidworks在打开x-t文件后保存为装配体格式后再打开装配体就显示所有零件都压缩了，这个问题能解决吗？另存不带零部件</p>
 <p>A：2024 SP0 版本的问题，子键不能加载到内存中，建议客户更换到 2024 SP5 版本</p>
 <h2 id="解决配合问题"><a href="#解决配合问题" class="headerlink" title="解决配合问题"></a>解决配合问题</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2024/chinese-simplified/SolidWorks/sldworks/c_Solving_Mate_Problems.htm?verRedirect=1">解决配合问题 - 2024 - SOLIDWORKS 帮助</a></p>
 <p>配合错误<br>MateXpert<br>您可以使用 MateXpert 识别装配体中的配合问题。 可以详细检查不满意的配合，并确定过定义装配体的配合组。</p>
 <p>修复配合问题的技巧<br>许多过定义及冗余配合问题可通过以下步骤而解决。</p>
-<p>配合错误范例<br>配合的实体 PropertyManager<br>在配合的实体 PropertyManager 中，您可重新附加悬空的配合实体。</p>
+<p>配合错误范例</p>
+<p>在配合的实体 PropertyManager 中，您可重新附加悬空的配合实体。</p>
 <p>全局替换失败的配合参考<br>如果用于装配体中的许多位置的某个部件缺少配合参考，则您可同时替换所有实例的缺失参考。</p>
 <p>遗失实体弹出式工具栏<br>当您替换装配体中的零部件时，可在替换配合参考时利用“遗失的实体”弹出式工具栏来导览现有的配合</p>
 <h2 id="虚拟零部件丢失"><a href="#虚拟零部件丢失" class="headerlink" title="虚拟零部件丢失"></a>虚拟零部件丢失</h2><img src="SOLIDWORKS-异常BUG/虚拟零件丢失问题.png">
 
-<p>方法Solution S-034052</p>
+<p><strong>方法S-034052</strong></p>
 <p>有一种比较常见的原因是因为文件损坏问题导致内部保存的零部件丢失，</p>
 <p>还有一种原因可能是使用了‘打包’功能，建议多做一个备份。</p>
 <p>目前有一个可行的方法，是需要客户去确认在C:\Users&lt;username&gt;\AppData\Local\Temp\sw（xxxx）中是否有丢失的复件“零件.sldprt”. 如果有，手动再装配体中解压零件，您应该会得到通知无法加载该零件，是否手动浏览选择，手动浏览到该路径，然后选择。</p>
@@ -67,8 +84,11 @@
 <img src="SOLIDWORKS-异常BUG/由于深度较大，开环轮廓盲孔切割失败.png">
 
 <h2 id="打包同名异常"><a href="#打包同名异常" class="headerlink" title="打包同名异常"></a>打包同名异常</h2><p>2022SP2.1，目前还是打包出现问题，提示一个或多个文件名相同 无法打包。</p>
-<p>解决方法:<br>打包装配体右键，设定轻化到还原，再打包</p>
-<p>解决方法:<br>1.把原文件的文件夹复制粘贴到其他盘，<br>2.再点击设定轻化到还原，就可以打包了</p>
+<p>解决方法:</p>
+<p>打包装配体右键，设定轻化到还原，再打包</p>
+<p>解决方法:</p>
+<p>1.把原文件的文件夹复制粘贴到其他盘，</p>
+<p>2.再点击设定轻化到还原，就可以打包了</p>
 <h1 id="显示异常"><a href="#显示异常" class="headerlink" title="显示异常"></a>显示异常</h1><h2 id="Win11鼠标显示异常"><a href="#Win11鼠标显示异常" class="headerlink" title="Win11鼠标显示异常"></a>Win11鼠标显示异常</h2><p>禁用 Windows 11 透明效果和动画 有没有用啊？</p>
 <p>Win + I → 个性化 → 颜色 → 关闭 “透明效果”。<br>Win + I → 辅助功能 → 视觉效果 → 关闭 “动画效果”。</p>
 <p>工具栏黑屏</p>
@@ -86,10 +106,6 @@
 <p>方法1：显卡驱动显示问题，经RX和回退驱动得到验证</p>
 <p>方法2：可以通过关闭（禁用）集成显卡的方式，恢复光标。</p>
 <p>方法3：可以通过【右键注解-在窗口中编辑】来看到光标编辑。</p>
-<h2 id="装配体图形显示"><a href="#装配体图形显示" class="headerlink" title="装配体图形显示"></a>装配体图形显示</h2><h2 id="透明度100-才透明"><a href="#透明度100-才透明" class="headerlink" title="透明度100%才透明"></a>透明度100%才透明</h2><p>透明度不能连续变化，只有不透明（0~99%）和透明（100%）。</p>
-<p>1、尝试【RX工具-OpenGL模式】打开文件，排除显卡显示问题；</p>
-<p>2、如果1正常检查当前显卡的型号和驱动，尝试验证其他电脑是否显示正常，或尝试修改显卡驱动看是否显示正常</p>
-<h2 id="纹理图片黑色"><a href="#纹理图片黑色" class="headerlink" title="纹理图片黑色"></a>纹理图片黑色</h2><p>不同版本效果还不一样</p>
 <h1 id="异常错误信息"><a href="#异常错误信息" class="headerlink" title="异常错误信息"></a>异常错误信息</h1><h2 id="弹窗此副本未通过验证"><a href="#弹窗此副本未通过验证" class="headerlink" title="弹窗此副本未通过验证"></a>弹窗此副本未通过验证</h2><p>sw2022 关闭许可证验证错误弹窗(弹窗此副本未通过验证，你可能是盗版受害者)</p>
 <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></span><br><span class="line">;关闭 SOLIDWORKS <span class="number">2022</span> 许可证验证错误弹窗</span><br><span class="line">[HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS <span class="number">2022</span>\User Interface\MessageBoxes]</span><br><span class="line">&quot;MessageBox30427&quot;=dword:<span class="number">00000000</span></span><br></pre></td></tr></table></figure>
 
@@ -98,9 +114,8 @@
 <p>重新注册 DDL 解决了该问题 ，RegSvr32 C:\Program Files\SOLIDWORKS Corp\SW2021\SOLIDWORKS\swHTMLControl.dll</p>
 <img src="SOLIDWORKS-异常BUG/image-20231220095342994.png">
 
-
-
-<h2 id="为什么会出现错误-包含无效路径"><a href="#为什么会出现错误-包含无效路径" class="headerlink" title="为什么会出现错误 包含无效路径"></a>为什么会出现错误<path> 包含无效路径</h2><p>(图)</p>
+<h2 id="无效路径"><a href="#无效路径" class="headerlink" title="无效路径"></a>无效路径</h2><p>为什么会出现错误<path> 包含无效路径</p>
+<p>(图)</p>
 <p>之所以出现此问题，是因为 *.obj 纹理文件路径与当前路径不匹配。</p>
 <p>要解决此问题，请执行以下步骤：</p>
 <p>1.在 Windows® 文件资源管理器中，右键单击 *.obj 文件，然后依次选择“打开方式”&gt;“记事本”。<br>2.在记事本中，选择“编辑”&gt;“替换”。<br>3.在“查找内容”文本框中，键入或粘贴 *.mtl 文件的路径。此路径一般显示在 *.obj 文件的第一行。<br>4.在文件资源管理器中，转至 *.mtl 文件的文件夹位置。<br>5.按下键盘上的“Shift”键，同时右键单击该文件，然后选择“复制为路径”。<br>6.返回到“替换”对话框，将该路径（不带引号）粘贴到“替换为”文本框中。然后，单击“全部替换”。</p>
