@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -45,7 +45,7 @@
 
 
 <h2 id="程序打开慢"><a href="#程序打开慢" class="headerlink" title="程序打开慢"></a>程序打开慢</h2><p>解决方法：禁用SOLIDWORKS网络许可</p>
-<img src="eDrawings-Q&A/禁用网络许可.png">
+<img src="http://8.162.5.68:6196/Hexo/禁用网络许可.png">
 
 
 
@@ -54,9 +54,9 @@
 <h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><p>Q：能否修改编辑别人添加的注解评论</p>
 <p>A：默认不行，</p>
 <h2 id="不包含显示数据"><a href="#不包含显示数据" class="headerlink" title="不包含显示数据"></a>不包含显示数据</h2><p>不包含显示数据</p>
-<img src="eDrawings-Q&A/image-20240704110133292.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240704110133292.png">
 
-<img src="eDrawings-Q&A/image-20240704110226460.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240704110226460.png">
 
 
 
@@ -64,10 +64,10 @@
 
 <h2 id="文件未重建"><a href="#文件未重建" class="headerlink" title="文件未重建"></a>文件未重建</h2><p>eDrawings装配体或图纸显示文件未重建，这是因为装配体和图纸所用到的零件是类似于参考借用的效果。</p>
 <p>这就存在说，当我零件进行了修改后，装配体和工程图未打开进行保存（而是停留在上一次保存的模型状态。也就是所谓的未重建）。那么，此时装配体或工程图在eDrawings打开的样子就是上个版本的样子</p>
-<img src="eDrawings-Q&A/image-20251226153423883.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20251226153423883.png">
 
 <h2 id="版本不支持"><a href="#版本不支持" class="headerlink" title="版本不支持"></a>版本不支持</h2><p>以前生成的文件不受支持。和文件的版本有关，可以把文件在SW打开，【保存所有】把版本升级即可。也可以考虑另存为【x-t】格式，再eDrawing打开</p>
-<img src="eDrawings-Q&A/image-20240420100350419.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240420100350419.png">
 
 <h2 id="自定义属性问题"><a href="#自定义属性问题" class="headerlink" title="自定义属性问题"></a>自定义属性问题</h2><p>当我在 eDrawings程序中打开 SOLIDWORKS 工程图文件时，为什么自定义属性不更新匹配 SOLIDWORKS中的自定义属性值？</p>
 <p><strong>方法</strong></p>
@@ -77,10 +77,11 @@
 <p><strong>方法</strong></p>
 <p>在eDrawings中直接打开SOLIDWORKS文件，然后保存为eDrawings文件即可。其原因是在SW另存easm时装配体文件名包含双字节字符导致。</p>
 <h2 id="找不到指定的模块"><a href="#找不到指定的模块" class="headerlink" title="找不到指定的模块"></a>找不到指定的模块</h2><p>LoadLibrary failed with error 126 找不到指定的模块</p>
-<img src="eDrawings-Q&A/image-20260309120316584.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20260309120316584.png">
 
 <p><strong>方法</strong></p>
 <p>好像说是和显卡有关。看看电脑显卡是否正常使用。是否是使用了集成显卡导致。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:eDrawings</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -108,4 +109,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

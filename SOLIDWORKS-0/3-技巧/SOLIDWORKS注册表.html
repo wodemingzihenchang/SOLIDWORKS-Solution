@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -65,48 +65,48 @@
 <h2 id="快速更换序列号"><a href="#快速更换序列号" class="headerlink" title="快速更换序列号"></a>快速更换序列号</h2><p>修改以下几个位置的注册表中的值即可</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Licenses\Serial Numbers]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Security]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Licenses\Serial Numbers]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Security]</span><br></pre></td></tr></table></figure>
 
-<h2 id="重置注册表"><a href="#重置注册表" class="headerlink" title="重置注册表"></a>重置注册表</h2><img src="SOLIDWORKS注册表/image-20250614105445469.png">
+<h2 id="重置注册表"><a href="#重置注册表" class="headerlink" title="重置注册表"></a>重置注册表</h2><img src="http://8.162.5.68:6196/Hexo/image-20250614105445469.png">
 
 
 
-<h2 id="查找设置在注册表位置"><a href="#查找设置在注册表位置" class="headerlink" title="查找设置在注册表位置"></a>查找设置在注册表位置</h2><img src="SOLIDWORKS注册表/image-20240423175000857.png">
+<h2 id="查找设置在注册表位置"><a href="#查找设置在注册表位置" class="headerlink" title="查找设置在注册表位置"></a>查找设置在注册表位置</h2><img src="http://8.162.5.68:6196/Hexo/image-20240423175000857.png">
 
 <p>导出设置：在菜单栏【工具-保存&#x2F;恢复设置】保存设置文件</p>
-<img src="SOLIDWORKS注册表/1.png">
+<img src="http://8.162.5.68:6196/Hexo/1-1776082823929-1.png">
 
 <p>数据对比：使用文本编辑器，打开保存设置的数据，新建Excel用来对比数据设置差异。</p>
-<img src="SOLIDWORKS注册表/image-20240423171231777.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423171231777.png">
 
 <p>将数据复制到Excel A列里面，</p>
-<img src="SOLIDWORKS注册表/image-20240423173430162.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423173430162.png">
 
 <p>设置同值判断函数：“&#x3D;IF(A1&#x3D;B1,1,0)”</p>
-<img src="SOLIDWORKS注册表/image-20240423173505069.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423173505069.png">
 
 <p>应用填充函数</p>
-<img src="SOLIDWORKS注册表/image-20240423173611105.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423173611105.png">
 
 <p>查找结果：设置筛选</p>
-<img src="SOLIDWORKS注册表/image-20240423173806693.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423173806693.png">
 
 <p>按结果差异值进行筛选，结果为0的行，就是设置差异的选项了</p>
-<img src="SOLIDWORKS注册表/image-20240423173832408.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423173832408.png">
 
-<img src="SOLIDWORKS注册表/image-20240423173902472.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423173902472.png">
 
 <p>查找注册表：在注册表里，定位到当前SW版本。Ctrl+F进行“项名称”查找。</p>
-<img src="SOLIDWORKS注册表/image-20240423174329222.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423174329222.png">
 
 <p>这里就是SW设置在注册表体现的内容了，通过修改此处也能影响SW的选项设置</p>
 <p>（注意：注册表的设置，需要SW程序在完全退出的状态下修改，不然会和现有的程序设置进行冲突导致注册表设置失败）</p>
-<img src="SOLIDWORKS注册表/image-20240423174352828.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240423174352828.png">
 
 <h2 id="强制归还许可"><a href="#强制归还许可" class="headerlink" title="强制归还许可"></a>强制归还许可</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager</span><br></pre></td></tr></table></figure>
 
 <p>重命名（或删除）BORROW信息</p>
 <p>然后在c盘，删除客户端的“C:\ProgramData\FLEXnet”这个文件夹。</p>
 <p>在重新打开许可程序，看看能否重新借用</p>
-<img src="SOLIDWORKS注册表/强制归还许可.png">
+<img src="http://8.162.5.68:6196/Hexo/强制归还许可.png">
 
 <p>不过这个方法似乎不是百分之百成功。如果不行，可能需要重激活许可服务器。并重启网络版服务，可强制归还许可</p>
 <h1 id="EPDM"><a href="#EPDM" class="headerlink" title="EPDM"></a>EPDM</h1><p>EPDM 的库在 SQL 中被删除，但存档库还存在。存档库服务器所在电脑中的找到下列注册项,删除其中与库同名的项</p>
@@ -135,6 +135,8 @@
 <p>手动修改注册表PDM存档服务器位置：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\PDM\ArchiveTable</span><br></pre></td></tr></table></figure>
 
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
+<p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -162,4 +164,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

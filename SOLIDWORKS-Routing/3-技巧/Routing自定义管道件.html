@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -60,7 +60,7 @@
 <p>对于多个CPoint连接器，为每个引脚添加一个CPoint，并使用CPoint原理图引脚ID用于指示CPoint所代表的引脚。自动管道工具可以提供帮助将导线布线到每个连接器引脚。</p>
 <p>建议:为每个连接器添加一个组件引用。当你有在一个设计中有几个相似的连接器，通常给出每个单独的实例是有用的描述性名称。右键单击连接器，选择Component Properties并输入在“组件属性”对话框的“组件引用”中使用唯一的名称。</p>
 <h1 id="Routing自定义-法兰"><a href="#Routing自定义-法兰" class="headerlink" title="Routing自定义-法兰"></a>Routing自定义-法兰</h1><p>前期准备：你需要准备标准件接头模型。打开Routing库管理器，选择零部件向导的类型。使用【Routing Library Manage-电缆电线库向导】进行自定义。</p>
-<img src="Routing库管理器\Routing库管理器.png">
+<img src="http://8.162.5.68:6196/Hexo/Routing库管理器.png">
 
 <h2 id="步路功能点"><a href="#步路功能点" class="headerlink" title="步路功能点"></a>步路功能点</h2><p>1、通过旋转点（或圆弧）获取连接点的位置；</p>
 <h2 id="步路几何体"><a href="#步路几何体" class="headerlink" title="步路几何体"></a>步路几何体</h2><p>在电线&#x2F;电缆中无需设置；可跳过直接下一步。</p>
@@ -75,6 +75,8 @@
 <p>保存还能选择“为缆束生成末端接头图例”</p>
 <h1 id="Routing自定义-管道"><a href="#Routing自定义-管道" class="headerlink" title="Routing自定义-管道"></a>Routing自定义-管道</h1><h1 id="Routing自定义-弯管"><a href="#Routing自定义-弯管" class="headerlink" title="Routing自定义-弯管"></a>Routing自定义-弯管</h1><h1 id="其他类型"><a href="#其他类型" class="headerlink" title="其他类型"></a>其他类型</h1><h2 id="线夹"><a href="#线夹" class="headerlink" title="线夹"></a>线夹</h2><p>使用草图或轴定义线夹的（Rpoint）。</p>
 <p>步路几何体：</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
+<p>tags:Routing</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -102,4 +104,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -43,23 +43,23 @@
 <div id="article"><h1 id="破解操作"><a href="#破解操作" class="headerlink" title="破解操作"></a>破解操作</h1><p>2018 版本之后的破解方法是用网络版模式的破解，操作上有区别与之前的方式。</p>
 <h2 id="破解前准备："><a href="#破解前准备：" class="headerlink" title="破解前准备："></a>破解前准备：</h2><h3 id="环境检查"><a href="#环境检查" class="headerlink" title="环境检查"></a>环境检查</h3><p>安装前，请关闭 Windows 外网、防火墙或电源线插头。检查.net Framework 3.5 和 4.0 是否已经安装。</p>
 <p>如果未安装，请转到【控制面板】-【程序和功能】-【启用或关闭 Windows 功能】勾选.NET Framework 3.5(包括 2.0)</p>
-<img src="破解操作/image1.png">
+<img src="http://8.162.5.68:6196/Hexo/image1-1776018705697-1.png">
 
 <h3 id="SW20-版注意"><a href="#SW20-版注意" class="headerlink" title="SW20 版注意"></a>SW20 版注意</h3><p>如果存在 SolidWorks_Flexnet_Server 请从 SW2020 SSQ 版本中卸载!</p>
 <p>要做到这一点，运行管理员 SolidWorks_Flexnet_Server\server_remove.bat 并等待”SolidWorks Flexnet Server”服务被删除</p>
-<img src="破解操作/image2.png">
+<img src="http://8.162.5.68:6196/Hexo/image2-1776018705697-2.png">
 
 <p>然后从计算机中删除 SolidWorks_Flexnet_Server 文件夹。（一般文件夹会在 C 盘）</p>
-<img src="破解操作/image3.png">
+<img src="http://8.162.5.68:6196/Hexo/image3-1776018705698-5.png">
 
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="注册序列号"><a href="#注册序列号" class="headerlink" title="注册序列号"></a>注册序列号</h3><p>1. “sw2022_network_serials_licensing 运行。并确认添加信息到 Windows 注册表</p>
-<img src="破解操作/image4.png">
+<img src="http://8.162.5.68:6196/Hexo/image4-1776018705698-4.png">
 
 <h3 id="破解服务器"><a href="#破解服务器" class="headerlink" title="破解服务器"></a>破解服务器</h3><p>2. 将文件夹”SolidWorks_Flexnet_Server”拷贝到 C:目录下，</p>
-<img src="破解操作/image5.png">
+<img src="http://8.162.5.68:6196/Hexo/image5-1776018705697-3.png">
 
 <p>以管理员身份运行”SolidWorks_Flexnet_Server\server_install.bat”并等待新的服务，安装并启动”SolidWorks Flexnet Server”</p>
-<img src="破解操作/image6.png">
+<img src="http://8.162.5.68:6196/Hexo/image6-1776018705698-6.png">
 
 <h3 id="安装程序"><a href="#安装程序" class="headerlink" title="安装程序"></a>安装程序</h3><p>（这一步可以参考：#软件安装操作）</p>
 <p>3.安装 SolidWorks 不要安装 SolidNetwork 许可证服务器(SNL)!当被问及许可证服务器定义输入:25734@localhost</p>
@@ -84,6 +84,8 @@
 
 <p>要从&quot;Program Files (x86)&quot;中替换的文件夹(默认设置):</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\\Program Files (x86)\\SOLIDWORKS PDM</span><br></pre></td></tr></table></figure>
+
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -111,4 +113,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

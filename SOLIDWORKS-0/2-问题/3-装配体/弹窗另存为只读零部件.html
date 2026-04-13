@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -42,14 +42,17 @@
 
 <div id="article"><h1 id="弹窗另存为只读零部件"><a href="#弹窗另存为只读零部件" class="headerlink" title="弹窗另存为只读零部件"></a>弹窗另存为只读零部件</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>保存总装的时候老是会弹出另存为窗口保存别的零件，这个怎么关闭呢？</p>
 <h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>在【工具，选项，系统选项，外部参考】中找到“不提示保存只读参考文件(放弃改变)”选项，勾选即可。此选项可以使只读文件忽视跳过另存为的弹窗出现。</p>
-<img src="弹窗另存为只读零部件/image-20250929154945323.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250929154945323.png">
 
 <h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>设置了方法1，但是保存还是会弹窗另存为只读文件。</p>
 <p>则需在【工具，选项，系统选项，解除的信息】中，看是否有关于保存只读文件方面的弹窗提示。例如：勾选“在此文档中参考的以下模型已被修改。它们在文档保存时也将被保存。”弹窗，恢复保存时候的弹窗出现，</p>
-<img src="弹窗另存为只读零部件/image-20250929154839133.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250929154839133.png">
 
 <p>该弹窗是关于“不保存只读文件”的选项，如果之前没有勾选不保存只读文件，并设置了该提示不再出现。则方法1的设置是不起作用的。</p>
-<img src="弹窗另存为只读零部件/image-20250929154907281.png"></div>
+<img src="http://8.162.5.68:6196/Hexo/image-20250929154907281.png">
+
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
+</div>
  			<!-- 引入正文 -->
     </div>	
     
@@ -76,4 +79,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

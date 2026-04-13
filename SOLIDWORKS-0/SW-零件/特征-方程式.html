@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,9 +41,9 @@
 </div>
 
 <div id="article"><h1 id="SOLIDWORK-方程式"><a href="#SOLIDWORK-方程式" class="headerlink" title="SOLIDWORK-方程式"></a>SOLIDWORK-方程式</h1><p>在【工具-方程式】启用该功能。并且在设计树里可以做编辑</p>
-<img src="特征-方程式/image-20241101172630578.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241101172630578-1776083930852-1.png">
 
-<img src="特征-方程式/image-20241101172531605.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241101172531605-1776083930853-2.png">
 
 <h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>自定义一个变量，做后续参与方程式计算使用；</p>
 <h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><p>针对特征压缩&#x2F;解压缩操作；可以搭配if函数对特征进行判断压缩。格式如下：If(判断, “是”的结果,“否”的结果)</p>
@@ -52,7 +52,7 @@
 <h2 id="方程式"><a href="#方程式" class="headerlink" title="方程式"></a>方程式</h2><p>利用前面以及模型上尺寸的选择，进行等式计算，驱动结果。 </p>
 <h1 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h1><h2 id="自动求解组序选项"><a href="#自动求解组序选项" class="headerlink" title="自动求解组序选项"></a>自动求解组序选项</h2><p>您可使用自动求解组序选项自动将方程式以软件所决定的顺序排序以产生精确结果。</p>
 <p>您可以在方程式、全局变量和尺寸对话框中选择自动求解顺序选项。 选中此选项后，SOLIDWORKS 软件会识别非独立方程和阶次方程，以便在执行非独立方程之前执行独立方程。 如果方程 B 被定义为方程 A 的函数，则必须先求解方程 A。</p>
-<p>例如，在下面的两个方程式中，软件首先估算 “D2@<a href="mailto:&#83;&#x6b;&#101;&#x74;&#x63;&#x68;&#49;&#x40;&#112;&#x61;&#114;&#116;&#95;&#x69;&#x6e;&#115;&#x69;&#x64;&#x65;&#46;&#x50;&#x61;&#x72;&#x74;">&#83;&#x6b;&#101;&#x74;&#x63;&#x68;&#49;&#x40;&#112;&#x61;&#114;&#116;&#95;&#x69;&#x6e;&#115;&#x69;&#x64;&#x65;&#46;&#x50;&#x61;&#x72;&#x74;</a>“，从而可以安全地用作方程式中 “D1@<a href="mailto:&#83;&#107;&#101;&#x74;&#x63;&#x68;&#x31;&#64;&#112;&#x61;&#x72;&#x74;&#x5f;&#111;&#x75;&#116;&#115;&#x69;&#100;&#101;&#x2e;&#x50;&#97;&#114;&#x74;">&#83;&#107;&#101;&#x74;&#x63;&#x68;&#x31;&#64;&#112;&#x61;&#x72;&#x74;&#x5f;&#111;&#x75;&#116;&#115;&#x69;&#100;&#101;&#x2e;&#x50;&#97;&#114;&#x74;</a>“ 的变量。</p>
+<p>例如，在下面的两个方程式中，软件首先估算 “D2@<a href="mailto:&#x53;&#x6b;&#101;&#116;&#x63;&#x68;&#x31;&#x40;&#x70;&#97;&#x72;&#116;&#95;&#x69;&#x6e;&#x73;&#x69;&#100;&#x65;&#x2e;&#x50;&#97;&#x72;&#116;">&#x53;&#x6b;&#101;&#116;&#x63;&#x68;&#x31;&#x40;&#x70;&#97;&#x72;&#116;&#95;&#x69;&#x6e;&#x73;&#x69;&#100;&#x65;&#x2e;&#x50;&#97;&#x72;&#116;</a>“，从而可以安全地用作方程式中 “D1@<a href="mailto:&#x53;&#107;&#101;&#116;&#99;&#x68;&#x31;&#64;&#x70;&#x61;&#x72;&#x74;&#x5f;&#x6f;&#117;&#116;&#x73;&#x69;&#100;&#101;&#x2e;&#x50;&#x61;&#x72;&#116;">&#x53;&#107;&#101;&#116;&#99;&#x68;&#x31;&#64;&#x70;&#x61;&#x72;&#x74;&#x5f;&#x6f;&#117;&#116;&#x73;&#x69;&#100;&#101;&#x2e;&#x50;&#x61;&#x72;&#116;</a>“ 的变量。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">“D1@Sketch1@part_outside.Part” = “D2@Sketch1@part_inside.Part” + 2</span><br><span class="line">“D2@Sketch1@part_inside.Part” = “Side” - 6</span><br></pre></td></tr></table></figure>
 
 
@@ -60,10 +60,11 @@
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="循环参考"><a href="#循环参考" class="headerlink" title="循环参考"></a>循环参考</h2><p>方程式包括循环引用，可能会造成计算结果死循环影响结果值。出现情况如下：变量间会相互影响</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">“D1@xx” = “D2@xx” + 2</span><br><span class="line">“D2@xx” = “变量” - 6</span><br><span class="line">“变量” = “D1@xx” </span><br></pre></td></tr></table></figure>
 
-<img src="特征-方程式/image-20260318010523947.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20260318010523947.png">
 
 <h2 id="添加编辑参数"><a href="#添加编辑参数" class="headerlink" title="添加编辑参数"></a>添加编辑参数</h2><p>方程式添加编辑参数命令有什么用途？</p>
-<p><img src="/SOLIDWORKS-Solution/%E7%89%B9%E5%BE%81-%E6%96%B9%E7%A8%8B%E5%BC%8F/%E6%96%B9%E7%A8%8B%E5%BC%8F%E6%B7%BB%E5%8A%A0%E7%BC%96%E8%BE%91%E5%8F%82%E8%80%83%E5%91%BD%E4%BB%A4%E7%94%A8%E9%80%94.png" alt="方程式添加编辑参考命令用途"></p>
+<p><img src="http://8.162.5.68:6196/Hexo/方程式添加编辑参考命令用途.png" alt="方程式添加编辑参考命令用途"></p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -91,4 +92,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -44,18 +44,14 @@
 
 <p>您可在将工程图保存为 .dxf 或 .dwg 文件时映射 SOLIDWORKS 工程图实体和颜色以在目标文件中配置这些实体和颜色</p>
 <p>默认情况下SW定义的图层会自动另存到DWG&#x2F;DXF文件的图纸中并生效。但如果您对SW里的对象（例如几何体、注释等）需要统一做关联映射时，则可有考虑CAD映射文件。</p>
-<h2 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h2><ol>
-<li>从 SOLIDWORKS 工程图单击 <strong>文件</strong> &gt; <strong>另存为</strong> ，然后选择 .dwg 或 .dxf 作文文件类型。</li>
-<li>单击<strong>选项</strong>。</li>
-<li>勾选<strong>激活</strong>，然后清除 <strong>在每次保存时不显示映射关系</strong>。点击确定选项设置，点击保存</li>
-</ol>
-<img src="CAD映射文件/image-20240407094420357.png">
+<h2 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h2><p>从 SOLIDWORKS 工程图单击 <strong>文件</strong> &gt; <strong>另存为</strong> ，然后选择 .dwg 或 .dxf 作文文件类型。单击<strong>选项</strong>。</p>
+<p>勾选<strong>激活</strong>，然后清除 <strong>在每次保存时不显示映射关系</strong>。点击确定选项设置，点击保存</p>
+<img src="http://8.162.5.68:6196/Hexo/image-20240407094420357.png">
 
-<p>空映射文件路径下保存，会出现 <strong>SOLIDWORKS 到 DXF&#x2F;DWG</strong> 。列表里展示的即是自定义映射的对照</p>
-<p>例如：</p>
+<p>空映射文件路径下保存，会出现 <strong>SOLIDWORKS 到 DXF&#x2F;DWG</strong> 。列表里展示的即是自定义映射的对照，例如：</p>
 <p>定义图层：是对即将保存成DWG&#x2F;DXF文件的图层定义</p>
 <p>映射实体：1列是“定义图层”里的的内容，4列是SW实体对象</p>
-<img src="CAD映射文件/image-20240407094917063.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240407094917063.png">
 
 <p>设置的映射表格，建议可有【保存映射文件】留作模板使用。单击确定保存DWG文件。</p>
 <h1 id="DWG字体修改"><a href="#DWG字体修改" class="headerlink" title="DWG字体修改"></a>DWG字体修改</h1><p>另存到CAD后的字体修改</p>
@@ -64,7 +60,9 @@
 <p>3、在过滤器类型选择‘标注样式’&gt;加号后选择‘SLDDIMSTYL2’&gt;确定；</p>
 <p><strong>4、此时图中会全选标注样式‘SLDDIMSTYL2’的图形；</strong></p>
 <p>5、在右侧面板更改为ISO-25。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><h2 id="保存映射文件"><a href="#保存映射文件" class="headerlink" title="保存映射文件"></a><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/SolidWorks/slddxf/t_map_entities_on_export_to_dwg.htm">保存映射文件</a></h2></div>
+<p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/SolidWorks/slddxf/t_map_entities_on_export_to_dwg.htm">保存映射文件</a></p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
+</div>
  			<!-- 引入正文 -->
     </div>	
     
@@ -91,4 +89,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

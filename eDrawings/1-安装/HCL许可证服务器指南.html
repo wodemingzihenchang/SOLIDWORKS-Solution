@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -47,35 +47,35 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /all&gt;hostinfo.txt</span><br></pre></td></tr></table></figure>
 
 <p>默认文件会生成在：C:\Users\&lt;用户名&gt;文件夹</p>
-<p>‘hostinfo.txt’包含生成license所需的信息。将此文件连同您的订单信息发送至<a href="mailto:&#x73;&#x61;&#108;&#101;&#x73;&#x40;&#103;&#108;&#x6f;&#118;&#x69;&#x75;&#115;&#x2e;&#99;&#111;&#x6d;">&#x73;&#x61;&#108;&#101;&#x73;&#x40;&#103;&#108;&#x6f;&#118;&#x69;&#x75;&#115;&#x2e;&#99;&#111;&#x6d;</a>或<a href="mailto:&#x67;&#x6c;&#111;&#118;&#105;&#x75;&#115;&#46;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#64;&#104;&#99;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x67;&#x6c;&#111;&#118;&#105;&#x75;&#115;&#46;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#64;&#104;&#99;&#x6c;&#46;&#x63;&#x6f;&#109;</a>。浮动许可文件将在2个工作日内通过电子邮件发送给您。</p>
+<p>‘hostinfo.txt’包含生成license所需的信息。将此文件连同您的订单信息发送至<a href="mailto:&#115;&#97;&#108;&#101;&#x73;&#x40;&#103;&#108;&#111;&#118;&#105;&#117;&#115;&#46;&#x63;&#x6f;&#x6d;">&#115;&#97;&#108;&#101;&#x73;&#x40;&#103;&#108;&#111;&#118;&#105;&#117;&#115;&#46;&#x63;&#x6f;&#x6d;</a>或<a href="mailto:&#103;&#x6c;&#x6f;&#118;&#x69;&#x75;&#x73;&#46;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#64;&#104;&#x63;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x6c;&#x6f;&#118;&#x69;&#x75;&#x73;&#46;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#64;&#104;&#x63;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a>。浮动许可文件将在2个工作日内通过电子邮件发送给您。</p>
 <h2 id="生成许可文件"><a href="#生成许可文件" class="headerlink" title="生成许可文件"></a>生成许可文件</h2><p>获得浮动许可文件后，在记事本中打开并保存成后缀是.lic的格式文件。许可证文件的内容如下所示:（注意：当用记事本保存文件时，请确保在“另存为类型”框中选择“所有文件”，这样就不会自动添加.txt扩展名）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">SERVER server-name 00823F752B89 27019 </span><br><span class="line">VENDOR gssl </span><br><span class="line">FEATURE glv_viewer_pro gssl 20070100 permanent 2 START=08-Jun-2014  </span><br><span class="line">TS_OK SIGN=&quot;8253 AA6F 7A51 69BC 4EE1 30F7 08CD EEC2 2892 8FD8  </span><br><span class="line">2001 7FCE 3B82 B930 4688 B46A AF32 B4BE 43E8 04C6 21BD&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 注释 #</span><br><span class="line"># server-name：表示实际的服务器名称。第四个领域，</span><br><span class="line"># 27019：端口号。默认端口号27000。根据购买的产品可能会有所不同。</span><br><span class="line"># VENDOR gssl：</span><br><span class="line"># FEATURE：</span><br><span class="line"># TS_OK SIGN：</span><br><span class="line"># 注释 #</span><br></pre></td></tr></table></figure>
 
 <h1 id="安装服务器"><a href="#安装服务器" class="headerlink" title="安装服务器"></a>安装服务器</h1><h2 id="安装服务器-1"><a href="#安装服务器-1" class="headerlink" title="安装服务器"></a>安装服务器</h2><p>下载并运行Geometric License Server安装文件。License Server download to host the license:<br> <a target="_blank" rel="noopener" href="https://glovius.blob.core.windows.net/installers/Support_material/HCLLicenseServer.exe">https://glovius.blob.core.windows.net/installers/Support_material/HCLLicenseServer.exe</a></p>
 <p>安装许可服务器工具指南。Instruction Guide to host the license on the server:<br> <a target="_blank" rel="noopener" href="https://glovius.blob.core.windows.net/installers/Support_material/Floating_License_Configuration.pdf">https://glovius.blob.core.windows.net/installers/Support_material/Floating_License_Configuration.pdf</a></p>
-<p>（安装下载链接过期失效或需要新版本程序，你可以联系‘<a href="mailto:&#x65;&#x64;&#114;&#97;&#x77;&#105;&#110;&#103;&#115;&#x2e;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#64;&#104;&#99;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#x65;&#x64;&#114;&#97;&#x77;&#105;&#110;&#103;&#115;&#x2e;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#64;&#104;&#99;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>‘）</p>
+<p>（安装下载链接过期失效或需要新版本程序，你可以联系‘<a href="mailto:&#101;&#100;&#x72;&#97;&#x77;&#x69;&#110;&#x67;&#115;&#x2e;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#64;&#104;&#99;&#108;&#46;&#99;&#x6f;&#x6d;">&#101;&#100;&#x72;&#97;&#x77;&#x69;&#110;&#x67;&#115;&#x2e;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#64;&#104;&#99;&#108;&#46;&#99;&#x6f;&#x6d;</a>‘）</p>
 <p>安装步骤如下：</p>
-<img src="HCL许可证服务器指南/安装服务器/0.png">
+<img src="http://8.162.5.68:6196/Hexo/0.png">
 
 <p>单击“下一步”继续，</p>
-<img src="HCL许可证服务器指南/安装服务器/1.png">
+<img src="http://8.162.5.68:6196/Hexo/1-1776019643067-10.png">
 
 <p>选择安装HCL License Server的安装目录（当然默认C盘路径也行）</p>
-<img src="HCL许可证服务器指南/安装服务器/2.png">
+<img src="http://8.162.5.68:6196/Hexo/2-1776019643067-7.png">
 
 <p>选择许可文件，单击“下一步”。（安装时需要license文件。如果还没有收到许可证文件，可使用空许可证文件代替）</p>
-<img src="HCL许可证服务器指南/安装服务器/3.png">
+<img src="http://8.162.5.68:6196/Hexo/3-1776019643067-8.png">
 
 <p>点击“安装”等待完成安装</p>
-<img src="HCL许可证服务器指南/安装服务器/4.png">
+<img src="http://8.162.5.68:6196/Hexo/4-1776019643067-6.png">
 
 <p>完成</p>
-<img src="HCL许可证服务器指南/安装服务器/5.png">
+<img src="http://8.162.5.68:6196/Hexo/5-1776019643067-9.png">
 
 
 
 <h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><p>从【开始菜单 &gt;程序&gt;”中运行lmtools.exe实用程序Geometric License证服务器&gt; lmtools】检查“配置使用”中的“服务&#x2F;许可文件”选项卡上的LMTOOLS对话框中是否存在FLEXlm服务几何服务”选项。</p>
-<img src="HCL许可证服务器指南/配置服务器/0配置服务器.png">
+<img src="http://8.162.5.68:6196/Hexo/0配置服务器.png">
 
 <p><strong>1、单击配置服务</strong></p>
 <p>在“服务名称”下拉列表中，选择要用于管理许可证的服务几何。如果不存在服务名称，请输入需要管理license的服务名称（名称可以自己定义）。</p>
@@ -85,56 +85,56 @@
 <li>license：（★重点）浏览到浮动许可证文件的位置。</li>
 <li>log：任意log文本，输入调试日志文件的路径和文件名。</li>
 </ul>
-<img src="HCL许可证服务器指南/配置服务器/1配置服务.png">
+<img src="http://8.162.5.68:6196/Hexo/1配置服务.png">
 
 <p>选择“使用服务”。如果要在系统启动时自动启动lmgrd.exe，请选择“开机启动服务”。</p>
 <p>单击“Save Service”将新配置保存在步骤4中创建的服务名称下。</p>
 <p><strong>2、单击“开始&#x2F;停止&#x2F;重读”页签</strong></p>
-<img src="HCL许可证服务器指南/配置服务器/2开始服务.png">
+<img src="http://8.162.5.68:6196/Hexo/2开始服务.png">
 
 <p>单击“启动服务器”，启动license服务器。消息“服务器”在“LMTOOLS”对话框底部显示“正在启动”。许可证服务器通常会在10到30秒内启动。为确保license管理器已正确启动，请在启动服务器后等待30秒，然后单击LMTOOLS的“服务器状态”页签，</p>
 <p><strong>3、单击“执行状态查询”</strong></p>
 <p>内容包括10秒返回结果。滚动到结果的底部，寻找类似于下面的一行:功能使用信息:用户总数为1个和被使用许可数量</p>
-<img src="HCL许可证服务器指南/配置服务器/3查询服务.png">
+<img src="http://8.162.5.68:6196/Hexo/3查询服务.png">
 
 
 
 <h1 id="安装客户端"><a href="#安装客户端" class="headerlink" title="安装客户端"></a>安装客户端</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>1、管理员启动安装程序，<a target="_blank" rel="noopener" href="https://edrawings.geometricglobal.com/products/edrawings-for-proengineer-and-creo/download-links/">【程序下载】</a>及<a target="_blank" rel="noopener" href="https://edrawings.geometricglobal.com/products/edrawings-for-proengineer-and-creo/release-notes/">【版本说明】</a></p>
-<img src="HCL许可证服务器指南/安装客户端/1.png">
+<img src="http://8.162.5.68:6196/Hexo/1-1776019643065-1.png">
 
 <p>2</p>
-<img src="HCL许可证服务器指南/安装客户端/2.png">
+<img src="http://8.162.5.68:6196/Hexo/2-1776019643065-2.png">
 
 <p>3选择包括publisher工具</p>
-<img src="HCL许可证服务器指南/安装客户端/3.png">
+<img src="http://8.162.5.68:6196/Hexo/3-1776019643065-3.png">
 
 <p>4安装程序会自动找到proe程序</p>
-<img src="HCL许可证服务器指南/安装客户端/4.png">
+<img src="http://8.162.5.68:6196/Hexo/4-1776019643065-4.png">
 
-<img src="HCL许可证服务器指南/安装客户端/5.png">
+<img src="http://8.162.5.68:6196/Hexo/5-1776019643065-5.png">
 
-<img src="HCL许可证服务器指南/安装客户端/6.png">
+<img src="http://8.162.5.68:6196/Hexo/6-1776019643067-11.png">
 
-<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><img src="HCL许可证服务器指南/安装客户端/edrawing license configuration.png">
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><img src="http://8.162.5.68:6196/Hexo/edrawing license configuration.png">
 
 <h1 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h1><h2 id="旧设备停用"><a href="#旧设备停用" class="headerlink" title="旧设备停用"></a>旧设备停用</h2><p>选择开始&gt;项目Geometric&#x2F;HCL License Server&gt;打开“LMTOOLS”窗口。</p>
 <p>在“服务&#x2F;许可文件”页签中，选择“配置使用服务”选项，显示服务。“FLEXlm服务几何”将被列出。选择“FLEXlm Service Geometric”，并确保选中“LMTOOLS忽略许可证文件路径环境变量”。如果您为eDrawings 服务指定了不同的名称，请选择相应的名称。</p>
 <p>单击“启动&#x2F;停止&#x2F;重读”页签，选择“停止服务器”，停止服务器。</p>
-<img src="HCL许可证服务器指南/配置服务器/2开始服务.png">
+<img src="http://8.162.5.68:6196/Hexo/2开始服务.png">
 
-<h2 id="获得新许可"><a href="#获得新许可" class="headerlink" title="获得新许可"></a>获得新许可</h2><p>从旧服务器拿到的许可文件.lic、新服务器的名称、MAC地址发到‘<a href="mailto:&#101;&#x64;&#114;&#97;&#x77;&#x69;&#110;&#103;&#115;&#x2e;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#64;&#x68;&#x63;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#101;&#x64;&#114;&#97;&#x77;&#x69;&#110;&#103;&#115;&#x2e;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#64;&#x68;&#x63;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>‘原厂支持邮箱，支持邮箱将回复新的许可文件</p>
-<img src="HCL许可证服务器指南/获得新许可.png">
+<h2 id="获得新许可"><a href="#获得新许可" class="headerlink" title="获得新许可"></a>获得新许可</h2><p>从旧服务器拿到的许可文件.lic、新服务器的名称、MAC地址发到‘<a href="mailto:&#101;&#100;&#x72;&#x61;&#x77;&#105;&#x6e;&#x67;&#115;&#46;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#64;&#x68;&#x63;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#101;&#100;&#x72;&#x61;&#x77;&#105;&#x6e;&#x67;&#115;&#46;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#64;&#x68;&#x63;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a>‘原厂支持邮箱，支持邮箱将回复新的许可文件</p>
+<img src="http://8.162.5.68:6196/Hexo/获得新许可.png">
 
 
 
 <h2 id="新设备激活"><a href="#新设备激活" class="headerlink" title="新设备激活"></a>新设备激活</h2><p>在新设备中安装服务器，并打开。选择开始菜单》Geometric&#x2F;HCL License Server》打开“LMTOOLS”窗口。</p>
-<img src="HCL许可证服务器指南/配置服务器/0配置服务器.png">
+<img src="http://8.162.5.68:6196/Hexo/0配置服务器.png">
 
 <p>单击“配置服务”选项卡，从“服务名称”下拉列表中选择要用于管理许可证的FLEXlm Service Geometric服务。浏览到新许可证文件的位置并选择许可证。单击Save Service保存新配置。（注意:如果有多个软件供应商使用FLEXlm进行许可证管理，则此下拉列表可能有多个选项。）</p>
-<img src="HCL许可证服务器指南/配置服务器/1配置服务.png">
+<img src="http://8.162.5.68:6196/Hexo/1配置服务.png">
 
 <p>单击Save Service保存新配置。单击“开始&#x2F;停止&#x2F;重读”页签。启动服务</p>
-<img src="HCL许可证服务器指南/配置服务器/2开始服务.png">
+<img src="http://8.162.5.68:6196/Hexo/2开始服务.png">
 
 <h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a target="_blank" rel="noopener" href="https://edrawings.geometricglobal.com/">(geometricglobal.com)</a></p>
 <p><a target="_blank" rel="noopener" href="https://products.geometricglobal.com/downloads/Glovius/Floating_License_Configuration.pdf">Floating License (geometricglobal.com)</a></p>
@@ -196,6 +196,7 @@
 <li><p>停用旧的许可服务器。</p>
 </li>
 </ol>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -223,4 +224,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

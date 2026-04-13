@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,7 +41,7 @@
 </div>
 
 <div id="article"><h1 id="不能加载-VBE6EXT"><a href="#不能加载-VBE6EXT" class="headerlink" title="不能加载 VBE6EXT"></a>不能加载 VBE6EXT</h1><p>原因：可能是因为安装又卸载了Office所致，根据经验，Office和WPS卸载均可产生上述问题。</p>
-<img src="不能加载VBE6EXT/image1.png" >
+<img src="http://8.162.5.68:6196/Hexo/image1-1776079418537-4.png">
 
 <h2 id="方法1-安装运行库"><a href="#方法1-安装运行库" class="headerlink" title="方法1:安装运行库"></a>方法1:安装运行库</h2><p>安装【微软常用运行库】在SOLIDWORKS安装包找到下面路径，安装下：VBA71_2052.msi</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\SOLIDWORKS安装包\SOLIDWORKS 20xx\PreReqs\VBA</span><br></pre></td></tr></table></figure>
@@ -54,12 +54,13 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CLASSES_ROOT\TypeLib\&#123;0002E157-0000-0000-C000-000000000046&#125;\5.3\0\win32</span><br><span class="line">计算机\HKEY_CLASSES_ROOT\TypeLib\&#123;0002E157-0000-0000-C000-000000000046&#125;\5.3\0\win64</span><br></pre></td></tr></table></figure>
 
 <p>右击，然后点击修改（或者鼠标连点两次），将下面目录改成你的 VB6EXT.OLB 的目录：C:\Program Files (x86)\Common Files\microsoft shared\VBA\VBA7.1\VB6EXT.OLB</p>
-<img src="不能加载VBE6EXT/image2.png" >
+<img src="http://8.162.5.68:6196/Hexo/image2-1776079416472-2.png">
 
-<h1 id="没能启动应用程序Visual-Basic"><a href="#没能启动应用程序Visual-Basic" class="headerlink" title="没能启动应用程序Visual Basic"></a>没能启动应用程序Visual Basic</h1><img src="不能加载VBE6EXT/image-20240620110934594.png" >
+<h1 id="没能启动应用程序Visual-Basic"><a href="#没能启动应用程序Visual-Basic" class="headerlink" title="没能启动应用程序Visual Basic"></a>没能启动应用程序Visual Basic</h1><img src="http://8.162.5.68:6196/Hexo/image-20240620110934594.png">
 
 <p>没能启动应用程序 Visual Basic</p>
 <p>解决办法就是将C:\Program Files\Common Files\Microsoft Shared下的VBA文件夹删除即可。（不影响office正常使用）</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -87,4 +88,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -46,20 +46,21 @@
 <p>1、选择要修改的库。若要使库列出，您必须设置本地视图。</p>
 <p>2、勾选“为此库使用自动登录”(“使用服务器默认值”项，是使用存档服务器上定义的默认登录。此选项只针对配置为使用 <strong>Windows 登录</strong>的库)</p>
 <p>3、输入登录账号密码即可完成</p>
-<img src="PDM自动登录/本地设置登录.png">
+<img src="http://8.162.5.68:6196/Hexo/本地设置登录.png">
 
 <h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>如果是想让库中所有用户自动登录，可以在SOLIDWORKS PDM存档服务器上进行设置（这个操作只有在用户设置为Windows域用户登录时才有效）</p>
 <p>首先，登录到存档服务器上，通过开始 &gt; SOLIDWORKS PDM &gt; 存档服务器配置。如果存档配置工具已经在服务器上运行了，就需要从系统托盘中打开，如下图所示</p>
-<img src="PDM自动登录/存档服务器打开.png">
+<img src="http://8.162.5.68:6196/Hexo/存档服务器打开.png">
 
 <p>在Archive Server配置工具中，转到“工具”&gt;“默认设置”。选择登录界面选项卡，在默认登录类型下选择Windows登录，然后选中“自动登录”。点击确定，所有设置为服务器默认值的客户端将使用其Windows登录设置自动登录。</p>
-<img src="PDM自动登录/存档服务器登录.png">
+<img src="http://8.162.5.68:6196/Hexo/存档服务器登录.png">
 
 <h1 id="不要自动登录"><a href="#不要自动登录" class="headerlink" title="不要自动登录"></a>不要自动登录</h1><p>该功能只有在 SOLIDWORKS PDM 2023 SP4或更新版本中提供。打开注册表编辑器。浏览到：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[vaultname]</span><br></pre></td></tr></table></figure>
 
 <p>创建名为 DisableAutoLoginPrompt 的新 DWORD （32 位） 值将值设置为1（1 &#x3D; 禁止自动登录，0 &#x3D; 关闭）</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/r_settings_auto_login.htm">https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/r_settings_auto_login.htm</a></p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -87,4 +88,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

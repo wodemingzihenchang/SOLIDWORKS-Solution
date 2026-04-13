@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,29 +41,30 @@
 </div>
 
 <div id="article"><h1 id="工程图视图空白"><a href="#工程图视图空白" class="headerlink" title="工程图视图空白"></a>工程图视图空白</h1><p>参考的零部件模型已从发生移动，导致工程图参考丢失，因此它以空白视图打开。</p>
-<img src="工程图视图空白/工程图视图空白.png">
+<img src="http://8.162.5.68:6196/Hexo/工程图视图空白.png">
 
 <p>如果在将模型保存到新位置时图形处于打开状态，则不会出现此问题…图形的参照将更新。就像在 Windows 中使用右键单击 SOLIDWORKS &gt; 移动模型一样 &gt; 移动 &gt; 更新。</p>
 <span id="more"></span>
 
 <h2 id="方法1：打开参考替换"><a href="#方法1：打开参考替换" class="headerlink" title="方法1：打开参考替换"></a>方法1：打开参考替换</h2><p>选择“文件”&gt;“打开”。找到打开对话框下的【参考】按钮，双击旧模型的路径，来浏览到模型的新位置(替换后，模型名字会变绿)</p>
-<img src="工程图视图空白/工程图视图空白方法.png">
+<img src="http://8.162.5.68:6196/Hexo/工程图视图空白方法.png">
 
 <p>然后打开工程图，此时模型可能会出现尺寸悬空的情况，我们可以忽略。在后续修改即可。</p>
 <h2 id="方法2：替换模型"><a href="#方法2：替换模型" class="headerlink" title="方法2：替换模型"></a>方法2：替换模型</h2><p>在打开工程图界面里，右键丢失参考的空白视图【替换模型】，浏览到新位置下的模型进行替换参考即可。</p>
-<img src="工程图视图空白/工程图视图空白方法2.png">
+<img src="http://8.162.5.68:6196/Hexo/工程图视图空白方法2.png">
 
 <h2 id="方法3：显示视图"><a href="#方法3：显示视图" class="headerlink" title="方法3：显示视图"></a>方法3：显示视图</h2><p>替换完成，并且可以从工程图打开零件，但是模型显示还是空白。可以将模型【显示】恢复</p>
-<img src="工程图视图空白/显示视图.png">
+<img src="http://8.162.5.68:6196/Hexo/显示视图.png">
 
 
 
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>其他情况的工程图空白</p>
 <h2 id="转DWG视图空白"><a href="#转DWG视图空白" class="headerlink" title="转DWG视图空白"></a>转DWG视图空白</h2><p>在为以下工程图视图创建精确几何体时出现错误，工图视图可能显示为空。</p>
-<img src="工程图视图空白/转DWG视图空白.png">
+<img src="http://8.162.5.68:6196/Hexo/转DWG视图空白.png">
 
 <p>这个问题常出现于模型错误，特别是标准件一类的面片实体的stp模型</p>
 <p>排除方法需要在装配体模式下，压缩一半的零部件方式(来找出)，压缩问题零件后，另存正常。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -91,4 +92,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

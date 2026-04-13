@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,24 +28,25 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
     <span id="post-date">2023-11-02 16:28:19</span>
 </div>
 
-<div id="article"><h1 id="列表文件名无效"><a href="#列表文件名无效" class="headerlink" title="列表文件名无效"></a>列表文件名无效</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><img src="列表文件名无效/image-20240923160533467.png">
+<div id="article"><h1 id="列表文件名无效"><a href="#列表文件名无效" class="headerlink" title="列表文件名无效"></a>列表文件名无效</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><img src="http://8.162.5.68:6196/Hexo/image-20240923160533467.png">
 
 <p>在特性选顶卡编制器中打开自定义特性模板时，为什么会出现“列表文件名无效”错误?</p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>在自定义特性模板中，当列表框元素外部参考了文本文件、Excel 电子表格或 Access 数据库时，存储在模板中的路径将为绝对路径。因此，如果自定义特性模板被移动或者与其他用户共享，则将断开这些路径的外部参考。 </p>
 <p>对于无法解析的每个路径实例，将显示“列表文件名无效“错误。 例如，如果模板有三个列表框元素全部链接到不同的 Excel 电子表格，则在加载模板之前将显示三个错误。 要解决此问题，需要在模板内重新定义外部参考的文件的路径。</p>
 <p>如果您与网络外部的其他用户共享自定义特性模板文件，则建议创建模板并在所有 SolidWorks,用户具有访问权限的公共位置创建外部链接到模板的文件。例如，默认的自定义特性模板位置“C:\ProgramData\SolidWorks\SolidWorks 20xx\lang\english”。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -73,4 +74,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

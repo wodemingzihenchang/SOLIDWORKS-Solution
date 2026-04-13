@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -59,44 +59,44 @@
 <h1 id="接合接触"><a href="#接合接触" class="headerlink" title="接合接触"></a>接合接触</h1><p>分析案例：虎钳。材料:合金钢。分别将225N的“挤压”力作用在钳臂的末端，平板短边两侧固定。求解模型，并查看位移和应力分布情况。</p>
 <h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>打开虎钳模型，并新建静应力算例。</p>
 <p>材料：在仿真树内的零件实体添加【普通碳钢】材料</p>
-<h2 id="夹具和载荷"><a href="#夹具和载荷" class="headerlink" title="夹具和载荷"></a>夹具和载荷</h2><img src="教程03-装配体接触/image-20240308153842247.png">
+<h2 id="夹具和载荷"><a href="#夹具和载荷" class="headerlink" title="夹具和载荷"></a>夹具和载荷</h2><img src="http://8.162.5.68:6196/Hexo/image-20240308153842247.png">
 
 <h2 id="零部件接触"><a href="#零部件接触" class="headerlink" title="零部件接触"></a>零部件接触</h2><p>当创建一个装配体的算例时，仿真树会出现“连结”的文件夹，将指定装配体中的零部件之间是如何连接在一起的。</p>
 <p>为了允许模型因加载而产生变形时钳臂有相对的移动，应该设定默认的【零部件接触】条件为【接合】。</p>
-<img src="教程03-装配体接触/接合接触.png">
+<img src="http://8.162.5.68:6196/Hexo/接合接触.png">
 
 <p>接合：</p>
-<img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/yyo1450460961235.image">
+<img src="http://8.162.5.68:6196/Hexo/yyo1450460961235.image">
 
 <p>必须保证所有零件和子装配体之间新增零部件的接触没有冲突，它们将覆盖顶层装配体的零部件接触。如果检测到有冲突，将会显示一条警告消息。</p>
 <h2 id="划分网格"><a href="#划分网格" class="headerlink" title="划分网格"></a>划分网格</h2><p>在【网格参数】下选择【基于曲率的网络】按默认网格设置划分即可。</p>
 <h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p>在默认的全局【接合】的零部件接触条件下，前端没有出现应力是不对的（理论上夹紧过程应是受力的）。这是因为接合相当于“焊接”，把虎钳的受力变成从销钉开始，而不是从加紧的物体开始。</p>
-<img src="教程03-装配体接触/image-20240529192944468.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240529192944468.png">
 
 <h1 id="无穿透接触"><a href="#无穿透接触" class="headerlink" title="无穿透接触"></a>无穿透接触</h1><p>复制前一个225N载荷的算例</p>
 <h2 id="零部件接触-1"><a href="#零部件接触-1" class="headerlink" title="零部件接触"></a>零部件接触</h2><p>设置【零部件接触】条件为【无穿透】。</p>
-<img src="教程03-装配体接触/无穿透接触.png">
+<img src="http://8.162.5.68:6196/Hexo/无穿透接触.png">
 
 <p>无穿透：</p>
 <iframe title="" src="about:blank" style="border: 0px currentColor; border-image: none; width: 0px; height: 0px; display: none;"></iframe>
 
-<img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/vxd1450460963415.image">
+<img src="http://8.162.5.68:6196/Hexo/vxd1450460963415.image">
 
 <h2 id="运行结果-1"><a href="#运行结果-1" class="headerlink" title="运行结果"></a>运行结果</h2><p>本次希望了解，模型是否有超过设计许用应力138MPa的应力存在，为了判断von mises是否超过最大值，可更改图解选项（如下图）。</p>
-<img src="教程03-装配体接触/image-20240308154549678.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240308154549678.png">
 
 <p>对于装配体来说，有些零部件可能被遮挡或是无需显示在图面上，则可以利用【图解定义-高级选项-仅显示选定实体上的图解】。</p>
-<img src="教程03-装配体接触/image-20240308154839864.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240308154839864.png">
 
 <h1 id="局部接触"><a href="#局部接触" class="headerlink" title="局部接触"></a>局部接触</h1><p>复制前一个225N载荷的算例</p>
 <h2 id="修改载荷"><a href="#修改载荷" class="headerlink" title="修改载荷"></a>修改载荷</h2><p>本算例我们增加载荷到4500N，确保虎钳手柄部分变形并且相互产生接触。</p>
 <p>前一个算例的”无穿透零部件接触“只应用到初始相互接触的面上，对于初始非接触面是不起作用的，所以还需要指定一个局部接触条件来阻止它们之间的相互穿透。</p>
 <h2 id="添加相触面组"><a href="#添加相触面组" class="headerlink" title="添加相触面组"></a>添加相触面组</h2><p>右键【连结-相触面组】设置”无穿透“局部接触类型。选择手柄尾部的两个面（如下图）</p>
-<img src="教程03-装配体接触/image-20240308162313476.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240308162313476.png">
 
 <h2 id="运行结果-2"><a href="#运行结果-2" class="headerlink" title="运行结果"></a>运行结果</h2><p>分析过程中会弹出如下信息:“在该模型计算中出现了过度位移。如果您的系统已妥当约束，可考虑使用大型位移选项提高计算精度。否则，继续使用当前设定并审阅这些位移的原因。”，这里选择<strong>“否”</strong></p>
 <p>正确设置接触的位移结果查看：</p>
-<img src="教程03-装配体接触/image-20240522144224993.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240522144224993.png">
 
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本章中，我们对带有多种接触条件的一个简单虎钳装配体进行了分析。分析完成后，我们发现最大Von Mises 应力为93MPa。这个应力低于指定的设计强度138MPa。为了确保应力结果，应当细化网格来保证应力是收敛的。</p>
 <p>此外，产生的最大位移为0.393mm，使用这个结果来更改加载的载荷，以研究当载荷大到手柄接触到一起时发生的状况。</p>
@@ -116,34 +116,34 @@
 <tbody><tr>
 <td>无穿透</td>
 <td>防止两实体产生干涉运算耗时。适用于静态算例、掉落测试算例、非线性算例</td>
-<td><img src="教程03-装配体接触/无穿透.png"></td>
+<td><img src="http://8.162.5.68:6196/Hexo/无穿透.png"></td>
 <td>罚函数法</td>
 </tr>
 <tr>
 <td>接合</td>
 <td>粘合两实体，适用于所有需要网格化的算例类型。</td>
-<td><img src="教程03-装配体接触/接合.png"></td>
+<td><img src="http://8.162.5.68:6196/Hexo/接合.png"></td>
 <td>约束方程&#x2F;节点耦合</td>
 </tr>
 <tr>
 <td>允许贯穿</td>
 <td>允许载荷在零件之间产生干涉，适用于静态算例、非线性算例频率算例、扭曲算例及掉落测试算例。</td>
-<td><img src="教程03-装配体接触/允许贯穿.png"></td>
+<td><img src="http://8.162.5.68:6196/Hexo/允许贯穿.png"></td>
 <td></td>
 </tr>
 </tbody></table>
 <p>接合：</p>
-<img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/yyo1450460961235.image">
+<img src="http://8.162.5.68:6196/Hexo/yyo1450460961235.image">
 
 <p>允许贯穿：</p>
 <iframe title="" src="about:blank" style="border: 0px currentColor; border-image: none; width: 0px; height: 0px; display: none;"></iframe>
 
-<img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/cry1450460962779.image">
+<img src="http://8.162.5.68:6196/Hexo/cry1450460962779.image">
 
 <p>无穿透：</p>
 <iframe title="" src="about:blank" style="border: 0px currentColor; border-image: none; width: 0px; height: 0px; display: none;"></iframe>
 
-<img src="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/cworks/vxd1450460963415.image">
+<img src="http://8.162.5.68:6196/Hexo/vxd1450460963415.image">
 
 <h2 id="Q2局部接触类型"><a href="#Q2局部接触类型" class="headerlink" title="Q2局部接触类型"></a>Q2局部接触类型</h2><table>
 <thead>
@@ -174,6 +174,7 @@
 </tr>
 </tbody></table>
 <p>相触面组：手动设置接触面组（2022后改名为”本地交互“）</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -201,4 +202,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

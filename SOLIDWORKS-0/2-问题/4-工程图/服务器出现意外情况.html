@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -43,10 +43,12 @@
 <div id="article"><h1 id="服务器出现意外情况"><a href="#服务器出现意外情况" class="headerlink" title="服务器出现意外情况"></a>服务器出现意外情况</h1><p>另存为Excel时，服务器出现意外情况。多数可能于当前office版本于SW等程序的版本兼容问题。</p>
 <span id="more"></span>
 
-<h2 id="方法1：检查office程序"><a href="#方法1：检查office程序" class="headerlink" title="方法1：检查office程序"></a>方法1：检查office程序</h2><p>安装高版本office后装低版本，会有影响。建议是尝试修复office（或卸载重装）</p>
-<h2 id="方法2：待确认"><a href="#方法2：待确认" class="headerlink" title="方法2：待确认"></a>方法2：待确认</h2><p>原因：Excel的com加载项启用影响。</p>
+<h2 id="方法1：检查版本"><a href="#方法1：检查版本" class="headerlink" title="方法1：检查版本"></a>方法1：检查版本</h2><p>安装高版本office后装低版本，会有影响。建议是尝试修复office（或卸载重装）</p>
+<h2 id="方法2：待确认"><a href="#方法2：待确认" class="headerlink" title="方法2：待确认"></a>方法2：待确认</h2><p>原因：Excel的com加载项启用影响。该项报错通常由于客户机Excel中安装了一些制作不够严谨的Excel加载项导致。</p>
 <p>方法：在【文件-选项-加载项-管理com加载项】-转到-取消可用加载项的勾选。取消或删除下图中不存在的加载项。重复问题操作验证。</p>
-<img src="服务器出现意外情况/取消COM加载项.png">
+<img src="http://8.162.5.68:6196/Hexo/取消COM加载项.png">
+
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -74,4 +76,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

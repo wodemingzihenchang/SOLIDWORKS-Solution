@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -42,24 +42,25 @@
 
 <div id="article"><h1 id="批量修改服务器地址"><a href="#批量修改服务器地址" class="headerlink" title="批量修改服务器地址"></a>批量修改服务器地址</h1><p>当 SOLIDWORKS 服务器转移到另一台电脑上后，对应所有客户端的服务器地址都要进行更改</p>
 <h2 id="手动模式"><a href="#手动模式" class="headerlink" title="手动模式"></a>手动模式</h2><p>\1.  点击左下方的开始菜单栏，找到 SOLIDNetWork License Manager</p>
-<img src="批量修改服务器地址/image-20240925173526050.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240925173526050.png">
 
 <p>\2.  打开许可服务器管理器，切换到“服务器清单”选项卡 ，删除现有的服务器地址和添加新的服务器地址。</p>
-<img src="批量修改服务器地址/image-20240925173619097.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240925173619097.png">
 
 <h2 id="注册表模式"><a href="#注册表模式" class="headerlink" title="注册表模式"></a>注册表模式</h2><p>针对客户端多的客户，如果一个一个的添加，未免显得太慢了。</p>
 <p>我们可以通过上面【手动模式】把修改好的新服务器设置“导出”成注册表文件，运行该文件来设置新服务器名称</p>
 <p>\1.  通过注册表修改服务器，Win+R打开运行命令，输入regedit，打开注册表</p>
-<img src="批量修改服务器地址/image-20240925173755688.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240925173755688.png">
 
 <p>找到以下路径：右键选择导出</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\FLEXlm License Manager</span><br></pre></td></tr></table></figure>
 
-<img src="批量修改服务器地址/image-20240925173955136.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240925173955136.png">
 
 <p>导出后，将会获得一份能设置许可服务器地址的（.reg）格式文件。将其批量发个每一个客户端的工程师，只需要双击该文件导进去，即可修改，节省大量的操作修改。</p>
 <p>如需要：</p>
 <p>你还可以右键编辑.reg格式文件，并修改SW_D_LICENSE_FILE后面相应的值，如25734@IP地址或者电脑名称， 若有多个服务器地址时，使用英文分号进行分隔。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -87,4 +88,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

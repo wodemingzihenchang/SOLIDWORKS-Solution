@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -47,33 +47,152 @@
 <blockquote>
 <p>..\SOLIDWORKS 20xx SP05 安装包\setup.exe<br></p>
 </blockquote>
-<img src="安装向导/01-安装/安装程序.png">
+<img src="http://8.162.5.68:6196/Hexo/安装程序.png">
 
 <p>步骤：</p>
 <h2 id="安装类型"><a href="#安装类型" class="headerlink" title="安装类型"></a>安装类型</h2><p>选择安装类型：默认新安装就是选【在此计算机新安装】；</p>
 <h2 id="序列号"><a href="#序列号" class="headerlink" title="序列号"></a>序列号</h2><p>填写序列号（或临时序列号，后面再激活）</p>
 <h2 id="选择产品"><a href="#选择产品" class="headerlink" title="选择产品"></a>选择产品</h2><p>选择安装产品、位置、Toolbox位置</p>
-<img src="安装向导/图片1：选择安装功能版本.png">
+<img src="http://8.162.5.68:6196/Hexo/图片1：选择安装功能版本.png">
 
 <p>SOLIDWORKS产品的内容</p>
-<img src="安装向导/产品的内容.png">
+<img src="http://8.162.5.68:6196/Hexo/产品的内容.png">
 
 <h2 id="插件安装（可选）"><a href="#插件安装（可选）" class="headerlink" title="插件安装（可选）"></a>插件安装（可选）</h2><p>插件是基于SW程序本体的拓展功能，使用需要先安装SW软件才能使用。例如：Simulation、Motion这些。</p>
 <p>与单机版安装区别是在【序列号】填入所需插件的序列号，在下一步的产品选择中勾选所需的插件即可安装。</p>
 <h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><h2 id="完成安装"><a href="#完成安装" class="headerlink" title="完成安装"></a>完成安装</h2><p>安装完成后，如果你是首次安装SOLIDWORKS，那么你将可以试用30天</p>
-<img src="安装向导/试用30天.png">
+<img src="http://8.162.5.68:6196/Hexo/试用30天.png">
 
 <h1 id="修复安装"><a href="#修复安装" class="headerlink" title="修复安装"></a>修复安装</h1><p>修复安装异常时，可以尝试如下设置：</p>
 <p>1.打开注册表编辑器找到如下位置（如果没有就新建）；</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer</span><br></pre></td></tr></table></figure>
 
-<img src="安装向导/02-修复/修复SW1.png">
+<img src="http://8.162.5.68:6196/Hexo/修复SW1.png">
 
 <p>新建一个 Dword 值，名字为“RemappedElevatedProxiesPolicy”，值为 1；</p>
-<img src="安装向导/02-修复/修复SW2.png">
+<img src="http://8.162.5.68:6196/Hexo/修复SW2.png">
 
 <p>打开 solidworks 安装程序，选修复安装；</p>
 <p>安装完后打开 Solidworks 确认问题解决后，将“RemappedElevatedProxiesPolicy” 的值改为 0。</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="Please-insert-the-disk"><a href="#Please-insert-the-disk" class="headerlink" title="Please insert the disk"></a>Please insert the disk</h2><p>这通常意味着安装程序在尝试访问某个需要物理光盘或虚拟光驱的文件时失败了。以下是详细的解决方案：</p>
+<img src="http://8.162.5.68:6196/Hexo/image-20260211141836397-1776006530294-2.png">
+
+<p> 方法：可以把U盘里的安装文件拷贝到你们本地电脑安装，（或者是公共网盘安装试试） </p>
+<h2 id="Net框架问题"><a href="#Net框架问题" class="headerlink" title="Net框架问题"></a>Net框架问题</h2><p>原因：net framework 3.5 安装报错（2022 年后需使用.Net framework 框架 4.8）</p>
+<p><strong>方法：</strong></p>
+<p>打开注册表：其中 UseWUServer 默认值为 1，改成 0；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU</span><br></pre></td></tr></table></figure>
+
+<p>在开始菜单栏搜索“服务”，打开服务列表，重启 Windows Update service；</p>
+<p>此时可以正常安装.net framework 3.5；</p>
+<p>将第二步的修改还原注册表 UseWUServer，并重启 Windows Update service。</p>
+<h2 id="SolidWorks-Login-Manager未安装"><a href="#SolidWorks-Login-Manager未安装" class="headerlink" title="SolidWorks Login Manager未安装"></a>SolidWorks Login Manager未安装</h2><p>未安装SolidWorks Login Manager。重新安装SOLIDWORKS或安装SOLIDWORKS LoginManager.</p>
+<p><strong>方法：</strong></p>
+<p>找到SolidWorks安装包，文件夹swloginmgr，运行安装文件夹内程序即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SOLIDWORKS安装包\swloginmgr</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://8.162.5.68:6196/Hexo/swloginmgr.png" alt="image-20260304151103702"></p>
+<h2 id="STR-SWINST-ACTIVE-SW"><a href="#STR-SWINST-ACTIVE-SW" class="headerlink" title="STR_SWINST_ACTIVE_SW"></a>STR_SWINST_ACTIVE_SW</h2><p>在安装或修改SOLIDWORKS的SolidNetWork许可证管理器安装时，你可能会遇到以下错误：未能获得本地化属性：STR_SWINST_ACTIVE_SW的字符串。</p>
+<img src="http://8.162.5.68:6196/Hexo/STR_SWINST_ACTIVE_SW.png">
+
+<p><strong>方法：</strong></p>
+<p>如果安装时在同一台系统上打开SOLIDWORKS，就会出现这个错误。关闭SOLIDWORKS后再尝试安装。这样你就可以继续安装，避免安装错误。</p>
+<h2 id="VBA版本升级问题"><a href="#VBA版本升级问题" class="headerlink" title="VBA版本升级问题"></a>VBA版本升级问题</h2><p>因 VBA 版本升级问题，在安装 2021 版后，无法安装 2020 以下版本 </p>
+<p>安装提示：A newer version of this application is already installed. Installation stopped.</p>
+<p>还有另外一种情况：软件会提示：内邮错误:该产品组件的 Windows Installer没按预期运行：LaunchConditions</p>
+<p><strong>方法1：</strong></p>
+<p>忽视报错，在安装过程选择“恢复”，继续安装</p>
+<p><strong>方法2：</strong></p>
+<p>1、卸载新版本的 VBA 7.1。您可以使用附带的脚本来简化这个过程。下载附件“S-078838_uninstall_vba.bat”，以管理员身份运行。</p>
+<p>2、找到最近的 SOLIDWORKS 安装(SOLIDWORKS 2021 SP2 或更高版本)，安装 VBA7.1 组件，文件路径 XXX \SOLIDWORKS 2021 SP0X\PreReqs\VBA </p>
+<img src="http://8.162.5.68:6196/Hexo/安装卸载VBA.png">
+
+<p>3、安装完成后，再点击卸载，最后重新安装 2021 SP2 以下版本 SOLIDWORKS</p>
+<img src="http://8.162.5.68:6196/Hexo/安装卸载VBA2.png">
+
+<h2 id="安装界面异常或空白"><a href="#安装界面异常或空白" class="headerlink" title="安装界面异常或空白"></a>安装界面异常或空白</h2><p>安装界面异常或空白，如下：</p>
+<img src="http://8.162.5.68:6196/Hexo/安装界面空白.png">
+
+<img src="http://8.162.5.68:6196/Hexo/安装界面异常或空白.png">
+
+<p><strong>方法1</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SOLIDWORKS安装包\sldim\lang\english\HTML</span><br></pre></td></tr></table></figure>
+
+<p>设置下这三个html文件属性是“解除锁定”</p>
+<img src="http://8.162.5.68:6196/Hexo/安装界面异常或空白方法1.png">
+
+<p>且权限是完全控制状态。</p>
+<img src="http://8.162.5.68:6196/Hexo/安装界面异常或空白方法.png">
+
+<p><strong>方法2</strong></p>
+<p>找到SW单独安装包程序，进行setup.exe安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..:\SOLIDWORKS安装包\swwi\data</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="界面大小显示异常"><a href="#界面大小显示异常" class="headerlink" title="界面大小显示异常"></a>界面大小显示异常</h2><p>界面大小显示异常，选择不到安装设置</p>
+<p><strong>方法1</strong></p>
+<p>找到SW单独安装包程序，进行setup.exe安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..:\SOLIDWORKS安装包\swwi\data</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法2</strong></p>
+<p>修改电脑文本大小</p>
+<img src="http://8.162.5.68:6196/Hexo/安装界面显示问题.png">
+
+<h2 id="缺少运行库组件"><a href="#缺少运行库组件" class="headerlink" title="缺少运行库组件"></a>缺少运行库组件</h2><p>原因：电脑系统环境缺少组件。提示：</p>
+<p>Register_DocMgrDLL.A48C1CF2_EBF8_48E8_ACAD_68CA04F776A2</p>
+<p><strong>方法</strong></p>
+<p>是电脑缺少组件问题（Microsoft® Visual C++ 2015 Redistributable）。装回组件解决。</p>
+<p>补充一点：该问题存在 2015 和 2017 组件是不能共存。建议是直接安装 2015-2019 的集合包，<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-CN/cpp/windows/latest-supported-vc-redist?view=msvc-170">#访问下载位置</a></p>
+<h2 id="dll注册失败"><a href="#dll注册失败" class="headerlink" title=".dll注册失败"></a>.dll注册失败</h2><p>sldInnerDispatchProxyu.dll注册失败，或是ColorBarAX.ocx 失败。已返回 0x5</p>
+<img src="http://8.162.5.68:6196/Hexo/sldInnerDispatchProxyu.png">
+
+<p><strong>方法</strong></p>
+<p>此类问题还请检查下是否存在<strong>【加密】</strong>或<strong>【杀毒】</strong>等软件，阻碍了安装组件注册的进行。例如：关闭360安全卫士等，</p>
+<p>有时候退出360还不行的，后台还有一个主动防御的进程。可以把360先卸载，装完SW后再装回去</p>
+<h2 id="Runtime安装失败"><a href="#Runtime安装失败" class="headerlink" title="Runtime安装失败"></a>Runtime安装失败</h2><p>Runtime组件是MSEdgeWebView2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SOLIDWORKS安装包\PreReqs\MSEdgeWebView2</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="安装错误代码"><a href="#安装错误代码" class="headerlink" title="安装错误代码"></a>安装错误代码</h2><p><a target="_blank" rel="noopener" href="https://www.solidworks.com/sw/support/FAQ-installation.html">#官方解决方法</a>（我这里只做了英译汉处理，方便手机等移动端查看）</p>
+<p>常见的 SolidWorks 相关 Windows Installer（WI）错误代码有哪些？</p>
+<p><strong>1304（S-01648）</strong></p>
+<p>在新计算机上安装时，是什么原因导致 Windows 安装程序出现“错误 1304”？</p>
+<p>方法：</p>
+<p>1.可能是磁盘问题，可将安装包内容复制到计算机安装。</p>
+<p>2.如果复制过程失败并出现错误，这表示磁盘是坏的。请求更换磁盘。</p>
+<p><strong>1305（S-070316）</strong>，<strong>1309（S-070316）</strong>，<strong>1311（S-070316）</strong>，<strong>1334（S-070316）</strong>，<strong>1335（S-070316）</strong>，<strong>2350（S-070316）</strong>，<strong>1620（S-070316）</strong>，</p>
+<p>错误编号“1305”、“1309”、“1311”、“1334”、“1335”、“1620”和“2350”表明安装程序在安装过程中读取一个或多个文件时遇到问题。</p>
+<p><strong>1374（S-05098）</strong></p>
+<p>当使用 Microsoft Active Directory 安装时，是什么导致“错误 1374”？</p>
+<p>方法：</p>
+<p>Q：错误 1374 表示 MST 文件中存在不正确的参数。 请仔细检查用于生成 MST 文件的过程和命令。</p>
+<p>此问题的最常见原因是用于生成 MST 文件的命令中缺少或多余语法（使用 swcreatemst.exe）。</p>
+<p>示例：  </p>
+<p>1、INSTALLDIR&#x3D;”C:\Program Files\SolidWorks&quot; 不是用于创建 MST 文件的正确属性。 </p>
+<p>2、如果使用该结果 MST 文件用于安装 SolidWorks，将会显示错误 1374。 </p>
+<p>3、正确的语法是 INSTALLDIR&#x3D;”C:\Program Files\SolidWorks”。</p>
+<p>但这只是一个示例而已。 请将整条命令与以下位置中的安装指南中的说明进行比较：<a target="_blank" rel="noopener" href="http://www.solidworks.com/pages/services/ServicePacks.html">http://www.solidworks.com/pages/services/ServicePacks.html</a></p>
+<p><strong>1406（S-03256）</strong></p>
+<p>安装程序错误提示“Cannot write to Windows registry” 1406？</p>
+<p>方法：</p>
+<p>1、原因是注册表的访问被阻止。使用管理员权限启动安装；</p>
+<p>2、如果是管理员权限下，先禁用相关防病毒和防间谍&#x2F;广告软件后再尝试安装。</p>
+<p><strong>1603（S-014608）</strong></p>
+<p>PDM 客户端安装失败并回滚，同时显示 Windows® 安装程序错误“MSI 错误代码：1603”？</p>
+<p>方法：</p>
+<p>导致安装失败最可能的原因是目标系统的本地权限不足。原有安装文件没有干净移除</p>
+<p>新下载安装文件有错误、三方软件干扰、系统问题</p>
+<p><strong>1722（S-079763）</strong></p>
+<p>安装更新的 C++ 软件包：2015-2017-2019 ，然后重试安装。</p>
+<p><a target="_blank" rel="noopener" href="https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads">https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads</a></p>
+<p><strong>1904（S-01546）</strong></p>
+<p>在安装过程，出现信息“安装错误 1904 模块 C:\Windows\system32\threed32.ocx 无法注册”？</p>
+<p>方法：</p>
+<p>1、需要安装 XML（扩展标记语言）的最新版本才能解决此安装问题。<a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/search.aspx?q=msxml">#下载最新 XML 服务版本</a> </p>
+<p>2、安装以下文件： “msxml.msi” 在安装此版本的 XML 之前卸载 SOLIDWORKS，然后重新安装 SOLIDWORKS。还需要检查以确保尝试安装时未启用防病毒软件。防病毒软件有时会干扰安装。</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -101,4 +220,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

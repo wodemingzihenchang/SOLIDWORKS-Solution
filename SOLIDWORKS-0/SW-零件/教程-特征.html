@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -43,7 +43,7 @@
 <div id="article"><h1 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h1><h2 id="【拉伸凸台-切除】"><a href="#【拉伸凸台-切除】" class="headerlink" title="【拉伸凸台&#x2F;切除】"></a>【拉伸凸台&#x2F;切除】</h2><p>-属于草图特征，需要先绘制草图轮廓用以拉伸。拉伸主要属性包括：从“哪里”开始拉伸；结束到“哪里”为止。这两个的条件不同，具体可以在操作中体验。</p>
 <h2 id="【旋转凸台-切除】"><a href="#【旋转凸台-切除】" class="headerlink" title="【旋转凸台&#x2F;切除】"></a>【旋转凸台&#x2F;切除】</h2><p>-属于草图特征，需要先绘制草图轮廓用以旋转。旋转属性主要有：“旋转轴”、“旋转角度”；这点比较好理解。具体也可在实际操作中体验。</p>
 <h2 id="【异形孔向导】"><a href="#【异形孔向导】" class="headerlink" title="【异形孔向导】"></a>【异形孔向导】</h2><p>-需要选择孔类型和位置两个属性，孔位置是按进入草图，绘制【点】的方式定位。可以多个点位置，点也是可以阵列复制的（也就是一个特征可以插入多个同类型的孔特征）。</p>
-<p><img src="/SOLIDWORKS-Solution/%E6%95%99%E7%A8%8B-%E7%89%B9%E5%BE%81/image-20251114132918835.png" alt="image-20251114132918835"></p>
+<p><img src="http://8.162.5.68:6196/Hexo/image-20251114132918835.png" alt="image-20251114132918835"></p>
 <h2 id="【扫描】"><a href="#【扫描】" class="headerlink" title="【扫描】"></a>【扫描】</h2><p>-沿着指定的路径移动轮廓线，“轮廓线”和“路径”必须创建为单独的草图，可以合并 3D 曲线或模型边缘，作为路径扫描部分可以随着它沿着引导曲线移动而变化 *【扫描-轮廓线】和【扫描-路径】是必要的属性</p>
 <p>*【扫描-引导线】引导变化过程的形状</p>
 <p>*【扫描-路径类型】</p>
@@ -72,22 +72,24 @@
 <p>镜像件的更新问题，默认情况下原始零件变化，镜像件并不会直接显示更新。此时，你可以操作镜像件的“原始零件特征”，编辑后，原始零件的数据就会更新进镜像件</p>
 <p>（图）</p>
 <h2 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h2><p>分割失败</p>
-<img src="教程-特征/分割失败.png">
+<img src="http://8.162.5.68:6196/Hexo/分割失败.png">
 
 <h1 id="特征库"><a href="#特征库" class="headerlink" title="特征库"></a>特征库</h1><p>一种可以重复利用的特征设计，一个特征库文件可以包含 1 个或多个的特征。</p>
 <h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2><p>1、 特征库需要您先预先制作好模板零件（其中带有您需要标准化的特征）；</p>
 <p>2、 在软件右侧任务窗格【设计库-添加到库】开始制作设计库特征。</p>
-<img src="教程-特征/image006.png">
+<img src="http://8.162.5.68:6196/Hexo/image006-1776083957232-1.png">
 
 <p>3、 选择特征项目、特征库命名、特征库位置等</p>
-<img src="教程-特征/image007.png">
+<img src="http://8.162.5.68:6196/Hexo/image007-1776083957233-2.png">
 
 <p>4、 完成后的特征库零件会自动另存为（.SLDLFP）格式，保存在上述设计库文件夹位置；并且特征库零件的图标会发生变化，带有参考几何和尺寸的文件夹，被标准化的特征也会带有“L”字样；至此完成特征库制作。</p>
-<img src="教程-特征/image008.png">
+<img src="http://8.162.5.68:6196/Hexo/image008.png">
 
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>1、 打开设计库，将制作好的特征库零件拖放至零件参考面即可；</p>
 <p>2、 拖后后会出现特征库使用编辑窗口：（举例）<br><br>a) 方位基准面：参考原零件的草图绘制面；<br><br>b) 配置：参考原零件的配置选择；<br><br>c) 参考：原零件的特征草图参考；<br></p>
-<img src="教程-特征/image010.png">
+<img src="http://8.162.5.68:6196/Hexo/image010.png">
+
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -115,4 +117,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,18 +41,20 @@
 </div>
 
 <div id="article"><h1 id="Step格式文件无法编辑"><a href="#Step格式文件无法编辑" class="headerlink" title="Step格式文件无法编辑"></a>Step格式文件无法编辑</h1><p>为什么打开 STEP 格式，保存到本地了还是没办法编辑。图中显示的零件的图标是开启了”3D interconnect”功能，是为了关联原格式（step）的设计信息，修改需要在原格式文件进行（在SW里是不能进行修改）。</p>
-<img src="Step格式文件无法编辑/image1.png" >
+<img src="http://8.162.5.68:6196/Hexo/image1-1776082461508-1.png">
 
 <h2 id="方法-1：断开链接"><a href="#方法-1：断开链接" class="headerlink" title="方法 1：断开链接"></a>方法 1：断开链接</h2><p>你可以右键设计树需要编辑的零件，有个【解散特征】的选项。（解散特征是不可逆的）</p>
-<img src="Step格式文件无法编辑/image2.png" >
+<img src="http://8.162.5.68:6196/Hexo/image2-1776082461508-3.png">
 
 <h2 id="方法-2：系统选项设置"><a href="#方法-2：系统选项设置" class="headerlink" title="方法 2：系统选项设置"></a>方法 2：系统选项设置</h2><p>或者是关闭【系统选项-导入-3D interconnect】功能，再打开 Step，使不关联原格式的设计信息，自己独立一份实体模型。</p>
-<img src="Step格式文件无法编辑/image3.png" >
+<img src="http://8.162.5.68:6196/Hexo/image3-1776082461508-2.png">
 
 <h2 id="3Dinterconnect-功能介绍"><a href="#3Dinterconnect-功能介绍" class="headerlink" title="3Dinterconnect 功能介绍"></a>3Dinterconnect 功能介绍</h2><p>是使用了新版的解算器打开stp等中性格式文件，</p>
 <p>该模式下的文件打开会较快，并且是携带原文件的链接效果。这意味着如果你是其他3D软件的模型，在SW里可以保持设计数据的更新（但其他3D软件设计变更后，SW文件会跟随更新）</p>
 <p>（”3D interconnect”功能的零部件图标如下）</p>
-<img src="Step格式文件无法编辑/image1.png" >
+<img src="http://8.162.5.68:6196/Hexo/image1-1776082461508-1.png">
+
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -80,4 +82,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

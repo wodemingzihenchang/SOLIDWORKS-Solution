@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,37 +28,38 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
     <span id="post-date">2024-03-12 19:12:18</span>
 </div>
 
-<div id="article"><h1 id="机械配合"><a href="#机械配合" class="headerlink" title="机械配合"></a>机械配合</h1><h2 id="凸轮"><a href="#凸轮" class="headerlink" title="凸轮"></a>凸轮</h2><p>!<img src="机械配合/凸轮.png"></p>
+<div id="article"><h1 id="机械配合"><a href="#机械配合" class="headerlink" title="机械配合"></a>机械配合</h1><h2 id="凸轮"><a href="#凸轮" class="headerlink" title="凸轮"></a>凸轮</h2><p>!<img src="http://8.162.5.68:6196/Hexo/凸轮.png"></p>
 <h2 id="槽口"><a href="#槽口" class="headerlink" title="槽口"></a>槽口</h2><h2 id="铰链"><a href="#铰链" class="headerlink" title="铰链"></a>铰链</h2><h2 id="齿轮"><a href="#齿轮" class="headerlink" title="齿轮"></a>齿轮</h2><p>齿轮的配合选择，一般需要选择齿轮的分度圆。应该分度圆会自动算出两齿轮的传动比（即角速度比，满足转动时齿轮能啮合正确）</p>
-<img src="机械配合/齿轮配合动画1.png">
+<img src="http://8.162.5.68:6196/Hexo/齿轮配合动画1.png">
 
 <p>不过有些模型是没有显示分度圆的（似乎大部分情况是没的），此时则可以选择两齿轮自身的轴孔半径。这时的半径比率就可能不对。需要手动修改配合比率满足转动时齿轮能啮合正确</p>
-<img src="机械配合/齿轮配合动画1.png">
+<img src="http://8.162.5.68:6196/Hexo/齿轮配合动画1.png">
 
 <p>效果展示</p>
-<img src="机械配合/齿轮配合动画.gif">
+<img src="http://8.162.5.68:6196/Hexo/齿轮配合动画.gif">
 
 <p>再者还有一种情况，就是做【齿轮】配合时，如果两齿轮已经存在干涉情况。那配合后的动作也是一直会干涉。（齿轮配合并无对齐功能，这是联动功能而已。所以一开始错了，联动的动作也会一起错）</p>
-<img src="机械配合/修改齿轮干涉1.png">
+<img src="http://8.162.5.68:6196/Hexo/修改齿轮干涉1.png">
 
 <p>这时你可以通过“压缩配合”或“配合前”先对齐，消除干涉问题。</p>
-<img src="机械配合/修改齿轮干涉2.png">
+<img src="http://8.162.5.68:6196/Hexo/修改齿轮干涉2.png">
 
 
 
-<h2 id="齿条"><a href="#齿条" class="headerlink" title="齿条"></a>齿条</h2><h2 id="螺旋"><a href="#螺旋" class="headerlink" title="螺旋"></a>螺旋</h2><h2 id="万向节"><a href="#万向节" class="headerlink" title="万向节"></a>万向节</h2></div>
+<h2 id="齿条"><a href="#齿条" class="headerlink" title="齿条"></a>齿条</h2><h2 id="螺旋"><a href="#螺旋" class="headerlink" title="螺旋"></a>螺旋</h2><h2 id="万向节"><a href="#万向节" class="headerlink" title="万向节"></a>万向节</h2><h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
+</div>
  			<!-- 引入正文 -->
     </div>	
     
@@ -85,4 +86,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

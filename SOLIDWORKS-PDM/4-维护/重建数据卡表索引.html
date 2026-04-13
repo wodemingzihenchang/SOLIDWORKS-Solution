@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,11 +41,13 @@
 </div>
 
 <div id="article"><h1 id="重建数据卡表索引"><a href="#重建数据卡表索引" class="headerlink" title="重建数据卡表索引"></a>重建数据卡表索引</h1><p>使用SOLIDWORKS®PDM Professional，在Microsoft®SQL Server®中使用维护计划重建文件库数据库中的表索引的最佳过程是什么?</p>
-<p>SOLIDWORKS®PDM文件库数据库中的许多表都包含索引，以确保在各种数据库操作执行查找时有效地找到数据。每当对底层数据执行插入、更新或删除操作时，Microsoft®SQL Server®自动维护这些索引。随着时间的推移，在存储库中执行大量文件操作，各种数据库表索引变得分散。例如，在升级之后，可能有许多记录进行了修改，或者在执行迁移之后，添加了许多新记录。这类似于硬盘驱动器变成碎片的方式。您可以通过运行维护计划来更新和刷新索引，以重新构建或重组索引。如果索引非常分散，则该操作可以通过搜索、浏览和文件库中的其他操作提高总体性能。</p>
+<p>SOLIDWORKS®PDM文件库数据库中的许多表都包含索引，以确保在各种数据库操作执行查找时有效地找到数据。每当对底层数据执行插入、更新或删除操作时，Microsoft®SQL Server®自动维护这些索引。随着时间的推移，在存储库中执行大量文件操作，各种数据库表索引变得分散。</p>
+<p>例如，在升级之后，可能有许多记录进行了修改，或者在执行迁移之后，添加了许多新记录。这类似于硬盘驱动器变成碎片的方式。您可以通过运行维护计划来更新和刷新索引，以重新构建或重组索引。如果索引非常分散，则该操作可以通过搜索、浏览和文件库中的其他操作提高总体性能。</p>
 <p>为了提高整体性能，最好每月至少重新构建文件库数据库索引并更新统计信息一次。对于较大的数据库和较多的活动，更频繁的重建(例如每周一次)可能是有益的。随附的文档解释了如何使用Microsoft SQL Management Studio创建维护计划，以安排索引的重建。</p>
 <p>请注意，SOLIDWORKS PDM Standard数据库使用的Microsoft SQL Express版本不支持维护计划。有关如何在SQL Express中重建索引的信息，请参见QA00000121565。</p>
 <p>重要的是:</p>
 <p>未经SOLIDWORKS技术支持的同意，任何时候都不应该在SOLIDWORKS PDM数据库中手动创建自定义索引。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

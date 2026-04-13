@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,28 +28,29 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
     <span id="post-date">2023-10-18 14:58:26</span>
 </div>
 
-<div id="article"><h1 id="接收不到邮件通知"><a href="#接收不到邮件通知" class="headerlink" title="接收不到邮件通知"></a>接收不到邮件通知</h1><img src="接收不到邮件通知/重命名失败.png">
+<div id="article"><h1 id="接收不到邮件通知"><a href="#接收不到邮件通知" class="headerlink" title="接收不到邮件通知"></a>接收不到邮件通知</h1><img src="http://8.162.5.68:6196/Hexo/重命名失败.png">
 
 <h2 id="检查原因"><a href="#检查原因" class="headerlink" title="检查原因"></a>检查原因</h2><p>登陆SQL管理，在对应数据库中查看该列表：dbo.DocumentActionInfo</p>
-<p><img src="/SOLIDWORKS-Solution/%E6%8E%A5%E6%94%B6%E4%B8%8D%E5%88%B0%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5/image-20250908103621161.png" alt="image-20250908103621161"></p>
+<p><img src="http://8.162.5.68:6196/Hexo/image-20250908103621161.png" alt="image-20250908103621161"></p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p> 如果发现这里的确有积压，那就重启PDM数据库服务器；</p>
-<p><img src="/SOLIDWORKS-Solution/%E6%8E%A5%E6%94%B6%E4%B8%8D%E5%88%B0%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5/image-20250908103724938.png" alt="image-20250908103724938"></p>
+<p><img src="http://8.162.5.68:6196/Hexo/image-20250908103724938.png" alt="image-20250908103724938"></p>
 <h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>也可以在SQL对应的数据库进行积压清理，语句为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE TABLE DocumentActionInfo</span><br></pre></td></tr></table></figure>
 
 <h2 id="方法3"><a href="#方法3" class="headerlink" title="方法3"></a>方法3</h2><p>如果前面两种方法都不行的话，那就单独卸载数据库服务，就是把勾选取消；重启电脑后再勾选起来；（不会影响到存在的库，就是一种服务）</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -77,4 +78,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2023-11-20 23:23:31</span>
+</div>
+
+<div id="article"><h1 id="SOLIDWORKS-常见问题"><a href="#SOLIDWORKS-常见问题" class="headerlink" title="SOLIDWORKS-常见问题"></a>SOLIDWORKS-常见问题</h1><span id="more"></span>
+
+
+
+<h2 id="无法使用剖面线"><a href="#无法使用剖面线" class="headerlink" title="无法使用剖面线"></a>无法使用剖面线</h2><p>无法使用剖面线</p>
+<p><strong>方法</strong></p>
+<p>剖切线与某个面刚好相切会导致如此，例如剖面线于孔相切，导致产生厚度为0的几何体错误。</p>
+<p>避免出现相切情况。</p>
+<h2 id="由于找不到mfc140u"><a href="#由于找不到mfc140u" class="headerlink" title="由于找不到mfc140u"></a>由于找不到mfc140u</h2><p>由于找不到mfc140u.dll，无法继续执行代码。重新安装程序可能会解决此问题。</p>
+<img src="http://8.162.5.68:6196/Hexo/image-20260226150707136-17760033316031.png">
+
+<p>以下是解决“由于找不到 mfc140u.dll，无法继续执行代码”问题的方法：</p>
+<ol>
+<li><strong>安装 Visual C++ 运行时组件</strong>：<ul>
+<li>从 Microsoft 官方网站下载并安装 Visual C++ 2015、2017 和 2019 运行时组件。这些组件是并排安装的，可以同时存在。</li>
+<li>下载链接：<a target="_blank" rel="noopener" href="https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads">Microsoft Visual C++ Redistributable</a>。</li>
+</ul>
+</li>
+<li><strong>检查 SOLIDWORKS 安装包</strong>：<ul>
+<li>如果问题发生在安装 SOLIDWORKS 时，确保从安装文件夹中安装所有必要的依赖项，例如 <code>..\SOLIDWORKS安装包\PreReqs\VCRedist</code> 目录下的组件。</li>
+</ul>
+</li>
+<li><strong>验证系统环境</strong>：<ul>
+<li>确保操作系统满足 SOLIDWORKS 的最低配置要求，尤其是 Windows 更新和系统补丁是否已安装。</li>
+</ul>
+</li>
+</ol>
+<h2 id="重命名失败"><a href="#重命名失败" class="headerlink" title="重命名失败"></a>重命名失败</h2><p>不可重命名只读文档或只读文档参考的文档。</p>
+<img src="http://8.162.5.68:6196/Hexo/image-20260402141901036.png">
+
+<img src="http://8.162.5.68:6196/Hexo/image-20260402142053711.png">
+
+<p><strong>方法：</strong></p>
+<p>检查文件是否真是只读文件；</p>
+<p>检出当前打开的SW文件里，是否存在该重命名文件的上层参考装配体，且是只读的状态。</p>
+<h2 id="装入此零件时发生错误"><a href="#装入此零件时发生错误" class="headerlink" title="装入此零件时发生错误"></a>装入此零件时发生错误</h2><p>装配体在打开部件失败时提示</p>
+<img src="http://8.162.5.68:6196/Hexo/装入此零件时发生错误.png">
+
+<p>A：检查部件文件的打开情况，如有异常再检查部件文件。</p>
+<p>A2：如果是PDM，可以尝试获取最新版本打开</p>
+<h2 id="快速异常检测失败"><a href="#快速异常检测失败" class="headerlink" title="快速异常检测失败"></a>快速异常检测失败</h2><p>发生了快速异常检测失败，将不会调用异常处理程序，并且进程将立即终止，</p>
+<p><img src="http://8.162.5.68:6196/Hexo/image-20240820145359743.png" alt="image-20240820145359743"></p>
+<p><strong>方法</strong></p>
+<p>关闭插件，例如PDM等和打开资源管理器窗口相关的插件，在重复操作问题验证</p>
+<p>如果是插件影响，请卸载重装即可。</p>
+<h2 id="程序窗口置顶"><a href="#程序窗口置顶" class="headerlink" title="程序窗口置顶"></a>程序窗口置顶</h2><p>SW开着的时候，其他软件都不能在它界面上，只能隐藏下去才行  这个要设置那里</p>
+<img src="http://8.162.5.68:6196/Hexo/image-20240923160533467.png">
+
+<p><strong>方法</strong></p>
+<p>使用任务管理器来调整窗口优先级</p>
+<p>右键点击该进程，选择“设置优先级”，然后将其优先级调整为“普通”或更低的级别。这个试试</p>
+<h2 id="双击会打印文件"><a href="#双击会打印文件" class="headerlink" title="双击会打印文件"></a>双击会打印文件</h2><p>双击会打印文件</p>
+<img src="http://8.162.5.68:6196/Hexo/双击打开文件会自动跳转到打印界面-1776079228635-1.png">
+
+<h2 id="当前页面的脚本发生错误"><a href="#当前页面的脚本发生错误" class="headerlink" title="当前页面的脚本发生错误"></a>当前页面的脚本发生错误</h2><p>当前页面的脚本发生错误</p>
+<p>file:&#x2F;&#x2F;C:&#x2F;Program%20Files&#x2F;Solidworks%20Comp&#x2F;SolidWorks&#x2F;data&#x2F;taskpane&#x2F;common&#x2F;taskPaneFuncs.js</p>
+<p>方法：重新注册 DDL 解决了该问题 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RegSvr32 C:\Program Files\SOLIDWORKS Corp\SW2021\SOLIDWORKS\swHTMLControl.dll</span><br></pre></td></tr></table></figure>
+
+<img src="http://8.162.5.68:6196/Hexo/image-20231220095342994.png">
+
+<h2 id="不能加载图形注册表"><a href="#不能加载图形注册表" class="headerlink" title="不能加载图形注册表"></a>不能加载图形注册表</h2><p>Unable to locate the graphics registry file infolder C:\Program Files\SOLIDWORKSCorp\SOLIDWORKS\ang.</p>
+<p>Your install is incomplete or has beencorrupted!</p>
+<p>不能加载图形注册表，你的安装不完整或损坏了！</p>
+<p><strong>方法：</strong> </p>
+<p>运行安装程序，修复安装 SOLIDWORKS</p>
+<h2 id="Failed-to-load-sldresu-dll"><a href="#Failed-to-load-sldresu-dll" class="headerlink" title="Failed to load sldresu.dll"></a>Failed to load sldresu.dll</h2><p>如果您在安装 SOLIDWORKS 软件的英文版本后更改系统语言设置，则您可能会看到此错误。</p>
+<p>SOLIDWORKS 软件会在安装路径下的语言文件夹中搜索与系统语言匹配的“sldresu.dll“文件。当 找得到该文件时，该软件将无法打开文件。</p>
+<p><strong>方法1：设置英文语言</strong></p>
+<p>可以将系统语言更改为英语</p>
+<p><strong>方法2：修改安装中文</strong></p>
+<p>打开 SOLIDWORKS 安装程序，添加所需的语言</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</div></body></html>

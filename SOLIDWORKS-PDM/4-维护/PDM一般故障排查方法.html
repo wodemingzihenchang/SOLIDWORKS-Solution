@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -68,11 +68,11 @@
 <!-- 其他操作（待确认）attrib --s --h --r desktop.ini -->
 
 <p>现在，PDM本地视图位置里会有一个“desktop.ini-old”的文件，这个文件和PDM本地视图的配置有关。（如果您的库视图文件夹仍具有 PDM 图标，请重新启动计算机）</p>
-<img src="PDM一般故障排查方法/断开PDM连接.png">
+<img src="http://8.162.5.68:6196/Hexo/断开PDM连接.png">
 
 <h2 id="2禁用插件和客户端"><a href="#2禁用插件和客户端" class="headerlink" title="2禁用插件和客户端"></a>2禁用插件和客户端</h2><p>1、打开 SOLIDWORKS &gt; 工具&gt;插件&gt;取消选中 SOLIDWORKS PDM 框&gt;然后单击确定。</p>
 <p>2、退出 PDM 客户端，右键单击系统托盘中的 PDM 图标，然后选择退出。</p>
-<img src="PDM一般故障排查方法/禁用PDM插件和客户端.png">
+<img src="http://8.162.5.68:6196/Hexo/禁用PDM插件和客户端.png">
 
 
 
@@ -82,6 +82,7 @@
 <h2 id="4恢复本地视图"><a href="#4恢复本地视图" class="headerlink" title="4恢复本地视图"></a>4恢复本地视图</h2><p>在原PDM本地视图文件夹中找到desktop.ini-old 文件。【右键-重命名】为 desktop.ini。</p>
 <p>再次单击desktop.ini 文件【右键-属性】，在“常规”下，启用“只读”和“隐藏”，单击“确定”。</p>
 <p>现在的PDM本地视图就是正常了，您将看到它已恢复成PDM的图标和界面。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -109,4 +110,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

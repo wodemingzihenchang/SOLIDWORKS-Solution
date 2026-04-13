@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -43,19 +43,19 @@
 <div id="article"><h1 id="PDM写入默认属性"><a href="#PDM写入默认属性" class="headerlink" title="PDM写入默认属性"></a>PDM写入默认属性</h1><span id="more"></span>
 
 <h2 id="添加文件时填入"><a href="#添加文件时填入" class="headerlink" title="添加文件时填入"></a>添加文件时填入</h2><p>选择文件夹数据卡变量，以该变量的值作为默认值。</p>
-<img src="PDM写入默认属性/image-20250206104539538.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250206104539538.png">
 
 <p>例如，如果选择了文件夹卡变量项目，且文件夹数据卡的值为 ：“检入时填写属性2”</p>
-<img src="PDM写入默认属性/image-20250206104126774.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250206104126774.png">
 
 <p>那么当用户向此文件夹中添加新文件时，编辑框中将填入默认值 ：“检入时填写属性2”。</p>
-<img src="PDM写入默认属性/image-20250206104307233.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250206104307233.png">
 
 <h2 id="流程变换时填入"><a href="#流程变换时填入" class="headerlink" title="流程变换时填入"></a>流程变换时填入</h2><p>在【PDM管理-工作流程】里设置变换节点，在“操作”里【添加操作】</p>
-<img src="PDM写入默认属性/image-20250206104736306.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250206104736306.png">
 
 <p>说明操作内容，并设置需要赋值的变量和状态变换时写入的值。例如：设置Checked_by（审批人变量名），赋值%fullname%（当前用户全名字符值）。这样就是把当前操作变换的用户名写入道审批人变量里。</p>
-<img src="PDM写入默认属性/image-20250206104945294.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250206104945294.png">
 
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>Q：文件夹默认值能否跟随变化？</p>
 <p>不行，只能在首次添加文件到库时生效</p>
@@ -64,6 +64,7 @@
 <p>Q：已添加到库内的文件，在移动到其他项目文件夹是否会变化属性？</p>
 <p>否，文件夹属性只在：外部文件——添加到——PDM库，这个阶段生效。</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2023/chinese-simplified/EnterprisePDM/admin/c_default_values.htm">指派默认值 - 2023 - SOLIDWORKS PDM 帮助</a></p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -91,4 +92,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

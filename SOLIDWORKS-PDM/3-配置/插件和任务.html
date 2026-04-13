@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2022-09-10 19:12:18</span>
+</div>
+
+<div id="article"><h1 id="PDM插件和任务"><a href="#PDM插件和任务" class="headerlink" title="PDM插件和任务"></a>PDM插件和任务</h1><p>通过管理工具中的任务特征，可配置、运行和监控常用的Enterpise PDM 文件操作任务。这些任务由通过 Enterprise PDM API创建的插件定义</p>
+<img src="http://8.162.5.68:6196/Hexo/任务.png">
+
+<span id="more"></span>
+
+<h1 id="SWTaskAddin"><a href="#SWTaskAddin" class="headerlink" title="SWTaskAddin"></a>SWTaskAddin</h1><h2 id="1添加插件-任务"><a href="#1添加插件-任务" class="headerlink" title="1添加插件&amp;任务"></a>1添加插件&amp;任务</h2><p>1、通过使用插件，您可以更好地配置 PDM</p>
+<p>2、新插件：加载.dll 文件</p>
+<p>3、调试插件：您无需将插件添加到库也可调试该插件。调试时，插件将从编译程序将之注册的地方加载。其他用户不会受到插件的影响。</p>
+<img src="http://8.162.5.68:6196/Hexo/输入任务.png">
+
+<h2 id="2配置任务主机"><a href="#2配置任务主机" class="headerlink" title="2配置任务主机"></a>2配置任务主机</h2><p>通常，整个操作都需要标准权限或仅需要管理员登录名。并且需要有电脑设置成【任务主机配置】这样，该电脑就能进行插件任务的运行。在“ 插件”上设置一个选中标记（这需要提升的权限或管理员权限）</p>
+<img src="http://8.162.5.68:6196/Hexo/任务主机配置.png">
+
+<p>接下来打开管理员面板，右键单击该任务，然后按“打开”。转到“执行方法”，然后在您的计算机名称上打勾。完成</p>
+<img src="http://8.162.5.68:6196/Hexo/执行方法.png">
+
+<p>在客户端里的命令设置可以从【任务-菜单命令】里设置。命令按钮会在客户端的菜单里显示。</p>
+<img src="http://8.162.5.68:6196/Hexo/任务菜单.png">
+
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p>您可以赋予用户或组【管理权限-可查看任务列表】，使用任务列表对话框查看或操作任务状态。</p>
+<img src="http://8.162.5.68:6196/Hexo/查看任务列表2.png">
+
+<p>查看任务状态、手动启动任务、查看已完成任务的详细信息，以及设置时间间隔以刷新未决任务列表。 也可以暂停和恢复任务。</p>
+<img src="http://8.162.5.68:6196/Hexo/任务列表.png">
+
+
+
+
+
+<p>为确保插件（如 SOLIDWORKS Task 插件）的最新版本正在运行，您必须手动升级插件。</p>
+<p>将文件保管库升级到新的 Service Pack 或版本时，现有的 加载项不会自动更新。这是为了防止 覆盖自定义项的加载项。</p>
+<p>例如，您可能已自定义由 SOLIDWORKS 任务插件。您可以继续使用自定义任务，而不升级。 但是，您将无法使用新的任务功能，并且可能会遇到问题 启动任务并处理升级的 SOLIDWORKS 文件。</p>
+<p>自 升级 这 任务 手动地 复制 .cex 文件 那 包含 SWTaskAdd-in、 转换 设计检查器和打印 任务。 这 位置 之 .cex 文件取决于 安装 之 客户端。如果安装客户端 通过 在 InstallShield 向导中，将 .cex 文件复制到 C：\Program Files\SOLIDWORKS PDM\Default Data\ 文件夹。 如果安装 客户 通过 SOLIDWORKS 安装管理程序，将 .cex 文件复制到 C：\Program Files\SOLIDWORKS Corp\Default Data\ 文件夹。您导入 这些文件中的一个或多个，用于更新 SWTaskAdd-in 及其任务 支持。</p>
+<p>内容</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_determining_current_versions_EPDM_SWTaskAddin.htm">确定 SOLIDWORKS PDM 和 SOLIDWORKS Task 插件的当前版本</a></p>
+<p>为确保您拥有 SOLIDWORKS Task 插件的最新更新，SOLIDWORKS PDM Professional 版本和 SWTaskAddin 版本应相同。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_performing_SWTaskAddin_upgrade.htm">执行 SWTaskAddin 升级（仅限 SOLIDWORKS PDM Professional）</a></p>
+<p>如果 SWTaskAddin 的版本低于 SOLIDWORKS PDM Professional 的版本，您可以通过导入 .cex 文件来升级 SWTaskAddin。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/english/enterprisepdm/admin/t_upgrading_tasks.htm">升级任务</a></p>
+<p>升级 SWTaskAddin 后，可以导入最新版本的“转换”、“打印”和“设计检查器”任务。</p>
+</li>
+</ul>
+<h1 id="Dispatch"><a href="#Dispatch" class="headerlink" title="Dispatch"></a>Dispatch</h1><p>企业版本PDM Dispatch是集成在PDM库内并且可以触发多种事件的插件工具，例如在文档达到某种工作流程状态时即触发该操作。</p>
+<!-- more -->
+
+<h2 id="加载插件"><a href="#加载插件" class="headerlink" title="加载插件"></a>加载插件</h2><p>方法1</p>
+<p>C:\Program Files\SOLIDWORKS PDM\Default Data</p>
+<img src="http://8.162.5.68:6196/Hexo/image-20251106162133796.png">
+
+<p>方法2</p>
+<img src="http://8.162.5.68:6196/Hexo/image-20240427110410451.png">
+
+
+
+<img src="http://8.162.5.68:6196/Hexo/image-20240427110910099.png">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SOLIDWORKS安装包\SWPDMClient\Support\Dispatch</span><br></pre></td></tr></table></figure>
+
+
+<img src="http://8.162.5.68:6196/Hexo/image-20240427110710394.png">
+
+
+
+<img src="http://8.162.5.68:6196/Hexo/image-20240427110956313.png">
+
+
+
+<h2 id="管理操作"><a href="#管理操作" class="headerlink" title="管理操作"></a>管理操作</h2><img src="http://8.162.5.68:6196/Hexo/image-20240427111123421.png">
+
+<p>触发条件：</p>
+<p>有如下4种启动程序的场景：操作菜单、状态变更、检出、检入；</p>
+<img src="http://8.162.5.68:6196/Hexo/触发条件.png">
+
+ 
+
+<p>命令内容：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>内容</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对于所有文档</td>
+<td>块启动</td>
+<td></td>
+</tr>
+<tr>
+<td>确定信息框</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>所有文档结尾</td>
+<td>块结束</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="程序例子："><a href="#程序例子：" class="headerlink" title="程序例子："></a>程序例子：</h2><p>dispatch程序一般以“程序.acn”的形式。</p>
+<h3 id="检入检出"><a href="#检入检出" class="headerlink" title="检入检出"></a>检入检出</h3><p>将文件检入或检出PDM库</p>
+<p>更改文件变量必须做什么？检出文件</p>
+<p>更改变量值（非自由版本变量）</p>
+<p>必须精确写入实际名称和路径进行操作</p>
+<h3 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h3><p>复制PDM库内外的文件</p>
+<p>复制只抓取缓存版本，而不是最新版本</p>
+<p>没有移动文件!</p>
+<p>复制本地缓存版本，不是最新的</p>
+<h3 id="生成文件夹"><a href="#生成文件夹" class="headerlink" title="生成文件夹"></a>生成文件夹</h3><p>在PDM内部或外部创建文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">生成文件夹</span><br><span class="line">%RootFolderPath%\01_物料库\物料标准库\%一级分类%</span><br><span class="line">%RootFolderPath%\01_物料库\物料标准库\%一级分类%\%二级分类%</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<p>1、需要逐级创建</p>
+<p>2、如果文件夹存在则会跳过</p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>只删除文件的缓存版本</p>
+<p>可勾选“同时将文件从库中移除”删除(权限?)</p>
+<h3 id="获取文件"><a href="#获取文件" class="headerlink" title="获取文件"></a>获取文件</h3><p>如果文件不存在，则创建文件的本地缓存副本</p>
+<p>也可以在系统中获得最新版本的文件缓存</p>
+<h3 id="标号-转移"><a href="#标号-转移" class="headerlink" title="标号&#x2F;转移"></a>标号&#x2F;转移</h3><p>基于If语句创建跳转</p>
+<p>非常有用</p>
+<h3 id="移动文件夹"><a href="#移动文件夹" class="headerlink" title="移动文件夹"></a>移动文件夹</h3><p>将本地文件夹从一个位置移动到另一个位置（非PDM库内文件路径）</p>
+<p>不能移动PDM库内文件夹!</p>
+<h3 id="生成参数文件"><a href="#生成参数文件" class="headerlink" title="生成参数文件"></a>生成参数文件</h3><p>生成包含所选文件信息的文本文件</p>
+<p>需要一个模板，例如txt</p>
+<h3 id="发送信息"><a href="#发送信息" class="headerlink" title="发送信息"></a>发送信息</h3><p>向选定的用户或组发送邮件消息</p>
+<p>使用建立的任何邮件系统发送</p>
+<p>将邮件消息发送到选定的用户或组，使用已建立的邮件系统发送</p>
+<h3 id="设定变量"><a href="#设定变量" class="headerlink" title="设定变量"></a>设定变量</h3><p>设置文件或文件夹数据卡的变量</p>
+<p>可以配置特定的SW配置页签文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="外壳执行"><a href="#外壳执行" class="headerlink" title="外壳执行"></a>外壳执行</h3><p>启动命令行，exe程序执行获取参数值的好方法</p>
+<h3 id="等候"><a href="#等候" class="headerlink" title="等候"></a>等候</h3><p>根据所选动作暂停脚本执行</p>
+<p>文件删除</p>
+<p>文件生成</p>
+<p>注册表值已设定</p>
+<h3 id="读写注册表"><a href="#读写注册表" class="headerlink" title="读写注册表"></a>读写注册表</h3><p>小心使用!! 防止写错位置</p>
+<p>写入运行脚本的机器的本地注册表</p>
+<p>不限制写入哪些注册表值</p>
+<img src="http://8.162.5.68:6196/Hexo/读写注册表.png">
+
+<p>使用：</p>
+<img src="http://8.162.5.68:6196/Hexo/读写注册表2.png">
+
+
+
+<h3 id="编辑框-组合框"><a href="#编辑框-组合框" class="headerlink" title="编辑框&#x2F;组合框"></a>编辑框&#x2F;组合框</h3><p>非常实用的输入变量值更新缺失的信息和初始化</p>
+<img src="http://8.162.5.68:6196/Hexo/编辑框组合框.png">
+
+<h3 id="是否信息框"><a href="#是否信息框" class="headerlink" title="是否信息框"></a>是否信息框</h3><p>根据所选值决定执行跳转路径</p>
+<h3 id="函数使用介绍"><a href="#函数使用介绍" class="headerlink" title="函数使用介绍"></a>函数使用介绍</h3><p>针对静态字符串自动抓取关键字字符</p>
+<h2 id="帮助文档"><a href="#帮助文档" class="headerlink" title="帮助文档"></a>帮助文档</h2><p>详细可查看PDM帮助，提供详细的命令说明</p>
+<h2 id="样例讲解"><a href="#样例讲解" class="headerlink" title="样例讲解"></a>样例讲解</h2><p>样例1：获取文件名后缀与不带后缀文件名</p>
+<p>样例2：同步零件属性到工程图</p>
+<p>样例3：使用零件信息重命名工程图</p>
+<p>样例4：通过注册表批量提示所有报错文件信息</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
+</div>
+ 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+					<!-- 引入 js 文件 -->	
+	<script type="text/javascript">      
+     var search_path = "SOLIDWORKS-Solution/search.xml";
+	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+	</script>
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 -->
+	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
+</div></body></html>

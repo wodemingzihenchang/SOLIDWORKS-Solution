@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -43,13 +43,14 @@
 <div id="article"><h1 id="PDM中收不到通知"><a href="#PDM中收不到通知" class="headerlink" title="PDM中收不到通知"></a>PDM中收不到通知</h1><p>常见的情况是流程通知收不到，但是手动发送通知可以收到。一般都是SQL中的DocumentsActionInfo表被堵塞了，可以查询此表是否有较多记录存在，且不会减少。</p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>重启下PDM的数据库服务器，如果记录还是不会变少，则将PDM数据库服务器卸载掉，再重装，</p>
 <p>操作方法：控制面板 – 程序和应用 – SW PDM Server– 更改（图1） – 下一步 – PDM数据库服务器 – 取消勾选（图2） – 下一步 – 完成 – 重启 – 然后重复步骤把PDM数据库服务器勾选上-改服务器名称为完整名称（图3，另见下文注意） - 完成。</p>
-<img src="新建文本文档/image-20240401185228192.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240401185228192.png">
 
 <p>注意：</p>
 <p>卸载并重装PDM数据库服务器组件时候，不要使用“local”，而是写完整的数据库服务器名称！如果安装使用的是SQL默认实例（MSSQLSERVER），就只需要写：服务器名称。如果安装使用的是SQL命名实例，就要写：服务器名称\自定义实例名。</p>
-<img src="新建文本文档/image-20240401185239462.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240401185239462.png">
 
 <p>另外：如果PDM自己的数据库通知正常，而SMTP不正常，应该是SMTP的问题</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -77,4 +78,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

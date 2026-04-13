@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -46,26 +46,26 @@
 <ul>
 <li>“存档服务器找不到具有指定 ID 的文件”</li>
 </ul>
-<img src="找不到指定的ID文件\存档服务器找不到指定的ID文件.png">
+<img src="http://8.162.5.68:6196/Hexo/存档服务器找不到指定的ID文件.png">
 
-<img src="找不到指定的ID文件\装载插件时出错.png">
+<img src="http://8.162.5.68:6196/Hexo/装载插件时出错.png">
 
 <p>或者，当尝试将文件从本地驱动器添加到保管库并收到此错误</p>
 <ul>
 <li>“访问存档服务器上的文件时出错”</li>
 </ul>
-<img src="找不到指定的ID文件\访问存档服务器上的文件时出错.png">
+<img src="http://8.162.5.68:6196/Hexo/访问存档服务器上的文件时出错.png">
 
 <h2 id="方法1检查存档位置"><a href="#方法1检查存档位置" class="headerlink" title="方法1检查存档位置"></a>方法1检查存档位置</h2><p>打开【菜单&#x2F;程序-SOLIDWORKS PDM-存档服务器配置】工具。</p>
-<img src="找不到指定的ID文件\打开存档服务器.png">
+<img src="http://8.162.5.68:6196/Hexo/打开存档服务器.png">
 
 <p>导航到“存档”文件夹，然后找到导致错误的库。右键单击保管库，然后选择“属性”。在属性窗口中，有关于库存档位置路径的信息。</p>
-<img src="找不到指定的ID文件\存档属性.png">
+<img src="http://8.162.5.68:6196/Hexo/存档属性.png">
 
 <p>匹配存档工具中给出的路径，这应该可以修复错误。从 Windows 文件夹刷新PDM库，然后从“存档服务器”工具重新启动服务器。</p>
 <p>测试更改：尝试将新文件上传到保管库并检入。检查存档服务器引用路径是否已恢复。</p>
 <h2 id="方法2检查日志"><a href="#方法2检查日志" class="headerlink" title="方法2检查日志"></a>方法2检查日志</h2><p>您可以从“SOLIDWORKS PDM 管理&gt;日志文件“中访问有关这些错误的更多信息。可以收集有关例如服务器名称、数据库、错误模块等。</p>
-<img src="..\2-问题\0-PDM问题方法\错误日志.png">
+<img src="http://8.162.5.68:6196/Hexo/错误日志.png">
 
 
 
@@ -73,6 +73,7 @@
 <p>• 确保路径有效，并且存档服务器服务可以访问该路径。如果存档位于网络共享上，您可能必须将存档服务器服务的登录帐户更改为具有存档文件夹完全访问权限的用户。<br>• 如果重新定位库存档至其他位置或驱动器后发生此错误，存档服务器服务可能在访问物理插件存档路径时遇到问题。<br>• 验证文件库存档中的“plugin”文件夹是否包含插件文件（每个插件都将具有包含两个名为“00000001.unk”和“index.xml”文件的子文件夹）。如果插件文件缺失，请通过管理工具将该插件从库中删除，然后再次添加。<br>• 如果库是复制的库，问题可能在于该插件无法复制，因此无法加载到客户端。请参阅知识库解决方案 S-046063。</p>
 <p>如果在出于测试目的恢复文件库副本后遇到此错误：</p>
 <p>• 如果您在该库中只恢复文件库数据库，则一切都可用，但存储在存档服务器上的物理存档文件除外。这包括任何已添加到库中的插件。如果原始插件存档缺失，请移除缺少的插件，方法是打开管理工具，登录库，展开插件节点并查看恢复的库中提供了哪些插件。右键单击并选择“移除”，以移除您没有的插件。<br>• 要恢复该库并保留原始插件，请从原始存档服务器的文件夹“…\0\Plugins\”下面复制插件存档。将它们复制到匹配的已恢复存档结构。<br>如果缺少的插件为“SWTaskAddIn”（即任务插件），并且想要在恢复的库副本中保留现有配置任务，则不要移除插件。而是在管理工具中打开“c:\program files&lt;安装文件夹&gt;\default data\convert_gb.cex”。将“swtaskaddin”拖放到已恢复的库的插件节点中。错误将显示未找到原始插件文件。关闭错误，任务插件将被更新为导入的副本。<br>• 如果缺少的插件是“Dispatch”，则移除“Dispatch”插件，然后从“c:\program files&lt;安装文件夹&gt;\default data\dispatch.caf”中再次添加。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -100,4 +101,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

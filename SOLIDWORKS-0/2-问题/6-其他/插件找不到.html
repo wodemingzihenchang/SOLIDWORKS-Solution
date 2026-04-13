@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -43,10 +43,10 @@
 <div id="article"><h1 id="插件找不到"><a href="#插件找不到" class="headerlink" title="插件找不到"></a>插件找不到</h1><p>打开SOLIDWORKS插件安装后，未能找到插件启动项</p>
 <h2 id="方法1：直接打开插件程序"><a href="#方法1：直接打开插件程序" class="headerlink" title="方法1：直接打开插件程序"></a>方法1：直接打开插件程序</h2><p>直接打开插件程序一般插件程序是.dll格式的文件。</p>
 <p>如果你不知道文件名字可以在正常插件电脑插件文件路径，如图：</p>
-<img src="插件找不到/image-20260225163332770.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20260225163332770.png">
 
 <p>在SW软件内，打开文件，选择add-Ins(.dll)类型打开。</p>
-<img src="插件找不到/image-20260225163935108.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20260225163935108.png">
 
 <h2 id="方法2：恢复启动项"><a href="#方法2：恢复启动项" class="headerlink" title="方法2：恢复启动项"></a>方法2：恢复启动项</h2><p>这个要在注册表里填启动项内容，以Simulation插件启动项为例：找到注册表里插件CLSID相关内容</p>
 <p>需留意路径是\cosworks.dll所在的路径，如果不一样则手动用文本编辑器修改下，</p>
@@ -66,6 +66,7 @@
 [HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SolidWorks 2013\Applications\SOLIDWORKS Simulation]
 &quot;CLSID&quot;=&quot;&#123;228C93FD-FC76-4C3F-8C94-700CD2FF2884&#125;&quot;
 </code></pre>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -93,4 +94,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

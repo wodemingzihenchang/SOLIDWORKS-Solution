@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -50,14 +50,15 @@
 <p>防火墙-入站规则与出站规则分别添加端口TCP与UDP，特定端口3030,1403,1433,1434</p>
 <p> 方法2: 防火墙高级面板方式<br>1.进入控制面板-&gt;管理工具-&gt;找到“高级安全 Windows防火墙<br>2点击入站规则<br>3.找到回显请求-ICMPv4-In (Echo Request -ICMPv4-In)<br>4.右键点击规则点击”启用规则(Enabie)</p>
 <h1 id="无法在网络上找到主机"><a href="#无法在网络上找到主机" class="headerlink" title="无法在网络上找到主机"></a>无法在网络上找到主机</h1><p>客户端提示无法在网络上找到主机</p>
-<img src="PDM连接失败处理方法/无法在网络上找到主机.png">
+<img src="http://8.162.5.68:6196/Hexo/无法在网络上找到主机.png">
 
 <p>解决方法：客户端IP设为固定IP</p>
-<h1 id="找不到服务器"><a href="#找不到服务器" class="headerlink" title="找不到服务器"></a>找不到服务器</h1><img src="PDM连接失败处理方法/找不到服务器.png">
+<h1 id="找不到服务器"><a href="#找不到服务器" class="headerlink" title="找不到服务器"></a>找不到服务器</h1><img src="http://8.162.5.68:6196/Hexo/找不到服务器.png">
 
 <p>客户端无法搜索到服务器。如果网络中存在访问服务器的连接问题，你可以尝试下面方法检查原因：</p>
 <h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>关闭服务器防火墙后，查看客户端是否可正常连接，若不可以应检查网络是否通，若可以则为防火墙设置问题。检查网络是否通：</p>
 <p>防火墙设置： 防火墙-入站规则与出站规则分别添加端口TCP与UDP，特定端口3030,1403,1433,1434</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -85,4 +86,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -49,13 +49,14 @@
 <h2 id="情况2"><a href="#情况2" class="headerlink" title="情况2"></a>情况2</h2><p>删除特定零部件之后保存装配体时，如何解决错误“访问时发生未知错误”？<br>ANSWER	<br>该装配体可能包含损坏的“镜向零部件”特征。要修复此类装配体，您必须识别并删除损坏的“镜向零部件”特征。有时需要删除多个甚至所有镜向特征。</p>
 <p>如果在删除所有“镜向零部件”阵列后问题仍然可以重现，则请尝试以下工作流程：</p>
 <p>1.创建新的装配体。<br>2.将有问题的装配体作为子装配体插入并将其解散。<br>3.删除所有需要的零部件并尝试保存文件。这应该可以解决问题。</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>A.症状<br>在运行仿真时，出现以下错误且分析失败。“在访问 [驱动器盘符]:[Path]*.GEN 时发生未知错误”</p>
+<h2 id="情况3"><a href="#情况3" class="headerlink" title="情况3"></a>情况3</h2><p>A.症状<br>在运行仿真时，出现以下错误且分析失败。“在访问 [驱动器盘符]:[Path]*.GEN 时发生未知错误”</p>
 <p>C.原因</p>
 <p>如果 SOLIDWORKS 文件或结果文件夹位于网络位置（网络文件夹）上，则会出现此情况。<br>与 SOLIDWORKS® 相比，如果文件存储在网络位置，SOLIDWORKS Simulation 必须进行大量数据处理并可能导致输出延迟或类似错误。<br>因此建议将 SOLIDWORKS Simulation 限制为仅用于本地计算机上的文件。</p>
 <p>C.解决方案</p>
 <p>1.检查文件是否位于网络驱动器上。如果是这种情况，请将它们移至本地驱动器上的文件夹。<br>2.在算例的“属性”中检查结果文件夹位置。如果该文件夹位于网络驱动器上，请将其更改为本地计算机上的文件夹。在运行之前，您必须验证所有已定义算例的结果文件夹位置。<br>3.再次运行算例。</p>
 <p>这可避免因网络问题而引起的错误。</p>
 <p>注意：较小的模型在通过网络驱动器运行时也许会正常工作，但在使用较大的模型时更有可能会出现问题。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	

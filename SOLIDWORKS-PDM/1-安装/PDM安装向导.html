@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,7 +41,7 @@
 </div>
 
 <div id="article"><h1 id="PDM安装向导"><a href="#PDM安装向导" class="headerlink" title="PDM安装向导"></a>PDM安装向导</h1><p>包括 SOLIDWORKS 本体单机版，网络版，插件类以及 PDM 的安装向导</p>
-<img src="PDM安装向导/PDM标准版和专业版的差别.png">
+<img src="http://8.162.5.68:6196/Hexo/PDM标准版和专业版的差别.png">
 
 <span id="more"></span>
 
@@ -64,7 +64,7 @@
 </blockquote>
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="Webview2"><a href="#Webview2" class="headerlink" title="Webview2"></a>Webview2</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\SOLIDWORKS安装包\sldim\MicrosoftEdgeWebView2RuntimeInstallerX64.exe</span><br></pre></td></tr></table></figure>
 
-<h2 id="需要SQL更高版本"><a href="#需要SQL更高版本" class="headerlink" title="需要SQL更高版本"></a>需要SQL更高版本</h2><img src="PDM安装向导/PDM需要SQL2019版本.png">
+<h2 id="需要SQL更高版本"><a href="#需要SQL更高版本" class="headerlink" title="需要SQL更高版本"></a>需要SQL更高版本</h2><img src="http://8.162.5.68:6196/Hexo/PDM需要SQL2019版本.png">
 
 <p>要在 Microsoft® SQL Server 2019 或 Microsoft® SQL Server Express 2019 上创建或升级文件库数据库，SOLIDWORKS® PDM 软件需要“SQL Server 2019 Cumulative Update 4”或更高版本。更新 SQL Server 安装，请执行以下步骤：</p>
 <p>1.安装 SQL Server 2019 或 SQL Server Express 2019 RTM（“SP0”）。</p>
@@ -73,7 +73,7 @@
 <p>4.继续创建 PDM 库的流程。</p>
 <p>（要运行较旧的 SQL Cumulative Update（至少为“CU4”），您可以从 Microsoft 更新目录 (<a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202019">https://www.catalog.update.microsoft.com/Search.aspx?q=sql%20server%202019</a>) 中选择其他内容）</p>
 <h2 id="Error1722"><a href="#Error1722" class="headerlink" title="Error1722"></a>Error1722</h2><p>Register_DocMgr.DLL</p>
-<img src="PDM安装向导/image-20241106103934467.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241106103934467.png">
 
 <p>在继续之前，请阅读 软件要求 部分。必须安装 MSXML 和 Visual C++ Redistributable for Visual Studio 2015 才能成功注册 Register_DocMgrDLL（SOLIDWORKS Document Manager DLL）。</p>
 <p>SOLIDWORKS Document Manager API 是 SwDocumentMgr.dll 中包含的 COM 对象。SOLIDWORKS Document Manager DimXpert API 包含在 dimxpert.dll 中。如果您安装了 SOLIDWORKS 软件，则 zlib.dll DLL 会自动安装在以下文件夹中：</p>
@@ -89,6 +89,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..\SOLIDWORKS安装包\PreReqs\ODBCSQLDriver17\</span><br></pre></td></tr></table></figure>
 
 <p>或从 Microsoft <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16#version-17">下载 ODBC Driver for SQL Server - ODBC Driver for SQL Server | Microsoft Learn</a></p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -116,4 +117,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

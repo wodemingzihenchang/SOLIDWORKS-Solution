@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -49,15 +49,15 @@
 <p>\1.     主要支撑用于2.5轴；</p>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="打开插件"><a href="#打开插件" class="headerlink" title="打开插件"></a>打开插件</h2><p>勾选启用插件【工具-插件-SOLIDWORKS CAM】，在SOLIDWORKS 插件中，找到SOLIDWORKS CAM 插件，勾选启用。</p>
 <p>（如果是需要自启动，则勾选右侧“启动”选项，下次打开SW软件时，插件即会自动加载）</p>
-<img src="CAM/image-20240311140754551.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240311140754551.png">
 
-<h2 id="CAM操作界面"><a href="#CAM操作界面" class="headerlink" title="CAM操作界面"></a>CAM操作界面</h2><img src="CAM/image-20240311140920078.png">
+<h2 id="CAM操作界面"><a href="#CAM操作界面" class="headerlink" title="CAM操作界面"></a>CAM操作界面</h2><img src="http://8.162.5.68:6196/Hexo/image-20240311140920078.png">
 
 
 <p>特征树：设置零件加工的特征类型，通过策略决定加工生成计划（也就是加工方式）。同个特征可以添加多次加工计划。</p>
 <p>加工树：由特征树生成的加工计划会显示在此处，我们需要做的是：设置好加工计划里的加工方式的详细操作。例如，加工进给量F&#x2F;S，引入&#x2F;退刀方式等</p>
 <p>刀具树：显示现有机床所携带的刀具库。不同的刀具在“加工树”的加工计划设置也不一样的，和加工策略有关。</p>
-<img src="CAM/image-20240311140934365.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240311140934365.png">
 
 
 
@@ -167,6 +167,7 @@
 <p> <strong>多表面特征示例</strong></p>
 <p>我们将加工下面零件的顶部。我们将使用毛坯零件的轮廓草图，因为它是作为毛坯提供的。库存的顶部中心将是我们的工作偏移。</p>
 <h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p>铣削装配体教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\ mill_assemblies_tutorial.pdf<br>铣削教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\mill_tutorial.pdf<br>设置表教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\setup_sheets_tutorial.pdf<br>基于公差的价格TBM：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\tbm_user_guide.pdf<br>TechDB 设置指南：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\techdb_settings_guide.pdf<br>工艺数据库 (TechDB) 教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\technology_database_tutorial.pdf<br>车削教程：<br>..\SolidWorks 安装位置\SOLIDWORKS CAM\Lang\Chinese\Manuals\turn_tutorial.pdf</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:CAM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -194,4 +195,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

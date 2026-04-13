@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -42,11 +42,11 @@
 
 <div id="article"><h1 id="PDM装载插件时出错"><a href="#PDM装载插件时出错" class="headerlink" title="PDM装载插件时出错"></a>PDM装载插件时出错</h1><span id="more"></span>
 
-<p><img src="/SOLIDWORKS-Solution/%E8%A3%85%E8%BD%BD%E6%8F%92%E4%BB%B6%E6%97%B6%E5%87%BA%E9%94%99/image-20240612135015557.png" alt="image-20240612135015557"></p>
+<p><img src="http://8.162.5.68:6196/Hexo/image-20240612135015557.png" alt="image-20240612135015557"></p>
 <p>问题详情：在PDM使用过程中遇到“插件装载错误”（客户端从服务器下载插件后注册插件失败），如下图：</p>
-<p><img src="/SOLIDWORKS-Solution/%E8%A3%85%E8%BD%BD%E6%8F%92%E4%BB%B6%E6%97%B6%E5%87%BA%E9%94%99/image-20240612135025462.png" alt="image-20240612135025462"></p>
+<p><img src="http://8.162.5.68:6196/Hexo/image-20240612135025462.png" alt="image-20240612135025462"></p>
 <h2 id="方法1：检查插件"><a href="#方法1：检查插件" class="headerlink" title="方法1：检查插件"></a>方法1：检查插件</h2><p>是否所有电脑所有用户都存在该问题?—如果存在，推断插件自身问题。</p>
-<p><img src="/SOLIDWORKS-Solution/%E8%A3%85%E8%BD%BD%E6%8F%92%E4%BB%B6%E6%97%B6%E5%87%BA%E9%94%99/image-20240612140931927.png" alt="image-20240612140931927"></p>
+<p><img src="http://8.162.5.68:6196/Hexo/image-20240612140931927.png" alt="image-20240612140931927"></p>
 <h2 id="方法2：检查权限"><a href="#方法2：检查权限" class="headerlink" title="方法2：检查权限"></a>方法2：检查权限</h2><p>若是特定电脑问题，可切换Windows账号，如果帐户权限不足，无法将注册文件放入至该路径，就会出现注册不上的问题。当然，你也需要排除杀毒软件\加密策略的影响。</p>
 <p>插件的注册文件存放位置：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\USER\[用户]\AppData\Local\Solidworks\Solidworks PDM\Plugins\[库名]</span><br></pre></td></tr></table></figure>
@@ -62,6 +62,7 @@
 
 <h2 id="方法5：修复安装"><a href="#方法5：修复安装" class="headerlink" title="方法5：修复安装"></a>方法5：修复安装</h2><p>（3）检查.NET framework的版本3.5，4.0，4.5是否装上</p>
 <p>检查C++补丁，VC++2008&#x2F;2010&#x2F;2012&#x2F;2013&#x2F;2015(x86,x64)</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -89,4 +90,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

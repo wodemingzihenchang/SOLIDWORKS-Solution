@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -44,22 +44,22 @@
 
 <p>注意：安装前，需检查当前电脑配置是否支持SW的安装环境（详细见下方配置要求参考）。<br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/system-requirements">SOLIDWORKS官网系统要求</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification">SOLIDWORKS官网硬件认证</a></p>
-<img src="硬件配置/硬件认证.png">
+<img src="http://8.162.5.68:6196/Hexo/硬件认证.png">
 
 <p><a target="_blank" rel="noopener" href="https://www.pugetsystems.com/recommended/">普吉网站的选配参考</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.pugetsystems.com/solutions/cad-workstations/solidworks/hardware-recommendations/">Hardware Recommendations for SOLIDWORKS | Puget Systems</a></p>
 <h2 id="硬件组成："><a href="#硬件组成：" class="headerlink" title="硬件组成："></a>硬件组成：</h2><p><strong>处理器 CPU：</strong><br>负责处理 SOLIDWORKS 程序操作过程的计算。对于零部件设计模块，其所占用的是 CPU 的单核心的计算能力，单核主频越高越好。对于模拟和渲染计算，更多核心的 cpu 有利于提高计算速度。</p>
-<img src="硬件配置/CPU.png">
+<img src="http://8.162.5.68:6196/Hexo/CPU.png">
 
 <p><strong>内存 RAM：</strong><br>当一个文档在 SOLIDWORKS 中打开时，它将会被加载到 RAM 内存上。因此，您需要足够的内存来运存 SOLIDWORKS 文件，我们发现在普遍在 16GB 是可以满足正常设计需求。当你需要处理大型装配体时，建议按需升级内存配置（见下表）</p>
 <p><strong>显卡 GPU:</strong><br>显卡对你的工作效率至关重要。它帮助处理器加速操作，如缩放和旋转。英特尔 HD 显卡，以及 GeForce 和 Radeon(非 Pro)等卡是不支持的消费级卡。通常性能和稳定性都很差。<br>NVIDIA 也是 SOLIDWORKS 可视化渲染中唯一支持 NVIDIA iRay 的显卡。图形和那些拥有 4GB 或更多内存的支持新的 AI 去噪(推荐 6GB+)意味着你可以更快地返回结果。最新的 Quadro RTX 显卡甚至有专门的光线追踪核心来进一步加速渲染</p>
 <p><strong>硬盘 ROM：</strong><br>固态硬盘(SSD)相对机械硬盘（HDD）提供了显著的读写性能的提升，我们建议是将操作系统，软件，操作文件放置在固态硬盘操作，至少将操作系统和程序放置在固态硬盘。对于硬盘容量尽量空余 1&#x2F;4 以上的空间，而不是占满整个硬盘，以获得最佳性能。</p>
 <p><a target="_blank" rel="noopener" href="https://support.hawkridgesys.com/hc/en-us/articles/18845987660813-SOLIDWORKS-2024-Comprehensive-Hardware-Guide#h_01HB9YAPNJR7CGHH8KBQ4R0BWP">SOLIDWORKS 综合硬件指南</a></p>
 <h2 id="设计配置参考："><a href="#设计配置参考：" class="headerlink" title="设计配置参考："></a>设计配置参考：</h2><p>如果您需要平时设计建模的流畅和响应性能，选择高频 CPU 和 16GB 以上内存是绝大多数 CAD 的理想选择。对于除了最大和最复杂的组件装配体或零部件，则按需升级硬件配置，详见下表：</p>
-<img src="硬件配置/SW硬件配置.png">
+<img src="http://8.162.5.68:6196/Hexo/SW硬件配置.png">
 
 <h2 id="仿真配置参考："><a href="#仿真配置参考：" class="headerlink" title="仿真配置参考："></a>仿真配置参考：</h2><p>一般图形渲染和仿真模拟可以从更高的内核数中受益。一般会建议使用英特尔至强（Xeon）W 处理器，其在 Flow 和 FEA 模拟中表现非常出色。<br>更高的核心也有助于基于 CPU 的渲染，就像 PhotoView 360 ，Visualize 等，如果您是主要关注图形渲染方面，那么像 AMD 的 Threadripper 这样的更高核心数的平台将会更快。</p>
-<img src="硬件配置/SW仿真硬件配置.png">
+<img src="http://8.162.5.68:6196/Hexo/SW仿真硬件配置.png">
 
 <h1 id="常见问题-Q-A："><a href="#常见问题-Q-A：" class="headerlink" title="常见问题 Q&amp;A："></a>常见问题 Q&amp;A：</h1><p><strong>问：拥有更多 CPU 内核是否会提高 SOLIDWORKS 性能？</strong><br>答：在 SOLIDWORKS 中建模和处理装配体只能使用少量核心。具有单核心高频率的处理器将体现一般建模时的最佳性能。然而，模拟和渲染可以通过更高的核心数看到中等到较大的性能提升。这就是需要区别工作站电脑是用于主设计还是主仿真。</p>
 <p><strong>问：我需要使用 Quadro 卡还是 GeForce ？</strong><br>答：一般建议 Quadro 卡。我们发现在“带边缘阴影”模式下，即使是低端 Quadro 也将胜过最快的 GeForce 显卡。此外，使用工作站卡是获得对 Realview（俗称“小金球”）等功能的官方支持的唯一方法。详细可见：SOLIDWORKS 硬件认证。</p>
@@ -72,6 +72,7 @@
 <p>看使用“设计类”还是“仿真类”产品</p>
 <p>关于SW设计类的CPU核心使用问题：SW程序多线程在执行时，是由系统在多核心上分配，同时在单核运行。也就是我们无需太在意核心数，还是已主频为主（当然多核心也有利于系统分配其他程序，也有一点点效果）</p>
 <p>关于SW仿真类的CPU核心使用问题：仿真计算类的是可以多核运算。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -99,4 +100,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

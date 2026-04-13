@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,7 +41,7 @@
 </div>
 
 <div id="article"><h1 id="插件提取失败"><a href="#插件提取失败" class="headerlink" title="插件提取失败"></a>插件提取失败</h1><p>插件提取失败，没有注册类，COM DLL注册失败</p>
-<img src="插件提取失败/image-20240819112925304.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240819112925304.png">
 
 <p>原因：客户端在每次登录时候对比本地和服务器上的插件版本是否一致，</p>
 <p>如果插件版本不一样则从服务器下载插件压缩包CAF文件到本地，然后解压缩成DLL文件后进行注册，此时其中一个步骤有异常会造成插件注册失败。</p>
@@ -63,6 +63,7 @@
 <p>找到已加载的插件文件夹，例如{C52D573B-057B-4CB3-A357-4FE531251826}，全部删除。</p>
 <p>再打开一个资源管理器Explorer并登录库，此时插件应该自动下载到上述文件夹了，刷新查看是否加载完毕。</p>
 <p>按照第3步，在cmd中手动方式为这些DLL文件重新注册一下。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -90,4 +91,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

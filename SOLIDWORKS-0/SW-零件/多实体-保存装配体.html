@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,24 +41,25 @@
 </div>
 
 <div id="article"><h1 id="多实体-保存装配体"><a href="#多实体-保存装配体" class="headerlink" title="多实体-保存装配体"></a>多实体-保存装配体</h1><p>在SOLIDWORKS里，零件可以使用多个实体进行操作，并且我们可以多实体转为装配体文件进行使用。其他方法有2种：</p>
-<img src="多实体-保存装配体/image-20250710095336070.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250710095336070.png">
 
 <h2 id="保存实体"><a href="#保存实体" class="headerlink" title="保存实体"></a>保存实体</h2><p>保存实体操作会产生【保存实体】特征的记录，</p>
-<img src="多实体-保存装配体/image-20250710120825484.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250710120825484.png">
 
 <p>有特征的存在，这将影响在主体多实体的特征修改是否会传递影响作用到保存出的零件。</p>
-<img src="多实体-保存装配体/image-20250710120936201.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250710120936201.png">
 
 
 
 
 
 <h2 id="插入到新零件"><a href="#插入到新零件" class="headerlink" title="插入到新零件"></a>插入到新零件</h2><p>插入到新零件操作不会产生特征的记录，相当于是另存实体并保持链接状态。你的主体多实体特征更新，会全部传递影响作用到保存出的零件。</p>
-<img src="多实体-保存装配体/image-20250710095032923.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20250710095032923.png">
 
 
 
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>注意，【保存实体】和【】都会产生外部参考的关系，这将要求你的文件命名规范（不可进行改动），否则，关系则会找不到而断开参考关系，</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -86,4 +87,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

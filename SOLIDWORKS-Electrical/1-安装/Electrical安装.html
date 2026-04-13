@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -48,22 +48,22 @@
 <li>协作服务器</li>
 <li>SQL服务器</li>
 </ul>
-<img src="Electrical安装/SWE SQL.png">
+<img src="http://8.162.5.68:6196/Hexo/SWE SQL.png">
 
 <p>确定安装并等待完成</p>
 <h1 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h1><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>Electrical通过数据库方式，将设计素材和工程文件进行共享。数据库使用的是SQL Server ，端口为26666。</p>
-<h2 id="协同服务器："><a href="#协同服务器：" class="headerlink" title="协同服务器："></a>协同服务器：</h2><img src="Electrical安装/协同服务器.png">
+<h2 id="协同服务器："><a href="#协同服务器：" class="headerlink" title="协同服务器："></a>协同服务器：</h2><img src="http://8.162.5.68:6196/Hexo/协同服务器.png">
 
 <h2 id="数据库："><a href="#数据库：" class="headerlink" title="数据库："></a>数据库：</h2><p>这里一般会需要又两个位置的设置：”应用程序数据文件夹“和”数据库名称“。</p>
 <p>应用程序数据文件夹：相当于是存档文件位置；这里一般会是网盘，并设置文件夹共享</p>
 <p>数据库名称：是SQL运行的电脑地址，里面会有如下表格：</p>
-<img src="Electrical安装/数据库.png">
+<img src="http://8.162.5.68:6196/Hexo/数据库.png">
 
 <p>SQL数据库里的内容对应：</p>
-<img src="Electrical安装/数据库2.png">
+<img src="http://8.162.5.68:6196/Hexo/数据库2.png">
 
 <h2 id="3D"><a href="#3D" class="headerlink" title="3D"></a>3D</h2><p>3D布线用的部件文件夹。确保零部件名称唯一性，可以关闭”将3D零件复制到工程“选项，使布线零件参考库中文件。</p>
-<img src="Electrical安装/3D.png">
+<img src="http://8.162.5.68:6196/Hexo/3D.png">
 
 
 
@@ -84,12 +84,14 @@
 <p>如果执行了密码策略或使用的认证密码不正确，使用SQL Server ‘ authentication Mode ‘连接已有SQL Server时，请检查密码是否正确。检查相同的身份验证设置是否有效。’tew’用户的默认密码长度为9个字符。大多数密码策略要求10个字符。</p>
 <p>如果安装管理器中的“电气选项”没有设置为指向正确的位置，则默认设置是针对单个安装的。在这种情况下，您必须调整客户端安装的设置。</p>
 <h2 id="SQLEXPR安装失败"><a href="#SQLEXPR安装失败" class="headerlink" title="SQLEXPR安装失败"></a>SQLEXPR安装失败</h2><p>使用新建SQL实例时会失败。</p>
-<img src="Electrical安装/SQLEXPR安装失败.png">
+<img src="http://8.162.5.68:6196/Hexo/SQLEXPR安装失败.png">
 
 <h2 id="15247"><a href="#15247" class="headerlink" title="15247"></a>15247</h2><p>SQL账号权限问题，可以使用SQL的管理员“sa”账号，做身份验证安装。</p>
-<img src="Electrical安装/安装失败用户没有执行此操作的权限(15247).png">
+<img src="http://8.162.5.68:6196/Hexo/安装失败用户没有执行此操作的权限(15247).png">
 
-<img src="Electrical安装/SWE SQL.png">
+<img src="http://8.162.5.68:6196/Hexo/SWE SQL.png">
+
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Electrical</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -117,4 +119,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

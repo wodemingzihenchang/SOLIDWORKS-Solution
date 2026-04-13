@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -46,10 +46,10 @@
 
 <h2 id="手动方法"><a href="#手动方法" class="headerlink" title="手动方法"></a>手动方法</h2><p>打开SOLIDWORKS。<strong>打开&gt;文件</strong>。在文件类型菜单中，选择<strong>“插件”（*.dll）</strong>文件类型。在<strong>“打开</strong>”对话框中，找到***cosworks.dll***文件并点击该文件选择它。</p>
 <p>如果你同时安装了多个版本，务必使用你想要的版本。<em>cosworks.dll</em>文件通常存在于该文件夹中。</p>
-<img src="手动启动插件方法/image-20260210140840423.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20260210140840423.png">
 
 <p>点击<strong>打开</strong>以加载SOLIDWORKS模拟插件。要确认SOLIDWORKS模拟插件是否成功加载，请打开零件或装配文件。</p>
-<img src="手动启动插件方法/image-20260210141027873.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20260210141027873.png">
 
 
 
@@ -57,8 +57,7 @@
 <p>需留意修改\cosworks.dll所在的路径，如果不一样则手动用文本编辑器修改下，</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\CLSID\&#123;228C93FD-FC76-4C3F-8C94-700CD2FF2884&#125;]</span><br><span class="line">@=&quot;SOLIDWORKS Simulation&quot;</span><br><span class="line">&quot;ProgID&quot;=&quot;SldWorks.Simulation.11&quot;</span><br><span class="line">&quot;VerionIndependentProgID&quot;=&quot;SldWorks.Simulation&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\CLSID\&#123;228C93FD-FC76-4C3F-8C94-700CD2FF2884&#125;\InprocServer32]</span><br><span class="line">@=&quot;C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\Simulation\\cosworks.dll&quot;</span><br><span class="line">&quot;ThreadingModel&quot;=&quot;Apartment&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\CLSID\&#123;228C93FD-FC76-4C3F-8C94-700CD2FF2884&#125;\TypeLib]</span><br><span class="line">@=&quot;22005892-BF16-45B4-BE24-CA5AC0BFF595&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SolidWorks 2018\Applications\SOLIDWORKS Simulation]</span><br><span class="line">&quot;CLSID&quot;=&quot;&#123;228C93FD-FC76-4C3F-8C94-700CD2FF2884&#125;&quot;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
-
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -86,4 +85,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

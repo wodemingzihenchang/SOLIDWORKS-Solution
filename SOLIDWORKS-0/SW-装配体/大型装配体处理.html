@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -57,62 +57,62 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows</span><br></pre></td></tr></table></figure>
 
 <p>设置以下的值：将数值调大<br>GDIProcessHandleQuota ：256 ~ 65536，▪ 默认值为10000（十进制）；<br>USERProcessHandleQuota ：200 ~ 18000，▪ 默认值为10000（十进制）；</p>
-<img src="大型装配体处理/image-20240825114634282.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240825114634282.png">
 
 <h1 id="软件环境"><a href="#软件环境" class="headerlink" title="软件环境"></a>软件环境</h1><h2 id="关闭插件"><a href="#关闭插件" class="headerlink" title="关闭插件"></a>关闭插件</h2><p>▪ 关闭不必要的插件</p>
-<img src="大型装配体处理/image-20241204172915156.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241204172915156.png">
 
 <p>▪ 关闭RealView图形</p>
-<img src="大型装配体处理/image-20241204172816022.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241204172816022.png">
 
 <h2 id="背景显示"><a href="#背景显示" class="headerlink" title="背景显示"></a>背景显示</h2><p>▪ 建议选择“素色”背景而不是“渐变”，这会对提升s显示性能有所帮助</p>
-<img src="大型装配体处理/image-20240610151353710.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240610151353710.png">
 
 <h2 id="显示选项"><a href="#显示选项" class="headerlink" title="显示选项"></a>显示选项</h2><p>▪ 清除模型边线选项中的“图形动态高亮显示”“反走样边线&#x2F;草图”</p>
 <p>▪ 该选项可以使模型的边线显示的更清晰，消除模型“锯齿”现象，但会大大增加图形显示卡的负担，特别是大型装配会严重影响机器性能</p>
-<img src="大型装配体处理/image-20240610151446050.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240610151446050.png">
 
 <h2 id="性能选项"><a href="#性能选项" class="headerlink" title="性能选项"></a>性能选项</h2><p>▪ 在系统选项中的性能里，将&lt;细节层次&gt;调至较少以减少细节显示， 从而提高 显示速度。调整图示的&lt;配合动画速度&gt;至关闭</p>
-<img src="大型装配体处理/image-20240610151330364.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240610151330364.png">
 
 
 
 <h2 id="装配体选项"><a href="#装配体选项" class="headerlink" title="装配体选项"></a>装配体选项</h2><p>▪ 处理大型装配体时，打开&lt;大型装配体模式&gt;</p>
 <p>▪ 隐藏不必要的相关基准面面、基准轴、临时轴、辅助曲线等。</p>
-<img src="大型装配体处理/image-20240610151553189.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240610151553189.png">
 
 <h2 id="外部参考"><a href="#外部参考" class="headerlink" title="外部参考"></a>外部参考</h2><p>▪ 保存所有时不提示只读文件的保存；</p>
 <p>▪ 保存所有时，不强制全部文档保存到当前最新版本（当然这部分能保存最新也是好的，相当于痛苦一次）</p>
-<img src="大型装配体处理/image-20241204170244621.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241204170244621.png">
 
 <h2 id="参考文件"><a href="#参考文件" class="headerlink" title="参考文件"></a>参考文件</h2><p>尽量不设置过多位置的【参考的文件】，特别是网盘的路径，这将有可能造成打开速度卡慢情况</p>
-<img src="大型装配体处理/image-20241225112008336.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241225112008336.png">
 
-<img src="大型装配体处理/image-20241225112038300.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241225112038300.png">
 
 <h2 id="备份-恢复"><a href="#备份-恢复" class="headerlink" title="备份&#x2F;恢复"></a>备份&#x2F;恢复</h2><p>为了好的性能可以考虑关闭此功能</p>
 <p>如果备份，确保恢复文件夹位置是位于本机，且备份次数是适当的</p>
-<img src="大型装配体处理/image-20241204165528460.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241204165528460.png">
 
 <h2 id="工程图选项"><a href="#工程图选项" class="headerlink" title="工程图选项"></a>工程图选项</h2><p>拖动工程视图时显示内容，清除之后，拖动时将仅显示视图边界。</p>
 <p>打开工程图时允许自动更新。清除此选项以更快地打开工程图</p>
-<img src="大型装配体处理/image-20240610151934981.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240610151934981.png">
 
 <h2 id="文档属性"><a href="#文档属性" class="headerlink" title="文档属性"></a>文档属性</h2><p>将图示的&lt;上色和草稿品质HLR&#x2F;HLV分辨率&gt;向左调节，以提高显示效率</p>
 <p>此选项在图形边线的分辨率较低时显示很粗糙，如圆形显示为多边形，但这样会减轻机器的运行负担，提升速度</p>
-<img src="大型装配体处理/image-20240610151821687.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20240610151821687.png">
 
 <h1 id="打开文档问题"><a href="#打开文档问题" class="headerlink" title="打开文档问题"></a>打开文档问题</h1><p>装配体文件打开顺序：</p>
-<img src="大型装配体处理/装配体文件打开顺序.png">
+<img src="http://8.162.5.68:6196/Hexo/装配体文件打开顺序.png">
 
-<img src="大型装配体处理/image-20241204164548503.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241204164548503.png">
 
 <p>选中装配体文件，打开，检查装配体层次，从上往下打开特征树中的文件</p>
 <h2 id="打开零部件"><a href="#打开零部件" class="headerlink" title="打开零部件"></a>打开零部件</h2><p>检查的方法可以使用SW菜单栏【文件-打开】，在打开对话框内，点“参考”按钮</p>
-<img src="大型装配体处理/查看参考.png">
+<img src="http://8.162.5.68:6196/Hexo/查看参考.png">
 
 <p>这里需着重关注下，特别是你设置了【系统选项-参考的文件】你需留意是否该路径文件访问是否正常特别是网盘路径的访问。</p>
-<img src="大型装配体处理/参考文件.png">
+<img src="http://8.162.5.68:6196/Hexo/参考文件.png">
 
 <h2 id="更新装配体"><a href="#更新装配体" class="headerlink" title="更新装配体"></a>更新装配体</h2><p>这一步会：</p>
 <p>1、解算和更新配合关系，我们尽量避免一些【高级配合】和【机械配合】；</p>
@@ -121,7 +121,7 @@
 <p>4、生成特征树</p>
 <h2 id="更新图形"><a href="#更新图形" class="headerlink" title="更新图形"></a>更新图形</h2><p>所有文件打开后，渲染绘图区，完全显示</p>
 <h2 id="提示报错信息"><a href="#提示报错信息" class="headerlink" title="提示报错信息"></a>提示报错信息</h2><p>如果您的装配体存在重建过程是错误提示，软件还会弹窗提示你存在的问题</p>
-<img src="大型装配体处理/image-20241204182523588.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241204182523588.png">
 
 <p>当然，你也可以在【系统选项-装配体】中，禁用重建检查的提醒或者不显示错误，来绕过这部分。</p>
 <h1 id="设计规范"><a href="#设计规范" class="headerlink" title="设计规范"></a>设计规范</h1><h2 id="轻化零部件"><a href="#轻化零部件" class="headerlink" title="轻化零部件"></a>轻化零部件</h2><p>在SOLIDWORKS装配体中，零部件有多种状态，分别是：还原、轻化、压缩、隐藏。不同状态的零部件占用不同的系统资源。零部件的各种状态定义如</p>
@@ -138,7 +138,7 @@
 <p><strong>测量</strong></p>
 <p><strong>可以查看文件路径</strong></p>
 <p><strong>预览最后一次保存的状态</strong>：对于单独修改了零部件，总装没保存进行更新的。我们只能看到修改前零件的样子，此处需要在大型设计审阅模式下，右键修改零件进行【更新零部件图像】。</p>
-<img src="大型装配体处理/大型设计审阅模式-更新零部件图像.png">
+<img src="http://8.162.5.68:6196/Hexo/大型设计审阅模式-更新零部件图像.png">
 
 <h2 id="配合"><a href="#配合" class="headerlink" title="配合"></a>配合</h2><p>下列配合关系的计算速度 (从快到慢):</p>
 <p>• 关系配合Relation Mates (重合.平行等)</p>
@@ -148,41 +148,42 @@
 <h2 id="外部参考-1"><a href="#外部参考-1" class="headerlink" title="外部参考"></a>外部参考</h2><p>避免不必要的外部参考，可对其进行如下操作：</p>
 <p>▪ 关联设计用在合适的地方，可以断开，锁定</p>
 <p>▪ 阻止外部参考生成</p>
-<img src="大型装配体处理/image-20241205163343431.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241205163343431.png">
 
 <h1 id="标准件优化"><a href="#标准件优化" class="headerlink" title="标准件优化"></a>标准件优化</h1><h2 id="报错修复"><a href="#报错修复" class="headerlink" title="报错修复"></a>报错修复</h2><h2 id="简化模型"><a href="#简化模型" class="headerlink" title="简化模型"></a>简化模型</h2><p>对于外购装配件只保留需要安装配合的零件，可将不重要装配体简化，按另存为“外部面”的零件处理。减少导入过程的格式识别和装配体数量</p>
-<img src="大型装配体处理/简化模型-保存外部面.png">
+<img src="http://8.162.5.68:6196/Hexo/简化模型-保存外部面.png">
 
-<img src="大型装配体处理/简化模型-保存外部面2.png">
+<img src="http://8.162.5.68:6196/Hexo/简化模型-保存外部面2.png">
 
 <h2 id="Defeature"><a href="#Defeature" class="headerlink" title="Defeature"></a>Defeature</h2><p>简化装配体零部件</p>
-<img src="大型装配体处理/Defeature.png">
+<img src="http://8.162.5.68:6196/Hexo/Defeature.png">
 
 <h2 id="特征冻结"><a href="#特征冻结" class="headerlink" title="特征冻结"></a>特征冻结</h2><p>对于部分标准件，可能存在特征修改并在装配体保存时，会进行【重建】操作。因此进行不必要的计算。</p>
-<img src="大型装配体处理/特征冻结.png">
+<img src="http://8.162.5.68:6196/Hexo/特征冻结.png">
 
 <h2 id="合并多实体"><a href="#合并多实体" class="headerlink" title="合并多实体"></a>合并多实体</h2><p>对于部分标准件，可能存在多实体的问题，可以尝试将多实体合并成单实体</p>
-<img src="大型装配体处理/合并多实体.png">
+<img src="http://8.162.5.68:6196/Hexo/合并多实体.png">
 
 <h1 id="零件"><a href="#零件" class="headerlink" title="零件"></a>零件</h1><p>影响因素多来自于特征数量（空间复杂度）和解算时长（时间复杂度）。</p>
 <p>对于稳定量产的零件及标准件，可以设置【冻结栏】的方式冻结特征。冻结后的特征将不参与【保存&#x2F;重建】等过程的计算，提供操作过程的运算速度</p>
 <h2 id="性能评估"><a href="#性能评估" class="headerlink" title="性能评估"></a>性能评估</h2><p>▪ 统计特征重建需要的时间。</p>
-<img src="大型装配体处理/性能评估.png">
+<img src="http://8.162.5.68:6196/Hexo/性能评估.png">
 
 <p>▪ 避免模型细节特征可以压缩文件大小，提高速度</p>
 <p>▪ 使用贴图替代实体拉伸切除或包覆</p>
 <p>▪ 复杂模型应用冻结栏</p>
 <p>▪ 圆角倒角细节特征最后生成</p>
 <h2 id="草图"><a href="#草图" class="headerlink" title="草图"></a>草图</h2><p>草图举例设置简单求解，阵列等复制类特征，由【阵列】特征生成。</p>
-<img src="大型装配体处理/草图-阵列.png">
+<img src="http://8.162.5.68:6196/Hexo/草图-阵列.png">
 
 <h2 id="阵列"><a href="#阵列" class="headerlink" title="阵列"></a>阵列</h2><p>复杂或数量多的阵列，尽量使用几何体阵列方式制作</p>
-<img src="大型装配体处理/勾选几何体阵列.png">
+<img src="http://8.162.5.68:6196/Hexo/勾选几何体阵列.png">
 
 <h2 id="钣金和焊件"><a href="#钣金和焊件" class="headerlink" title="钣金和焊件"></a>钣金和焊件</h2><p>合理利用钣金焊件等特定类型，与只用实体多特征的对比</p>
 <p>门板 的实体和钣金建模的性能对比</p>
 <p>机架 的实体和焊件建模的性能对比</p>
 <h2 id="复杂零件"><a href="#复杂零件" class="headerlink" title="复杂零件"></a>复杂零件</h2><p>装配体-性能评估找到的，影响恶劣的“复杂零件”。特征性能评估即优化性能</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -210,4 +211,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

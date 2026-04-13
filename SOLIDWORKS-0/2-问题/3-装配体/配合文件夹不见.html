@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -41,16 +41,17 @@
 </div>
 
 <div id="article"><h1 id="配合文件夹不见"><a href="#配合文件夹不见" class="headerlink" title="配合文件夹不见"></a>配合文件夹不见</h1><p>装配体特征树的配合文件夹不见，配合是展开排列。零件的特征被打包成特征文件夹。</p>
-<h2 id="解决方法-1："><a href="#解决方法-1：" class="headerlink" title="解决方法 1："></a>解决方法 1：</h2><p>右键总装关闭【树显示-查看配合和从属关系】。</p>
-<img src="配合文件夹不见\配合文件夹不见.png" >
+<h2 id="方法-1："><a href="#方法-1：" class="headerlink" title="方法 1："></a>方法 1：</h2><p>右键总装关闭【树显示-查看配合和从属关系】。</p>
+<img src="http://8.162.5.68:6196/Hexo/配合文件夹不见.png">
 
 <p>右键总装勾选【树显示-查看特征】。</p>
-<img src="配合文件夹不见/image-20240905102938762.png" >
+<img src="http://8.162.5.68:6196/Hexo/image-20240905102938762.png">
 
-<h2 id="解决方法-2："><a href="#解决方法-2：" class="headerlink" title="解决方法 2："></a>解决方法 2：</h2><p>需修改注册表如下设置的：“AsmDocBrowserViewType”项。（值为 1 时：配合会展开；值为 0 时：配合会在文件夹内）</p>
+<h2 id="方法-2："><a href="#方法-2：" class="headerlink" title="方法 2："></a>方法 2：</h2><p>需修改注册表如下设置的：“AsmDocBrowserViewType”项。（值为 1 时：配合会展开；值为 0 时：配合会在文件夹内）</p>
 <blockquote>
 <p>计算机\HKEY_CURRENT_USER\Software\SolidWorks\SOLIDWORKS 2021\General</p>
 </blockquote>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -78,4 +79,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>

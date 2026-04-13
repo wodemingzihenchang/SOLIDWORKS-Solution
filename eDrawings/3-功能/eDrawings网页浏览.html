@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -28,12 +28,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
     
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link">新功能</a></li>
-    
-    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link">SOLIDWORKS网站</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
     
     <!-- 外部链接打开新的窗口跳转 -->
-    </ul>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
@@ -42,19 +42,19 @@
 
 <div id="article"><h1 id="eDrawings网页浏览"><a href="#eDrawings网页浏览" class="headerlink" title="eDrawings网页浏览"></a>eDrawings网页浏览</h1><p>有时我们会需要将3D模型文件放到网页浏览器查看，但可能会存在如下问题</p>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>如果你使用eDrawings另存为（.htm）格式，在现在的浏览器打开，大概率会发现浏览器界面显示空白，没有模型信息显示。</p>
-<img src="eDrawings网页浏览/image-20241230145011385.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241230145011385.png">
 
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>2019前的eDrawings产品，只有另存为htm选项</p>
 <p>在老版IE可能会提示你启用Active功能，参考：<a target="_blank" rel="noopener" href="https://support.microsoft.com/zh-cn/office/%E5%9C%A8-internet-explorer-%E4%B8%AD%E5%90%AF%E7%94%A8-activex-04774c30-617d-4de4-a028-0fe03d68b955">在 Internet Explorer 中启用 ActiveX - Microsoft 支持</a></p>
-<img src="eDrawings网页浏览\image-20241103145628881.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241103145628881.png">
 
 <p>2019的eDrawings新功能，添加多一项了Html选择，并且先前的（.htm）格式另存为会自带Active功能，</p>
-<img src="eDrawings网页浏览\image-20241103145608598.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241103145608598.png">
 
 <p>使用（html）格式保存，文件会比htm格式的大，并且能支持直接在浏览器上打开，直接查看</p>
-<img src="eDrawings网页浏览\image-20241103151545804.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241103151545804.png">
 
-<img src="eDrawings网页浏览\image-20241103152459136.png">
+<img src="http://8.162.5.68:6196/Hexo/image-20241103152459136.png">
 
 <h1 id="旧版本另存Html"><a href="#旧版本另存Html" class="headerlink" title="旧版本另存Html"></a>旧版本另存Html</h1><p><strong><a target="_blank" rel="noopener" href="https://help.solidworks.com/2018/chinese-simplified/eDrawings/c_Saving_Files_as_HTML_Files.htm">旧版本2018前保存文件为 HTML 文件</a></strong></p>
 <h2 id="1修改另存HTML文件"><a href="#1修改另存HTML文件" class="headerlink" title="1修改另存HTML文件"></a>1修改另存HTML文件</h2><p>要将旧的eDrawings®HTM文件(Internet Explorer 5)转换为新的eDrawings®HTM文件(IE 11)，请按照以下步骤操作:</p>
@@ -82,16 +82,11 @@
 <li><p>打开Internet选项控制面板。</p>
 </li>
 <li><p>在高级选项卡上，在安全下的设置对话框中，进行以下更改。<br>a.激活“增强保护模式下启用64位进程”选项。<br>b.取消激活“启用增强保护模式”选项。</p>
+<img src="http://8.162.5.68:6196/Hexo/取消启用增强保护模式.png">
 </li>
-</ol>
-<img src="eDrawings网页浏览/取消启用增强保护模式.png">
-
-<ol start="3">
-<li>在“Internet选项”中，单击“安全”选项卡;选择Local intranet区域&gt;单击“自定义级别”。<br>a.按照附图QA00000125695_4中的规格进行操作。<br>b.重新启动计算机。</li>
-</ol>
-<img src="eDrawings网页浏览/QA00000125695_4.png">
-
-<ol start="3">
+<li><p>在“Internet选项”中，单击“安全”选项卡;选择Local intranet区域&gt;单击“自定义级别”。<br>a.按照附图QA00000125695_4中的规格进行操作。<br>b.重新启动计算机。</p>
+<img src="http://8.162.5.68:6196/Hexo/QA00000125695_4.png">
+</li>
 <li><p>打开Windows®注册表编辑器。</p>
 </li>
 <li><p>警告:<br>不正确地编辑注册表可能会严重损坏操作系统。SOLIDWORKS技术支持团队强烈建议您在对注册表进行任何更改之前备份注册表数据。</p>
@@ -112,7 +107,7 @@
 <ol start="8">
 <li>创建一个名称为2500，数据值为0的QWORD键。</li>
 </ol>
-<img src="eDrawings网页浏览/QA00000125695_5.png">
+<img src="http://8.162.5.68:6196/Hexo/QA00000125695_5.png">
 
 
 
@@ -135,6 +130,7 @@
 <p>在 Internet Explorer 9 和更高版本中，如果启用“ActiveX 筛选”功能，它会阻止正常加载 Lync Web App。 您必须禁用它以便使用 Lync Web App。 如果为某个网站启用了“ActiveX 筛选”，则 Internet Explorer 会在地址栏中显示空图标，以指明已经筛选 ActiveX 控件。</p>
 <h1 id="新版本功能"><a href="#新版本功能" class="headerlink" title="新版本功能"></a>新版本功能</h1><p>新版本另存html自带播放器功能，无需上述设置</p>
 <p><strong><a target="_blank" rel="noopener" href="https://help.solidworks.com/2019/chinese-simplified/eDrawings/c_Saving_Files_as_activex_Files.htm">新版本2019后将文件保存为 eDrawings ActiveX 文件</a></strong></p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:eDrawings</p>
 </div>
  			<!-- 引入正文 -->
     </div>	
@@ -162,4 +158,4 @@
 	mermaid.initialize({ theme: 'forest'});
 	</script> <!-- 引入 mermaid 流程图 -->
 	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+</div></body></html>
