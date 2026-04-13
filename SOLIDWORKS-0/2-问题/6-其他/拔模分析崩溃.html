@@ -41,19 +41,19 @@
 </div>
 
 <div id="article"><h1 id="SW-异常-拔模分析崩溃"><a href="#SW-异常-拔模分析崩溃" class="headerlink" title="SW 异常-拔模分析崩溃"></a>SW 异常-拔模分析崩溃</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用拔模分析时崩溃 vcruntime140</p>
-<img src="http://8.162.5.68:6196/Hexo/image1-1776017253055-1.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image1-1776017253055-1.png">
 
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1、使用【开始菜单栏-Windows 系统-命令提示符】”以管理员身份运行”。</p>
-<img src="http://8.162.5.68:6196/Hexo/image2-1776017253056-2.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image2-1776017253056-2.png">
 
 <p>2、在命令提示符内：依次输入一下内容。</p>
 <p>输入：D:（回车调整到 D 盘）</p>
 <p>输入：cd D:\Program Files\SolidWorks 2020\SOLIDWORKS Corp\SOLIDWORKS（回车进入 ocx 文件目录）</p>
 <p>输入：regsvr32 swatcolorlabel.ocx （回车 regsvr 注册加载 ocx 文件）</p>
-<img src="http://8.162.5.68:6196/Hexo/image3-1776017253056-3.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image3-1776017253056-3.png">
 
 <p>3、确认 regsvr 操作，重启 SW 使用【评估-拔模分析】检查崩溃是否继续复现？</p>
-<img src="http://8.162.5.68:6196/Hexo/image4-1776017253056-4.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image4-1776017253056-4.png">
 
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>VCRuntime140_1:00002743，是指在运行 SolidWorks 时缺失了 Microsoft Visual C++ Redistributable for Visual Studio 2015 库文件而导致的错误。这个错误通常是由于 SolidWorks 和 Windows 操作系统不兼容、操作系统损坏、注册表损坏、防病毒软件以及硬件驱动程序等问题引起的。解决此错误的方法如下：</p>
 <p>1. 安装 Microsoft Visual C++ Redistributable for Visual Studio 2015 库文件。</p>

@@ -43,34 +43,34 @@
 <div id="article"><h1 id="文件预览图不显示"><a href="#文件预览图不显示" class="headerlink" title="文件预览图不显示"></a>文件预览图不显示</h1><p>SOLIDWORKS 缩略图能够便于识别想要打开的模型，并会有图形显示如下图：</p>
 <span id="more"></span>
 
-<img src="http://8.162.5.68:6196/Hexo/image-20231012171244241.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20231012171244241.png">
 
 <h2 id="方法1：检查设置"><a href="#方法1：检查设置" class="headerlink" title="方法1：检查设置"></a>方法1：检查设置</h2><p>1.首先确保 Windows 文件夹选项设置，显示的是缩略图而不是图标。所以，不勾选“始终显示图标，从不显示缩略图”，win7 和 win10 的选项位置略有不同，下图是 win7 的截图。</p>
-<img src="http://8.162.5.68:6196/Hexo/image2-1776082385410-1.jpeg">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image2-1776082385410-1.jpeg">
 
 <p>2.检查 windows 的性能选项，找到视觉效果标签栏，勾选“显示缩略图，而不是显示图标”：</p>
-<img src="http://8.162.5.68:6196/Hexo/image3.jpeg">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image3.jpeg">
 
 <p>3.当 Windows 设定完成后，若还是不显示缩略图，需检查 SOLIDWORKS 系统选项</p>
-<img src="http://8.162.5.68:6196/Hexo/image4.jpeg">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image4.jpeg">
 
 <h2 id="方法2：修复安装"><a href="#方法2：修复安装" class="headerlink" title="方法2：修复安装"></a>方法2：修复安装</h2><p>选项若都没有问题，可再检查 SOLIDWORKS 的文档是否是旧版本，例如电脑上先安装高版本再安装低版本SW，那会有可能导致缩略图不显示的问题(如图部分文件显示)。</p>
 <p>此时需要用高版本修复安装，修复时注意关闭杀毒软件并且有管理员权限。</p>
-<img src="http://8.162.5.68:6196/Hexo/image-20231012170615178.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20231012170615178.png">
 
 <h2 id="方法3：选择默认启动"><a href="#方法3：选择默认启动" class="headerlink" title="方法3：选择默认启动"></a>方法3：选择默认启动</h2><p>SWLauncher启动方法：文件的预览和文件类型图标是由swshellLauncher.exe程序作用。因此，如果SW文件的启动方式被修改了那么。文件的图标以及预览图也会异常。如图</p>
-<img src="http://8.162.5.68:6196/Hexo/文件启动异常1.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/文件启动异常1.png">
 
 <p>方法：则需要SW文件【右键-打开方式-选择其他应用】修改默认启动程序。</p>
-<img src="http://8.162.5.68:6196/Hexo/文件启动异常2.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/文件启动异常2.png">
 
 <p>如果没有找到SOLIDWORKS Launcher程序，那就选到“在这台电脑上查找其他应用”</p>
-<img src="http://8.162.5.68:6196/Hexo/image-20240920135750951.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20240920135750951.png">
 
 <p>如果没找到这个模型程序“SOLIDWORKS Launcher”，可以手动到如下位置查找。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\SOLIDWORKS\SOLIDWORKS 2018\SOLIDWORKS Corp\SOLIDWORKS</span><br></pre></td></tr></table></figure>
 
-<img src="http://8.162.5.68:6196/Hexo/image-20240920135923470.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20240920135923470.png">
 
 <p>这个默认启动也可以在【window设置-默认应用-按文件类型指导默认应用】里设置，这点可以参考：</p>
 <ol>
@@ -80,7 +80,7 @@
 </ol>
 <h2 id="方法4：恢复文件关联"><a href="#方法4：恢复文件关联" class="headerlink" title="方法4：恢复文件关联"></a>方法4：恢复文件关联</h2><p>高版本的SOLIDWORKS软件可能优化了swshellLauncher.exe这个程序，你可能会找不到他。</p>
 <p>那你可以用管理员启动程序，在设置【系统选项，普通，恢复文件关联】点击下，恢复程序及其SOLIDWORKS格式文件的关联。</p>
-<img src="http://8.162.5.68:6196/Hexo/恢复文件关联.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/恢复文件关联.png">
 
 
 
@@ -115,7 +115,7 @@
 
 <h2 id="方法：恢复文件关联"><a href="#方法：恢复文件关联" class="headerlink" title="方法：恢复文件关联"></a>方法：恢复文件关联</h2><p>他那个文件关联的，是要在注册表：计算机\HKEY_CLASSES_ROOT。估计也是安装时候没权限，所以才提示没正常写入注册表。</p>
 <p>用管理员启动程序，在设置【系统选项，普通，恢复文件关联】点击下，恢复程序及其SOLIDWORKS格式文件的关联。</p>
-<img src="http://8.162.5.68:6196/Hexo/恢复文件关联-1776082427886-1.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/恢复文件关联-1776082427886-1.png">
 
 <p>这个关联通常是指：</p>
 <p>1、程序的默认启动方式，会影响是否支持双击打开文件；</p>

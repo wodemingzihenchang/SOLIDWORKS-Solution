@@ -46,31 +46,31 @@
 
 <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>当存在未附加到SQL Server的ConisioMasterDb数据库文件时，且数据库数据文件夹里却有主数据库文件时就会发生这种情况。</p>
 <p>在没有ConisioMasterDb数据库的服务器上创建新的文件库时，该数据库将尝试创建ConisioMasterDb库文件（.mdf和.ldf)，如果在数据库文件中存在同名的现有文件文件夹，则创建失败。</p>
-<img src="http://8.162.5.68:6196/Hexo/4-1776018304363-1.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/4-1776018304363-1.png">
 
 <p>造成这种情况的原因很可能是卸载了以前托管文件库数据库的SQL服务器并重新安装，从而删除(分离)所有用户定义的数据库(即文件库数据库和ConisioMasterDb数据库)。重新安装SQL服务器不会自动重新连接到孤立的数据库文件。</p>
 <p>MDF（Master Database Fie）包含数据库的所有主要信息<br>LDF 跟踪数据库中所做的更改。</p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>如果以前安装了 SQL，则这两个文件可能存在，并且在创建第一个 Vault 期间无法覆盖。要解决此问题，请执行以下操作：</p>
 <p>1、首先确保你有SQL和PDM的备份，</p>
 <p>2、打开【Microsoft SQL Server Management】确认没有ConisioMasterDb数据库连接到创建失败的SQL服务器。删除“创建失败”的PDM库，如果有的话。</p>
-<img src="http://8.162.5.68:6196/Hexo/1-1776018305672-3.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/1-1776018305672-3.png">
 
 <p>3、在删除PDM库时，建议在删除对话框中选择“Close existing connections”。</p>
-<img src="http://8.162.5.68:6196/Hexo/2-1776018308880-5.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/2-1776018308880-5.png">
 
 <p>删除 ConisioMasterDb.mdf 和 ConisioMasterDb.ldf。可以从SQL【服务器属性-数据库设置】里找到文件位置。默认情况下，这些文件位于：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA</span><br></pre></td></tr></table></figure>
 
-<img src="http://8.162.5.68:6196/Hexo/4-1776018311264-7.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/4-1776018311264-7.png">
 
 <p>删除这些文件后，尝试再次创建新的PDM文件库，它现在应该成功完成。</p>
 <h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>请注意。如果在卸载和重新安装时意外地得到孤立的数据库文件SQL服务器-(很可能)重新附加到数据库。例如，如果你有一个工作文件库设置，然后重新安装SQL服务器，之后无法使用文件库。</p>
 <p>在升级或重新安装SQL服务器之前，您应该始终执行任何SQL数据库的备份软件。</p>
 <p>若要重新附加到数据库文件，请右键单击数据库节点并选择Attach。</p>
-<img src="http://8.162.5.68:6196/Hexo/21.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/21.png">
 
 <p>浏览到孤立的.mdf文件并重新附加到它。</p>
-<img src="http://8.162.5.68:6196/Hexo/22.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/22.png">
 
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>

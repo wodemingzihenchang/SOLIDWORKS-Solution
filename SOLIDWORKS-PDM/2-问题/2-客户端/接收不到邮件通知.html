@@ -40,12 +40,12 @@
     <span id="post-date">2023-10-18 14:58:26</span>
 </div>
 
-<div id="article"><h1 id="接收不到邮件通知"><a href="#接收不到邮件通知" class="headerlink" title="接收不到邮件通知"></a>接收不到邮件通知</h1><img src="http://8.162.5.68:6196/Hexo/重命名失败.png">
+<div id="article"><h1 id="接收不到邮件通知"><a href="#接收不到邮件通知" class="headerlink" title="接收不到邮件通知"></a>接收不到邮件通知</h1><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/重命名失败.png">
 
 <h2 id="检查原因"><a href="#检查原因" class="headerlink" title="检查原因"></a>检查原因</h2><p>登陆SQL管理，在对应数据库中查看该列表：dbo.DocumentActionInfo</p>
-<p><img src="http://8.162.5.68:6196/Hexo/image-20250908103621161.png" alt="image-20250908103621161"></p>
+<p><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20250908103621161.png" alt="image-20250908103621161"></p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p> 如果发现这里的确有积压，那就重启PDM数据库服务器；</p>
-<p><img src="http://8.162.5.68:6196/Hexo/image-20250908103724938.png" alt="image-20250908103724938"></p>
+<p><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20250908103724938.png" alt="image-20250908103724938"></p>
 <h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>也可以在SQL对应的数据库进行积压清理，语句为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE TABLE DocumentActionInfo</span><br></pre></td></tr></table></figure>
 

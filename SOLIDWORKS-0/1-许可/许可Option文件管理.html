@@ -48,19 +48,19 @@
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>这里我准备了一个示例文件，其功能是保证有【2】个【solidworks】许可是固定在【某几个电脑】使用：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HOST_GROUP &lt;组名1&gt; &lt;计算机名&gt;</span><br><span class="line">RESERVE 2 solidworks HOST_GROUP &lt;组名1&gt;</span><br></pre></td></tr></table></figure>
 
-<img src="http://8.162.5.68:6196/Hexo/image-20250805152233459.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20250805152233459.png">
 
 
 
-<img src="http://8.162.5.68:6196/Hexo/image-20250805152302768.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20250805152302768.png">
 
 
 
-<img src="http://8.162.5.68:6196/Hexo/image-20250805152347903.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20250805152347903.png">
 
 
 
-<img src="http://8.162.5.68:6196/Hexo/image-20250805153107441.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20250805153107441.png">
 
 
 
@@ -69,7 +69,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9:20:57 (SW_D) (@SW_D-SLOG@) Options file used: C:\Program Files (x86)\SOLIDWORKS SolidNetWork License Manager\licenses\sw_d.opt</span><br></pre></td></tr></table></figure>
 
 <h2 id="后续修改"><a href="#后续修改" class="headerlink" title="后续修改"></a>后续修改</h2><p>后续修改不用每次都修改激活许可，直接修改opt文件，然后在服务器许可程序里，直接点击重读即可。重读，相当于重新加载许可文件和option文件，</p>
-<img src="http://8.162.5.68:6196/Hexo/image-20260330191831656.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20260330191831656.png">
 
 <h1 id="功能语法"><a href="#功能语法" class="headerlink" title="功能语法:"></a>功能语法:</h1><p>Option 文件可以用来管理许可的分配。具体而言，Option 文件可以实现以下目的：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--设置分组--&gt;</span></span><br><span class="line">GROUP             #定义一个组，基于用户名</span><br><span class="line">HOST_GROUP        #定义一个组，基于电脑名</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--设置限制许可--&gt;</span></span><br><span class="line">BORROW_LOWWATER   #禁止借出许可</span><br><span class="line">EXCLUDE           #拒绝某个用户访问某个许可</span><br><span class="line">EXCLUDE_BORROW    #拒绝某个用户借用某个许可</span><br><span class="line">EXCLUDEALL        #拒绝某个用户使用所有许可</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--设置保留许可--&gt;</span></span><br><span class="line">INCLUDE           #允许一个用户使用某个许可</span><br><span class="line">INCLUDE_BORROW    #允许某个用户借用许可</span><br><span class="line">INCLUDEALL        #允许某个用户使用所有的许可</span><br><span class="line">MAX               #为用户优先保留许可</span><br><span class="line">RESERVE           #为某个组保留许可（保留是指至少有保留的许可，有空闲许可还能用）</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--设置超时--&gt;</span></span><br><span class="line">MAX_BORROW_HOURS  #设定许可借用最长时间</span><br><span class="line">TIMEOUT           #为某个许可设置超时</span><br><span class="line">TIMOUTALL         #为所有的许可设置超时</span><br><span class="line">没有TIMEOUT设置时，默认是2小时没有在使用程序会自动回收</span><br></pre></td></tr></table></figure>
@@ -111,7 +111,7 @@
 
 <p><strong>超时回收影响</strong></p>
 <p> 许可超时的客户端的 SOLIDWORKS 会话仍然活跃。如果该用户返回电脑并重新激活 SOLIDWORKS 会话，如果有新的许可，它会获得新的许可。如果客户端未重启 SOLIDWORKS 会话，或没有可用的许可，则会出现以下警告：</p>
-<img src="http://8.162.5.68:6196/Hexo/image-20260112144857690.png">
+<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20260112144857690.png">
 
 <p>如果会话长时间处于非激活状态，或者客户端无法获得许可，点击<strong>消息中的确定</strong>会关闭 SOLIDWORKS。</p>
 <p>要了解如何在选项文件中实现 TIMEOUT 关键词，请点击以下链接：</p>
