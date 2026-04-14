@@ -43,19 +43,19 @@
 <div id="article"><h1 id="许可借出"><a href="#许可借出" class="headerlink" title="许可借出"></a>许可借出</h1><p>无论是服务器还是客户端，你都需要学会打开这个SOLIDWORKS服务器程序（或客户端程序）进行问题排查。打开【开始&#x2F;菜单-solidworks工具-solidnetworks license manage client】</p>
 <p>客户端：SolidNetWork License Manager Client 20xx</p>
 <p>服务端：SolidNetWork License Manager Server 20xx</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/打开程序.png">
+<img src="https://frp-leg.com:18981//Hexo/打开程序.png">
 
 <p>在许可借用里选择借用时长，选择借用的产品即可（参考红字操作）。归还的话参考蓝字操作</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/借用&归还许可.png">
+<img src="https://frp-leg.com:18981//Hexo/借用&归还许可.png">
 
 <h1 id="许可借出问题"><a href="#许可借出问题" class="headerlink" title="许可借出问题"></a>许可借出问题</h1><h2 id="无法借用"><a href="#无法借用" class="headerlink" title="无法借用"></a>无法借用</h2><p>借用许可证时发生错误“无法借用许可证。 没有可供借用的许可证 (-67, 147, 0)”? 在以下情况下会发生此错误：</p>
 <p>1、无空闲许可：检查客户端许可程序，检查“许可的使用”是否正常有空闲许可证。如果许可证总数为0，则需检查“服务器”的连接问题。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/许可的使用.png">
+<img src="https://frp-leg.com:18981//Hexo/许可的使用.png">
 
 <p>2、许可文件限制：管理员在选项文件中设置了选项 BORROW_LOWWATER。 请参见 licensingenduserguide.pdf 了解更多信息。</p>
 <h2 id="无法借出2"><a href="#无法借出2" class="headerlink" title="无法借出2"></a>无法借出2</h2><p>您目前已将”SOLIDWORKS Standard’检出。您在尝试借用前必须将之检入。</p>
 <p>方法：关闭SOLIDWORKS 程序（或对应产品的程序），保证当前是没有检出的许可借用状态，再去借出许可。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/借出许可失败.png">
+<img src="https://frp-leg.com:18981//Hexo/借出许可失败.png">
 
 <h2 id="没有借用信息"><a href="#没有借用信息" class="headerlink" title="没有借用信息"></a>没有借用信息</h2><p>如果客户端计算机借用 SOLIDWORKS产品，但许可并未出现在 SolidNetWork License (SNL) Manager 的“借用的产品许可”列表中，该怎么办？</p>
 <p><strong>方法：</strong></p>
@@ -64,20 +64,20 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\FLEXlm License Manager\Borrow</span><br></pre></td></tr></table></figure>
 
 <p>4.确认有一个注册表项显示借用的产品。<br>5.将“FLEXlm License Manager”注册表文件夹重命名为类似“FLEXlm License Manager_old”的文件夹。<br>6.打开 SNL Manager。确认没有任何更改，然后关闭 SNL Manager。<br>7.返回到注册表编辑器，并将注册表文件夹名称恢复为“FLEXlm License Manager”。<br>8.打开 SNL Manager &gt; 单击“许可借用”选项卡。借用的产品现在显示在“借用的产品许可”区域中。</p>
-<h2 id="系统时钟已重新设定"><a href="#系统时钟已重新设定" class="headerlink" title="系统时钟已重新设定"></a>系统时钟已重新设定</h2><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/系统时钟已重新设定.png">
+<h2 id="系统时钟已重新设定"><a href="#系统时钟已重新设定" class="headerlink" title="系统时钟已重新设定"></a>系统时钟已重新设定</h2><img src="https://frp-leg.com:18981//Hexo/系统时钟已重新设定.png">
 
 <h1 id="许可归还问题"><a href="#许可归还问题" class="headerlink" title="许可归还问题"></a>许可归还问题</h1><p>在客户端机器上，将“借用”文件夹添加到注册表中，<!--参考QA00000115374--></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER/Software/Flexlm License Manager/</span><br></pre></td></tr></table></figure>
 
 <p>用户不能删除或编辑此文件夹。如果发生这种情况，他们将无法将许可证“返回”给服务器，必须等待借用期到期才能再次使用许可证。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/不能归还许可.png">
+<img src="https://frp-leg.com:18981//Hexo/不能归还许可.png">
 
 
 <p>既然信息是填入到“HKEY_CURRENT_USER”里的，也就意味着许可是跟着用户走的，而不是电脑。这会出现同一电脑不同用户登录时，无法使用其他用户借用来的许可。</p>
 <h2 id="注册表归还"><a href="#注册表归还" class="headerlink" title="注册表归还"></a>注册表归还</h2><p>重命名注册表Borrow位置，</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\FLEXlm License Manager\Borrow</span><br></pre></td></tr></table></figure>
 
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/许可借出注册表.png">
+<img src="https://frp-leg.com:18981//Hexo/许可借出注册表.png">
 
 <p>再删除客户端“C:\ProgramData\FLEXnet”文件夹后，许可会重置并归还。</p>
 <h2 id="强制归还"><a href="#强制归还" class="headerlink" title="强制归还"></a>强制归还</h2><p>A1、请确保客户端已经完全退出，在“任务管理器”，将 SOLIDWORKS 结束进程</p>
@@ -85,7 +85,7 @@
 <p>确保是 SOLIDWORKS 2020 SP5 及后的版本； 在服务器上使用 CD 命令，将目录指定到 license file 路径，一般目录如下：再运行 </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Program Files (x86)\SOLIDWORKS SolidNetWork License Manager\utils</span><br><span class="line">Imutil Imremove –c[“path to the license file”] [feature] [user] [computer]  [Display]；</span><br><span class="line"></span><br><span class="line">其中： 对照下图红框信息</span><br><span class="line">路径（path to the license file）：到sw d.lic路径；</span><br><span class="line">特征（Feature）：产品特征名，SOLIDWORKS 就是 SOLIDWORKS； </span><br><span class="line">用户（User）：客户端用户名；</span><br><span class="line">电脑（Computer）：客户端机器名；</span><br><span class="line">显示（Display）：一般同客户端机器名；</span><br></pre></td></tr></table></figure>
 
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/归还许可.png">
+<img src="https://frp-leg.com:18981//Hexo/归还许可.png">
 
 <p>注：后几者可在许可管理器-许可证的使用中查看。（若其它电脑远程， 显示那项有所不同， 不是被查询的客户端机器名）</p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>

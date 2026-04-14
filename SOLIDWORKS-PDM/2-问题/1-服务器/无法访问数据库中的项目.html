@@ -40,7 +40,7 @@
     <span id="post-date">2025-03-04 16:19:10</span>
 </div>
 
-<div id="article"><h1 id="无法访问数据库中的项目"><a href="#无法访问数据库中的项目" class="headerlink" title="无法访问数据库中的项目"></a>无法访问数据库中的项目</h1><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/无法访问数据库中的项目.png">
+<div id="article"><h1 id="无法访问数据库中的项目"><a href="#无法访问数据库中的项目" class="headerlink" title="无法访问数据库中的项目"></a>无法访问数据库中的项目</h1><img src="https://frp-leg.com:18981//Hexo/无法访问数据库中的项目.png">
 
 <h2 id="服务器名称"><a href="#服务器名称" class="headerlink" title="服务器名称"></a>服务器名称</h2><p>检查客户端这里的服务器是否正常或者该服务器连接访问是否正常</p>
 <p>在客户端工作站注册表中，库数据库名称存储在以下位置的“DbName”值中：</p>
@@ -49,25 +49,25 @@
 <p>在存档服务器注册表中，库数据库名称存储在以下位置的“SQLDbName”中：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\[库名称]</span><br></pre></td></tr></table></figure>
 
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20241021131959307png">
+<img src="https://frp-leg.com:18981//Hexo/image-20241021131959307png">
 
 
 <h2 id="sa密码不正确"><a href="#sa密码不正确" class="headerlink" title="sa密码不正确"></a>sa密码不正确</h2><p>如果日志文件中的错误条目表明 SQL 登录失败，这可能是由于存储的 “sa” 密码不正确所致</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/error-log-entry.png">
+<img src="https://frp-leg.com:18981//Hexo/error-log-entry.png">
 
 <p>可从 【Windows 开始&gt;所有程序&gt;启动存档服务器配置工具】</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20241029183819717.png">
+<img src="https://frp-leg.com:18981//Hexo/image-20241029183819717.png">
 
 <p>右键单击生成错误的 Vault，然后选择 Properties （属性）。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20241029183903509.png">
+<img src="https://frp-leg.com:18981//Hexo/image-20241029183903509.png">
 
 <p>在登录选项卡下，将密码设置为默认或重新输入密码以确保密码正确。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20241029184025084.png">
+<img src="https://frp-leg.com:18981//Hexo/image-20241029184025084.png">
 
 <p>重新启动服务。</p>
 <h2 id="缺少主数据库"><a href="#缺少主数据库" class="headerlink" title="缺少主数据库"></a>缺少主数据库</h2><p>如果将库数据库移动到新的服务器上却忘记移动 ConisioMasterDb，便会发生此错误。如果您重新安装 SQL 服务器并且没有重新连接 ConisioMasterDb 数据库，也会发生此错误。</p>
 <p>要纠正此问题，请确保已在 SQL 服务器上恢复 ConisioMasterDb 数据库。或者，重新创建 ConisioMasterDb 数据库</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20241012105833743.png">
+<img src="https://frp-leg.com:18981//Hexo/image-20241012105833743.png">
 
 <p><strong>方法1</strong></p>
 <p>要解决此问题并允许删除转换，可以使用脚本在删除转换之前删除链接到该转换的所有通知项。</p>
@@ -80,7 +80,7 @@
 <p>删除转换后保存工作流现在应该成功完成。</p>
 <p><strong>方法2</strong></p>
 <p>参考安装手册P35。有一种情况是主数据库log文件满了导致。需要清除下日志。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/错误日志.png">
+<img src="https://frp-leg.com:18981//Hexo/错误日志.png">
 
 
 
@@ -92,7 +92,7 @@
 <p>导致<br>如果我们关注其中一个在修改时导致保存错误的转换(RnD EditingRequired)，我们可以看到它被配置为通知根文件夹“\Projects\”下的所有文件的两个组</p>
 <p>此转换的两个组的通知分配为NotificationID &#x3D; 547和548</p>
 <h2 id="问题日志-1"><a href="#问题日志-1" class="headerlink" title="问题日志"></a>问题日志</h2><p>Named Pipes Provider：Could nat open a connection to SQl Server [53].</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/53.png">
+<img src="https://frp-leg.com:18981//Hexo/53.png">
 
 
 

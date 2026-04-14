@@ -40,7 +40,7 @@
     <span id="post-date">2023-11-01 16:59:40</span>
 </div>
 
-<div id="article"><h1 id="SOLIDWORKS-Routing库管理器"><a href="#SOLIDWORKS-Routing库管理器" class="headerlink" title="SOLIDWORKS Routing库管理器"></a>SOLIDWORKS Routing库管理器</h1><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/Routing库管理器.png">
+<div id="article"><h1 id="SOLIDWORKS-Routing库管理器"><a href="#SOLIDWORKS-Routing库管理器" class="headerlink" title="SOLIDWORKS Routing库管理器"></a>SOLIDWORKS Routing库管理器</h1><img src="https://frp-leg.com:18981//Hexo/Routing库管理器.png">
 
 <p>【Routing Library Manage-电缆电线库向导】打开现有库，Routing Library Manager 包含以下项目： </p>
 <h1 id="Routing-零部件向导"><a href="#Routing-零部件向导" class="headerlink" title="Routing 零部件向导"></a>Routing 零部件向导</h1><p>准备用于 Routing 的零件。可以使用现有的零件或生成新零件，然后使用向导准备零件。</p>
@@ -48,7 +48,7 @@
 <h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>用于生成新的库、以 Excel 格式输入库或打开现有的库。</p>
 <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>当现在以Excel创建时，会进入设置页。遵循设置提示的“列名称对应”来导入Excel表即可。</p>
 <p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2018/Chinese-Simplified/SolidWorks/sldpiping/t_creating_cable_wire_excel.htm">创建电缆电线、零部件或覆盖层 Excel 文件 - 2018 - SOLIDWORKS 帮助</a></p>
-<h2 id="现有库"><a href="#现有库" class="headerlink" title="现有库"></a>现有库</h2><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/电缆电线库.png">
+<h2 id="现有库"><a href="#现有库" class="headerlink" title="现有库"></a>现有库</h2><img src="https://frp-leg.com:18981//Hexo/电缆电线库.png">
 
 <p>在XML文件是这样表示的</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">CableLibrary</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.solidworks.com/cablelibrary&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">cable</span> <span class="attr">ID</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">cable</span> <span class="attr">ID</span>=<span class="string">&quot;2&quot;</span>&gt;</span><span class="comment">&lt;!-- 电缆库 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">wire</span> <span class="attr">ID</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">wire</span> <span class="attr">ID</span>=<span class="string">&quot;2&quot;</span>&gt;</span><span class="comment">&lt;!-- 电线库 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">RibbonCable</span> <span class="attr">ID</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">RibbonCable</span> <span class="attr">ID</span>=<span class="string">&quot;2&quot;</span>&gt;</span><span class="comment">&lt;!-- 带电缆库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">CableLibrary</span>&gt;</span></span><br></pre></td></tr></table></figure>

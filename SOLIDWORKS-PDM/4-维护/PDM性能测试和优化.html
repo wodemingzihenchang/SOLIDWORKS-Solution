@@ -44,7 +44,7 @@
 
 
 
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/性能改善流程.png">
+<img src="https://frp-leg.com:18981//Hexo/性能改善流程.png">
 
 <h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><pre class="mermaid">graph LR
 PDM_report-->B1-->B2</pre>
@@ -66,7 +66,7 @@ PDM_report-->B1-->B2</pre>
 <h3 id="PDM配置调优"><a href="#PDM配置调优" class="headerlink" title="PDM配置调优"></a>PDM配置调优</h3><h3 id="硬件升级"><a href="#硬件升级" class="headerlink" title="硬件升级"></a>硬件升级</h3><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h2><p>掌握管理当地缓存的方法：当用户获取文件库中的一个文件时,文件的副本将会被加载到本地视图中.从计算机资源以及性能方面考虑,用户应该管理当地缓存并将不需要的文件从本地清理.</p>
 <p>•移除本地副本</p>
 <p>•清理当地缓存</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/缓存.png">
+<img src="https://frp-leg.com:18981//Hexo/缓存.png">
 
 <h2 id="检入慢-缓存影响"><a href="#检入慢-缓存影响" class="headerlink" title="检入慢-缓存影响"></a>检入慢-缓存影响</h2><p>原理：</p>
 <p>检入检出和变更状态在PDM运行逻辑就是将SQL表内的相关列值信息做更新，在多个表内插入或新建新版本的所有记录和列值，然后将所有新产生的新版本物理文件上传到存档服务器内的0-F目录内，并更新对应的index.xml文件。</p>
@@ -75,9 +75,9 @@ PDM_report-->B1-->B2</pre>
 <p>要验证设置：</p>
 <p>在 SOLIDWORKS PDM 管理工具中，右键单击“用户”，然后单击“设置”。<br>在“检入”部分中，停用“在整个库中查找工程图”选项，然后重试检入。</p>
 <h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><h2 id="SQL数据库的事务日期清理"><a href="#SQL数据库的事务日期清理" class="headerlink" title="SQL数据库的事务日期清理"></a>SQL数据库的事务日期清理</h2><p>ldf(分离&#x2F;附加)</p>
-<p><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20240403153027814.png" alt="image-20240403153027814"></p>
+<p><img src="https://frp-leg.com:18981//Hexo/image-20240403153027814.png" alt="image-20240403153027814"></p>
 <p>附加</p>
-<p><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20240403153325078.png" alt="image-20240403153325078"></p>
+<p><img src="https://frp-leg.com:18981//Hexo/image-20240403153325078.png" alt="image-20240403153325078"></p>
 <h2 id="存档服务器根目录0-F迁移"><a href="#存档服务器根目录0-F迁移" class="headerlink" title="存档服务器根目录0-F迁移"></a>存档服务器根目录0-F迁移</h2><p>停止存档服务移动</p>
 <p>0-F存档库中需要更换路径的文件夹</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\&lt;库名&gt;\ArchiveTable\</span><br></pre></td></tr></table></figure>
@@ -106,7 +106,7 @@ PDM_report-->B1-->B2</pre>
 <li>遍历查询SQL数据库</li>
 <li>务必在下班时间操作</li>
 </ul>
-<p><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20240403154324604.png" alt="image-20240403154324604"></p>
+<p><img src="https://frp-leg.com:18981//Hexo/image-20240403154324604.png" alt="image-20240403154324604"></p>
 <h2 id="清理服务彻底移除掉已销毁数据"><a href="#清理服务彻底移除掉已销毁数据" class="headerlink" title="清理服务彻底移除掉已销毁数据"></a>清理服务彻底移除掉已销毁数据</h2><h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
  			<!-- 引入正文 -->

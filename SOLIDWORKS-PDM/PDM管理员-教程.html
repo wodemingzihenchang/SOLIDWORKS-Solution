@@ -69,10 +69,10 @@
 </ul>
 <h1 id="2管理工具"><a href="#2管理工具" class="headerlink" title="2管理工具"></a>2管理工具</h1><p>PDM的设置和实现的效果等配置，都是在管理工具里操作的。管理工具在【开始&#x2F;程序-SOLIDWORKS PDM-管理】打开</p>
 <h2 id="本地设置"><a href="#本地设置" class="headerlink" title="本地设置"></a>本地设置</h2><p>日志文件：记载了客户端中的任何问题信息</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/日志文件.png">
+<img src="https://frp-leg.com:18981//Hexo/日志文件.png">
 
 <p>设置</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/本地设置.png">
+<img src="https://frp-leg.com:18981//Hexo/本地设置.png">
 
 <p>组策略</p>
 <p>可以在本地系统里修改或添加PDM策略，利用活动目录、压缩存档文件、启动备份带我去等，组策略可以分发到文件库视图。</p>
@@ -80,18 +80,18 @@
 <p>视图设置无需账户登录，但有可能需要服务器电脑的账户登录</p>
 <p>方法2：PDM管理</p>
 <p>打开【“开始菜单”&gt;“SOLIDWORKS PDM”&gt;“管理”】程序。找到PDM数据库，右键连接。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/clip_image002.jpg">
+<img src="https://frp-leg.com:18981//Hexo/clip_image002.jpg">
 
 <p>连接时，会要求你进行登录，输入你的【用户名称】和【密码】即可。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/image-20241011173539365.png">
+<img src="https://frp-leg.com:18981//Hexo/image-20241011173539365.png">
 
 <p>连接登录后，再【右键-生成当地视图】，并在提示共享库视图，选择”是“：以便该计算机上的其它用户访问</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/clip_image002-17286392605991.jpg">
+<img src="https://frp-leg.com:18981//Hexo/clip_image002-17286392605991.jpg">
 
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/clip_image002-17286392699432.jpg">
+<img src="https://frp-leg.com:18981//Hexo/clip_image002-17286392699432.jpg">
 
 <p>创建快捷方式：打开Windows资源管理器,将PDM库的本地视图拖至桌面创建其快捷方式，或者拖放到快速访问进行固定，方便以后使用PDM</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/clip_image002-17286393915503.jpg">
+<img src="https://frp-leg.com:18981//Hexo/clip_image002-17286393915503.jpg">
 
 <h2 id="设置概述"><a href="#设置概述" class="headerlink" title="设置概述"></a>设置概述</h2><ul>
 <li><!-- 视图设置--></li>
@@ -115,34 +115,34 @@
 
 <h1 id="3用户和组"><a href="#3用户和组" class="headerlink" title="3用户和组"></a>3用户和组</h1><h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><p>通过添加不同权限的用户来控制对库的访问，用户名在每个库里是唯一的，同个用户可以存在于其他库里。</p>
 <p>在新建用户时，我们还可以从已有用户权限处进行复制设置（标记3）。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/新建用户.png">
+<img src="https://frp-leg.com:18981//Hexo/新建用户.png">
 
 <h2 id="用户属性"><a href="#用户属性" class="headerlink" title="用户属性"></a>用户属性</h2><p>在用户属性里包括了基本的选项、分组、以及各类操作的权限（例如：管理、文件夹、流程等等）</p>
 <p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/admin/IDD_USER_GROUP_GENERAL.htm">详见帮助说明</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">组：您可以将用户添加到现有的 SOLIDWORKS PDM 组。</span><br><span class="line">管理权限：设置权限来控制用户可执行的管理任务。</span><br><span class="line">文件夹权限:查看和分配文件夹权限。</span><br><span class="line">状态权限：给用户分配访问特定状态文件夹的权限。</span><br><span class="line">变换权限：给用户分配运行特定过渡的权限。</span><br><span class="line">每个文件的权限：选择该用户创建的文件对所有用户可见还是对特定组可见。</span><br><span class="line">搜索卡：设置用户访问库搜索卡的权限。</span><br><span class="line">材料明细表：设置用户访问库材料明细表的权限。</span><br><span class="line">任务：设置用户访问任务的权限。</span><br><span class="line">模板：设置用户访问库模板的权限。</span><br><span class="line">警告：指定阻止检入、检出、更改状态和递增修订版本等操作的条件。</span><br><span class="line">设定密码：可以为用户修改并确认新密码。(如忘记密码见问题文章《忘记密码》操作)</span><br><span class="line">发送邮件：打开 SOLIDWORKS PDM 电子邮件编辑器。</span><br><span class="line">设置：可以自定义 SOLIDWORKS PDM 客户端行为。</span><br></pre></td></tr></table></figure>
 
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/属性界面-1776086754290-1.png">
+<img src="https://frp-leg.com:18981//Hexo/属性界面-1776086754290-1.png">
 
 <h2 id="用户设置"><a href="#用户设置" class="headerlink" title="用户设置"></a>用户设置</h2><p>在设置里包括了我们用户使用客户端时的一些内容，具体这部分先不展开讨论。<a target="_blank" rel="noopener" href="https://help.solidworks.com/2022/chinese-simplified/EnterprisePDM/Admin/c_settings_db.htm?id=2de625b68eb14436bf1850e13bcc1ffe#Pg0">详见帮助说明</a></p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/用户设置-1776086754290-3.png">
+<img src="https://frp-leg.com:18981//Hexo/用户设置-1776086754290-3.png">
 
 <h2 id="添加组"><a href="#添加组" class="headerlink" title="添加组"></a>添加组</h2><p>添加一个新组</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/添加组-1776086754290-2.png">
+<img src="https://frp-leg.com:18981//Hexo/添加组-1776086754290-2.png">
 
 <h2 id="组管理"><a href="#组管理" class="headerlink" title="组管理"></a>组管理</h2><p>组管理里的属性项显示和用户是类似的，会有例如：管理、文件夹、流程等等。重点我们看“组成员”。这里是我们设置该组里的成员对象</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/组管理-1776086754290-4.png">
+<img src="https://frp-leg.com:18981//Hexo/组管理-1776086754290-4.png">
 
 <h2 id="丢失用户登录信息"><a href="#丢失用户登录信息" class="headerlink" title="丢失用户登录信息"></a>丢失用户登录信息</h2><p>如果一个存档文件库内用户的信息无法从存档服务器内正确读出，则在管理工具内用户名称左上方会有一个红色的十字图标。表示该用户在修复相应的错误前将无法登录到文件库，</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/丢失用户登录信息.png">
+<img src="https://frp-leg.com:18981//Hexo/丢失用户登录信息.png">
 
-<h2 id="Windows或LDAP登录"><a href="#Windows或LDAP登录" class="headerlink" title="Windows或LDAP登录"></a>Windows或LDAP登录</h2><img src="https://wodemingzihenchang.github.io/SOLIDWORKS/Windows登录设置.png">
+<h2 id="Windows或LDAP登录"><a href="#Windows或LDAP登录" class="headerlink" title="Windows或LDAP登录"></a>Windows或LDAP登录</h2><img src="https://frp-leg.com:18981//Hexo/Windows登录设置.png">
 
 <p>在用Windows登录前，存档服务器的系统登录设置中必须包含已添加为库用户的组，这些组必须加入存档服务器配置工具中的Windows登录设置</p>
 <p>可按以下步骤添加新用户:</p>
 <p>(1)在【管理工具-用户和组】右键单击【用户】，然后选择【新用户】</p>
 <p>(2)在【添加用户】对话框内就不会列出PDM的用户,而是采用Windows登录时所指定的用户。如果需要列出可用用户名称列表，需要单击【列举Windows用户】按钮。（如果用户域比较大，生成用户列表可能需要较长的时间。基于这点考虑，建议通过单击【新用户】手工方式添加用户。）</p>
 <p>(3)在“新用户”对话框内输入一个用户名，然后单击【确定】，则自动从系统用户列表中搜索并添加该用户到所选文件库。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/Windows登录.png">
+<img src="https://frp-leg.com:18981//Hexo/Windows登录.png">
 
 <p>(4)添加用户详细信息。采用 Windows 登录方式，所使用的用户名和密码都无法在此处修改。</p>
 <h2 id="admin"><a href="#admin" class="headerlink" title="admin"></a>admin</h2><p>特殊的用户账号，其会有一些额外的管理权限（是自带的无法通过权限选项来赋予的），例如：</p>
@@ -157,13 +157,13 @@
 <li>文件卡</li>
 </ul>
 <h2 id="卡编辑器"><a href="#卡编辑器" class="headerlink" title="卡编辑器"></a>卡编辑器</h2><p>数据卡类似我们的窗口编辑工具，类似VB或Winform窗口的编辑。我们可以在窗口编辑区域，编辑文本、编辑框、图片等</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/卡编辑器.png">
+<img src="https://frp-leg.com:18981//Hexo/卡编辑器.png">
 
 
 
 <p>卡关联，</p>
 <p>在保存数据卡时，需要留意保存的数据“卡类型”和“扩展名”</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/保存卡-1776086754290-5.png">
+<img src="https://frp-leg.com:18981//Hexo/保存卡-1776086754290-5.png">
 
 <h2 id="设计数据卡"><a href="#设计数据卡" class="headerlink" title="设计数据卡"></a>设计数据卡</h2><ul>
 <li>控件</li>
@@ -236,7 +236,7 @@
 <li>身份验证</li>
 </ul>
 <p>勾选“身份验证后，在做状态变更时会需要你填写用户密码。</p>
-<img src="https://wodemingzihenchang.github.io/SOLIDWORKS/流程身份验证.png">
+<img src="https://frp-leg.com:18981//Hexo/流程身份验证.png">
 
 <h2 id="修订版"><a href="#修订版" class="headerlink" title="修订版"></a>修订版</h2><p>7.6 学习实例:生成新修订版格式···…………136</p>
 <p>7.7 学习实例:CAD Files 修订版格式···········140</p>
