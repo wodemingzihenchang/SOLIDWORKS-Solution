@@ -46,14 +46,14 @@
 <p>1、选择要修改的库。若要使库列出，您必须设置本地视图。</p>
 <p>2、勾选“为此库使用自动登录”(“使用服务器默认值”项，是使用存档服务器上定义的默认登录。此选项只针对配置为使用 <strong>Windows 登录</strong>的库)</p>
 <p>3、输入登录账号密码即可完成</p>
-<img src="https://frp-leg.com:18981//Hexo/本地设置登录.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/本地设置登录.png">
 
 <h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>如果是想让库中所有用户自动登录，可以在SOLIDWORKS PDM存档服务器上进行设置（这个操作只有在用户设置为Windows域用户登录时才有效）</p>
 <p>首先，登录到存档服务器上，通过开始 &gt; SOLIDWORKS PDM &gt; 存档服务器配置。如果存档配置工具已经在服务器上运行了，就需要从系统托盘中打开，如下图所示</p>
-<img src="https://frp-leg.com:18981//Hexo/存档服务器打开.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/存档服务器打开.png">
 
 <p>在Archive Server配置工具中，转到“工具”&gt;“默认设置”。选择登录界面选项卡，在默认登录类型下选择Windows登录，然后选中“自动登录”。点击确定，所有设置为服务器默认值的客户端将使用其Windows登录设置自动登录。</p>
-<img src="https://frp-leg.com:18981//Hexo/存档服务器登录.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/存档服务器登录.png">
 
 <h1 id="不要自动登录"><a href="#不要自动登录" class="headerlink" title="不要自动登录"></a>不要自动登录</h1><p>该功能只有在 SOLIDWORKS PDM 2023 SP4或更新版本中提供。打开注册表编辑器。浏览到：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[vaultname]</span><br></pre></td></tr></table></figure>

@@ -56,34 +56,34 @@
 ## SQL服务器备份
 
 <p>在旧服务器上备份数据库的信息：获得备份文件.bak。（在备份SQL库数据库后使其脱机并分离，防止客户端意外连接它们。或是是停止SQL服务器服务。）</p>
-<img src="https://frp-leg.com:18981//Hexo/备份.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/备份.png">
 
 <p>然后把备份文件.bak在新服务器上进行PDM数据库还原</p>
-<img src="https://frp-leg.com:18981//Hexo/还原.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/还原.png">
 
 <h2 id="存档服务器备份"><a href="#存档服务器备份" class="headerlink" title="存档服务器备份"></a>存档服务器备份</h2><p>在旧服务器上备份存档服务器的信息：临时停止 SOLIDWORKS PDM 存档服务器服务。导出如下注册表项：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer</span><br></pre></td></tr></table></figure>
 
 <p>创建缺少的存档服务器注册表项和文件归档文件夹。使用PDM提供的工具“ArcServCreator32.exe”，在新服务器相应的注册表和文件库中新建相应的库数据记录以及相应的文件库文件夹。</p>
 <p>注：这里ArcServCreator32.exe恢复了文件夹，但是没有恢复PDM存档服务器的内容，这也影响了PDM管理里的PDM库的显示为空</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20240123164437685.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240123164437685.png">
 
 <h2 id="存档文件夹"><a href="#存档文件夹" class="headerlink" title="存档文件夹"></a>存档文件夹</h2><p>把原文件库数据拷贝备份</p>
 <p>一般文件库的位置在PDM服务端安装目录下“SOLIDWORKS PDM\Data”文件夹中。</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20251105165415296.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251105165415296.png">
 
 <h1 id="PDM迁移"><a href="#PDM迁移" class="headerlink" title="PDM迁移"></a>PDM迁移</h1><h2 id="SQL服务器还原"><a href="#SQL服务器还原" class="headerlink" title="SQL服务器还原"></a>SQL服务器还原</h2><p>选择数据库，点击鼠标右键→“还原数据库”，打开如下对话框：</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20251105163234784.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251105163234784.png">
 
 <p>输入与原来备份的数据相同的数据库名</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20251105163437786.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251105163437786.png">
 
 
 
-<img src="https://frp-leg.com:18981//Hexo/image-20251105163551198.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251105163551198.png">
 
 <p>更新SolidWorksPDM主数据库“ConisioMasterDb”中的表“FileVaults”中的记录，把相应的迁移过来的文件库记录增加到该表中。</p>
-<img src="https://frp-leg.com:18981//Hexo/主数据库更新.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/主数据库更新.png">
 
 <p>为内容搜索重新创建链接服务器，在数据库管理工具中执行相应的语句。来自动创建链接服务器。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Exec Sys_IndexServerLink 1</span><br></pre></td></tr></table></figure>
@@ -92,19 +92,19 @@
 
 <h2 id="存档服务器还原"><a href="#存档服务器还原" class="headerlink" title="存档服务器还原"></a>存档服务器还原</h2><p>存档服务器还原时，操作路径跟备份相同</p>
 <p>打开存档服务器，点击“工具”—“备份设置”，点击“装载备份”按钮之后出现如下对话框</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20251105164750514.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251105164750514.png">
 
 
 
 <h2 id="拷贝存档文件夹"><a href="#拷贝存档文件夹" class="headerlink" title="拷贝存档文件夹"></a>拷贝存档文件夹</h2><p>把原文件库数据拷贝覆盖到新服务器上的文件库中，一般文件库的位置在PDM服务端安装目录下“SOLIDWORKS PDM\Data”文件夹中。</p>
 <p>※ 需要记住该文件的路径，以备还原的时候将备份的文件复制到原来相同Data位置，要确保路径一致。</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20251105165415296.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251105165415296.png">
 
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="修改注册表"><a href="#修改注册表" class="headerlink" title="修改注册表"></a>修改注册表</h2><p>在开始菜单运行中输入 regedit，打开注册表，找到如下路径；</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Computers\&lt;local&gt;\档案</span><br></pre></td></tr></table></figure>
 
 <p>把Vaults里添加：还原的库名称</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20260120225551005.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260120225551005.png">
 
 <h2 id="修改数据库"><a href="#修改数据库" class="headerlink" title="修改数据库"></a>修改数据库</h2><p>表:dbo.ArchiveServers编辑值 ArchiveServerName&#x3D;当前机器名</p>
 <p>表:dbo.SystemInfo 编辑值 ArchiveServerName&#x3D; 当前机器名</p>

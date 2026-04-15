@@ -44,7 +44,7 @@
 <span id="more"></span>
 
 <p>产品矩阵<a target="_blank" rel="noopener" href="https://help.solidworks.com/2024/chinese-simplified/Solidworks/cworks/IDH_HELP_STUDYNAME.htm?rid=42000">算例</a></p>
-<img src="https://frp-leg.com:18981//Hexo/SIM产品矩阵.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/SIM产品矩阵.png">
 
 <h2 id="静力学分析"><a href="#静力学分析" class="headerlink" title="静力学分析"></a>静力学分析</h2><p>在有限元分析中，要确保静态分析，除了载荷静态之外，有一个非常重要的因素:整个结构所有的部件都必须保证静态，不能存在可能发生的运动趋势。</p>
 <p>刚体运动：案例：轴扭矩受力分析；</p>
@@ -85,7 +85,7 @@
 <p>应力奇异性</p>
 <p>受力体由于几何关系，在求解应力函数的时候出现的应力无穷大。根据弹性理论，在尖角处的应力是无穷大;由于离散化误差，有限元模型并不会产生无穷大的应力结果，而会形成本例中随着网格的细化，得出的应力值大幅度增加的现象。应力奇异是数学算法问题。应力奇异点一般出现在刚性约束和尖角处。注意:应力集中和应力奇异不是必须显示红色。</p>
 <h2 id="位移"><a href="#位移" class="headerlink" title="位移"></a>位移</h2><p>挠度（刚度）</p>
-<h2 id="应变"><a href="#应变" class="headerlink" title="应变"></a>应变</h2><h2 id="应力应变曲线"><a href="#应力应变曲线" class="headerlink" title="应力应变曲线"></a>应力应变曲线</h2><img src="https://frp-leg.com:18981//Hexo/v2-8bcca18ee4eaa1aa8177e818020b1de7_720w.webp">
+<h2 id="应变"><a href="#应变" class="headerlink" title="应变"></a>应变</h2><h2 id="应力应变曲线"><a href="#应力应变曲线" class="headerlink" title="应力应变曲线"></a>应力应变曲线</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/v2-8bcca18ee4eaa1aa8177e818020b1de7_720w.webp">
 
 
 
@@ -96,23 +96,23 @@
 <h3 id="3强化阶段（Strengthening）"><a href="#3强化阶段（Strengthening）" class="headerlink" title="3强化阶段（Strengthening）"></a>3强化阶段（Strengthening）</h3><h3 id="4颈缩阶段DE"><a href="#4颈缩阶段DE" class="headerlink" title="4颈缩阶段DE"></a>4颈缩阶段DE</h3><h3 id="4失效阶段（Failure）"><a href="#4失效阶段（Failure）" class="headerlink" title="4失效阶段（Failure）"></a>4失效阶段（Failure）</h3><h2 id="剪切应力"><a href="#剪切应力" class="headerlink" title="剪切应力"></a>剪切应力</h2><p>说明：</p>
 <p>计算公式：</p>
 <p>例子：</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20240405121714675.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240405121714675.png">
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">剪切应力=作用扭力 (F)/作用面积（A）</span><br><span class="line">作用扭力 (F)=转矩 (T)/作用半径 (R)</span><br><span class="line">作用面积（A）=宽度*长度</span><br><span class="line"></span><br><span class="line">=8187.5</span><br></pre></td></tr></table></figure>
 
-<img src="https://frp-leg.com:18981//Hexo/image-20240405121753856.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240405121753856.png">
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">作用扭力 (F)=转矩 (T)/作用半径 (R)/平均到8个螺丝</span><br><span class="line">F=45/0.15/2/8=75</span><br><span class="line"></span><br><span class="line">作用面积（A）=宽度*长度</span><br><span class="line">A=(26/2)^2*3.1415/1000000=0.000531</span><br><span class="line"></span><br><span class="line">剪切应力=作用扭力 (F)/作用面积（A）</span><br><span class="line">F/A=141,242.93</span><br></pre></td></tr></table></figure>
 
-<img src="https://frp-leg.com:18981//Hexo/image-20240405132204126.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240405132204126.png">
 
 <p>58.333&#x2F;0.00049085</p>
 <h1 id="耦合"><a href="#耦合" class="headerlink" title="耦合"></a>耦合</h1><p>耦合分析是指在有限元分析的过程中考虑了两种或者多种工程学科(物理场)的交叉作用和相互影响(耦合)，根据分析的结合顺序分为单向耦合和双向耦合两种</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20240320172305522.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320172305522.png">
 
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2021/chinese-simplified/SolidWorks/cworks/c_SOLIDWORKS_Simulation_Fundamentals.htm">SOLIDWORKS Simulation 基础知识 - 2021 - SOLIDWORKS 帮助</a></p>
 <h2 id="单元阶数和自适应"><a href="#单元阶数和自适应" class="headerlink" title="单元阶数和自适应"></a>单元阶数和自适应</h2><p>实体单元类型：</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20240319180322088.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240319180322088.png">
 
 <p>自适应网格:通过电脑自动计算控制网格精度的网格技术。是手动网格控制的一种平替方法，（手动细化网格是优优先）</p>
 <ul>
@@ -121,7 +121,7 @@
 <li><p>P方法采用比较复杂的形状函数，即通过增加节点增加单元阶数，而单元数量不变提高计算精度。</p>
 </li>
 </ul>
-<img src="https://frp-leg.com:18981//Hexo/image-20240319180539260.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240319180539260.png">
 
 <h2 id="大位移考虑“大位移功能”"><a href="#大位移考虑“大位移功能”" class="headerlink" title="大位移考虑“大位移功能”"></a>大位移考虑“大位移功能”</h2><h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
 </div>

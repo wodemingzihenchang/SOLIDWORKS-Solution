@@ -42,21 +42,21 @@
 
 <div id="article"><h1 id="Simulation-机柜分析"><a href="#Simulation-机柜分析" class="headerlink" title="Simulation-机柜分析"></a>Simulation-机柜分析</h1><p>分析实例:机柜<br>问题描述:在柜体顶部指定横梁部位分别施加垂直向下的4450N载荷，并在指定焊接点位置施加垂直向下的4450N载荷，考察结构的应力及变形情况。材料:AISI304</p>
 <p>柜子模型如图10-50所示。其材料为【铝合金】&#x2F;【5052H32】，承载着4450N(1000Ib)的力，并在两个转角处的两个横梁上作用着两个4450N(1000Ib)的载荷，如图10-51所示。为了简化模型，分析中没有计入其他载荷和质量(例如搁板载荷等)。柜子底部沿着基座通过螺栓固定到地面。</p>
-<p><img src="https://frp-leg.com:18981//Hexo/image-20240319163637325.png" alt="image-20240319163637325"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240319163637325.png" alt="image-20240319163637325"></p>
 <span id="more"></span>
 
 <p>混合单元的仿真</p>
 <h2 id="【新建算例】"><a href="#【新建算例】" class="headerlink" title="【新建算例】"></a>【新建算例】</h2><p>实体</p>
 <p>钣金件</p>
 <p>焊件</p>
-<p><img src="https://frp-leg.com:18981//Hexo/image-20240319165606429.png" alt="image-20240319165606429"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240319165606429.png" alt="image-20240319165606429"></p>
 <h2 id="【连结】"><a href="#【连结】" class="headerlink" title="【连结】"></a>【连结】</h2><p>零部件接触删除</p>
-<h2 id="【夹具】"><a href="#【夹具】" class="headerlink" title="【夹具】"></a>【夹具】</h2><p><img src="https://frp-leg.com:18981//Hexo/image-20240319165640830.png" alt="image-20240319165640830"></p>
+<h2 id="【夹具】"><a href="#【夹具】" class="headerlink" title="【夹具】"></a>【夹具】</h2><p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240319165640830.png" alt="image-20240319165640830"></p>
 <p>【外部载荷】</p>
-<p><img src="https://frp-leg.com:18981//Hexo/image-20240319165715031.png" alt="image-20240319165715031"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240319165715031.png" alt="image-20240319165715031"></p>
 <h2 id="【网格】"><a href="#【网格】" class="headerlink" title="【网格】"></a>【网格】</h2><p>默认网格</p>
 <h2 id="【运行】"><a href="#【运行】" class="headerlink" title="【运行】"></a>【运行】</h2><p>混合单元时，默认求解器可能不支持，可以换成如图求解器。</p>
-<p><img src="https://frp-leg.com:18981//Hexo/image-20240319170036927.png" alt="image-20240319170036927"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240319170036927.png" alt="image-20240319170036927"></p>
 <p>混合单元的【连结】问题，可能会出现“壳单元”和“梁单元”间的焊接不足问题。</p>
 <p>排查方法：将“壳单元”部分排查在分析之外，排除法检查。</p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>

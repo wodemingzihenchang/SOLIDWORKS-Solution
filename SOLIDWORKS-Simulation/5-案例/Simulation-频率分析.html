@@ -79,21 +79,21 @@
 模型频率分析-->指定材质-->设定频率数,推荐10阶分析-->划分高品质网格-->运行结果</pre>
 
 <h1 id="固有频率分析"><a href="#固有频率分析" class="headerlink" title="固有频率分析"></a>固有频率分析</h1><p>问题描述:分析音叉以下三种工况<br>1、考察自由状态下的音叉模态<br>2、考察音叉是否能够释放出频率440Hz的音调<br>3、在音叉末端加载450N的压力载荷，和工况二做对比，考察两种情况下频率的改变情况并对结果进行解释。<br>材料:Chrome Stainless Steel</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20240323121245169.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240323121245169.png">
 
-<img src="https://frp-leg.com:18981//Hexo/image-20240323121322874.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240323121322874.png">
 
 <h2 id="自由状态模态"><a href="#自由状态模态" class="headerlink" title="自由状态模态"></a>自由状态模态</h2><p>直接运行结果：</p>
 <p>振幅个数。由【算例属性-振动数】确定</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20240407112701569.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240407112701569.png">
 
 <p>使您能够设置要计算的固有（共振）频率的所需数量。 默认情况下，计算最低的五个频率。 刚性实体模式由 FFEPlus 解算器来计算。 无任何约束的实体有六个刚性实体模式。 刚性实体模式有零个频率（无限周期）。</p>
 <p>如果模型的工作情形包含动态载荷，则至少计算一个高于载荷频率的频率，这一点很重要。在大多数情况下，共振并非所需的，因为它会导致失效。不过，某些设备利用共振来触发事件，同时提供控制过度相关变形的措施。</p>
 <p>最初的6个振动模式自由度为0，对应着刚体模态。因为音又没有支撑，频率为0（刚体模态），它存在6个自由度:三个转动，三个平动，查看此刻的质量参与。</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20240407110619227.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240407110619227.png">
 
 <h2 id="约束状态模态"><a href="#约束状态模态" class="headerlink" title="约束状态模态"></a>约束状态模态</h2><p>添加夹具</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20240407113016642.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240407113016642.png">
 
 <p>运行结果：</p>
 <p>对比自由模态下的共振频率列表</p>
@@ -104,7 +104,7 @@
 <p>材料: PET</p>
 <p>夹具: 固定4个铰接面如图A所示</p>
 <p>网格大小: 默认。</p>
-<img src="https://frp-leg.com:18981//Hexo/固有频率.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/固有频率.png">
 
 
 

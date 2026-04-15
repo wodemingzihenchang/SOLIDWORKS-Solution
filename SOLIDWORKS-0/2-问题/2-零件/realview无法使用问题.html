@@ -42,26 +42,26 @@
 
 <div id="article"><h1 id="realview无法使用问题"><a href="#realview无法使用问题" class="headerlink" title="realview无法使用问题"></a>realview无法使用问题</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>realview（小金球）无法正常显示材质的问题或 realview 无法开启问题。</p>
 <p>原因：多数是显卡兼容问题或是版本支持问题。</p>
-<img src="https://frp-leg.com:18981//Hexo/image-20260212135548626.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260212135548626.png">
 
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1、打开注册表位置：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Solidworks 2020\Performance\Graphics\Hardware\Current</span><br></pre></td></tr></table></figure>
 
 <p>2、找到 Renderer 项，双击 Renderer，在打开的窗口中复制你的显卡的名字；</p>
-<img src="https://frp-leg.com:18981//Hexo/image001.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image001.png">
 
 <p>3、打开注册表位置：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CURRENT_USER\SOFTWARE\SolidWorks\Solidworks 2020\Performance\Graphics\Hardware\Gl2Shaders</span><br></pre></td></tr></table></figure>
 
 
 <p>4、在左侧的列表中展开 R420 然后在 R420 处右键单击，选择新建项，并重命名为第三步中复制的显卡的名字：（笔者这里是 AMD 的显卡，如果是英伟达的显卡，就展开 NV40 目录，如果是 Intel 的核显，就展开 Other 目录）</p>
-<img src="https://frp-leg.com:18981//Hexo/image002-1776079730911-1.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image002-1776079730911-1.png">
 
 <p>5、在刚刚新建的以显卡命名的项那里点击右键，再次新建一个 DWORD（32 位）值：</p>
-<img src="https://frp-leg.com:18981//Hexo/image003.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image003.png">
 
 <p>6、将新建的 32 位值命名为 Workarounds，双击命名后的 Workarounds，将数值数据改为 30008：</p>
-<img src="https://frp-leg.com:18981//Hexo/image004-1776079730912-2.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image004-1776079730912-2.png">
 
 <p>7、检查 realview 是否能启用。</p>
 <p>似乎了解到不同版本和显卡和驱动的设置也是有所不同的，下面是在网上收集的一些：</p>
