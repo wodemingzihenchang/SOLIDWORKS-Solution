@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<html><head>
-    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
-<!-- 引入配置文件 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
-<!-- 字体图片库 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
-<!-- 代码高亮库 -->
-	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
-<meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div id="main">
-        <aside id="aside"><!-- 搜索栏 -->
+<html>
+    <head>
+        <title>SOLIDWORKS-Solution</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/css/main.css"><!-- 引入配置文件 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css"><!-- 字体图片库 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css"><!-- 代码高亮库 -->
+        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+        <link href="https://192.168.0.108:23366/dist/Artalk.css" rel="stylesheet" /><!-- CSS -->
+        <script src="https://192.168.0.108:23366/dist/Artalk.js"></script><!-- JS -->
+    <meta name="generator" content="Hexo 6.3.0"></head>
+
+    <body>
+        <div id="main">
+            <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
-<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
-        <nav><div>
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside> <!-- 引入侧边栏-->
+            <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
     
@@ -34,60 +32,99 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
-</div></nav>	<!-- 引入导航 -->
-        <div id="content"><div>
+</div></nav> <!-- 引入导航 -->
+            <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2026-04-10 02:02:06</span>
+    <span id="post-date">2026-04-21 01:33:24</span>
 </div>
+        <div id="article"><!DOCTYPE html>
+<html lang="zh-CN">
 
-<div id="article"><body  style="width:90%;"  onload="coze.showChatBot();">
-  <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
-  <script src="index.js"></script>
-  <script>
-    const coze = new CozeWebSDK.WebChatClient({
-      config: { bot_id: '7489376497380343820', },
-      componentProps: { title: 'Coze-知识库', },
-      auth: {
-        type: 'token',
-        token: 'pat_uEs5pUzTNIKkLX2XAa0wCNe3c08FrK9E9r4uy3YjPyhuKBIGu532vzglg4kXecAD',
-        onRefreshToken: function () { return 'pat_uEs5pUzTNIKkLX2XAa0wCNe3c08FrK9E9r4uy3YjPyhuKBIGu532vzglg4kXecAD' }
-      },
-      ui: {
-        base: {
-          icon: 'https://lf-coze-web-cdn.coze.cn/obj/coze-web-cn/obric/coze/favicon.1970.png',
-          layout: 'mobile',
-          zIndex: 1000,
-        },
-        asstBtn: { isNeed: false, },//展示悬浮球​
-      },
-    });
-  </script>
+<head>
+    <meta charset="UTF-8">
+    <title>AI搜索工具</title>
+    <script src="/js/search.js"></script>
+
+    <style>
+        #local-search-input {
+            height: 55px;
+            width: 94%;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            padding: 0 3% 0 3%;
+            font-size: 18px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+
+<body style="width:90%;" onload="coze.showChatBot();">
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+    <script src="index.js"></script>
+    <script>
+        const coze = new CozeWebSDK.WebChatClient({
+            config: { bot_id: '7489376497380343820', },
+            componentProps: { title: 'Coze-知识库', },
+            auth: {
+                type: 'token',
+                token: 'pat_uEs5pUzTNIKkLX2XAa0wCNe3c08FrK9E9r4uy3YjPyhuKBIGu532vzglg4kXecAD',
+                onRefreshToken: function () { return 'pat_uEs5pUzTNIKkLX2XAa0wCNe3c08FrK9E9r4uy3YjPyhuKBIGu532vzglg4kXecAD' }
+            },
+            ui: {
+                base: {
+                    icon: 'https://lf-coze-web-cdn.coze.cn/obj/coze-web-cn/obric/coze/favicon.1970.png',
+                    layout: 'mobile',
+                    zIndex: 1000,
+                },
+                asstBtn: { isNeed: false, },//展示悬浮球​
+            },
+        });
+    </script>
+
 </body>
+
 </html></div>
- 			<!-- 引入正文 -->
-    </div>	
-    
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'search/AIsearch.html',
+  pageTitle: '',
+  server:    'http://8.134.162.189:50387/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
+})
+</script> <!-- 引入正文 -->
+            </div>
+            
 <script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
 <!-- 引入代码高亮的 js -->
-    
+                
 <script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
-	<!-- 引入 jquery -->
-    
+ <!-- 引入 jquery -->
+                    
 <script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
-		<!-- 引入 pjax -->
-    
+ <!-- 引入 pjax -->
+                        
 <script src="/SOLIDWORKS-Solution/js/main.js"></script>
-					<!-- 引入 js 文件 -->
-	
+ <!-- 引入 js 文件 -->
+                            
 <script src="/SOLIDWORKS-Solution/js/search.js"></script>
-					<!-- 引入 js 文件 -->	
-	<script type="text/javascript">      
-     var search_path = "SOLIDWORKS-Solution/search.xml";
-	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-	</script>
-	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
-	mermaid.initialize({ theme: 'forest'});
-	</script> <!-- 引入 mermaid 流程图 -->
-	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+ <!-- 引入 js 文件 -->
+                                <script type="text/javascript">
+                                    var search_path = "SOLIDWORKS-Solution/search.xml";
+                                    if (search_path.length == 0) { search_path = "search.xml"; } var path = '/' + search_path;
+                                    searchFunc(path, 'local-search-input', 'local-search-result');
+                                </script>
+                                <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+                                    mermaid.initialize({ theme: 'forest' });
+                                </script> <!-- 引入 mermaid 流程图 -->
+                                <script>new CozeWebSDK.WebChatClient({ config: { bot_id: '7489376497380343820', }, componentProps: { title: 'Coze', }, });</script>
+                                <script src="./index.js"></script>
+    </body>
+</html>

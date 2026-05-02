@@ -1,26 +1,24 @@
-<!DOCTYPE html>
-<html><head>
-    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
-<!-- 引入配置文件 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
-<!-- 字体图片库 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
-<!-- 代码高亮库 -->
-	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
-<meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div id="main">
-        <aside id="aside"><!-- 搜索栏 -->
+<html>
+    <head>
+        <title>SOLIDWORKS-Solution</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/css/main.css"><!-- 引入配置文件 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css"><!-- 字体图片库 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css"><!-- 代码高亮库 -->
+        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+        <link href="https://192.168.0.108:23366/dist/Artalk.css" rel="stylesheet" /><!-- CSS -->
+        <script src="https://192.168.0.108:23366/dist/Artalk.js"></script><!-- JS -->
+    <meta name="generator" content="Hexo 6.3.0"></head>
+
+    <body>
+        <div id="main">
+            <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
-<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
-        <nav><div>
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside> <!-- 引入侧边栏-->
+            <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
     
@@ -34,71 +32,195 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
-</div></nav>	<!-- 引入导航 -->
-        <div id="content"><div>
+</div></nav> <!-- 引入导航 -->
+            <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2026-04-02 15:08:58</span>
+    <span id="post-date">2026-04-21 01:25:00</span>
 </div>
+        <div id="article"><!DOCTYPE html>
+<html lang="zh-CN">
 
-<div id="article"><script src="/js/search.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>搜索工具</title>
+    <script src="/js/search.js"></script>
 
-<div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control">
-   </div>  
-  <div id="local-search-result"></div>
-</div>
+    <style>
+        #local-search-input {
+            height: 55px;
+            width: 94%;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            padding: 0 3% 0 3%;
+            font-size: 18px;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        }
 
-<p>搜索插件参考：<a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search/tree/master">https://github.com/wzpan/hexo-generator-search/tree/master</a></p>
-<script type="text/javascript">      
-     var search_path = "SOLIDWORKS-Solution/search.xml";
-     if (search_path.length == 0) {
-     	search_path = "SOLIDWORKS-Solution/search.xml";
-     }
-     var path = '/' + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-</script>
+        .search-keyword {
+            background: #c5afd9;
+        }
 
-<style>
-#local-search-input {
-    height: 55px;
-    width: 94%;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    padding: 0 3% 0 3%;
-    font-size: 18px;
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
-}
-.search-keyword {
-    background: #c5afd9;
-}
-</style>
-</div>
- 			<!-- 引入正文 -->
-    </div>	
-    
+        .tags_button {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            border-style: solid;
+            border-width: 1px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 筛选按钮 -->
+    <h2>筛选按钮</h2>
+    <button class="tags_button" id="addSlwBtn">tags:SOLIDWORKS</button>
+    <button class="tags_button" id="addPdmBtn">tags:PDM</button>
+    <button class="tags_button" id="addSimBtn">tags:Simulation</button>
+    <button class="tags_button" id="addFloBtn">tags:FlowSimulation</button>
+    <button class="tags_button" id="addComBtn">tags:Composer</button>
+    <button class="tags_button" id="addVisBtn">tags:Visualize</button>
+    <button class="tags_button" id="addEleBtn">tags:Electrical</button>
+    <!-- 文本框 -->
+    <h1></h1>
+    <div id="site_search">
+        <div class="form-group">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="Search"
+                class="st-search-input st-default-search-input form-control">
+        </div>
+        <!-- 搜索内容 -->
+        <div id="local-search-result"></div>
+    </div>
+    <div>搜索插件参考：https://github.com/wzpan/hexo-generator-search/tree/master</div>
+
+    <script type="text/javascript">
+        var search_path = "SOLIDWORKS-Solution/search.xml";
+        if (search_path.length == 0) { search_path = "SOLIDWORKS-Solution/search.xml"; }
+        var path = '/' + search_path;
+        searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+
+    <script>
+        // 获取文本框元素
+        const textarea = document.getElementById('local-search-input');
+        // 获取两个按钮 
+        const SlwBtn = document.getElementById('addSlwBtn');
+        const PdmBtn = document.getElementById('addPdmBtn');
+        const SimBtn = document.getElementById('addSimBtn');
+        const FloBtn = document.getElementById('addFloBtn');
+        const ComBtn = document.getElementById('addComBtn');
+        const VisBtn = document.getElementById('addVisBtn');
+        const EleBtn = document.getElementById('addEleBtn');
+
+        // 通用的在光标处（或末尾）插入文本的函数
+        function insertTextAtCursor(textToInsert) {
+            // 获取当前文本框内容
+            const currentValue = textarea.value;
+            // 获取光标起始位置和结束位置（如果有选中文字，起始≠结束）
+            const start = textarea.selectionStart;
+            const end = textarea.selectionEnd;
+
+            // 如果文本框没有任何内容，或者光标在末尾且没有选中任何文字，直接在末尾添加
+            if (currentValue === '' || (start === end && start === currentValue.length)) {
+                // 如果当前内容为空，直接赋值标签
+                if (currentValue === '') {
+                    textarea.value = textToInsert;
+                } else {
+                    // 否则在末尾添加，并加上换行符让内容更整洁
+                    textarea.value = currentValue + '\n' + textToInsert;
+                }
+                // 将光标移动到插入文本的末尾
+                textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+            }
+            // 如果有选中文字，用新文本替换选中的部分
+            else if (start !== end) {
+                const newValue = currentValue.substring(0, start) + textToInsert + currentValue.substring(end);
+                textarea.value = newValue;
+                // 光标移动到插入文本之后
+                const newCursorPos = start + textToInsert.length;
+                textarea.setSelectionRange(newCursorPos, newCursorPos);
+            }
+            // 光标在文本中间（没有选中文字），直接在光标位置插入
+            else {
+                const newValue = currentValue.substring(0, start) + textToInsert + currentValue.substring(start);
+                textarea.value = newValue;
+                // 光标移动到插入文本之后
+                const newCursorPos = start + textToInsert.length;
+                textarea.setSelectionRange(newCursorPos, newCursorPos);
+            }
+
+            // 让文本框重新获得焦点，方便继续输入
+            textarea.focus();
+        }
+
+        // 为 SOLIDWORKS 按钮绑定点击事件
+        SlwBtn.addEventListener('click', function () {
+            insertTextAtCursor(' tags:SOLIDWORKS ');
+        });
+        PdmBtn.addEventListener('click', function () {
+            insertTextAtCursor(' tags:PDM ');
+        });
+        SimBtn.addEventListener('click', function () {
+            insertTextAtCursor(' tags:Simulation ');
+        });
+        FloBtn.addEventListener('click', function () {
+            insertTextAtCursor(' tags:FlowSimulation ');
+        });
+        ComBtn.addEventListener('click', function () {
+            insertTextAtCursor(' tags:Composer ');
+        });
+        VisBtn.addEventListener('click', function () {
+            insertTextAtCursor(' tags:Visualize ');
+        });
+        EleBtn.addEventListener('click', function () {
+            insertTextAtCursor(' tags:Electrical ');
+        });
+    </script>
+
+</body>
+
+</html></div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'search/index.html',
+  pageTitle: '',
+  server:    'http://8.134.162.189:50387/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
+})
+</script> <!-- 引入正文 -->
+            </div>
+            
 <script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
 <!-- 引入代码高亮的 js -->
-    
+                
 <script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
-	<!-- 引入 jquery -->
-    
+ <!-- 引入 jquery -->
+                    
 <script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
-		<!-- 引入 pjax -->
-    
+ <!-- 引入 pjax -->
+                        
 <script src="/SOLIDWORKS-Solution/js/main.js"></script>
-					<!-- 引入 js 文件 -->
-	
+ <!-- 引入 js 文件 -->
+                            
 <script src="/SOLIDWORKS-Solution/js/search.js"></script>
-					<!-- 引入 js 文件 -->	
-	<script type="text/javascript">      
-     var search_path = "SOLIDWORKS-Solution/search.xml";
-	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-	</script>
-	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
-	mermaid.initialize({ theme: 'forest'});
-	</script> <!-- 引入 mermaid 流程图 -->
-	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</body></html>
+ <!-- 引入 js 文件 -->
+                                <script type="text/javascript">
+                                    var search_path = "SOLIDWORKS-Solution/search.xml";
+                                    if (search_path.length == 0) { search_path = "search.xml"; } var path = '/' + search_path;
+                                    searchFunc(path, 'local-search-input', 'local-search-result');
+                                </script>
+                                <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+                                    mermaid.initialize({ theme: 'forest' });
+                                </script> <!-- 引入 mermaid 流程图 -->
+                                <script>new CozeWebSDK.WebChatClient({ config: { bot_id: '7489376497380343820', }, componentProps: { title: 'Coze', }, });</script>
+                                <script src="./index.js"></script>
+    </body>
+</html>

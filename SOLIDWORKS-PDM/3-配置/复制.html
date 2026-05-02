@@ -1,26 +1,24 @@
-﻿<!DOCTYPE html>
-<html><head>
-    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
-<!-- 引入配置文件 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
-<!-- 字体图片库 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
-<!-- 代码高亮库 -->
-	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
-<meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div id="main">
-        <aside id="aside"><!-- 搜索栏 -->
+﻿<html>
+    <head>
+        <title>SOLIDWORKS-Solution</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/css/main.css"><!-- 引入配置文件 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css"><!-- 字体图片库 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css"><!-- 代码高亮库 -->
+        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+        <link href="https://192.168.0.108:23366/dist/Artalk.css" rel="stylesheet"><!-- CSS -->
+        <script src="https://192.168.0.108:23366/dist/Artalk.js"></script><!-- JS -->
+    <meta name="generator" content="Hexo 6.3.0"></head>
+
+    <body>
+        <div id="main">
+            <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
-<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
-        <nav><div>
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside> <!-- 引入侧边栏-->
+            <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
     
@@ -34,13 +32,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
-</div></nav>	<!-- 引入导航 -->
-        <div id="content"><div>
+</div></nav> <!-- 引入导航 -->
+            <div id="content"><div>
     <span id="post-author">作者: </span>
     <span id="post-date">2022-09-10 19:12:18</span>
 </div>
-
-<div id="article"><h1 id="PDM复制"><a href="#PDM复制" class="headerlink" title="PDM复制"></a>PDM复制</h1><p>如果您有多个站点访问SOLIDWORKS PDM库，您可能会发现远程办公室的用户体验与主办公室中的库的速度和响应能力有所不同。这是由于网络设置。远程用户在跨越地理位置的广域网 (WAN) 上工作。</p>
+        <div id="article"><h1 id="PDM复制"><a href="#PDM复制" class="headerlink" title="PDM复制"></a>PDM复制</h1><p>如果您有多个站点访问SOLIDWORKS PDM库，您可能会发现远程办公室的用户体验与主办公室中的库的速度和响应能力有所不同。这是由于网络设置。远程用户在跨越地理位置的广域网 (WAN) 上工作。</p>
 <p>当客户端通过库视图连接到 SOLIDWORKS PDM 库后，用户执行浏览文件、查看文件数据卡、搜索文件等操作时，信息将在客户端和数据库服务器之间进行传递。 当用户在客户端使用“获取”或“检出”等功能从档案中将库中存储的物理文件（如工程图和文档）检索到本地库视图（缓存）时，文件将从存档服务器中检索出来，然后发送到客户端。 传输这些文件的时间长短取决于网络的大小和速度。</p>
 <p>在 LAN 环境中，由于存档服务器与客户端都位于本地，文档传输速度通常很快。 如果是在多个办公室之间通过 WAN 连接共享 SOLIDWORKS PDM 库，则传输性能将降低，且主要取决于连接速度。 来自数据库服务器的信息和来自物理文件的信息均通过 WAN 进行传输。前者的传输速度因只传送小的文本数据而较快；后者的传输速度视文件大小而定，从几秒到几小时不等。</p>
 <p>通过使用 SOLIDWORKS PDM 中的库复制功能，您可以在每个办公室设置本地存档服务器，用于承载库档案的复制型副本，从而平衡通过低速 WAN 连接传输的数据量。 每个办公室的用户在客户端使用库时，信息仍从中央数据库服务器发出，但物理文件此时将从承载存档文件副本的最近一个存档服务器中检索而来。</p>
@@ -54,30 +51,45 @@
 
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
- 			<!-- 引入正文 -->
-    </div>	
-    
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'SOLIDWORKS-PDM/3-配置/复制.html',
+  pageTitle: 'SOLIDWORKS-PDM复制',
+  server:    'http://8.134.162.189:50387/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
+})
+</script> <!-- 引入正文 -->
+            </div>
+            
 <script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
 <!-- 引入代码高亮的 js -->
-    
+                
 <script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
-	<!-- 引入 jquery -->
-    
+ <!-- 引入 jquery -->
+                    
 <script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
-		<!-- 引入 pjax -->
-    
+ <!-- 引入 pjax -->
+                        
 <script src="/SOLIDWORKS-Solution/js/main.js"></script>
-					<!-- 引入 js 文件 -->
-	
+ <!-- 引入 js 文件 -->
+                            
 <script src="/SOLIDWORKS-Solution/js/search.js"></script>
-					<!-- 引入 js 文件 -->	
-	<script type="text/javascript">      
-     var search_path = "SOLIDWORKS-Solution/search.xml";
-	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-	</script>
-	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
-	mermaid.initialize({ theme: 'forest'});
-	</script> <!-- 引入 mermaid 流程图 -->
-	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</div></body></html>
+ <!-- 引入 js 文件 -->
+                                <script type="text/javascript">
+                                    var search_path = "SOLIDWORKS-Solution/search.xml";
+                                    if (search_path.length == 0) { search_path = "search.xml"; } var path = '/' + search_path;
+                                    searchFunc(path, 'local-search-input', 'local-search-result');
+                                </script>
+                                <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+                                    mermaid.initialize({ theme: 'forest' });
+                                </script> <!-- 引入 mermaid 流程图 -->
+                                <script>new CozeWebSDK.WebChatClient({ config: { bot_id: '7489376497380343820', }, componentProps: { title: 'Coze', }, });</script>
+                                <script src="./index.js"></script>
+    </div></body>
+</html>

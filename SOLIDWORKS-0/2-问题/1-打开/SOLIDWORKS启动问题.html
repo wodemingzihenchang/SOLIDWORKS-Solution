@@ -1,26 +1,24 @@
-﻿<!DOCTYPE html>
-<html><head>
-    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
-<!-- 引入配置文件 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
-<!-- 字体图片库 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
-<!-- 代码高亮库 -->
-	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
-<meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div id="main">
-        <aside id="aside"><!-- 搜索栏 -->
+﻿<html>
+    <head>
+        <title>SOLIDWORKS-Solution</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/css/main.css"><!-- 引入配置文件 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css"><!-- 字体图片库 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css"><!-- 代码高亮库 -->
+        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+        <link href="https://192.168.0.108:23366/dist/Artalk.css" rel="stylesheet"><!-- CSS -->
+        <script src="https://192.168.0.108:23366/dist/Artalk.js"></script><!-- JS -->
+    <meta name="generator" content="Hexo 6.3.0"></head>
+
+    <body>
+        <div id="main">
+            <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
-<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
-        <nav><div>
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside> <!-- 引入侧边栏-->
+            <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
     
@@ -34,13 +32,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
-</div></nav>	<!-- 引入导航 -->
-        <div id="content"><div>
+</div></nav> <!-- 引入导航 -->
+            <div id="content"><div>
     <span id="post-author">作者: </span>
     <span id="post-date">2022-06-22 11:12:59</span>
 </div>
-
-<div id="article"><h1 id="程序启动慢"><a href="#程序启动慢" class="headerlink" title="程序启动慢"></a>程序启动慢</h1><p>solidworks启动慢的原因&amp;可能出现的问题：一般打开SOLIDWORKS会经历这几个过程：  </p>
+        <div id="article"><h1 id="程序启动慢"><a href="#程序启动慢" class="headerlink" title="程序启动慢"></a>程序启动慢</h1><p>solidworks启动慢的原因&amp;可能出现的问题：一般打开SOLIDWORKS会经历这几个过程：  </p>
 <blockquote>
 <ol>
 <li>加载注册表</li>
@@ -67,9 +64,26 @@
 <p>　　1、打开“我的电脑”，然后点击顶部的【查看】-【选项】：</p>
 <p>　　2、打开文件夹选项后，点击查看-找到显示隐藏的文件、文件夹和驱动器，并选中。并且把“隐藏受保护的系统文件”前边的对勾去掉</p>
 <p>　　3、找到C:\ProgramData\FLEXnet文件夹，将下面的图示文件sw_D_三个文件删除，或者剪切到别的地方备份，如果不行好在粘回来(推荐)。现在试试打开SolidWorks的速度正常了没。</p>
-<h2 id="3、初始化-NET环境"><a href="#3、初始化-NET环境" class="headerlink" title="3、初始化.NET环境"></a>3、初始化.NET环境</h2><p>将安装文件夹中“PreReqs“文件夹中的必备组件重新安装,如“SOLIDWORKS 2018 SP02\PreReqs”对比重新安装没有效果。</p>
-<h2 id="4、加载插件"><a href="#4、加载插件" class="headerlink" title="4、加载插件"></a>4、加载插件</h2><p>打开SOLIDWORKS后，可在插件窗口查看哪个插件加载时间过长，可暂时去除勾选，在需要使用时再加载插件，对于不必要的插件可以取消启动勾选。</p>
+<h2 id="4、初始化-NET环境"><a href="#4、初始化-NET环境" class="headerlink" title="4、初始化.NET环境"></a>4、初始化.NET环境</h2><p>将安装文件夹中“PreReqs“文件夹中的必备组件重新安装,如“SOLIDWORKS 2018 SP02\PreReqs”对比重新安装没有效果。</p>
+<h2 id="5、加载任务窗格界面"><a href="#5、加载任务窗格界面" class="headerlink" title="5、加载任务窗格界面"></a>5、加载任务窗格界面</h2><p>启动SOLIDWORKS卡在正在加载任务窗格界面</p>
+<p>在启动 SOLIDWORKS® 时，为什么欢迎屏幕会冻结并一直显示“Loading Task Panes（正在加载任务窗格）”屏幕？</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250916120938473.png">
+
+<p><strong>方法：</strong></p>
+<p>如果“Windows Search（Windows 搜索）”服务出现问题，则会出现此情况。可以通过停止“Windows Search（Windows 搜索）”服务来解决此问题。请执行下列步骤：</p>
+<p>1.单击 Windows®“Start（开始）”按钮 &gt; 键入“services”&gt; 在“Programs（程序）”下面单击“services”。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250916121135692.png">
+
+<p>2.在“Services（服务）”对话框中，滚动查找“Windows Search（Windows 搜索）”服务。默认情况下，“Startup Type（启动类型）”已设置为“Automatic (Delayed Start)（自动（延迟启动））”。</p>
+<p>3.右键单击“Windows Search（Windows 搜索）”&gt; 单击“Properties（属性）”。</p>
+<p>4.在“Windows Search Properties（Windows 搜索属性）”对话框的“General（常规）”选项卡上，将“Startup type（启动类型）”更改为“Disabled（已禁用）”&gt; 单击“OK（确定）”。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250916121245863.png">
+
+<p>重新启动 SOLIDWORKS应用程序，并验证其是否正确启动。</p>
+<h2 id="8、加载插件"><a href="#8、加载插件" class="headerlink" title="8、加载插件"></a>8、加载插件</h2><p>打开SOLIDWORKS后，可在插件窗口查看哪个插件加载时间过长，可暂时去除勾选，在需要使用时再加载插件，对于不必要的插件可以取消启动勾选。</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240301094113781.png">
+
+
 
 <h1 id="文件打开慢"><a href="#文件打开慢" class="headerlink" title="文件打开慢"></a>文件打开慢</h1><iframe src="https://www.edrawmax.cn/online/share.html?code=97e5f6d6957f11eea622dbd80885ff13"></iframe>
 
@@ -98,7 +112,7 @@
 <p>使用英文字母和数字作为用户名和计算机名</p>
 <h1 id="启动闪退"><a href="#启动闪退" class="headerlink" title="启动闪退"></a>启动闪退</h1><h2 id="在启动界面闪退"><a href="#在启动界面闪退" class="headerlink" title="在启动界面闪退"></a>在启动界面闪退</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/卡在启动界面1.png">
 
-<p>方法：</p>
+<p><strong>方法：</strong></p>
 <p>安装swcef（CEF for SOLIDWORKS Applications）程序后恢复正常，这个似乎是在高版本出现的问题。安装程序位置在：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X:\SOLIDWORKS安装包\swcef</span><br></pre></td></tr></table></figure>
 
@@ -109,30 +123,45 @@
 <p><a target="_blank" rel="noopener" href="https://support.3ds.com/knowledge-base/?q=docid:QA00000314980">QA00000314980</a></p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
- 			<!-- 引入正文 -->
-    </div>	
-    
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'SOLIDWORKS-0/2-问题/1-打开/SOLIDWORKS启动问题.html',
+  pageTitle: 'solidworks启动问题',
+  server:    'http://8.134.162.189:50387/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
+})
+</script> <!-- 引入正文 -->
+            </div>
+            
 <script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
 <!-- 引入代码高亮的 js -->
-    
+                
 <script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
-	<!-- 引入 jquery -->
-    
+ <!-- 引入 jquery -->
+                    
 <script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
-		<!-- 引入 pjax -->
-    
+ <!-- 引入 pjax -->
+                        
 <script src="/SOLIDWORKS-Solution/js/main.js"></script>
-					<!-- 引入 js 文件 -->
-	
+ <!-- 引入 js 文件 -->
+                            
 <script src="/SOLIDWORKS-Solution/js/search.js"></script>
-					<!-- 引入 js 文件 -->	
-	<script type="text/javascript">      
-     var search_path = "SOLIDWORKS-Solution/search.xml";
-	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-	</script>
-	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
-	mermaid.initialize({ theme: 'forest'});
-	</script> <!-- 引入 mermaid 流程图 -->
-	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</div></body></html>
+ <!-- 引入 js 文件 -->
+                                <script type="text/javascript">
+                                    var search_path = "SOLIDWORKS-Solution/search.xml";
+                                    if (search_path.length == 0) { search_path = "search.xml"; } var path = '/' + search_path;
+                                    searchFunc(path, 'local-search-input', 'local-search-result');
+                                </script>
+                                <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+                                    mermaid.initialize({ theme: 'forest' });
+                                </script> <!-- 引入 mermaid 流程图 -->
+                                <script>new CozeWebSDK.WebChatClient({ config: { bot_id: '7489376497380343820', }, componentProps: { title: 'Coze', }, });</script>
+                                <script src="./index.js"></script>
+    </div></body>
+</html>

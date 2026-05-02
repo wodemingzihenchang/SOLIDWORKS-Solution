@@ -1,26 +1,24 @@
-﻿<!DOCTYPE html>
-<html><head>
-    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
-<!-- 引入配置文件 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
-<!-- 字体图片库 -->
-    
-<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
-<!-- 代码高亮库 -->
-	<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
-<meta name="generator" content="Hexo 6.3.0"></head>
-<body>
-    <div id="main">
-        <aside id="aside"><!-- 搜索栏 -->
+﻿<html>
+    <head>
+        <title>SOLIDWORKS-Solution</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/css/main.css"><!-- 引入配置文件 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css"><!-- 字体图片库 -->
+        <link rel="stylesheet" href="https://wodemingzihenchang.github.io/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css"><!-- 代码高亮库 -->
+        <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.1/libs/cn/index.js"></script>
+        <link href="https://192.168.0.108:23366/dist/Artalk.css" rel="stylesheet"><!-- CSS -->
+        <script src="https://192.168.0.108:23366/dist/Artalk.js"></script><!-- JS -->
+    <meta name="generator" content="Hexo 6.3.0"></head>
+
+    <body>
+        <div id="main">
+            <aside id="aside"><!-- 搜索栏 -->
 <div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
-<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
-        <nav><div>
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside> <!-- 引入侧边栏-->
+            <nav><div>
     <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
     <!-- 内部链接本页面直接跳转 -->
     
@@ -34,13 +32,12 @@
     
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
     <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
-</div></nav>	<!-- 引入导航 -->
-        <div id="content"><div>
+</div></nav> <!-- 引入导航 -->
+            <div id="content"><div>
     <span id="post-author">作者: </span>
     <span id="post-date">2025-03-04 16:19:10</span>
 </div>
-
-<div id="article"><h1 id="存档服务器找不到指定的ID文件"><a href="#存档服务器找不到指定的ID文件" class="headerlink" title="存档服务器找不到指定的ID文件"></a>存档服务器找不到指定的ID文件</h1><p>PDM 的后端有许多工具可用于对库中的错误进行故障诊断。如果遇到“存档服务器找不到具有指定 ID 的文件”或“访问存档服务器上的文件时出错”错误消息，这可能是由许多不同的来源引起的，因此此修复程序可能不适用于所有情况。</p>
+        <div id="article"><h1 id="存档服务器找不到指定的ID文件"><a href="#存档服务器找不到指定的ID文件" class="headerlink" title="存档服务器找不到指定的ID文件"></a>存档服务器找不到指定的ID文件</h1><p>PDM 的后端有许多工具可用于对库中的错误进行故障诊断。如果遇到“存档服务器找不到具有指定 ID 的文件”或“访问存档服务器上的文件时出错”错误消息，这可能是由许多不同的来源引起的，因此此修复程序可能不适用于所有情况。</p>
 <p>在对库进行更改期间发生错误时，可能会发生此特定情况。更改，例如修改安装、添加保管库、对服务器的更改或使用 SQL 数据库的新程序。</p>
 <p>无论是什么原因导致了错误，当尝试检查库中的文件时，都会弹出以下错误消息：</p>
 <ul>
@@ -75,30 +72,45 @@
 <p>• 如果您在该库中只恢复文件库数据库，则一切都可用，但存储在存档服务器上的物理存档文件除外。这包括任何已添加到库中的插件。如果原始插件存档缺失，请移除缺少的插件，方法是打开管理工具，登录库，展开插件节点并查看恢复的库中提供了哪些插件。右键单击并选择“移除”，以移除您没有的插件。<br>• 要恢复该库并保留原始插件，请从原始存档服务器的文件夹“…\0\Plugins\”下面复制插件存档。将它们复制到匹配的已恢复存档结构。<br>如果缺少的插件为“SWTaskAddIn”（即任务插件），并且想要在恢复的库副本中保留现有配置任务，则不要移除插件。而是在管理工具中打开“c:\program files&lt;安装文件夹&gt;\default data\convert_gb.cex”。将“swtaskaddin”拖放到已恢复的库的插件节点中。错误将显示未找到原始插件文件。关闭错误，任务插件将被更新为导入的副本。<br>• 如果缺少的插件是“Dispatch”，则移除“Dispatch”插件，然后从“c:\program files&lt;安装文件夹&gt;\default data\dispatch.caf”中再次添加。</p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
- 			<!-- 引入正文 -->
-    </div>	
-    
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'SOLIDWORKS-PDM/2-问题/1-服务器/找不到指定的ID文件.html',
+  pageTitle: '存档服务器找不到指定的ID文件',
+  server:    'http://8.134.162.189:50387/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
+})
+</script> <!-- 引入正文 -->
+            </div>
+            
 <script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
 <!-- 引入代码高亮的 js -->
-    
+                
 <script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
-	<!-- 引入 jquery -->
-    
+ <!-- 引入 jquery -->
+                    
 <script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
-		<!-- 引入 pjax -->
-    
+ <!-- 引入 pjax -->
+                        
 <script src="/SOLIDWORKS-Solution/js/main.js"></script>
-					<!-- 引入 js 文件 -->
-	
+ <!-- 引入 js 文件 -->
+                            
 <script src="/SOLIDWORKS-Solution/js/search.js"></script>
-					<!-- 引入 js 文件 -->	
-	<script type="text/javascript">      
-     var search_path = "SOLIDWORKS-Solution/search.xml";
-	 if (search_path.length == 0) {search_path = "search.xml";} var path = '/' + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-	</script>
-	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
-	mermaid.initialize({ theme: 'forest'});
-	</script> <!-- 引入 mermaid 流程图 -->
-	<script>new CozeWebSDK.WebChatClient({config: {bot_id: '7489376497380343820',},componentProps: {title: 'Coze',},});</script><script src="./index.js"></script>
-</div></body></html>
+ <!-- 引入 js 文件 -->
+                                <script type="text/javascript">
+                                    var search_path = "SOLIDWORKS-Solution/search.xml";
+                                    if (search_path.length == 0) { search_path = "search.xml"; } var path = '/' + search_path;
+                                    searchFunc(path, 'local-search-input', 'local-search-result');
+                                </script>
+                                <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+                                    mermaid.initialize({ theme: 'forest' });
+                                </script> <!-- 引入 mermaid 流程图 -->
+                                <script>new CozeWebSDK.WebChatClient({ config: { bot_id: '7489376497380343820', }, componentProps: { title: 'Coze', }, });</script>
+                                <script src="./index.js"></script>
+    </div></body>
+</html>
