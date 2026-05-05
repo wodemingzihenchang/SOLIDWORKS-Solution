@@ -74,7 +74,7 @@
 
 </head>
 
-<body onload="location.reload()">
+<body>
     <!-- 筛选按钮 -->
     <h2>筛选按钮</h2>
     <button class="tags_button" id="addSlwBtn">tags:SOLIDWORKS</button>
@@ -183,7 +183,13 @@
 </body>
 
 </html></div>
-
+	<script>
+        // 检查是否已经刷新过
+        if (!sessionStorage.getItem('refreshed')) {
+            sessionStorage.setItem('refreshed', 'true');
+            location.reload();
+        }
+    </script>
 <!-- Artalk 评论系统 -->
 <link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
