@@ -118,6 +118,9 @@
 <h2 id="INCLUDE和EXCLUDE"><a href="#INCLUDE和EXCLUDE" class="headerlink" title="INCLUDE和EXCLUDE"></a>INCLUDE和EXCLUDE</h2><p>INCLUDE和EXCLUDE并存时，优先EXCLUDE（拒绝）</p>
 <h2 id="组设置“超时”"><a href="#组设置“超时”" class="headerlink" title="组设置“超时”"></a>组设置“超时”</h2><p>Q 是否可以通过带有SolidNetWork许可证（SNL）的选项文件为特定组设置“超时”选项？</p>
 <p>A 用户无法设置<strong>超时</strong>，超<strong>时</strong>选项适用于功能，也称为许可类型。超<strong>时</strong>可以针对单个功能或所有功能设置</p>
+<h2 id="使用中的用户为什么被退出系统"><a href="#使用中的用户为什么被退出系统" class="headerlink" title="使用中的用户为什么被退出系统"></a>使用中的用户为什么被退出系统</h2><p>SNL存在的超时机制:Options文件可设置TIMEOUT时间，则按设置时间执行超时没有设置TIMEOUT，则按默认2小时执行超时超时后许可会被SNL收回，以供其他用户使用超时后用户重新操作PDM，系统后台会自动连接SNL获取许可:</p>
+<p>如果此时SNL有空闲许可，则自动获取许可成功，用户无感知。如果此时SNL没有空闲许可，则自动获取许可失败。</p>
+<p>用户在没有许可的情况下可继续使用30分钟左右，然后被强制退出PDM。所以用户会感受到正常使用着却莫名其妙被强制退出的情况。常发生在许可点数不足的客户</p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
 

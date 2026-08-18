@@ -40,9 +40,20 @@
 </div>
         <div id="article"><h1 id="Simulation-共享违例"><a href="#Simulation-共享违例" class="headerlink" title="Simulation-共享违例"></a>Simulation-共享违例</h1><span id="more"></span>.
 
-<p>仿真分析过程中提示：在访问一个未命名的文件时发生共享违例</p>
-<h2 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h2><p>确定一下就行，不影响别的</p>
-<h2 id="方法2："><a href="#方法2：" class="headerlink" title="方法2："></a>方法2：</h2><p>如果是2023SP3之后，2024SP2之前版本的话，是SW2023 SP3版本之后发生的一个特定流程导致的功能回退问题，据研发方面的反馈已经在 2024 SP2版本上修复了</p>
+<p>在网格化或运行研究时，会出现以下错误信息：“访问未命名文件时发生了共享违规。”</p>
+<p>或者当我在 SOLIDWORKS® Simulation 中导入某个部件时，为什么会看到“一个未命名文件包含无效的路径”的错误呢？</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>如果是2023SP3之后，2024SP2之前版本的话，是SW2023 SP3版本之后发生的一个特定流程导致的功能回退问题，据研发方面的反馈已经在 2024 SP2版本上修复了 BR10000366012</p>
+<p>第三方软件，比如安全系统应用（杀毒、反恶意软件、端点检测与响应、防火墙等）正在阻止部分可执行文件运行。</p>
+<p>结果文件夹权限不足。</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><p>咨询你的IT部门。你的IT部门可以审查当前的安全策略，并可能进行修改。IT部门可能会尝试的修改示例：</p>
+<p>禁用安全系统，然后尝试网格化并重新运行分析。</p>
+<p>如果你无法关闭安全系统，请将SOLIDWORKS模拟的可执行文件添加到安全系统的异常列表中。SOLIDWORKS 仿真可执行文件包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ghs3d.exe：网格化使用该程序进行体积填充过程。</span><br><span class="line">star.exe：用于静态和滴落测试分析。</span><br><span class="line">dstar.exe：用于频率和屈曲分析。</span><br><span class="line">hstar.exe：用于热分析。</span><br><span class="line">solidworks.exe：关于SOLIDWORKS应用。</span><br><span class="line">nstar.exe：用于非线性分析。</span><br><span class="line">astar.exe：用于动态分析。</span><br><span class="line">cwanalysisproc.exe：SOLIDWORKS 仿真使用该程序来解决多个研究。</span><br></pre></td></tr></table></figure>
+
+<p>每个解法都会导致该过程的一次或多个实例，该过程会持续直到解结束。该程序即使在关闭 SOLIDWORKS 会话后仍会运行，以确保解法完成。</p>
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><p>确定研究结果文件夹位置是存在于网络驱动器还是本地驱动器上。如果位置在网络驱动器上，将位置更改为用户拥有全部权限的本地驱动器中的文件夹。</p>
+<h2 id="方法3"><a href="#方法3" class="headerlink" title="方法3"></a>方法3</h2><p>请尝试以下方法来减轻该信息的影响和干扰：</p>
+<p>当该消息的第一个实例出现时，按住键盘上的Esc（Esc）键以关闭所有剩余的提示。这样你就不用反复点击<strong>确定</strong>了。</p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
 </div>
 

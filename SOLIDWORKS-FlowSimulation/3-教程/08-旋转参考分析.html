@@ -38,7 +38,7 @@
     <span id="post-author">作者: </span>
     <span id="post-date">2024-10-27 17:18:29</span>
 </div>
-        <div id="article"><h1 id="旋转参考分析"><a href="#旋转参考分析" class="headerlink" title="旋转参考分析"></a>旋转参考分析</h1><p>使用旋转参照流动解决旋转流动问题</p>
+        <div id="article"><h1 id="旋转参考分析"><a href="#旋转参考分析" class="headerlink" title="旋转参考分析"></a>旋转参考分析</h1><p>物体的旋转对空间内的流体是由干扰作用，使用【旋转参照系】流动解决旋转流动问题。</p>
 <h2 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h2><p>台扇以200rad&#x2F;s的速度进行转动。台扇四周为环境压力，而且台扇在Z方向还会产生0.1m&#x2F;s的恒定风速。</p>
 <p>通过在叶片区域使用局部旋转坐标系来分析通过台扇的流动。</p>
 <p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260422213608828.png" alt="image-20260422213608828"></p>
@@ -63,7 +63,7 @@
 <img src="https://img.r77817520.nyat.app:18981/Hexo/向导-壁面条件.png">
 
 <p>初始条件</p>
-<p>对这个分析来说，我们可以按默认定义进行</p>
+<p>Z方向设置产生 0.1m&#x2F;s 的恒定风速。</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/向导-初始条件.png">
 
 
@@ -73,18 +73,20 @@
 <h2 id="旋转区域"><a href="#旋转区域" class="headerlink" title="旋转区域"></a>旋转区域</h2><p>需要建立一个包含风扇旋转叶片的区域</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024144500635.png">
 
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260516214253150.png" alt="image-20260516214253150"></p>
 <h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024144637821.png">
 
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024145110680.png">
 
-<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>插入局部网格</p>
+<h2 id="网格"><a href="#网格" class="headerlink" title="网格"></a>网格</h2><p>全局网格默认</p>
+<p>插入局部网格：狭长通道细化&#x3D;3，细小特征细化&#x3D;3</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024144951094.png">
 
 <h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>切面图+流动轨迹</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024150810261.png">
 
 <h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p><strong>噪声预测</strong></p>
-<p>•风扇噪声活风扇的声音排放是目前一项非常重要的设计指标。好的风扇设计不仅能增加风量，提高压力，还能降低噪声。</p>
+<p>•风扇噪声是风扇的声音排放是目前一项非常重要的设计指标。好的风扇设计不仅能增加风量，提高压力，还能降低噪声。</p>
 <p><strong>宽带模型</strong></p>
 <p>•由紊流引起的许多应用噪声中，并没有包含具体的特定的声调，而是包含了宽频谱的频率。在这种情况下，可以从普劳德曼公式计算得到统计噪声量，由此计算声功率。宽频噪声源模型不需要瞬态解，也不提供任何关于频率的信息。</p>
 <p><strong>声功率</strong></p>

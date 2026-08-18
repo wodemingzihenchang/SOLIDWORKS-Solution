@@ -36,12 +36,48 @@
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2023-11-06 18:07:40</span>
+    <span id="post-date">2024-03-19 17:18:29</span>
 </div>
-        <div id="article"><h1 id="DSComposer-设计树"><a href="#DSComposer-设计树" class="headerlink" title="DSComposer-设计树"></a>DSComposer-设计树</h1><h2 id="装配体模式"><a href="#装配体模式" class="headerlink" title="装配体模式"></a>装配体模式</h2><p>激活装配体模式时，属于SW零部件层级的模型会被选中，</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260128175219258.png">
+        <div id="article"><h1 id="Simulation-热分析"><a href="#Simulation-热分析" class="headerlink" title="Simulation-热分析"></a>Simulation-热分析</h1><p>问题描述:简化为2D轴对称模型，通过金属膨胀节的气体压力为0.3MPA，温度为空气对流系数为50，环境温度25摄氏度，同时结构在安装过程中整体拉220摄氏度长8mm，通过温度的分布对结构的应力应变问题进行考察</p>
+<p>材料:法兰 碳钢；波纹管 AISI316</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320172514236.png">
 
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Composer</p>
+<span id="more"></span>
+
+<h2 id="【新建算例-2D简化】"><a href="#【新建算例-2D简化】" class="headerlink" title="【新建算例-2D简化】"></a>【新建算例-2D简化】</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320172725317.png">
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320172806272.png">
+
+<h2 id="【材料】"><a href="#【材料】" class="headerlink" title="【材料】"></a>【材料】</h2><h2 id="【热载荷-温度】"><a href="#【热载荷-温度】" class="headerlink" title="【热载荷-温度】"></a>【热载荷-温度】</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320173045385.png">
+
+<h2 id="【热载荷-对流】"><a href="#【热载荷-对流】" class="headerlink" title="【热载荷-对流】"></a>【热载荷-对流】</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320173159545.png">
+
+<h2 id="【网格】"><a href="#【网格】" class="headerlink" title="【网格】"></a>【网格】</h2><h2 id="【结果】"><a href="#【结果】" class="headerlink" title="【结果】"></a>【结果】</h2><h1 id="分析实例-金属膨胀节2："><a href="#分析实例-金属膨胀节2：" class="headerlink" title="分析实例:金属膨胀节2："></a>分析实例:金属膨胀节2：</h1><p>【新建算例-静应力2D简化】</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320173415919.png">
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320173456380.png">
+
+<p>【材料】</p>
+<p>【连结】</p>
+<p>【夹具-对称】</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320173801572.png">
+
+<p>【夹具-使用参考几何体】</p>
+<p>拉长8mm（对称4mm）</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320173719113.png">
+
+<p>【外部载荷-压力】</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320173858957.png">
+
+<p>【外部载荷-热力效应】</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320173925398.png">
+
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240320174002176.png">
+
+<p>【网格】</p>
+<p>【结果】</p>
+<p>显示3D图解及图解的高级设定可有编辑云图显示效果</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
 </div>
 
 <!-- Artalk 评论系统 -->
@@ -51,8 +87,8 @@
 <script>
 Artalk.init({
   el:        '#Comments',
-  pageKey:   'SOLIDWORKS-Composer/3-功能/DSComposer-设计树.html',
-  pageTitle: 'DSComposer-设计树',
+  pageKey:   'SOLIDWORKS-Simulation/4-教程/Simulation-热分析-2D简化.html',
+  pageTitle: 'Simulation-热分析',
   server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
   site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
 })

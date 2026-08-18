@@ -38,7 +38,9 @@
     <span id="post-author">作者: </span>
     <span id="post-date">2024-06-18 14:58:26</span>
 </div>
-        <div id="article"><h1 id="PDM装载插件时出错"><a href="#PDM装载插件时出错" class="headerlink" title="PDM装载插件时出错"></a>PDM装载插件时出错</h1><span id="more"></span>
+        <div id="article"><h1 id="PDM装载插件时出错"><a href="#PDM装载插件时出错" class="headerlink" title="PDM装载插件时出错"></a>PDM装载插件时出错</h1><p>登录SOLIDWORKS PDM时，可能会弹出类似“未能提取插件……”的提示。类别未注册。”这是SOLIDWORKS最常见的PDM错误之一，尤其是在升级、Windows更新或自定义插件更改后。</p>
+<p>当你登录保险库时，它会把这些插件拉到你的本地机器并注册，这样它们就可以运行了。“类别未注册”错误通常在某个进程中断时出现。</p>
+<span id="more"></span>
 
 <p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240612135015557.png" alt="image-20240612135015557"></p>
 <p>问题详情：在PDM使用过程中遇到“插件装载错误”（客户端从服务器下载插件后注册插件失败），如下图：</p>
@@ -58,6 +60,15 @@
 <h2 id="方法4：手动注册"><a href="#方法4：手动注册" class="headerlink" title="方法4：手动注册"></a>方法4：手动注册</h2><p>在cmd中手动方式为这些dll文件重新注册，打开cmd命令窗口输入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &lt;PDM安装目录&gt;</span><br><span class="line">regsvr32 &lt;文件名&gt;.dll</span><br></pre></td></tr></table></figure>
 
+<h2 id="方法4：手动注册2"><a href="#方法4：手动注册2" class="headerlink" title="方法4：手动注册2"></a>方法4：手动注册2</h2><p>以下手动重新注册的步骤应由经验丰富的管理员或在我们的技术支持指导下完成。</p>
+<p>关闭SOLIDWORKS，完全退出SOLIDWORKS PDM。</p>
+<p>以管理员身份打开Windows注册表编辑器。</p>
+<p>导航到错误信息中提到的CLSID。</p>
+<p>右键点击CLSID键，选择导出以创建备份。</p>
+<p>导出后，右键点击同一个CLSID键，选择删除。</p>
+<p>重启Windows资源管理器。</p>
+<p>使用Windows文件资源管理器浏览SOLIDWORKS PDM保险库，触发插件重新注册。</p>
+<p>当访问保险库时，SOLIDWORKS PDM 客户端会从归档服务器下载新的插件副本，本地解压后重新注册。</p>
 <h2 id="方法5：修复安装"><a href="#方法5：修复安装" class="headerlink" title="方法5：修复安装"></a>方法5：修复安装</h2><p>（3）检查.NET framework的版本3.5，4.0，4.5是否装上</p>
 <p>检查C++补丁，VC++2008&#x2F;2010&#x2F;2012&#x2F;2013&#x2F;2015(x86,x64)</p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>

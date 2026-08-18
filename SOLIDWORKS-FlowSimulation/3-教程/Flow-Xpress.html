@@ -36,39 +36,40 @@
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2022-09-15 19:12:18</span>
+    <span id="post-date">2023-10-27 17:18:29</span>
 </div>
-        <div id="article"><h1 id="方法1：视图设置创建"><a href="#方法1：视图设置创建" class="headerlink" title="方法1：视图设置创建"></a>方法1：视图设置创建</h1><p>通过视图设置添加</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251108213445816.png">
+        <div id="article"><h1 id="FloXpress入门"><a href="#FloXpress入门" class="headerlink" title="FloXpress入门"></a>FloXpress入门</h1><p>SOLIDWORKS FloXpress可了解液体在模型中流动的情况。<!-- 执行第一次流体流动分析基于“计算流体动力学”或“CFD”技术流体在模型内循环。不考虑热传递假设流体流动是稳定状态而不是传递的? --></p>
+<span id="more"></span>
 
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251108213500528.png">
+<p><strong>优点：</strong></p>
+<p>1、设计仿真一体化；不需要导入或导出。</p>
+<p>2、熟悉的界面和工作流程缩短的学习曲线。</p>
+<p>3、流体域是自动生成的</p>
+<h2 id="检查几何体"><a href="#检查几何体" class="headerlink" title="检查几何体"></a>检查几何体</h2><p>SOLDWORKS一个入口和出口的单一内部Floxpress可分析带有空腔中的液体。开口必须以顶盖闭合。请确保开口已完全以顶盖闭合。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/检查几何体1.png">
 
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251108213535551.png">
+<p>确保开口已完全以顶盖闭合，【检查几何体】的提示将变成“查看流体体积”。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/检查几何体2.png">
 
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251108213714029.png">
+<h2 id="流体"><a href="#流体" class="headerlink" title="流体"></a>流体</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/流体.png">
 
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251108213733283.png">
+<h2 id="入口条件"><a href="#入口条件" class="headerlink" title="入口条件"></a>入口条件</h2><p>压力：按流体在此处压力为条件</p>
+<p>容积流量比：按每秒进入流体的容积为条件设置。</p>
+<p>质量流量比：按每秒进入流体的质量为条件设置。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/入口条件.jpg">
 
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251108213751860.png">
+<h2 id="出口条件"><a href="#出口条件" class="headerlink" title="出口条件"></a>出口条件</h2><p>压力：按流体在此处压力为条件（注意，出口的压力必须小于入口压力，不然进出口就相反了。）</p>
+<p>容积流量比：按每秒进入流体的容积为条件设置。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/出口条件.jpg">
 
-<h1 id="方法2：PDM管理创建"><a href="#方法2：PDM管理创建" class="headerlink" title="方法2：PDM管理创建"></a>方法2：PDM管理创建</h1><h2 id="连接服务器库"><a href="#连接服务器库" class="headerlink" title="连接服务器库"></a>连接服务器库</h2><p>首次安装 SOLIDWORKS PDM 客户端后，必须在 <a target="_blank" rel="noopener" href="https://www.javelin-tech.com/blog/tag/solidworks-pdm-client/">PDM</a> 管理中识别存档服务器。(如果已经连接服务器，这一步可以跳过)</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/13-06-2022-03-04-57.png">
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p> 运行结果的过程是自动的，点击图1计算后，等待图2的计算过程。获得图3的观阅结果查看。</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/结果.png">
 
+<p>观阅结果播放如下：</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/动画.gif">
 
-
-<h2 id="连接PDM库"><a href="#连接PDM库" class="headerlink" title="连接PDM库"></a>连接PDM库</h2><p>打开【“开始菜单”&gt;“SOLIDWORKS PDM”&gt;“管理”】程序。找到PDM数据库，右键连接。</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251015161648678.png">
-
-<p>连接时，会要求你进行登录，输入你的【用户名称】和【密码】即可。</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251015161713207.png">
-
-<h2 id="生成当地视图"><a href="#生成当地视图" class="headerlink" title="生成当地视图"></a>生成当地视图</h2><p>连接登录后，再【右键-生成当地视图】，并在提示共享库视图，选择”是“：以便该计算机上的其它用户访问</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251015161738558.png">
-
-<h1 id="创建快捷方式"><a href="#创建快捷方式" class="headerlink" title="创建快捷方式"></a>创建快捷方式</h1><p>打开Windows资源管理器,将PDM库的本地视图拖至桌面创建其快捷方式，或者拖放到快速访问进行固定，方便以后使用PDM</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251015161744232.png">
-
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
+<p>tags:FlowSimulation</p>
 </div>
 
 <!-- Artalk 评论系统 -->
@@ -78,8 +79,8 @@
 <script>
 Artalk.init({
   el:        '#Comments',
-  pageKey:   'SOLIDWORKS-PDM/1-安装/PDM创建本地视图.html',
-  pageTitle: 'PDM-创建本地视图',
+  pageKey:   'SOLIDWORKS-FlowSimulation/3-教程/Flow-Xpress.html',
+  pageTitle: 'FloXpress入门',
   server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
   site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
 })

@@ -81,11 +81,37 @@
 
 
 
-<p>方程式：输入水平方向的气动风阻系数公式</p>
+<p>方程式：输入水平方向的气动【风阻】系数公式</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;GG 力 (X) 1&#125;*4/1.7^2/1.399*2/101325/3.14159*4/0.1^2</span><br></pre></td></tr></table></figure>
 
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241026131043009.png">
 
+<p>风阻的参考值和类似场景如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">物体类型</th>
+<th align="left">典型 Cd 值 (风阻系数)</th>
+<th align="left">判断结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>现代流线型轿车</strong></td>
+<td align="left">0.24 - 0.30</td>
+<td align="left"><strong>优秀</strong>。空气阻力很小，高速行驶省油。</td>
+</tr>
+<tr>
+<td align="left"><strong>SUV &#x2F; 厢式货车</strong></td>
+<td align="left">0.35 - 0.45</td>
+<td align="left"><strong>中等</strong>。风阻较大，主要受方正外形影响。</td>
+</tr>
+<tr>
+<td align="left"><strong>赛车（带大尾翼）</strong></td>
+<td align="left">0.70 - 1.10+</td>
+<td align="left"><strong>看似很高，但实际需要</strong>。赛车的 Cd 往往很大，因为尾翼产生大量下压力（负升力）的同时，必然带来巨大的空气阻力。此时需要结合 Cl 值综合判断。</td>
+</tr>
+</tbody></table>
+<p><strong>特别说明</strong>：Cd 和 Cl 是<strong>无量纲数</strong>，这意味着无论你分析的是小轿车还是大卡车，无论风速是 10m&#x2F;s 还是 100m&#x2F;s，只要形状相似，这两个系数就应该基本一致。这让它们成为了最通用的空气动力学评价标准。</p>
 <h2 id="计算控制选项"><a href="#计算控制选项" class="headerlink" title="计算控制选项"></a>计算控制选项</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241026130645686.png">
 
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241026130734400.png">
@@ -95,7 +121,8 @@
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241026131550261.png">
 
 <p>目标图</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本章研究了通过圆锥体的超声速流动， 使用了对称的条件来简化分析。 此外， 还使用了自动网格<br>细化技术来确保高质量的结果， 仿真的结果中捕捉到了正激波和斜激波， 最后还使用了切面图进行结果分析。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本章研究了通过圆锥体的超声速流动， 使用了对称的条件来简化分析。</p>
+<p>此外， 还使用了自动网格细化技术来确保高质量的结果， 仿真的结果中捕捉到了正激波和斜激波， 最后还使用了切面图进行结果分析。</p>
 <h2 id="激波"><a href="#激波" class="headerlink" title="激波"></a>激波</h2><p>在前面提到过， 当流动属性由于扰动的存在而发生强烈变化时就会出现激波。 可以看到， 在这个例子中出现的激波包含两个部分。</p>
 <p>第一， 在垂直于流动的方向存在一个弓形激波， 弓形激波的存在会极大地增加物体的阻力。 </p>
 <p>第二， 沿着圆锥体的边界可以看到斜激波的传播， 因为流动是沿边界行进的。</p>

@@ -40,14 +40,51 @@
 </div>
         <div id="article"><h1 id="SOLIDWORKS-PDM性能测试"><a href="#SOLIDWORKS-PDM性能测试" class="headerlink" title="SOLIDWORKS-PDM性能测试"></a>SOLIDWORKS-PDM性能测试</h1><span id="more"></span>
 
-
-
-<img src="https://img.r77817520.nyat.app:18981/Hexo/性能改善流程.png">
+<p>在 SOLIDWORKS PDM Professional 库中执行的几乎所有操作都会与 SQL Server 组件交互。因此，操作执行缓慢很可能源于 SQL Server 本身性能问题。性能问题也可能来自客户端环境、网络连接&#x2F;延迟、服务器硬件资源等</p>
+<p>PDM 常见性能问题发生场景：</p>
+<ul>
+<li>检入 Check In</li>
+<li>检出 Check Out</li>
+<li>获取版本 &#x2F; 获取最新版</li>
+<li>显示“包含”与“使用位置”</li>
+<li>显示材料明细表 BOM</li>
+<li>工作流状态变更</li>
+<li>管理操作（如修改权限）</li>
+</ul>
+<p>影响 SQL Server 性能的因素：</p>
+<p>系统硬件、网络架构、操作系统、存储硬盘类型（SSD&#x2F;机械）、数 据库应用、客户端应用。</p>
+<h2 id="A-使用-Ping"><a href="#A-使用-Ping" class="headerlink" title="A) 使用 Ping"></a>A) 使用 Ping</h2><p>Windows 自带命令行工具，用于测试网络延迟与丢包。</p>
+<p>命令示例：ping &lt;服务器名&gt; -t -l 1000- -t：持续 ping；-l：指定数据包大小（建议 1000~1450 字节）</p>
+<p>建议至少运行 3~4 分钟，延迟应稳定 &lt;200ms，丢包率 0%。同时用 IP 地址与服务器名分别测试，排查 DNS 解析问题。</p>
+<h2 id="B-使用性能监视器-PerfMon"><a href="#B-使用性能监视器-PerfMon" class="headerlink" title="B) 使用性能监视器 PerfMon"></a>B) 使用性能监视器 PerfMon</h2><p>Windows 自带系统性能监控工具，可远程监控 SQL Server &#x2F; 归档服务器。可保存 BLG 日志提交给技术支持。</p>
+<p>参考知识库：S-025698（SQL）、S-038515（归档服务器）。</p>
+<h2 id="C-路由跟踪-Tracert"><a href="#C-路由跟踪-Tracert" class="headerlink" title="C) 路由跟踪 Tracert"></a>C) 路由跟踪 Tracert</h2><p>用于查看客户端到服务器经过的路由节点（跳数）与每跳延迟，定位网络瓶颈节点。命令：tracert &lt;服务器地址&gt;</p>
+<p>请求超时通常是路由器安全策略，不代表故障。</p>
+<p>D) 使用 SQL Profiler</p>
+<p>i) SQL Profiler 作用：捕获 SQL Server 中执行最慢的查询语句，定位数据库层面性能瓶颈。可保存为 .trc 跟踪文件用于后续分析。<br>ii) 安装：随 SQL Server 安装包一起安装，选择“管理工具 - 完整”。SQL Server 2016+ 需单独安装 SSMS。</p>
+<p>iii) 使用方法</p>
+<ol>
+<li>打开 SSMS → 工具 → SQL Server Profiler</li>
+<li>新建跟踪，连接目标服务器</li>
+<li>使用 Standard 模板，取消安全审计与会话事件</li>
+<li>勾选“显示所有列”，添加 DatabaseName、HostName</li>
+<li>设置过滤器：库名、主机名、持续时间 ≥1</li>
+<li>在复现问题前启动跟踪，复现后停止并分析最长耗时语句</li>
+</ol>
+<h2 id="E-使用-SSMS-活动监视器"><a href="#E-使用-SSMS-活动监视器" class="headerlink" title="E) 使用 SSMS 活动监视器"></a>E) 使用 SSMS 活动监视器</h2><p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260511225137432.png" alt="image-20260511225137432"></p>
+<p>实时查看 SQL 进程、等待任务、数据库 I&#x2F;O、批处理请求、阻塞、资源等待、高开销查询。</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260511225146950.png" alt="image-20260511225146950"></p>
+<p>关键：Head Block 列可查看阻塞其他查询的语句。建议刷新间隔 ≥10 秒，避免影响服务器性能。</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260511225157612.png" alt="image-20260511225157612"></p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260511225215542.png" alt="image-20260511225215542"></p>
+<h2 id="F-使用-PDM-连接测试工具"><a href="#F-使用-PDM-连接测试工具" class="headerlink" title="F) 使用 PDM 连接测试工具"></a>F) 使用 PDM 连接测试工具</h2><p>用于测试 PDM 所有链路连通性：归档服务器、SQL Server、SNL 等。性能问题重点关注 Ping 结果。</p>
+<p>工具与说明见知识库 S-069274。</p>
+<h2 id="G-使用-PDM-状态报告工具"><a href="#G-使用-PDM-状态报告工具" class="headerlink" title="G) 使用 PDM 状态报告工具"></a>G) 使用 PDM 状态报告工具</h2><p>用于抓取 PDM 库数据库状态、配置、性能快照，生成诊断报告。支持保存为 .dat 文件，可离线查看并提交技术支持。</p>
+<p>工具见知识库 S-066526。</p>
+<h1 id="PDM性能改善"><a href="#PDM性能改善" class="headerlink" title="PDM性能改善"></a>PDM性能改善</h1><img src="https://img.r77817520.nyat.app:18981/Hexo/性能改善流程.png">
 
 <h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><pre class="mermaid">graph LR
 PDM_report-->B1-->B2</pre>
-
-
 
 <p>PDM report：查看SOL服务器 &#x2F; PDM库配置，查看PDM性能&#x2F;PDM使用历史数据</p>
 <p>SW Log Parser：分析SOL服务器默认扩展事件system_health 中的死锁及等待事务</p>
@@ -66,32 +103,14 @@ PDM_report-->B1-->B2</pre>
 <p>•清理当地缓存</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/缓存.png">
 
-<h2 id="检入慢-缓存影响"><a href="#检入慢-缓存影响" class="headerlink" title="检入慢-缓存影响"></a>检入慢-缓存影响</h2><p>原理：</p>
-<p>检入检出和变更状态在PDM运行逻辑就是将SQL表内的相关列值信息做更新，在多个表内插入或新建新版本的所有记录和列值，然后将所有新产生的新版本物理文件上传到存档服务器内的0-F目录内，并更新对应的index.xml文件。</p>
+<h2 id="检入慢-缓存影响"><a href="#检入慢-缓存影响" class="headerlink" title="检入慢-缓存影响"></a>检入慢-缓存影响</h2><p>检入检出和变更状态在PDM运行逻辑就是将SQL表内的相关列值信息做更新，在多个表内插入或新建新版本的所有记录和列值，然后将所有新产生的新版本物理文件上传到存档服务器内的0-F目录内，并更新对应的index.xml文件。</p>
 <p>在某些情况下，如果所处理的库包含许多本地缓存和检出的文件夹和文件，即使检入单个文档，也可能需要很长时间才会显示“检入”对话框。通常，仅当用户以特定用户身份登录到特定计算机上的库时，才会出现这些情况。</p>
 <p>要核实的一点是：SOLIDWORKS® Professional PDM 应用程序如何在检入期间定义父工程图的处理。默认情况下，检入操作将扫描所有缓存的文件夹，以便将可能的父工程图纳入检入。检入非 SOLIDWORKS 文件时，也可能会发生该问题。根据客户端计算机上当前缓存文件夹的结构，此扫描可能会增加大量开销，导致在出现“检入”对话框之前长时间延迟。</p>
 <p>要验证设置：</p>
-<p>在 SOLIDWORKS PDM 管理工具中，右键单击“用户”，然后单击“设置”。<br>在“检入”部分中，停用“在整个库中查找工程图”选项，然后重试检入。</p>
-<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><h2 id="SQL数据库的事务日期清理"><a href="#SQL数据库的事务日期清理" class="headerlink" title="SQL数据库的事务日期清理"></a>SQL数据库的事务日期清理</h2><p>ldf(分离&#x2F;附加)</p>
-<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240403153027814.png" alt="image-20240403153027814"></p>
-<p>附加</p>
-<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240403153325078.png" alt="image-20240403153325078"></p>
-<h2 id="存档服务器根目录0-F迁移"><a href="#存档服务器根目录0-F迁移" class="headerlink" title="存档服务器根目录0-F迁移"></a>存档服务器根目录0-F迁移</h2><p>停止存档服务移动</p>
-<p>0-F存档库中需要更换路径的文件夹</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\&lt;库名&gt;\ArchiveTable\</span><br></pre></td></tr></table></figure>
-
-<p>修改ArchiveTable的16个键值路径</p>
-<p>启动存档服务</p>
-<h2 id="冷存储不需要的文件版本"><a href="#冷存储不需要的文件版本" class="headerlink" title="冷存储不需要的文件版本"></a>冷存储不需要的文件版本</h2><p>删除版本</p>
-<p>移动版本</p>
-<p>重启存档服务器服务</p>
-<p>保留版本数</p>
-<p>保留修订版</p>
-<p>避免在工作时间内运行计划</p>
+<p>在 SOLIDWORKS PDM 管理工具中，右键单击“用户”，然后单击“设置”。在“检入”部分中，停用“在整个库中查找工程图”选项，然后重试检入。</p>
+<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><h2 id="冷存储不需要的文件版本"><a href="#冷存储不需要的文件版本" class="headerlink" title="冷存储不需要的文件版本"></a>冷存储不需要的文件版本</h2><p>避免在工作时间内运行计划</p>
 <h2 id="删除文件库中的空目录和无用文件数据"><a href="#删除文件库中的空目录和无用文件数据" class="headerlink" title="删除文件库中的空目录和无用文件数据"></a>删除文件库中的空目录和无用文件数据</h2><p>删除文件库中的空目录和无用文件数据</p>
-<ul>
-<li>减少SQL数据库中的Documents&#x2F;Projects和其它关联表的数据量</li>
-</ul>
+<p>减少SQL数据库中的Documents&#x2F;Projects和其它关联表的数据量</p>
 <h2 id="适当减少多余重复的流程通知"><a href="#适当减少多余重复的流程通知" class="headerlink" title="适当减少多余重复的流程通知"></a>适当减少多余重复的流程通知</h2><p>适当减少多余重复的流程通知</p>
 <ul>
 <li>组&#x2F;用户<em>文件夹</em>通知</li>

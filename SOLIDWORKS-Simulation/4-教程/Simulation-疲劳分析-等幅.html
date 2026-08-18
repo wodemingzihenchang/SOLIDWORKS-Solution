@@ -39,13 +39,13 @@
     <span id="post-date">2024-04-19 10:18:29</span>
 </div>
         <div id="article"><h1 id="Simulation-疲劳分析"><a href="#Simulation-疲劳分析" class="headerlink" title="Simulation-疲劳分析"></a>Simulation-疲劳分析</h1><p>疲劳破坏是指结构在远低于材料强度极限甚至屈服极限的交变应力作用下发生破坏的现象。材料在循环应力和应变作用下，在一处或几处逐渐产生局部永久性累积损伤，经一定循环次数产生裂纹或突然发生完全断裂的过程</p>
-<h2 id="静应力分析"><a href="#静应力分析" class="headerlink" title="静应力分析"></a>静应力分析</h2><p>疲劳分析前你需要对疲劳添加下的静态受力进行分析，这里有两个目的：</p>
-<p>1、确定静态下的模型未发生屈服失效；</p>
-<p>2、为疲劳分析提供静态工况下的受力条件；</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240419091103122.png">
-
-
-
+<h2 id="静应力分析"><a href="#静应力分析" class="headerlink" title="静应力分析"></a>静应力分析</h2><p>如图所示，材料为铝合金7075-T6的压力容器将接受疲劳寿命的评估，它同时受到等幅应力和热应力载<br>荷。压力载荷0.066MPa和3.3MPa之间波动。热应力随着热流在0和1471.8W&#x2F;㎡之间波动。<br>本例的目标是分析该压力容器在200万次热力和190万次压力载荷周期后是否失效。</p>
+<p>① 热力算例。热力分析会加载热流量到容器内部，同时通过对流的方式向外散热。</p>
+<p>② 热应力算例。为了观察热力分析后的热膨胀效果，需要建立一个静态算例。</p>
+<p>③ 静应力分析算例。为了计算压力容器内部承受3.3MPa压力的结果，需要建立第二个静态算例。</p>
+<p>④ 疲劳算例。疲劳算例应当考虑所有的载荷条件并将其在模型中运行指定的周期数。</p>
+<p>⑤ 后处理结果。疲劳算例运行结束后，分析结果并判断是否发生失效。</p>
+<p>⑥ 改善方法。在压力容器顶盖上施加恒定载荷，以减小疲劳损坏</p>
 <h2 id="新建疲劳分析"><a href="#新建疲劳分析" class="headerlink" title="新建疲劳分析"></a>新建疲劳分析</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240419091216947.png">
 
 <h2 id="添加事件"><a href="#添加事件" class="headerlink" title="添加事件"></a>添加事件</h2><p>添加前面的静应力分析算例作为事件，并数值循环次数和类型，</p>
@@ -62,14 +62,17 @@
 
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240419085913154.png">
 
+
+
+<p>当两轴上只有少量数据点且分散性较大时，采用插值法</p>
+<p>双对数：对循环数和交替应力采用对数内插法（底数为10），建议此选项用于只有少量数据点稀疏分布在两条轴上的 SN 曲线。</p>
+<p>半对数：对应力采用线性插值，而对循环数采用对数插值法，建议将此选项用于相对于循环数的变化而言应力变化范围相对较小的 SN 曲线。</p>
+<p>线性：对循环数和交替应力都采用线性插值法，建议将此选项用于具有大量数据点的 SN 曲线。</p>
 <h2 id="运行算例"><a href="#运行算例" class="headerlink" title="运行算例"></a>运行算例</h2><p>出现断裂的位置：</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240419092423281.png">
-
 <p>出现断裂的次数：</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240419092631407.png">
-
-
-
+<p>生命<br> 仅当疲劳研究由一个事件定义时才可用。<br> 显示导致在每个位置发生疲劳失效的循环数（对于恒定高低幅度事件算例）或块数（对于可变高低<br>幅度算例）。 图解基于 SN 曲线和每个位置处的交替应力。 块是可变高低幅度事件的完整载荷历史<br>（包括复制数）。</p>
+<p> 损坏<br> 损坏是基于线性损坏准则（Miner法则）的。该准则假定有这么一条S-N曲线，它预测经过𝑁𝑖个循环，<br>以及在交替应力𝜎𝑖时产生疲劳失效。每个循环都会产生一个损坏因子𝐷𝑖，它将占结构寿命的𝑁1 。而实<br>际计算在交替应力𝜎𝑖时，经历的循环数为𝑛𝑖。那么总的损坏因子就为D&#x3D;(</p>
+<p> 损坏因子也被称为利用率，代表结构消耗寿命的比率。损坏因子为0.35时就意味着35%的结构寿命被<br>消耗了。当损坏因子为1（100%）时，疲劳失效就发生了。</p>
 <h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="循环类型"><a href="#循环类型" class="headerlink" title="循环类型"></a>循环类型</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2023/chinese-simplified/Solidworks/cworks/IDH_HELP_FATIGUE_ADD_EVENT.htm?rid=42938">帮助</a></p>
 <ul>
 <li>完全反转：-最大值——+最大值</li>
@@ -102,7 +105,7 @@
 <script>
 Artalk.init({
   el:        '#Comments',
-  pageKey:   'SOLIDWORKS-Simulation/5-案例/Simulation-疲劳分析.html',
+  pageKey:   'SOLIDWORKS-Simulation/4-教程/Simulation-疲劳分析-等幅.html',
   pageTitle: 'Simulation-疲劳分析',
   server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
   site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称

@@ -89,13 +89,56 @@
 
 <h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>流动轨迹</p>
 <p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260422223356108.png" alt="image-20260422223356108"></p>
-<h1 id="粒子研究"><a href="#粒子研究" class="headerlink" title="粒子研究"></a>粒子研究</h1><p>向主流注入物理颗粒</p>
+<h1 id="粒子研究"><a href="#粒子研究" class="headerlink" title="粒子研究"></a>粒子研究</h1><p>粒子研究：是颗粒相的“独立仿真”，用来研究分散在流体中的固体颗粒（如沙砾、灰尘）的运动及物理影响。向主流注入物理颗粒</p>
 <h2 id="新建粒子"><a href="#新建粒子" class="headerlink" title="新建粒子"></a>新建粒子</h2><p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241026145049811.png" alt="image-20241026145049811"></p>
 <p>粒子注入</p>
 <p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241026145830704.png" alt="image-20241026145830704"></p>
 <p>使用粒子研究命令</p>
 <p>查看粒子轨迹结果</p>
 <p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260422223408846.png" alt="image-20260422223408846"></p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p>“流动迹线”和“粒子研究”是两种完全不同分析层级的结果工具。简单来说：</p>
+<p>流动迹线：是流体本身的“可视化工具”，用来观察连续流体（如水、空气）的整体运动轨迹。</p>
+<p>粒子研究：是颗粒相的“独立仿真”，用来研究分散在流体中的固体颗粒（如沙砾、灰尘）的运动及物理影响。</p>
+<p>它们的核心区别可以总结为下表：</p>
+<table>
+<thead>
+<tr>
+<th align="left">对比维度</th>
+<th align="left">流动迹线 (Flow Trajectories)</th>
+<th align="left">粒子研究 (Particle Study)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>分析性质</strong></td>
+<td align="left"><strong>后处理可视化工具</strong> （基于已算出的流场结果绘制）</td>
+<td align="left"><strong>独立的仿真计算</strong> （需单独设置并运行求解）</td>
+</tr>
+<tr>
+<td align="left"><strong>追踪对象</strong></td>
+<td align="left"><strong>流体微团</strong>（代表流体质点）</td>
+<td align="left"><strong>离散固体颗粒</strong>（如沙砾、粉尘、液滴）</td>
+</tr>
+<tr>
+<td align="left"><strong>核心作用</strong></td>
+<td align="left">直观展示流体的流动路径、速度分布、涡流区域</td>
+<td align="left">模拟颗粒在流场中的运动轨迹、沉积、侵蚀或分离效率</td>
+</tr>
+<tr>
+<td align="left"><strong>是否需要求解</strong></td>
+<td align="left">不需要，计算结果已存在</td>
+<td align="left">需要，在流场结果基础上进行二次求解</td>
+</tr>
+<tr>
+<td align="left"><strong>颗粒间&#x2F;与壁面作用</strong></td>
+<td align="left">不涉及</td>
+<td align="left">可考虑（如碰撞反弹、壁面侵蚀、颗粒吸附）</td>
+</tr>
+<tr>
+<td align="left"><strong>物理属性</strong></td>
+<td align="left">通常只标记流场属性（如速度、压力）</td>
+<td align="left">可赋予颗粒独立属性（如直径、材料、质量流量）</td>
+</tr>
+</tbody></table>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
 <p>tags:FlowSimulation</p>
 </div>

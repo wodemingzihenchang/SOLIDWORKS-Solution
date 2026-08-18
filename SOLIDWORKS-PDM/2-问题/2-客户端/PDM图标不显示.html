@@ -36,21 +36,19 @@
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2023-10-27 17:18:29</span>
+    <span id="post-date">2026-06-04 19:29:13</span>
 </div>
-        <div id="article"><h1 id="Simulation-跌落测试"><a href="#Simulation-跌落测试" class="headerlink" title="Simulation-跌落测试"></a>Simulation-跌落测试</h1><p>在产品设计时，我们会考虑产品跌落后是否会发生损坏。例如：手机掉到地上，为了保证产品的可靠性（或者鲁棒性[1]），我们需要考虑跌落的变形、损坏、从而影响使用的情况。</p>
-<span id="more"></span>
-
-<p>solidworks simulation的跌落仿真可以考虑材料的弹性变形，也可以考虑材料的塑性变形。下面，猫亮设计用一个直径30mm的小球来演示一下小球在跌落的瞬间会发生什么变化。</p>
-<h2 id="新建算例"><a href="#新建算例" class="headerlink" title="新建算例"></a>新建算例</h2><p>新建一个跌落测试算例。</p>
-<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><p>材料设置为合金钢（SS），模型类型选择塑性。</p>
-<p>为了快速演示跌落现象，采用默认网格划分，网格精度稍好一点即可。<br>跌落测试的设置和其他结构类有限元分析的设置中相比多了一项设置，在这个设置中我们可以定义跌落的相关参数。</p>
-<p>在跌落测试设置中，添加向下的引力，我们让小球从1000m的高度落下（跌落测试中不考虑空气阻力，高度越高计算和实际偏差越大，这里只是为了演示小球的塑性变形，因此高度设的比较高），看看小球会发生什么样的变化。</p>
-<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240529152531157.png" alt="image-20240529152531157"></p>
-<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240529152546575.png" alt="image-20240529152546575"></p>
-<p>以上设置完成后，我们就可以直接进行计算了。计算完成后的结果如下。</p>
-<p>为了保证产品的可靠性，我们需要考虑一些冗余设计-即使掉落到地上也不允许产生较大的损坏，从而影响使用。</p>
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
+        <div id="article"><h1 id="PDM-图标不显示"><a href="#PDM-图标不显示" class="headerlink" title="PDM-图标不显示"></a>PDM-图标不显示</h1><p>PDM客户端图标在Windows任务栏右下角不显示，该问题通常由系统托盘设置、服务未启动、启动项禁用或软件冲突引起。</p>
+<h2 id="检查任务栏设置"><a href="#检查任务栏设置" class="headerlink" title="检查任务栏设置"></a>检查任务栏设置</h2><p>右键点击任务栏，选择“任务栏设置”。</p>
+<p>向下滚动并找到“通知区域”部分，点击“选择哪些图标显示在任务栏上”。</p>
+<p>确保SOLIDWORKS PDM的图标已启用。如果未启用，请将其切换为“开”；</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260608105501846.png" alt="image-20260608105501846"></p>
+<h2 id="检查“本地安全策略”"><a href="#检查“本地安全策略”" class="headerlink" title="检查“本地安全策略”"></a>检查“本地安全策略”</h2><p>如果PDM图标没有出现，还需要检查“本地安全策略”。运行对话框，输入“secpol.msc”，</p>
+<p>在“安全设置”下的“本地安全策略”管理控制台中，展开“本地策略”，然后单击“安全选项”。</p>
+<p>确保以下两个策略指定为“已启用”<br>             •“用户帐户控制：为内置管理员帐户使用管理员审批模式”<br>             •“用户帐户控制：在管理员审批模式下运行所有管理员”</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260608105413883.png" alt="image-20260608105413883"></p>
+<p>重新启动计算机，然后访问文件库。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
 
 <!-- Artalk 评论系统 -->
@@ -60,8 +58,8 @@
 <script>
 Artalk.init({
   el:        '#Comments',
-  pageKey:   'SOLIDWORKS-Simulation/5-案例/Simulation-跌落测试.html',
-  pageTitle: 'Simulation-跌落测试',
+  pageKey:   'SOLIDWORKS-PDM/2-问题/2-客户端/PDM图标不显示.html',
+  pageTitle: 'PDM-图标不显示',
   server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
   site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
 })

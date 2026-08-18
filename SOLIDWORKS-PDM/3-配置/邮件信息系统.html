@@ -50,9 +50,12 @@
 <p>（以 163 邮箱为例：）</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image073-1776086308030-1.png">
 
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>PDM通知总数限制设置，在服务器电脑上打开注册表并找到以下项，添加名为“NumActionsToProcess”的新 DWORD 值，并将其数值修改为5000（十进制）</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="通知总数"><a href="#通知总数" class="headerlink" title="通知总数"></a>通知总数</h2><p>PDM通知总数限制设置，在服务器电脑上打开注册表并找到以下项，添加名“NumActionsToProcess”的新 DWORD 值，并将其数值修改为5000（十进制）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\MailService </span><br></pre></td></tr></table></figure>
 
+<h2 id="SSL"><a href="#SSL" class="headerlink" title="SSL"></a>SSL</h2><p>PDM 2025版本开始支持SSL</p>
+<p>PDM2024及旧版本只支持普通SMTP&#x2F;端口25实测网易&#x2F;QQ邮箱需要花钱开VIP会员</p>
+<p>已知问题:启用SMTPSSL通知同事会报错“无法创建套接字”<br>BR10000414497 - Sending notification fails with “Could notcreate socket” error for Notify, A Colleague for securedSMTP (SMTPS)</p>
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
 </div>
 

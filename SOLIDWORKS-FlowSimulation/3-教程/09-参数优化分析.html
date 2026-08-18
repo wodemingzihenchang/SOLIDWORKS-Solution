@@ -38,7 +38,8 @@
     <span id="post-author">作者: </span>
     <span id="post-date">2024-10-27 17:18:29</span>
 </div>
-        <div id="article"><h1 id="参数优化分析"><a href="#参数优化分析" class="headerlink" title="参数优化分析"></a>参数优化分析</h1><p>使用参数(优化)算例特征创建分析项目。使用对称平面创建1&#x2F;2 或 1&#x2F;4分析模型</p>
+        <div id="article"><h1 id="参数优化分析"><a href="#参数优化分析" class="headerlink" title="参数优化分析"></a>参数优化分析</h1><p>使用参数(优化)算例特征创建分析项目。通过参数研究：设置【变量】、【标准】等，按变量进行多次迭代的变量分析，得到接近标准的结果项目。</p>
+<p>技巧：使用对称平面创建1&#x2F;2 或 1&#x2F;4分析模型</p>
 <p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260422215952888.png" alt="image-20260422215952888"></p>
 <h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>利用向导创建流体分析项目</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/向导-创建项目.png">
@@ -74,15 +75,23 @@
 
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024155555251.png">
 
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024155718562.png">
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>活塞面受力目标</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024155718562.png">
 
+<p>静压平均值</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260516221340141.png" alt="image-20260516221340141"></p>
 <h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>目标图</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024161829199.png">
 
 
 
-<h1 id="参数研究"><a href="#参数研究" class="headerlink" title="参数研究"></a>参数研究</h1><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024161734727.png">
+<h1 id="参数研究"><a href="#参数研究" class="headerlink" title="参数研究"></a>参数研究</h1><p>新建参数研究，研究方法有3种：</p>
+<p>1、目标优化：设置变量，通过变量变化，得到接近标准的结果；</p>
+<p>2、假设优化：设定变量，通过假设变量进行组合多组试验，获得接受的仿真结果组。</p>
+<p>3、试验设计和优化：咋这个和假设优化有点像？？</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024161734727.png">
 
+<p>目标优化</p>
 <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>添加目标优化，由配合尺寸数值控制</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024162119309.png">
 
@@ -100,6 +109,8 @@
 
 <p>在运行后的方案里看各参数过程计算的结果</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024165433822.png">
+
+
 
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
 <p>tags:FlowSimulation</p>

@@ -38,14 +38,8 @@
     <span id="post-author">作者: </span>
     <span id="post-date">2024-10-27 17:18:29</span>
 </div>
-        <div id="article"><h1 id="多孔介质分析"><a href="#多孔介质分析" class="headerlink" title="多孔介质分析"></a>多孔介质分析</h1><p>学习点：</p>
-<p>使用多孔介质选项生成一个流体分析</p>
-<p>通过虚设的实体获得需要的目标值</p>
-<p>定义多孔介质材料</p>
-<p>评价速度分布</p>
+        <div id="article"><h1 id="多孔介质分析"><a href="#多孔介质分析" class="headerlink" title="多孔介质分析"></a>多孔介质分析</h1><p>使用多孔介质选项生成一个流体分析。通过虚设的实体获得需要的目标值，定义多孔介质材料。评价速度分布</p>
 <h2 id="案例分析"><a href="#案例分析" class="headerlink" title="案例分析"></a>案例分析</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024115833407.png">
-
-
 
 <p>检查模型</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024120259899.png">
@@ -71,8 +65,7 @@
 <p>壁面条件</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/向导-壁面条件.png">
 
-<p>初始条件</p>
-<p>对这个分析来说，我们可以按默认定义进行</p>
+<p>初始条件：对这个分析来说，我们可以按默认定义进行</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/向导-初始条件.png">
 
 
@@ -85,12 +78,13 @@
 
 
 
-<h2 id="多孔介质"><a href="#多孔介质" class="headerlink" title="多孔介质"></a>多孔介质</h2><p>考虑到多孔材质对经过流体具有一些“压降”等特性。我们可以在【多孔介质】编辑内，定义其材质的特性</p>
+<h2 id="多孔介质"><a href="#多孔介质" class="headerlink" title="多孔介质"></a>多孔介质</h2><p>考虑到多孔材质对经过流体具有一些“压降”等特性。</p>
+<p>我们可以在【多孔介质】编辑内，定义其材质的特性</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024122320748.png">
 
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024122153625.png">
 
-<p>多孔介质2</p>
+<p>另一个过滤器也添加多孔介质</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024122455045.png">
 
 
@@ -108,7 +102,7 @@
 <p>压降：插入方程式目标，把前三个目标做计算</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024123409182.png">
 
-<h2 id="组件控制"><a href="#组件控制" class="headerlink" title="组件控制"></a>组件控制</h2><p>2净化器，我们设置了多孔介质，已经排除在外；</p>
+<h2 id="组件控制"><a href="#组件控制" class="headerlink" title="组件控制"></a>组件控制</h2><p>2个过滤净化器，我们设置了多孔介质，已经排除在外；</p>
 <p>然后，过程目标使用的实体，需要也取消勾选，排除在计算之外</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024123709074.png">
 
@@ -133,10 +127,10 @@
 <h2 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h2><p>设置XY图</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024142810606.png">
 
+
+
 <p>查看2个仿真项目的XY图比较</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20241024142541314.png">
-
-
 
 
 

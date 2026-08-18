@@ -36,29 +36,14 @@
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2026-04-21 01:33:24</span>
+    <span id="post-date">2026-05-05 13:42:30</span>
 </div>
         <div id="article"><!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
-    <title>AI搜索工具</title>
-    <script src="/js/search.js"></script>
-
-    <style>
-        #local-search-input {
-            height: 55px;
-            width: 94%;
-            outline: none;
-            border: none;
-            border-radius: 5px;
-            padding: 0 3% 0 3%;
-            font-size: 18px;
-            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-
+    <title>AI搜索工具</title> 
 </head>
 
 <body style="width:90%;" onload="coze.showChatBot();">
@@ -83,7 +68,13 @@
             },
         });
     </script>
-
+	<script>
+        // 检查是否已经刷新过
+        if (!sessionStorage.getItem('refreshed')) {
+            sessionStorage.setItem('refreshed', 'true');
+            location.reload();
+        }
+    </script> 
 </body>
 
 </html></div>

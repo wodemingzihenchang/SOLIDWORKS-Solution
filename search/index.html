@@ -36,7 +36,7 @@
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2026-05-04 00:18:10</span>
+    <span id="post-date">2026-05-17 21:37:00</span>
 </div>
         <div id="article"><!DOCTYPE html>
 <html lang="zh-CN">
@@ -74,7 +74,7 @@
 
 </head>
 
-<body onload="location.reload()">
+<body>
     <!-- 筛选按钮 -->
     <h2>筛选按钮</h2>
     <button class="tags_button" id="addSlwBtn">tags:SOLIDWORKS</button>
@@ -95,14 +95,19 @@
         <div id="local-search-result"></div>
     </div>
     <div>搜索插件参考：https://github.com/wzpan/hexo-generator-search/tree/master</div>
-
+	<script>
+        // 检查是否已经刷新过
+        if (!sessionStorage.getItem('refreshed')) {
+            sessionStorage.setItem('refreshed', 'true');
+            location.reload();
+        }
+    </script>
     <script type="text/javascript">
         var search_path = "SOLIDWORKS-Solution/search.xml";
         if (search_path.length == 0) { search_path = "SOLIDWORKS-Solution/search.xml"; }
         var path = '/' + search_path;
         searchFunc(path, 'local-search-input', 'local-search-result');
     </script>
-
     <script>
         // 获取文本框元素
         const textarea = document.getElementById('local-search-input');

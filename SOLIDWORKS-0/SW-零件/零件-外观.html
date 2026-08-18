@@ -36,33 +36,39 @@
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2025-03-04 16:19:06</span>
+    <span id="post-date">2025-10-11 11:09:43</span>
 </div>
-        <div id="article"><h1 id="Toolbox标准件处理"><a href="#Toolbox标准件处理" class="headerlink" title="Toolbox标准件处理"></a>Toolbox标准件处理</h1><p>SOLIDWORKS有自己的一个Toolbox标准件数据库，通过【开始&#x2F;菜单-solidworks工具-toolbox设置】进行编辑定制</p>
-<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250606112554250.png" alt="image-20250606112554250"></p>
-<h1 id="螺纹孔"><a href="#螺纹孔" class="headerlink" title="螺纹孔"></a>螺纹孔</h1><p>定制螺纹大小</p>
-<p>定义显示的名称和直径，注意这里这是定义的显示名称，这个是在SW【异形孔向导】时用于显示选择用，不包括螺纹数据。</p>
-<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250606113006374.png" alt="image-20250606113006374"></p>
-<p>定义螺纹数据，其中，full_size就是上一步定义的大小。<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250606113249562.png" alt="image-20250606113249562"></p>
-<h1 id="标准件"><a href="#标准件" class="headerlink" title="标准件"></a>标准件</h1><h1 id="用户设定"><a href="#用户设定" class="headerlink" title="用户设定"></a>用户设定</h1><h1 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h1><h1 id="智能扣件"><a href="#智能扣件" class="headerlink" title="智能扣件"></a>智能扣件</h1><h1 id="Toolbox转零件"><a href="#Toolbox转零件" class="headerlink" title="Toolbox转零件"></a>Toolbox转零件</h1><p>本文将介绍如何将普通 SW 文件转换成 Toolbox 零件，使得零件具备 Toolbox 标准件的一些特性。</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image1-1776083501581-1.png">
+        <div id="article"><h1 id="SOLIDWORK零件-外观"><a href="#SOLIDWORK零件-外观" class="headerlink" title="SOLIDWORK零件-外观"></a>SOLIDWORK零件-外观</h1><p>颜色或图片</p>
+<p>映射</p>
+<p>照明度</p>
+<p>表面粗糙度</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20231227165445096.png">
 
-<h2 id="方法-1：转换工具"><a href="#方法-1：转换工具" class="headerlink" title="方法 1：转换工具"></a>方法 1：转换工具</h2><p>你需要借助到一个转换工具”sldsetdocprop.exe”，其位置默认如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\SolidWorks 20XX\SOLIDWORKS\Toolbox\data utilities</span><br></pre></td></tr></table></figure>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/.png">
 
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image2-1776083501581-3.png">
+<p>1、在编辑材料库窗</p>
+<h1 id="贴图"><a href="#贴图" class="headerlink" title="贴图"></a>贴图</h1><p>图像</p>
+<p>映射</p>
+<p>照明度</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20231227165712841.png">
 
-<p>打开该程序，如下图【添加文件】选择所需转换的 SW 文件，在”属性状态”这里设置（”是”则转成 Toolbox 零部件；”否”则转成普通 SW 零部件）</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image3-1776083501581-2.png">
+<h1 id="布景"><a href="#布景" class="headerlink" title="布景"></a>布景</h1><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20231227165847194.png">
 
-<h2 id="方法-2：Toolbox-向导添加"><a href="#方法-2：Toolbox-向导添加" class="headerlink" title="方法 2：Toolbox 向导添加"></a>方法 2：Toolbox 向导添加</h2><p>2-1、在软件界面打开”配置 Toolbox”的编辑程序</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image4-1776083501581-4.png">
+<h1 id="光源"><a href="#光源" class="headerlink" title="光源"></a>光源</h1><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20231227165908037.png">
 
-<p>2-2、在 Toolbox 向导，2-自定义五金件，在 GB 文件夹右键进行”新文件夹”或”添加文件”自定义自己的标准件。</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image5-1776083501581-5.png">
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20231227165924982.png">
 
-<p>并且在 Toolbox 文件夹内会生成一份新的 SW Toolbox 文件。你可以像其他标准件那样来使用他们。</p>
-<img src="https://img.r77817520.nyat.app:18981/Hexo/image6-1776083501581-6.png">
+<h1 id="相机"><a href="#相机" class="headerlink" title="相机"></a>相机</h1><h1 id="走查"><a href="#走查" class="headerlink" title="走查"></a>走查</h1><h2 id="贴图-1"><a href="#贴图-1" class="headerlink" title="贴图"></a>贴图</h2><p>使用贴图时，在模型表面默认会按平铺方式。</p>
+<p>我们可以使用【插入，特征，分割线】划分出单独的一个面，然后再把图片放到分割线区域上，调整外观里【映射，高度宽度】即可。</p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="纹理黑色"><a href="#纹理黑色" class="headerlink" title="纹理黑色"></a>纹理黑色</h2><p>使用图片做贴图纹理时，若图片格式是tif，则可能出现显示异常的纯黑色外观（并未显示正常的图片图案）。</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260508173608971.png" alt="image-20260508173608971"></p>
+<h2 id="多外观覆盖"><a href="#多外观覆盖" class="headerlink" title="多外观覆盖"></a>多外观覆盖</h2><p>多外观覆盖，导致颜色显示异常</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260513164552903.png" alt="image-20260513164552903"></p>
+<h2 id="线框显示颜色不同"><a href="#线框显示颜色不同" class="headerlink" title="线框显示颜色不同"></a>线框显示颜色不同</h2><p>装配体切换到线框显示的零部件颜色不同</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251126093759803.png">
+
+<p>方法</p>
+<img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251126094025716.png">
 
 <h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:SOLIDWORKS</p>
 </div>
@@ -74,8 +80,8 @@
 <script>
 Artalk.init({
   el:        '#Comments',
-  pageKey:   'SOLIDWORKS-0/5-模板/Toolbox标准件处理.html',
-  pageTitle: 'Toolbox标准件处理',
+  pageKey:   'SOLIDWORKS-0/SW-零件/零件-外观.html',
+  pageTitle: 'SOLIDWORK零件-外观',
   server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
   site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
 })

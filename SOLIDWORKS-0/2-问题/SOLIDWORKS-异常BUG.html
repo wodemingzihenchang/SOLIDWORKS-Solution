@@ -38,27 +38,28 @@
     <span id="post-author">作者: </span>
     <span id="post-date">2023-11-20 23:23:31</span>
 </div>
-        <div id="article"><h1 id="启动问题"><a href="#启动问题" class="headerlink" title="启动问题"></a>启动问题</h1><h2 id="热修复后崩溃"><a href="#热修复后崩溃" class="headerlink" title="热修复后崩溃"></a>热修复后崩溃</h2><p><a target="_blank" rel="noopener" href="https://r1132100503382-eu1-3dswym.3dexperience.3ds.com/community/swym:prd:R1132100503382:community:kKnaKWHGTPC4ut-q1X_9uA?content=swym:prd:R1132100503382:qnaquestion:Bk1gBbIvT-6PR7EUTvJDMQ">Solidworks在热修复后崩溃，可能是GPU故障？</a></p>
+        <div id="article"><h1 id="启动问题"><a href="#启动问题" class="headerlink" title="启动问题"></a>启动问题</h1><h2 id="ESC按钮无效"><a href="#ESC按钮无效" class="headerlink" title="ESC按钮无效"></a>ESC按钮无效</h2><p>百度网盘的问题 </p>
+<h2 id="热修复后崩溃"><a href="#热修复后崩溃" class="headerlink" title="热修复后崩溃"></a>热修复后崩溃</h2><p><a target="_blank" rel="noopener" href="https://r1132100503382-eu1-3dswym.3dexperience.3ds.com/community/swym:prd:R1132100503382:community:kKnaKWHGTPC4ut-q1X_9uA?content=swym:prd:R1132100503382:qnaquestion:Bk1gBbIvT-6PR7EUTvJDMQ">Solidworks在热修复后崩溃，可能是GPU故障？</a></p>
 <p>我遇到了启动后崩溃的情况。使用多年后，现在看来显卡可能是问题所在。</p>
 <p>电脑装的是游戏显卡（AMD Radeon RX 6800S），可能不再支持了。我尝试过各种方法，从更新驱动、关闭混合模式、将Windows显卡优先设置到AMD Radeon RX 6800S、重置Solidworks注册表、关闭所有用户设置以及在OpenGL中打开软件，还是会崩溃。</p>
 <p><strong>方法：</strong></p>
 <p>我通过将以下DLL：SWK3DCompassAddin.dll重命名为SWK3DCompassAddin.dll.bak  解决了这个问题</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C：\Program Files\Dassault Systemes\SOLIDWORKS 3DEXPERIENCE R2026x\win_b64\code\bin\SWXDesktopAddins</span><br></pre></td></tr></table></figure>
 
-<h1 id="模型异常"><a href="#模型异常" class="headerlink" title="模型异常"></a>模型异常</h1><h2 id="模型抖动"><a href="#模型抖动" class="headerlink" title="模型抖动"></a>模型抖动</h2><p>装配体旋转的时候，会抖动。怎么解决</p>
-<p><strong>方法：</strong></p>
-<p>按空格，选一个标准视图把模型摆正，然后ctrl+q重建模型，然后保存，在试试</p>
+<h1 id="模型异常"><a href="#模型异常" class="headerlink" title="模型异常"></a>模型异常</h1><h2 id="镜像特征无法展开"><a href="#镜像特征无法展开" class="headerlink" title="镜像特征无法展开"></a>镜像特征无法展开</h2><p>钣金特征四角镜像后无法展开</p>
+<p>拆成单个面镜像的即可。这个问题出现在2022-2025</p>
 <h2 id="不支持的文件扩展名"><a href="#不支持的文件扩展名" class="headerlink" title="不支持的文件扩展名"></a>不支持的文件扩展名</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/不支持的文件扩展名.png">
 
-<h2 id="配合异常崩溃"><a href="#配合异常崩溃" class="headerlink" title="配合异常崩溃"></a>配合异常崩溃</h2><p>配合异常马上崩溃-swsettings 20251113 1029012124</p>
-<h2 id="尺寸显示异常"><a href="#尺寸显示异常" class="headerlink" title="尺寸显示异常"></a>尺寸显示异常</h2><p>20251126-科瑞-尺寸显示科学计数法swSettings20251126（未能复现）</p>
-<h2 id="折弯线可以设置图层吗"><a href="#折弯线可以设置图层吗" class="headerlink" title="折弯线可以设置图层吗"></a>折弯线可以设置图层吗</h2><p>不能，这是已知的功能缺陷，已经有用户希望可以做到为图纸中的折弯线使用图层进行控制；ESPR # 596294 Would like to be able to change the line font for brake lines on drawings Ability to set custom line font&#x2F;Layer?Color to the Bend lines in Drawing &amp; Part.<br>E：Enhancement( 增强)<br>SPR：Software Performance Report( 软件性能报告) </p>
+
+
+<h2 id="折弯线可以设置图层吗"><a href="#折弯线可以设置图层吗" class="headerlink" title="折弯线可以设置图层吗"></a>折弯线可以设置图层吗</h2><p>不能，这是已知的功能缺陷，已经有用户希望可以做到为图纸中的折弯线使用图层进行控制；</p>
+<p>ESPR # 596294 Would like to be able to change the line font for brake lines on drawings Ability to set custom line font&#x2F;Layer?Color to the Bend lines in Drawing &amp; Part.<br>E：Enhancement( 增强)</p>
 <h2 id="剖视图上的尺寸，不能拖放"><a href="#剖视图上的尺寸，不能拖放" class="headerlink" title="剖视图上的尺寸，不能拖放"></a>剖视图上的尺寸，不能拖放</h2><p>剖视图上的尺寸，不能拖放到从该剖视图创建的局部视图上，情况是这样的吗？</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20251226172358137.png">
 
 <p><strong>已知SPR280137</strong></p>
 <p>Cannot Ctrl + Drag or Shift + Drag dimensions from parent view to section view or any view derived from section view 上报至研发部门，目前还未在已发行的版本中修正。</p>
-<h2 id="尺寸显示科学计数法"><a href="#尺寸显示科学计数法" class="headerlink" title="尺寸显示科学计数法"></a>尺寸显示科学计数法</h2><p>重置当前用户solidworks注册表后恢复正常</p>
+<h2 id="✅尺寸显示科学计数法"><a href="#✅尺寸显示科学计数法" class="headerlink" title="✅尺寸显示科学计数法"></a>✅尺寸显示科学计数法</h2><p>重置当前用户solidworks注册表后恢复正常</p>
 <h2 id="装配体另存"><a href="#装配体另存" class="headerlink" title="装配体另存"></a>装配体另存</h2><p>体solidworks在打开x-t文件后保存为装配体格式后再打开装配体就显示所有零件都压缩了，这个问题能解决吗？另存不带零部件</p>
 <p>A：2024 SP0 版本的问题，子键不能加载到内存中，建议客户更换到 2024 SP5 版本</p>
 <h2 id="解决配合问题"><a href="#解决配合问题" class="headerlink" title="解决配合问题"></a>解决配合问题</h2><p><a target="_blank" rel="noopener" href="https://help.solidworks.com/2024/chinese-simplified/SolidWorks/sldworks/c_Solving_Mate_Problems.htm?verRedirect=1">解决配合问题 - 2024 - SOLIDWORKS 帮助</a></p>
@@ -68,7 +69,7 @@
 <p>在配合的实体 PropertyManager 中，您可重新附加悬空的配合实体。</p>
 <p>全局替换失败的配合参考<br>如果用于装配体中的许多位置的某个部件缺少配合参考，则您可同时替换所有实例的缺失参考。</p>
 <p>遗失实体弹出式工具栏<br>当您替换装配体中的零部件时，可在替换配合参考时利用“遗失的实体”弹出式工具栏来导览现有的配合</p>
-<h2 id="虚拟零部件丢失"><a href="#虚拟零部件丢失" class="headerlink" title="虚拟零部件丢失"></a>虚拟零部件丢失</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/虚拟零件丢失问题.png">
+<h2 id="⚠️虚拟零部件丢失"><a href="#⚠️虚拟零部件丢失" class="headerlink" title="⚠️虚拟零部件丢失"></a>⚠️虚拟零部件丢失</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/虚拟零件丢失问题.png">
 
 <p><strong>方法S-034052</strong></p>
 <p>有一种比较常见的原因是因为文件损坏问题导致内部保存的零部件丢失，</p>
@@ -87,7 +88,9 @@
 <p>解决方法:</p>
 <p>1.把原文件的文件夹复制粘贴到其他盘，</p>
 <p>2.再点击设定轻化到还原，就可以打包了</p>
-<h1 id="显示异常"><a href="#显示异常" class="headerlink" title="显示异常"></a>显示异常</h1><h2 id="Win11鼠标显示异常"><a href="#Win11鼠标显示异常" class="headerlink" title="Win11鼠标显示异常"></a>Win11鼠标显示异常</h2><p>禁用 Windows 11 透明效果和动画 有没有用啊？</p>
+<h1 id="显示异常"><a href="#显示异常" class="headerlink" title="显示异常"></a>显示异常</h1><h2 id="软件状态栏不显示"><a href="#软件状态栏不显示" class="headerlink" title="软件状态栏不显示"></a>软件状态栏不显示</h2><p>重置注册表后正常</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260622135706907.png" alt="image-20260622135706907"></p>
+<h2 id="Win11鼠标显示异常"><a href="#Win11鼠标显示异常" class="headerlink" title="Win11鼠标显示异常"></a>Win11鼠标显示异常</h2><p>禁用 Windows 11 透明效果和动画 有没有用啊？</p>
 <p>Win + I → 个性化 → 颜色 → 关闭 “透明效果”。<br>Win + I → 辅助功能 → 视觉效果 → 关闭 “动画效果”。</p>
 <p>工具栏黑屏</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/工具栏黑屏.png">
@@ -129,9 +132,12 @@
 <h1 id="性能挂起"><a href="#性能挂起" class="headerlink" title="性能挂起"></a>性能挂起</h1><h2 id="右键重命名卡"><a href="#右键重命名卡" class="headerlink" title="右键重命名卡"></a>右键重命名卡</h2><p>造成卡死的原因是 SolidWorks2020 与 Windows11 不兼容，把系统换回 Windows10 就 OK 了。SolidWorks 对 Windows 家庭版系统的兼容性也不好！</p>
 <h2 id="sldbgproc-占用-100"><a href="#sldbgproc-占用-100" class="headerlink" title="sldbgproc 占用 100%"></a>sldbgproc 占用 100%</h2><img src="https://img.r77817520.nyat.app:18981/Hexo/sldbgproc占用100%25.png">
 
-<h1 id="异常代码"><a href="#异常代码" class="headerlink" title="异常代码"></a>异常代码</h1><h2 id="sldrsu"><a href="#sldrsu" class="headerlink" title="sldrsu"></a>sldrsu</h2><p>Graphics, Display - Render System: Possible ‘sldrsu’ crashes when changing one or more appearances, toggling RealView Graphics or other workflows where a model changes while something is highlighted<br>图形、显示 - 渲染系统：更改一个或多个外观、切换 RealView 图形或其他工作流程时，可能会崩溃，其中模型在突出显示某些内容时发生更改</p>
+<h1 id="异常代码"><a href="#异常代码" class="headerlink" title="异常代码"></a>异常代码</h1><h2 id="STEELU"><a href="#STEELU" class="headerlink" title=".STEELU"></a>.STEELU</h2><p>.STEELU:1B7F4CB5:00034CB5</p>
+<p>方法：控制面板卸载 c++ 组件后。重装恢复正常。</p>
+<h2 id="sldrsu"><a href="#sldrsu" class="headerlink" title="sldrsu"></a>sldrsu</h2><p>Graphics, Display - Render System: Possible ‘sldrsu’ crashes when changing one or more appearances, toggling RealView Graphics or other workflows where a model changes while something is highlighted<br>图形、显示 - 渲染系统：更改一个或多个外观、切换 RealView 图形或其他工作流程时，可能会崩溃，其中模型在突出显示某些内容时发生更改</p>
 <p>sldrsu:0017g51c</p>
-<h2 id="siduiu-019b41f9"><a href="#siduiu-019b41f9" class="headerlink" title="siduiu:019b41f9"></a>siduiu:019b41f9</h2><h2 id="打开图纸报错"><a href="#打开图纸报错" class="headerlink" title="打开图纸报错"></a>打开图纸报错</h2><p>闪退报错，然后我就去看了下host文件加了个PDM服务器IP后正常</p>
+<h2 id="siduiu"><a href="#siduiu" class="headerlink" title="siduiu"></a>siduiu</h2><p>siduiu:019b41f9</p>
+<h2 id="打开图纸报错"><a href="#打开图纸报错" class="headerlink" title="打开图纸报错"></a>打开图纸报错</h2><p>闪退报错，然后我就去看了下host文件加了个PDM服务器IP后正常</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="sldappu-0019eacc"><a href="#sldappu-0019eacc" class="headerlink" title="sldappu:0019eacc"></a>sldappu:0019eacc</h2><p>操作“显示零部件”崩溃（可复现）<br>方法：是显示问题，在此SOLIDWORKS官网下载对应的2020版本修补补丁并安装<br><a target="_blank" rel="noopener" href="https://www.solidworks.com/zh-hans/support/hardware-certification/">https://www.solidworks.com/zh-hans/support/hardware-certification/</a></p>
 <h2 id="sldrglu-000b1559"><a href="#sldrglu-000b1559" class="headerlink" title="sldrglu:000b1559"></a>sldrglu:000b1559</h2><h2 id="swccu-0001834c"><a href="#swccu-0001834c" class="headerlink" title="swccu:0001834c"></a>swccu:0001834c</h2><p>重建崩溃</p>
 <h2 id="Mscorlib：0059d884"><a href="#Mscorlib：0059d884" class="headerlink" title="Mscorlib：0059d884"></a>Mscorlib：0059d884</h2><p>重建崩溃</p>
