@@ -65,7 +65,22 @@
 
 
 
-<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="数据库连接问题"><a href="#数据库连接问题" class="headerlink" title="数据库连接问题"></a>数据库连接问题</h2><h2 id="安装错误：27502"><a href="#安装错误：27502" class="headerlink" title="安装错误：27502"></a>安装错误：27502</h2><p>错误代码是一个通用的SQL连接错误消息。此错误是SOLIDWORKS®Electrical最常见的安装问题。该错误可能是由于：</p>
+<h1 id="Q-A"><a href="#Q-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><h2 id="Powershell2-0问题"><a href="#Powershell2-0问题" class="headerlink" title="Powershell2.0问题"></a>Powershell2.0问题</h2><p>由于WIN11中安装旧版本的SWE，所需要的Powershell2.0在win11中已经取消导致的，操作步骤如下:</p>
+<p>1、在以下网址下载<a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/servicing/os/windows/docs/2025/08/powershell-2-0-removal-from-windows">ps2DLC.zip</a>：</p>
+<p>2、本地解压缩后，使用管理员运行Powershell。</p>
+<p>3、进入解压缩文件路径， </p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CD &lt;解压文件路径&gt;</span><br><span class="line">.\loadGAC.ps1</span><br></pre></td></tr></table></figure>
+
+<p> 如果出现以下报错。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force</span><br></pre></td></tr></table></figure>
+
+<p> 4、再次执行步骤3，直至完成。</p>
+<p> <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260912221238130.png" alt="image-20260912221238130"></p>
+<p>7、将之前安装有问题的SQL程序、安装目录，注册表信息删除干净。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">文件路径（默认情况）：</span><br><span class="line">&quot;C:\Program Files\Microsoft SQL Server\MSSQL15.TEW_SQLEXPRESS1&quot;</span><br><span class="line"></span><br><span class="line">&quot;C:\Program Files (x86)\Microsoft SQL Server\MSSQL15.TEW_SQLEXPRESS1&quot;</span><br><span class="line"></span><br><span class="line">&quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft SQL Server&quot;</span><br><span class="line"></span><br><span class="line">注册表：</span><br><span class="line">&quot;HKLM\SOFTWARE\Microsoft\Microsoft SQL Server &quot;</span><br><span class="line"></span><br><span class="line">应用程序：</span><br><span class="line">Microsoft SQL Server 2012 Native Client</span><br><span class="line">Browser for SQL Server 2022</span><br><span class="line">Microsoft OLE DB Driver 19 for SQL Server</span><br><span class="line">Microsoft SQL Server 2022 Setup (English)</span><br><span class="line">Microsoft VSS Writer for SQL Server 2022</span><br><span class="line">Microsoft OLE DB Driver for SQL Server</span><br><span class="line">Microsoft ODBC Driver 17 for SQL Server</span><br><span class="line">Microsoft SQL Server 2022 (64-bit)</span><br></pre></td></tr></table></figure>
+
+<p> 8、重启电脑，重新使用SW安装包安装SWE（SQL无需手动单独安装）即可。</p>
+<h2 id="数据库连接问题"><a href="#数据库连接问题" class="headerlink" title="数据库连接问题"></a>数据库连接问题</h2><h2 id="安装错误：27502"><a href="#安装错误：27502" class="headerlink" title="安装错误：27502"></a>安装错误：27502</h2><p>错误代码是一个通用的SQL连接错误消息。此错误是SOLIDWORKS®Electrical最常见的安装问题。该错误可能是由于：</p>
 <ul>
 <li><p>权限不足</p>
 </li>

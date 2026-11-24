@@ -39,6 +39,7 @@
     <span id="post-date">2022-08-09 16:21:27</span>
 </div>
         <div id="article"><h1 id="SOLIDWORKS-注册表"><a href="#SOLIDWORKS-注册表" class="headerlink" title="SOLIDWORKS 注册表"></a>SOLIDWORKS 注册表</h1><p>记录有关SOLIDWORKS设置的注册表内容。</p>
+<p>需留意此类注册表编辑的操作，需要在SW设置后正常关闭才会生效。相反的，注册表编辑前，你需要先关闭SW避免当前打开进行影响覆盖注册表</p>
 <span id="more"></span>
 
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\FLEXlm License Manager：网络版借用信息</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\Solidworks：设置信息</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\Solidworks BackOffice：批量处理任务工具</span><br><span class="line">HKEY_CURRENT_USER\SOFTWARE\srac：Simulation 信息</span><br></pre></td></tr></table></figure>
@@ -50,8 +51,7 @@
 <h1 id="SolidWorks"><a href="#SolidWorks" class="headerlink" title="SolidWorks"></a>SolidWorks</h1><p>下面即是 SW 在电脑上的注册表信息。有时我们需要重置注册表时，可将注册表改名备份，再启动 SOLIDWORKS 即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Solidworks]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks]</span><br></pre></td></tr></table></figure>
 
-
-
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/重置注册表.png" alt="重置注册表"></p>
 <p>再下面我们来看看注册表里有哪些内容吧：</p>
 <p>· AddIns： 插件信息<br><br>· AddInsStartup：插件自启动<br><br>· Application： 工具插件<br><br>· IM： 安装管理器设定信息<br><br>· Licenses： 所有产品序列号<br><br>· Security： CAD 序列号信息<br><br>· SOLIDWORKS 20XX 对应版本的设定信息<br></p>
 <h2 id="许可"><a href="#许可" class="headerlink" title="许可"></a>许可</h2><p>强制归还许可，删除 BORROW 信息，并重启网络版服务，可强制归还许可</p>
@@ -107,6 +107,9 @@
 <img src="https://img.r77817520.nyat.app:18981/Hexo/强制归还许可.png">
 
 <p>不过这个方法似乎不是百分之百成功。如果不行，可能需要重激活许可服务器。并重启网络版服务，可强制归还许可</p>
+<h2 id="收藏材质"><a href="#收藏材质" class="headerlink" title="收藏材质"></a>收藏材质</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">计算机\HKEY_CURRENT_USER\Software\Solidworks\Solidworks 2023\Material</span><br></pre></td></tr></table></figure>
+
+<p> <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260916164040295.png" alt="image-20260916164040295"></p>
 <h1 id="EPDM"><a href="#EPDM" class="headerlink" title="EPDM"></a>EPDM</h1><p>EPDM 的库在 SQL 中被删除，但存档库还存在。存档库服务器所在电脑中的找到下列注册项,删除其中与库同名的项</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults]</span><br></pre></td></tr></table></figure>
 

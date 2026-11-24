@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html><head>
     <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
     
@@ -14,7 +14,7 @@
 <body>
     <div id="main">
         <aside id="aside"><!-- 搜索栏 -->
-<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
 <!-- 侧边目录栏 -->
 <div id="tree">
 </div><div id="toc"></div> 
@@ -36,19 +36,19 @@
 </div></nav>	<!-- 引入导航 -->
         <div id="content"><div>
     <span id="post-author">作者: </span>
-    <span id="post-date">2023-10-24 16:33:20</span>
+    <span id="post-date">2023-11-20 23:23:31</span>
 </div>
-        <div id="article"><h1 id="DSComposer-如何正确更新文档"><a href="#DSComposer-如何正确更新文档" class="headerlink" title="DSComposer-如何正确更新文档"></a>DSComposer-如何正确更新文档</h1><p>请注意以下规则和限制： </p>
-<h2 id="相同名称"><a href="#相同名称" class="headerlink" title="相同名称"></a>相同名称</h2><p>1.如果您使用 SOLIDWORKS® 文件进行更新，该 SOLIDWORKS 文件必须与您用于创建 Composer 文档的 SOLIDWORKS 文件（源文件）具有相同的名称。</p>
-<p>装配体树的根节点下的名称与 SOLIDWORKS 文件的名称必须始终匹配。您可以更改根节点下的名称或更改 SOLIDWORKS 文件的名称，以使它们匹配。但是，您在更新时可能会看到意外的结果。例如，您导入“Assembly1”以创建 Composer 文档。您修改该装配体并将其保存为“Assembly2”。如果您使用“Assembly2”进行更新，更新将失败。为了让更新成功，您必须将根节点下的名称更改为“Assembly2”，或者您必须将 SOLIDWORKS 文件名更改为“Assembly1”。</p>
-<h2 id="示例名称"><a href="#示例名称" class="headerlink" title="示例名称"></a>示例名称</h2><p>2.请勿从角色具有不同 NetGuids 的另一个 Composer 文档进行更新。<br>您可以更改装配体树中的角色名称。但是这不会更改角色的 NetGUID。仅在导入或更新过程中创建 NetGUID。</p>
-<p>3.如果您使用 SOLIDWORKS 装配体文件进行更新，转换过程必须加载完全还原的装配体文件。 要确保发生此行为，请在 SOLIDWORKS 中关闭系统选项：“Use Large Assembly Mode”、“自动以轻化状态装入零部件”和“Use Large Design Review”。如果您使用 SOLIDWORKS® Translator，请参阅解决方案 S-053656 了解更多信息。 </p>
-<p>4.请使用您用于创建 Composer 文档的同一导入选项。 </p>
-<p>5.您不能在装配体树中重新排列几何体、零件和装配体节点。 更新过程会使用更新文件的装配体树覆盖现有装配体树。</p>
-<p>6.请勿将 CAD 文件或其他 Composer 文档合并到您更新的 Composer 文档中。<br>如果您执行此操作，则会违反规则 #5。更新过程将从 Composer 文档移除合并的文档。</p>
-<p>7.不要对几何体角色应用运动（父子关系）。如果您执行此操作，则会违反规则 #5。</p>
-<p>8.如果您使用 SOLIDWORKS® 文件进行更新，请勿在 Composer 文档中创建元属性。<br>更新过程会从 Composer 文档移除 Composer 创建的元属性，因为元属性不存在于 SOLIDWORKS 文件中。<br>如果您从另一个 Composer 文档进行更新，更新过程不会移除 Composer 创建的元属性。但是，如果两个 Composer 文档包含相同的元属性，更新过程将不会更新元属性。</p>
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Composer</p>
+        <div id="article"><h1 id="3DExperience问题"><a href="#3DExperience问题" class="headerlink" title="3DExperience问题"></a>3DExperience问题</h1><h2 id="插件登录失败"><a href="#插件登录失败" class="headerlink" title="插件登录失败"></a>插件登录失败</h2><p>出现以下错误：*与3DEXPERIENCE 3DSpace服务的连接失败。点击重试尝试新连接，点击取消以无连接，继续（你可以从MySession登出，完全断开3DEXPERIENCE连接）</p>
+<p><strong>方法：</strong></p>
+<ol>
+<li>用SOLIDWORKS卸载设计。a. 登录<strong>3D</strong>EXPERIENCE平台。b.点击左上角的<strong>指南针</strong>。c. 点击<strong>协作设计师以获取SOLIDWORKS</strong>职位。d. 点击“用SOLIDWORKS设计”旁边的箭头。e. 点击<strong>卸载</strong>图标，然后选择<strong>卸载。</strong></li>
+<li>重启电脑。</li>
+<li>用SOLIDWORKS重新安装设计。a. 登录<strong>3D</strong>EXPERIENCE平台b.点击左上角的<strong>指南针</strong>。c. 点击<strong>协作设计师以获取SOLIDWORKS</strong>职位。d. 点击“用SOLIDWORKS设计”旁边的箭头。e. 点击<strong>“立即安装”</strong>图标<strong>。****f。</strong> 按照说明开始安装并完成安装。</li>
+<li>重启电脑。</li>
+<li>登录<strong>3D</strong>EXPERIENCE平台。a.点击左上角的<strong>指南针</strong>。b.点击协作<strong>设计师（Collaborative Designer）以获取SOLIDWORKS</strong>职位。c. 点击<strong>“设计”中的SOLIDWORKS</strong>以启动SOLIDWORKS。d. 启用<strong>3D</strong>EXPERIENCE插件。e. 连接<strong>3D</strong>体验。</li>
+</ol>
+<p>  <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260309191949536.png" alt="image-20260309191949536"></p>
+<h2 id="数据安全"><a href="#数据安全" class="headerlink" title="数据安全"></a>数据安全</h2><p><img src="https://img.r77817520.nyat.app:18981/Hexo/数据安全.png" alt="数据安全"></p>
 </div>
 
 <!-- Artalk 评论系统 -->
@@ -58,8 +58,8 @@
 <script>
 Artalk.init({
   el:        '#Comments',
-  pageKey:   'SOLIDWORKS-Composer/4-技巧/DSComposer-如何正确更新文档.html',
-  pageTitle: 'DSComposer-如何正确更新文档',
+  pageKey:   '3DExperience/3DExperience问题.html',
+  pageTitle: '3DExperience问题',
   server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
   site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
 })
@@ -91,4 +91,4 @@ Artalk.init({
 	</script> <!-- 引入 mermaid 流程图 --> 
 	<script>new CozeWebSDK.WebChatClient({ config: { bot_id: '7489376497380343820', }, componentProps: { title: 'Coze', }, });</script>
 	<script src="./index.js"></script>	
-</body></html>
+</div></body></html>

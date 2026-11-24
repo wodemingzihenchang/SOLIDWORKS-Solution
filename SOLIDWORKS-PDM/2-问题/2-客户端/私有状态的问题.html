@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2026-09-28 15:55:33</span>
+</div>
+        <div id="article"><h1 id="私有状态的问题"><a href="#私有状态的问题" class="headerlink" title="私有状态的问题"></a>私有状态的问题</h1><p><strong>私有状态：</strong>私有状态文件是其他用户添加到库中的文件，但还未检入。</p>
+<h2 id="出现原因"><a href="#出现原因" class="headerlink" title="出现原因"></a>出现原因</h2><p><strong>1. 工作流程条件未正确设置</strong></p>
+<p>PDM在文件<strong>首次检入</strong>时，会根据文件类型和路径来判断它该进入哪个工作流。如果所有工作流的条件都不覆盖这个文件，就会报错。</p>
+<p><strong>排查方法</strong>：在PDM管理工具中，检查各工作流的“条件”选项卡。确认至少有一个工作流的初始状态条件，能匹配你正在操作的文件类型（如 <code>.sldprt</code>）或所在路径。</p>
+<p><strong>2. 用户缺少初始状态的“添加文件”权限</strong></p>
+<p>即使工作流条件设置正确，如果<strong>当前登录用户</strong>在工作流初始状态上没有 <strong>“添加或重命名文件”</strong> 权限，文件依然无法进入该工作流，同样会触发此错误。</p>
+<p><strong>排查方法</strong>：在管理工具中打开对应工作流，找到带“页面”图标的<strong>初始状态</strong>，在其“权限”选项卡中，确认你的用户或所属用户组勾选了“添加或重命名文件”权限。</p>
+<h2 id="可能存在问题"><a href="#可能存在问题" class="headerlink" title="可能存在问题"></a>可能存在问题</h2><table>
+<thead>
+<tr>
+<th><strong>条件互斥性</strong></th>
+<th>多个工作流的条件应互斥。如果文件同时匹配多个工作流条件，会随机进入一个，可能导致非预期行为</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>通用工作流</strong></td>
+<td>如果存在一个<strong>未定义任何条件</strong>的工作流，它实际上会接收所有不匹配其他条件的文件。检查这个工作流是否被意外删除或修改</td>
+</tr>
+<tr>
+<td><strong>文件路径条件</strong></td>
+<td>如果使用文件路径作为条件，注意通配符 <code>%</code> 的用法。<code>!=%</code> 可用于排除所有文件进入某工作流</td>
+</tr>
+</tbody></table>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:PDM</p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'SOLIDWORKS-PDM/2-问题/2-客户端/私有状态的问题.html',
+  pageTitle: 'PDM-私有状态的问题',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+    <script type="text/javascript">
+        var search_path = "SOLIDWORKS-Solution/search.xml";
+        if (search_path.length == 0) { search_path = "SOLIDWORKS-Solution/search.xml"; }  var path = '/' + search_path;
+        searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+	
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 --> 
+	<script>new CozeWebSDK.WebChatClient({ config: { bot_id: '7489376497380343820', }, componentProps: { title: 'Coze', }, });</script>
+	<script src="./index.js"></script>	
+</body></html>

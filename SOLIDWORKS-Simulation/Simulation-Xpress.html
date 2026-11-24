@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <title>SOLIDWORKS-Solution</title><meta charset="utf-8">
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/css/main.css">
+<!-- 引入配置文件 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/font-awesome/css/font-awesome.min.css">
+<!-- 字体图片库 -->
+    
+<link rel="stylesheet" href="/SOLIDWORKS-Solution/lib/highlight/styles/atom-one-dark.css">
+<!-- 代码高亮库 -->
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="main">
+        <aside id="aside"><!-- 搜索栏 -->
+<div id="search"><input class="search-input" type="text" placeholder="search"><icon id="search-icon" class="fa fa-bars" title="收起目录"></icon></div>
+<!-- 侧边目录栏 -->
+<div id="tree">
+</div><div id="toc"></div> 
+<!-- 引入备案<footer id="footer"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024236103号</a></footer>--></aside>		<!-- 引入侧边栏-->
+        <nav><div>
+    <!-- 显示侧边栏 --><icon id="asideshow" class="fa fa-bars" title="显示侧边栏"></icon><ul id="menu">
+    <!-- 内部链接本页面直接跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/index.html" class="menu-item-link">主页</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/index.html" class="menu-item-link">搜索</a></li>
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/search/AIsearch.html" class="menu-item-link">AI搜索</a></li>
+    
+    <!-- 外部链接打开新的窗口跳转 -->
+    
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/新功能/index.html" class="menu-item-link" target="_blank">新功能</a></li>
+    <li class="menu-item"><a href="/SOLIDWORKS-Solution/SOLIDWORKS网站/index.html" class="menu-item-link" target="_blank">SOLIDWORKS网站</a></li></ul>
+</div></nav>	<!-- 引入导航 -->
+        <div id="content"><div>
+    <span id="post-author">作者: </span>
+    <span id="post-date">2023-10-27 17:18:29</span>
+</div>
+        <div id="article"><h1 id="Simulation-Xpress"><a href="#Simulation-Xpress" class="headerlink" title="Simulation-Xpress"></a>Simulation-Xpress</h1><p>SimulationXpress 是 SOLIDWORKS 中基于向导的模拟模块；我们将材料分配给模型，应用夹具和载<br>荷，然后运行仿真以解决问题。</p>
+<p>它使用一种称为有限元分析（FEA）的原理将一个大问题分解为更小的，更易于管理的，由多个节点组成的零件（一个过程，通常称为网格划分）。然后进行计算以确定每个节点的位移和应力，然后将其结果表示为一组结果。</p>
+<p>这些结果可用于检查零件是否能够承受施加到其上的载荷，确定故障点是否存在，并允许我们根据需要改进模型以改进产品。整个过程比手动计算甚至制造试件并对零件进行物理测试要快得多。</p>
+<span id="more"></span>
+
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>SimulationXpress 有一些其他仿真程序包中不存在的限制；这些可以分为四个主要区域：几何，载<br>荷&#x2F;夹具，网格划分以及最终结果。</p>
+<h2 id="1-几何"><a href="#1-几何" class="headerlink" title="1.几何"></a>1.几何</h2><p>SimulationXpress 只能分析零件，而不能处理装配体或多实体零件。</p>
+<p>虽然装配可以另存零件组合体，方法可以通过假设零件被粘合在一起来人为地加强模型，这将对结果的有效性产生影响（例如，<br>假设螺栓连接牢固地粘合在一起会大大简化问题）。在完整的仿真程序包中，您可以指定零件之间<br>的不同接触，还可以应用连接器来仿真固定，螺栓连接和焊接的接头，以更准确地表示实际情况。</p>
+<h2 id="2-负载-夹具"><a href="#2-负载-夹具" class="headerlink" title="2.负载&#x2F;夹具"></a>2.负载&#x2F;夹具</h2><p>SimulationXpress 允许用户仅通过面部严格固定模型；这可能无法真正代表模型的真实世界，并再<br>次导致人为僵化的模型。同样，对于载荷，我们仅限于将力载荷和压力载荷施加到面上，在“模拟”<br>中，可以施加多种不同的载荷。</p>
+<h2 id="3-网格划分"><a href="#3-网格划分" class="headerlink" title="3.网格划分"></a>3.网格划分</h2><p>FEA 流程涉及将模型分为许多小元素，在 SimulationXpress 中，我们只有一种网格类型（标准）可<br>用，并且网格尺寸在整个模型中都是全局的。使用 Simulation 插件，我们可以指定网格控件以在<br>感兴趣的区域中强制使用更细的网格，而在其他区域中使用更宽松，更粗糙的全局网格，这意味着<br>更少的计算和更快的结果，我们必须在 SimulationXpress 中添加更多元素仅因为这个原因，我们<br>就必须选择适合整个模型的网格尺寸作为我们的全局尺寸，从而导致更长的求解时间。</p>
+<p><img src="https://img.r77817520.nyat.app:18981/Hexo/image-20260909122523573.png" alt="image-20260909122523573"></p>
+<h2 id="4-结果"><a href="#4-结果" class="headerlink" title="4.结果"></a>4.结果</h2><p>在 SimulationXpress 中，我们限于三个输出图：应力，位移和安全系数以及模型的变形视图，我<br>们可以以 eDrawings 和 Word 格式输出报告。这样做的缺点是我们对这些图几乎没有控制（除了为<br>我们的单位选择 SI 或英制 IPS 之外），我们甚至无法更改单位显示，如果您有兴趣进一步分析不<br>同的图形，这可能是一个限制。诸如主应力，沿已知方向的变形等图表。完整的 SolidWorks 仿真<br>软件包使您可以更好地控制研究结果。</p>
+<p>以上内容可能会或可能不会将 SimulationXpress 认为不适合您的要求，但重要的是要认识什么是<br>SimulationXpress。它是应力分析的首过工具，使设计人员可以在设计过程的早期快速洞悉潜在问<br>题。</p>
+<h3 id="结果比较"><a href="#结果比较" class="headerlink" title="结果比较"></a>结果比较</h3><p>好吧，这真是令人惊讶。用于求解 SimulationXpress 算例的网格划分器和求解器与用于完整<br>SOLIDWORKS 线性静态算例的网格划分器和求解器相同，因此就网格划分和求解算例使用的算法而言，<br>这并不意味着质量下降。对于具有简单夹具的简单模型（单个零件），结果是相同的。<br>仿真分析示例：</p>
+<p>这个例子是张紧受约束的板。应力和位移的结果都是相同的（417.67MPa 和 0.143mm）。因此可以<br>准确地说，如果您感兴趣的是在单个零件上运行模拟，而夹具仅是具有简单力或压力载荷的固定几<br>何体，那么 SimulationXpress 可以满足您的需求，但是这些限制可能会导致误差结果中（例如由<br>于不正确的夹具导致结构变硬）或由于缺少网格控制，研究花费了很长时间进行网格划分和求解。<br>显然，如果我们要查看每个零件之间具有特定接触条件的多个零件的装配，或者想要对整个分析和<br>后处理进行更多控制，那么我们将需要投资 SOLIDWORKS Simulation。</p>
+<h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><p>SOLIDWORKS 的每个版本都包含 SimulationXpress 功能，可对零件执行首过应力分析。如果您有幸<br>拥有 SOLIDWORKS Premium，那么您还将获得线性静态分析模拟加载项。除此之外，SOLIDWORKS 还<br>提供了许多在模拟标准，Simulation Professional 和 Simulation Premium 中运行的模拟插件。从<br>Simulation Standard 中的基本线性静态分析到 Premium 中的非线性和动态分析，每种工具都为用<br>户提供了更多的仿真功能。现在，这引起了关于 SimulationXpress 角色的疑问，尤其是考虑到打<br>开 SimulationXpress 会导致本段：</p>
+<p>这是否意味着 SOLIDWORKS SimulationXpress 本质上是无用的？SOLIDWORKS 中包含的 included 头<br>是否允许用户在其模型上创建漂亮的颜色？答案是肯定没有！SOLIDWORKS SimulationXpress 确实<br>有其目的，实际上，取决于您的模型和分析设置，它可以为您提供与 SOLIDWORKS Simulation 相同<br>的结果。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>与 SOLIDWORKS 中的任何 Xpress 产品一样，这些工具可以使用户深入了解 SOLIDWORKS 中的其他功<br>能领域。它们被设计为具有明显已知限制的简化版本。如果我们在这些限制范围内工作并且将产品<br>用于预期目的（成为首个“洞察”工具），并且最终从设计过程的早期就更好地了解了我们的设计，<br>那么这只会使我们有一个更好的产品。虽然最终产品可能需要在完整的 SOLIDWORKS 仿真套件中运<br>行，但在签收 Xpress 工具之前仍然是过程中不可估量的，并且在我们的 SOLIDWORKS 软件包中它是<br>完全免费的。</p>
+<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags:Simulation</p>
+</div>
+
+<!-- Artalk 评论系统 -->
+<link href="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/artalk@2/dist/Artalk.js"></script>
+<div id="Comments"></div>
+<script>
+Artalk.init({
+  el:        '#Comments',
+  pageKey:   'SOLIDWORKS-Simulation/Simulation-Xpress.html',
+  pageTitle: 'Simulation-Xpress',
+  server:    'https://forum.r77817520.nyat.app:62607/',  // 👈 修改为你的 Artalk 后端地址
+  site:      'SOLIDWORKS-Solution',                       // 👈 修改为你的站点名称
+})
+</script> 			<!-- 引入正文 -->
+    </div>	
+    
+<script src="/SOLIDWORKS-Solution/lib/highlight/highlight.pack.js"></script>
+<!-- 引入代码高亮的 js -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery-3.4.1.min.js"></script>
+	<!-- 引入 jquery -->
+    
+<script src="/SOLIDWORKS-Solution/lib/jquery.pjax.js"></script>
+		<!-- 引入 pjax -->
+    
+<script src="/SOLIDWORKS-Solution/js/main.js"></script>
+					<!-- 引入 js 文件 -->
+	
+<script src="/SOLIDWORKS-Solution/js/search.js"></script>
+				<!-- 引入 js 文件 -->	
+    <script type="text/javascript">
+        var search_path = "SOLIDWORKS-Solution/search.xml";
+        if (search_path.length == 0) { search_path = "SOLIDWORKS-Solution/search.xml"; }  var path = '/' + search_path;
+        searchFunc(path, 'local-search-input', 'local-search-result');
+    </script>
+	
+	<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+	mermaid.initialize({ theme: 'forest'});
+	</script> <!-- 引入 mermaid 流程图 --> 
+	<script>new CozeWebSDK.WebChatClient({ config: { bot_id: '7489376497380343820', }, componentProps: { title: 'Coze', }, });</script>
+	<script src="./index.js"></script>	
+</div></body></html>

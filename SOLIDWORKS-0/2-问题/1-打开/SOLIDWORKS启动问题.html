@@ -66,21 +66,21 @@
 <p>　　2、打开文件夹选项后，点击查看-找到显示隐藏的文件、文件夹和驱动器，并选中。并且把“隐藏受保护的系统文件”前边的对勾去掉</p>
 <p>　　3、找到C:\ProgramData\FLEXnet文件夹，将下面的图示文件sw_D_三个文件删除，或者剪切到别的地方备份，如果不行好在粘回来(推荐)。现在试试打开SolidWorks的速度正常了没。</p>
 <h2 id="4、初始化-NET环境"><a href="#4、初始化-NET环境" class="headerlink" title="4、初始化.NET环境"></a>4、初始化.NET环境</h2><p>将安装文件夹中“PreReqs“文件夹中的必备组件重新安装,如“SOLIDWORKS 2018 SP02\PreReqs”对比重新安装没有效果。</p>
-<h2 id="5、加载任务窗格界面"><a href="#5、加载任务窗格界面" class="headerlink" title="5、加载任务窗格界面"></a>5、加载任务窗格界面</h2><p>启动SOLIDWORKS卡在正在加载任务窗格界面</p>
-<p>在启动 SOLIDWORKS® 时，为什么欢迎屏幕会冻结并一直显示“Loading Task Panes（正在加载任务窗格）”屏幕？</p>
+<h2 id="5、加载任务窗格界面"><a href="#5、加载任务窗格界面" class="headerlink" title="5、加载任务窗格界面"></a>5、加载任务窗格界面</h2><p>在启动 SOLIDWORKS® 时，启动SOLIDWORKS卡在Loading Task Panes（正在加载任务窗格）界面</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250916120938473.png">
 
 <p><strong>方法：</strong></p>
-<p>如果“Windows Search（Windows 搜索）”服务出现问题，则会出现此情况。可以通过停止“Windows Search（Windows 搜索）”服务来解决此问题。请执行下列步骤：</p>
-<p>1.单击 Windows®“Start（开始）”按钮 &gt; 键入“services”&gt; 在“Programs（程序）”下面单击“services”。</p>
+<p>如果“Windows Search（Windows 搜索）”服务出现问题，则会出现此情况。可以通过停止“Windows 搜索”服务来解决此问题。请执行下列步骤：</p>
+<p>1.单击开始菜单&gt; 键入“services”&gt; 单击“services”。</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250916121135692.png">
 
-<p>2.在“Services（服务）”对话框中，滚动查找“Windows Search（Windows 搜索）”服务。默认情况下，“Startup Type（启动类型）”已设置为“Automatic (Delayed Start)（自动（延迟启动））”。</p>
-<p>3.右键单击“Windows Search（Windows 搜索）”&gt; 单击“Properties（属性）”。</p>
-<p>4.在“Windows Search Properties（Windows 搜索属性）”对话框的“General（常规）”选项卡上，将“Startup type（启动类型）”更改为“Disabled（已禁用）”&gt; 单击“OK（确定）”。</p>
+<p>2.在“服务”对话框中，滚动查找“Windows 搜索”服务，右键属性停止。重新启动 SOLIDWORKS应用程序，并验证其是否正确启动。</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20250916121245863.png">
 
-<p>重新启动 SOLIDWORKS应用程序，并验证其是否正确启动。</p>
+
+
+
+
 <h2 id="8、加载插件"><a href="#8、加载插件" class="headerlink" title="8、加载插件"></a>8、加载插件</h2><p>打开SOLIDWORKS后，可在插件窗口查看哪个插件加载时间过长，可暂时去除勾选，在需要使用时再加载插件，对于不必要的插件可以取消启动勾选。</p>
 <img src="https://img.r77817520.nyat.app:18981/Hexo/image-20240301094113781.png">
 
